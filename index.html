@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LyricStudio Pro - Tự Động Tạo Slideshow Video Lyrics & Music</title>
+  
+  <!-- Google Fonts: Modern Geometric Sans, Monospace & Serif for diverse templates -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="brand-group">
+      <div class="brand-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      </div>
+      <div class="brand-text">
+        <h1>LYRICSTUDIO <span class="pro-badge">60FPS PRO</span></h1>
+        <div class="brand-sub">Trình Tự Động Tạo Slideshow Video Lyrics Chuyên Nghiệp</div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <!-- Auto-Save indicator pill -->
+      <div id="autoSaveIndicator" class="autosave-pill">
+        <span>●</span> <span id="autoSaveText">Sẵn sàng</span>
+      </div>
+
+      <!-- History & Drafts Button -->
+      <button id="btnOpenHistory" class="btn-header" title="Xem lịch sử dự án & bản nháp đã lưu">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Lịch Sử (<span id="historyCountBadge">0</span>)</span>
+      </button>
+
+      <!-- Save Snapshot Button -->
+      <button id="btnSaveSnapshot" class="btn-header" title="Lưu nhanh bản nháp hiện tại vào lịch sử">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        <span>Lưu Bản Nháp</span>
+      </button>
+
+      <button id="btnLoadDemo1" class="btn-header" title="Nạp nhanh dự án mẫu 'Phía Sau Một Cô Gái'">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>Mẫu 1</span>
+      </button>
+
+      <button id="btnLoadDemo2" class="btn-header" title="Nạp nhanh dự án mẫu 'Lofi Chill Beat'">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+        <span>Mẫu 2</span>
+      </button>
+
+      <button id="btnQuickExport" class="btn-header accent" title="Xuất video ngay lập tức">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>Xuất Video</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main 2-Column Studio Interface -->
+  <main class="studio-layout">
+    
+    <!-- LEFT COLUMN: PIPELINE CONTROLS -->
+    <aside class="config-panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          <span>BẢNG ĐIỀU KHIỂN & NGUYÊN LIỆU</span>
+        </div>
+        <span class="step-hint">Chỉ cần 3 bước đơn giản</span>
+      </div>
+
+      <div class="panel-scrollable">
+
+        <!-- STEP 1: AUDIO UPLOAD -->
+        <section class="step-card active-step" id="stepAudioCard">
+          <div class="step-head">
+            <div class="step-label">
+              <span class="step-num">1</span>
+              <div>
+                <h2 class="step-title">Bài Hát / Âm Thanh</h2>
+                <div class="step-hint">Tải lên file MP3, WAV, M4A, OGG</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropzone" id="audioDropzone">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <p>Kéo thả file nhạc vào đây hoặc <u style="color:var(--accent-primary)">chọn file</u></p>
+            <span>Hỗ trợ MP3, WAV, M4A (Tối đa 50MB)</span>
+            <input type="file" id="audioFileInput" accept="audio/*" style="display:none;">
+          </div>
+
+          <!-- Current Audio Info -->
+          <div class="audio-status-box" id="audioStatusBox">
+            <div class="audio-file-meta">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+              <div class="audio-meta-text">
+                <div class="audio-name" id="audioNameDisplay">audio.mp3 (Phía Sau Một Cô Gái)</div>
+                <div class="audio-duration" id="audioDurationDisplay">01:10 • 192kbps MP3</div>
+              </div>
+            </div>
+            <button class="btn-remove-audio" id="btnReplaceAudio" title="Đổi bài hát">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+            </button>
+          </div>
+
+          <div class="preset-chips-row">
+            <span class="step-hint">Bài mẫu có sẵn:</span>
+            <button class="chip-btn active" id="chipSample1">🎵 Phía Sau Một Cô Gái</button>
+            <button class="chip-btn" id="chipSample2">☕ Lofi Chill Rhodes</button>
+          </div>
+        </section>
+
+
+        <!-- STEP 2: IMAGES / SLIDESHOW MANAGER -->
+        <section class="step-card" id="stepImageCard">
+          <div class="step-head">
+            <div class="step-label">
+              <span class="step-num">2</span>
+              <div>
+                <h2 class="step-title">Hình Ảnh Slideshow</h2>
+                <div class="step-hint">Tải lên 1 hoặc nhiều ảnh (sẽ tự động chuyển cảnh)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropzone" id="imageDropzone">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <p>Kéo thả ảnh vào đây hoặc <u style="color:var(--accent-primary)">tải lên hàng loạt</u></p>
+            <span>Hỗ trợ JPG, PNG, WEBP (Tự động canh tỷ lệ)</span>
+            <input type="file" id="imageFileInput" accept="image/*" multiple style="display:none;">
+          </div>
+
+          <!-- Thumbnails of active slideshow images -->
+          <div class="image-thumbs-grid" id="imageThumbsGrid">
+            <!-- Dynamically populated -->
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Hiệu Ứng Chuyển Cảnh Slideshow (Transition):</label>
+            <select id="selectTransition" class="form-select">
+              <option value="kenburns">Ken Burns & Crossfade (Mượt Mà / Điện Ảnh)</option>
+              <option value="slide">Slide Parallax (Trượt Ngang Hiện Đại)</option>
+              <option value="diagonal">Diagonal Wipe (Cắt Chéo Sắc Nét)</option>
+              <option value="zoom">Breathing Soft Zoom (Lãng Mạn / Nhẹ Nhàng)</option>
+            </select>
+          </div>
+
+          <div class="preset-chips-row">
+            <span class="step-hint">Bộ ảnh mẫu:</span>
+            <button class="chip-btn" id="btnAddPortraitPack">+ Bộ Chân Dung Mẫu</button>
+            <button class="chip-btn" id="btnAddSunsetPack">+ Bộ Sunset Mẫu</button>
+            <button class="chip-btn" id="btnAddCyberPack">+ Bộ Cyberpunk Mẫu</button>
+          </div>
+        </section>
+
+
+        <!-- STEP 3: TEMPLATE SELECTOR -->
+        <section class="step-card" id="stepTemplateCard">
+          <div class="step-head">
+            <div class="step-label">
+              <span class="step-num">3</span>
+              <div>
+                <h2 class="step-title">Chọn Phong Cách (Template)</h2>
+                <div class="step-hint">Mỗi template có bộ quy tắc motion & typographic riêng</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="templates-picker-grid" id="templatePickerGrid">
+            
+            <!-- Template 1: FinnXIII Editorial Sharp -->
+            <div class="template-card active" data-template="finnxiii">
+              <div class="template-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l9 4.5v11L12 22 3 17.5v-11z"/></svg>
+              </div>
+              <div class="template-name">FinnXIII Sharp</div>
+              <div class="template-tag">Vết Cắt & Thẻ Hồng</div>
+            </div>
+
+            <!-- Template 2: Lofi Chill & Vinyl -->
+            <div class="template-card" data-template="lofi">
+              <div class="template-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+              </div>
+              <div class="template-name">Lofi Vinyl</div>
+              <div class="template-tag">Đĩa Than & Sao Bay</div>
+            </div>
+
+            <!-- Template 3: Neon Cyberpunk Spectrum -->
+            <div class="template-card" data-template="cyberpunk">
+              <div class="template-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div class="template-name">Cyber Wave</div>
+              <div class="template-tag">Sóng Nhạc & Neon</div>
+            </div>
+
+            <!-- Template 4: Vintage 1980s Cinema -->
+            <div class="template-card" data-template="vintage">
+              <div class="template-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+              </div>
+              <div class="template-name">Vintage 1980s</div>
+              <div class="template-tag">Film Grain & Hoài Niệm</div>
+            </div>
+
+            <!-- Template 5: Karaoke Pop Glow -->
+            <div class="template-card" data-template="karaoke">
+              <div class="template-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              </div>
+              <div class="template-name">Karaoke Pop</div>
+              <div class="template-tag">Quét Màu Theo Lời</div>
+            </div>
+
+          </div>
+
+          <!-- Aspect Ratio Options -->
+          <div class="form-group">
+            <label class="form-label">Tỷ Lệ Video (Aspect Ratio):</label>
+            <div class="aspect-selector" id="aspectSelector">
+              <button class="aspect-btn active" data-ratio="16-9">16:9 (YouTube/Ngang)</button>
+              <button class="aspect-btn" data-ratio="9-16">9:16 (TikTok/Reels/Shorts)</button>
+              <button class="aspect-btn" data-ratio="1-1">1:1 (Instagram Vuông)</button>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- STEP 4: LYRICS & AUTO-SYNC -->
+        <section class="step-card" id="stepLyricsCard">
+          <div class="step-head">
+            <div class="step-label">
+              <span class="step-num">4</span>
+              <div>
+                <h2 class="step-title">Lời Bài Hát & Đồng Bộ (Lyrics)</h2>
+                <div class="step-hint">Dán lời bài hát để tự động phân phối nhịp</div>
+              </div>
+            </div>
+            <button class="chip-btn" id="btnAutoSyncLyrics" style="color:var(--accent-primary); border-color:var(--accent-primary)">
+              ⚡ Tự Động Canh Nhịp
+            </button>
+          </div>
+
+          <div class="form-group">
+            <textarea id="rawLyricsInput" class="form-textarea" placeholder="Dán lời bài hát vào đây (mỗi câu một dòng hoặc định dạng LRC [00:12.50] Lời bài hát)..."></textarea>
+          </div>
+
+          <!-- Stanza Timings List -->
+          <div class="lyrics-sync-list" id="lyricsSyncList">
+            <!-- Dynamically populated with active timed lines -->
+          </div>
+        </section>
+
+      </div>
+    </aside>
+
+
+    <!-- RIGHT COLUMN: 60FPS LIVE PREVIEW & EXPORT -->
+    <section class="viewport-panel">
+      
+      <!-- Video Stage Container (Supports 16:9, 9:16, 1:1) -->
+      <div class="stage-wrapper ratio-16-9" id="stageWrapper">
+        <canvas id="renderCanvas" width="1280" height="720"></canvas>
+
+        <!-- Big Play Overlay on First Interaction -->
+        <div class="stage-play-overlay" id="stagePlayOverlay">
+          <button class="btn-big-play" id="btnBigPlay">
+            <div class="pulse-ring"></div>
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          </button>
+          <div class="overlay-title">NHẤN ĐỂ PHÁT & XEM DEMO 60FPS</div>
+          <div class="overlay-sub">Âm thanh chuẩn sync • Slideshow chuyển động mượt mà</div>
+        </div>
+      </div>
+
+      <!-- Playback & Timeline Scrubber Bar -->
+      <div class="controller-bar">
+        <div class="timeline-track-wrap" id="timelineTrackWrap">
+          <div class="timeline-bg">
+            <div class="timeline-fill" id="timelineFill"></div>
+            <div class="timeline-thumb" id="timelineThumb"></div>
+            <div class="timeline-dots-container" id="timelineDots"></div>
+          </div>
+        </div>
+
+        <div class="controller-actions">
+          <div class="ctrl-left">
+            <button class="btn-icon-ctrl" id="btnPlayPause" title="Phát / Tạm dừng (Space)">
+              <svg id="ctrlPlayIcon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              <svg id="ctrlPauseIcon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            </button>
+            <button class="btn-icon-ctrl" id="btnRestart" title="Phát lại từ đầu">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M1 4v6h6M23 20v-6h-6"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+            </button>
+            <div class="time-display">
+              <span id="labelCurrentTime">00:00</span> / <span id="labelTotalTime">01:10</span>
+            </div>
+          </div>
+
+          <div class="ctrl-center">
+            <div class="lyric-live-ticker" id="lyricLiveTicker">
+              Đang chờ phát nhạc...
+            </div>
+          </div>
+
+          <div class="ctrl-right">
+            <!-- Audio waveform visualizer bars -->
+            <div class="live-visualizer-wave" id="liveWave">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <!-- Volume -->
+            <button class="btn-icon-ctrl" id="btnMuteToggle" title="Bật/Tắt tiếng">
+              <svg id="ctrlVolIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+
+            <!-- Fullscreen -->
+            <button class="btn-icon-ctrl" id="btnFullscreenToggle" title="Toàn màn hình">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+            </button>
+
+            <!-- Big Export Video Button -->
+            <button class="btn-export-main" id="btnStartExport">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Xuất Video</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Callout Cards -->
+      <div class="feature-callout-grid">
+        <div class="callout-box">
+          <div class="callout-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l9 4.5v11L12 22 3 17.5v-11z"/></svg>
+          </div>
+          <div class="callout-content">
+            <h4>Tự Động Tạo Video Hoàn Chỉnh</h4>
+            <p>Hệ thống tự động tính toán thời lượng bài hát, phân bổ từng bức ảnh slideshow và đồng bộ lời bài hát tương thích.</p>
+          </div>
+        </div>
+
+        <div class="callout-box">
+          <div class="callout-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="callout-content">
+            <h4>Xuất Video Trực Tiếp 60FPS</h4>
+            <p>Sử dụng Web MediaRecorder API kết hợp Audio Stream để ghi hình video độ phân giải cao kèm âm thanh trực tiếp từ trình duyệt.</p>
+          </div>
+        </div>
+
+        <div class="callout-box">
+          <div class="callout-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+          </div>
+          <div class="callout-content">
+            <h4>Đa Tỷ Lệ Đăng Mạng Xã Hội</h4>
+            <p>Chuyển đổi tức thì giữa 16:9 (YouTube), 9:16 (TikTok, Reels, Shorts) và 1:1 (Instagram) với bố cục chữ tự động cân chỉnh.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Export Progress Modal Backdrop -->
+  <div class="export-modal-backdrop" id="exportModalBackdrop">
+    <div class="export-modal">
+      <div class="export-spinner"></div>
+      <div>
+        <h3 id="exportModalTitle">Đang Xuất Video 60FPS...</h3>
+        <p class="step-hint" id="exportModalSub">Vui lòng giữ tab này mở trong quá trình ghi hình</p>
+      </div>
+
+      <div class="export-progress-bar-bg">
+        <div class="export-progress-bar-fill" id="exportProgressBarFill"></div>
+      </div>
+
+      <div class="export-stat-readout">
+        <span id="exportProgressPct">0%</span>
+        <span id="exportTimeReadout">00:00 / 01:10</span>
+      </div>
+
+      <button class="btn-header" id="btnCancelExport" style="margin-top:0.5rem">Hủy Quá Trình</button>
+    </div>
+  </div>
+
+  <!-- History & Drafts Modal Backdrop -->
+  <div class="history-modal-backdrop" id="historyModalBackdrop">
+    <div class="history-modal">
+      <div class="history-header">
+        <h3>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          LỊCH SỬ DỰ ÁN & BẢN NHÁP ĐÃ LƯU
+        </h3>
+        <button class="btn-icon-ctrl" id="btnCloseHistoryModal" title="Đóng">&times;</button>
+      </div>
+
+      <div class="history-actions-bar">
+        <div style="display:flex; gap:8px;">
+          <button class="btn-header accent" id="btnHistoryNewProject">+ Tạo Mới</button>
+          <button class="btn-header" id="btnImportProjectJson">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Nhập File Dự Án
+          </button>
+          <input type="file" id="importProjectJsonFileInput" accept=".lyricproj,.json" style="display:none">
+        </div>
+        <button class="btn-header" id="btnClearHistory" style="color:#ff6b81">Xóa Hết Lịch Sử</button>
+      </div>
+
+      <!-- History List -->
+      <div class="history-list" id="historyListContainer">
+        <!-- Dynamically rendered -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio Element Hidden -->
+  <audio id="coreAudio" preload="auto"></audio>
+
+  <!-- JS Modules -->
+  <script src="js/templates.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/recorder.js"></script>
+  <script src="js/history.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

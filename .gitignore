@@ -1,0 +1,18 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Temporary Media & Test Artifacts
+screenshot_*.png
+temp_*
+*.raw
+*.tmp
+
+# User / Local Data
+.vscode/
+.idea/
