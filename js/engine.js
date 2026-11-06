@@ -296,7 +296,7 @@ class LyricEngine {
     ctx.restore();
   }
 
-  // === LYRICS MOTION RENDERER (WORD-BY-WORD KINETIC TIMING) ===
+  // === LYRICS MOTION RENDERER (WORD-BY-WORD KINETIC TIMING & DYNAMIC LAYOUTS) ===
   drawLyrics(time) {
     const ctx = this.ctx;
     const W = this.width;
@@ -304,10 +304,12 @@ class LyricEngine {
 
     if (!this.lyricsData || this.lyricsData.length === 0) return;
 
+    // Search active stanza with extended 0.70s exit window for buttery smooth transitions
+    const exitThreshold = 0.70;
     let activeStanza = null;
     for (let i = 0; i < this.lyricsData.length; i++) {
       const stanza = this.lyricsData[i];
-      if (time >= stanza.start && time <= stanza.end) {
+      if (time >= stanza.start && time <= stanza.end + exitThreshold) {
         activeStanza = stanza;
         break;
       }
@@ -317,15 +319,15 @@ class LyricEngine {
 
     const stanzaDuration = activeStanza.end - activeStanza.start;
 
-    // Smooth cubic exit transition in the last 0.40s of the stanza
-    let exitAlpha = 1;
+    // Smooth Hermite cubic exit transition during the exit window
+    let exitAlpha = 1.0;
     let exitOffsetY = 0;
-    const exitThreshold = 0.40;
-    if (activeStanza.end - time < exitThreshold) {
-      const exitProgress = Math.max(0, Math.min(1, (exitThreshold - (activeStanza.end - time)) / exitThreshold));
-      const exitEase = Math.pow(exitProgress, 2.2);
+    if (time > activeStanza.end) {
+      const exitProgress = Math.min(1, Math.max(0, (time - activeStanza.end) / exitThreshold));
+      // Hermite smoothstep curve:
+      const exitEase = exitProgress * exitProgress * (3 - 2 * exitProgress);
       exitAlpha = 1 - exitEase;
-      exitOffsetY = -Math.pow(exitProgress, 1.8) * 22;
+      exitOffsetY = -exitEase * 18;
     }
 
     ctx.save();
@@ -333,24 +335,39 @@ class LyricEngine {
 
     const isVertical = this.aspectRatio === '9-16';
     const lines = activeStanza.lines || [{ text: activeStanza.text || '', start: activeStanza.start, end: activeStanza.end }];
+    const layout = activeStanza.layout || 'left';
 
-    // Adjust baseY and lineSpacing dynamically based on the number of lines
-    // So 5-6 cascading lines fit gracefully in the upper-mid region without hitting the bottom
+    // Dynamic baseY and lineSpacing based on layout and line count
     let baseY;
     let lineSpacing;
-    if (lines.length >= 5) {
-      baseY = isVertical ? H * 0.46 + exitOffsetY : H * 0.28 + exitOffsetY;
+    if (layout === 'lower') {
+      baseY = isVertical ? H * 0.74 + exitOffsetY : H * 0.70 + exitOffsetY;
+      lineSpacing = isVertical ? H * 0.048 : Math.round(H * 0.055);
+    } else if (lines.length >= 5) {
+      baseY = isVertical ? H * 0.44 + exitOffsetY : H * 0.28 + exitOffsetY;
       lineSpacing = isVertical ? H * 0.052 : Math.round(H * 0.058); // ~42px on 720p
     } else if (lines.length >= 3) {
-      baseY = isVertical ? H * 0.50 + exitOffsetY : H * 0.34 + exitOffsetY;
+      baseY = isVertical ? H * 0.48 + exitOffsetY : H * 0.34 + exitOffsetY;
       lineSpacing = isVertical ? H * 0.058 : Math.round(H * 0.065); // ~47px on 720p
     } else {
-      baseY = isVertical ? H * 0.56 + exitOffsetY : H * 0.40 + exitOffsetY;
+      baseY = isVertical ? H * 0.54 + exitOffsetY : H * 0.40 + exitOffsetY;
       lineSpacing = isVertical ? H * 0.065 : Math.round(H * 0.075);
     }
 
-    let baseX = isVertical ? W * 0.07 : W * 0.09;
-    const indentStep = isVertical ? 20 : 42;
+    // Dynamic baseX and indentStep based on layout archetype
+    let baseX;
+    let indentStep;
+    if (layout === 'right') {
+      baseX = isVertical ? W * 0.44 : W * 0.52;
+      indentStep = isVertical ? 16 : 32;
+    } else if (layout === 'center' || layout === 'lower') {
+      baseX = W * 0.5;
+      indentStep = 0;
+    } else {
+      // default: left layout
+      baseX = isVertical ? W * 0.07 : W * 0.08;
+      indentStep = isVertical ? 18 : 36;
+    }
 
     lines.forEach((line, idx) => {
       const lineStart = line.start !== undefined ? line.start : activeStanza.start + (idx / lines.length) * stanzaDuration;
@@ -363,24 +380,19 @@ class LyricEngine {
       const lineProgress = Math.max(0, Math.min(1, (time - lineStart) / lineDur));
       const isCurrent = time >= lineStart && time <= lineEnd;
 
-      // Authentic staircase indent offset
+      // Staircase indent offset
       const indentOffset = (line.indent !== undefined ? line.indent : idx) * indentStep;
       const posX = baseX + indentOffset;
       const posY = baseY + (idx * lineSpacing);
 
-      // Gentle deceleration entrance for the line (420ms duration)
-      const enterAge = time - lineStart;
-      const enterEase = 1 - Math.pow(1 - Math.min(1, enterAge / 0.42), 3);
-      const enterOffsetY = (1 - enterEase) * 10;
-
       // Completed lines dim slightly to focus on the active singing line
-      const lineFocusAlpha = isCurrent ? 1.0 : 0.72;
+      const lineFocusAlpha = isCurrent ? 1.0 : 0.82;
 
       ctx.save();
-      ctx.globalAlpha = exitAlpha * enterEase * lineFocusAlpha;
+      ctx.globalAlpha = exitAlpha * lineFocusAlpha;
 
-      // Delegate line styling and word-by-word reveal to template definition
-      this.currentTemplate.drawLyricLine(ctx, line, posX, posY + enterOffsetY, W, H, time, lineProgress, isCurrent);
+      // Delegate line styling and word-by-word reveal to template definition with layout
+      this.currentTemplate.drawLyricLine(ctx, line, posX, posY, W, H, time, lineProgress, isCurrent, layout);
 
       ctx.restore();
     });
@@ -395,14 +407,27 @@ class LyricEngine {
     const W = this.width;
     const H = this.height;
 
+    // Active stanza lookup
+    let activeStanza = null;
+    const exitThreshold = 0.70;
+    if (this.lyricsData) {
+      for (let i = 0; i < this.lyricsData.length; i++) {
+        const s = this.lyricsData[i];
+        if (time >= s.start && time <= s.end + exitThreshold) {
+          activeStanza = s;
+          break;
+        }
+      }
+    }
+
     // 1. Clear background
     ctx.clearRect(0, 0, W, H);
 
     // 2. Draw Slideshow Image with Ken Burns / Parallax Slices
     this.drawSlideshowImage(time);
 
-    // 3. Draw Template Background & Lighting Filters
-    this.currentTemplate.drawBackgroundEffects(ctx, W, H, time, this.beatEnergy);
+    // 3. Draw Template Background & Lighting Filters with layout awareness
+    this.currentTemplate.drawBackgroundEffects(ctx, W, H, time, this.beatEnergy, activeStanza);
 
     // 4. Render Ambient Particles
     this.renderParticles();

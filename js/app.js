@@ -571,8 +571,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const DEMO_PRESET_GANH_HAO = (window.DEMO_PRESET_GANH_HAO) ? {
     audioUrl: window.DEMO_PRESET_GANH_HAO.audioUrl,
     audioName: `${window.DEMO_PRESET_GANH_HAO.audioTitle} - ${window.DEMO_PRESET_GANH_HAO.audioArtist}`,
-    audioDuration: window.DEMO_PRESET_GANH_HAO.audioDuration || 352.8,
-    duration: window.DEMO_PRESET_GANH_HAO.audioDuration || 352.8,
+    audioDuration: window.DEMO_PRESET_GANH_HAO.audioDuration || 355.05,
+    duration: window.DEMO_PRESET_GANH_HAO.audioDuration || 355.05,
     images: window.DEMO_PRESET_GANH_HAO.imageUrls,
     template: 'finnxiii',
     transition: 'kenburns',
@@ -619,7 +619,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (state.audioUrl) {
       coreAudio.src = state.audioUrl;
       audioNameDisplay.textContent = state.audioName || 'File âm thanh';
-      const dur = state.audioDuration || state.duration || 352.8;
+      const dur = state.audioDuration || state.duration || 355.05;
       audioDurationDisplay.textContent = `${formatTime(dur)} • Audio Ready`;
       labelTotalTime.textContent = formatTime(dur);
       engine.setDuration(dur);
