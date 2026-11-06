@@ -70,35 +70,50 @@ window.LYRIC_TEMPLATES = {
         ctx.stroke();
         ctx.restore();
 
-        // --- AUTHENTIC VERTICAL TITLE CARD: "PHÍA SAU MỘT CÔ GÁI" ---
-        const cardW = width * 0.095;
-        const cardH = height * 0.34;
+        // --- AUTHENTIC DYNAMIC VERTICAL TITLE CARD (FINNXIII EDITORIAL) ---
+        const meta = window.CURRENT_SONG_META || {
+          topMeta: 'SOOBIN HOÀNG SƠN  •  NEW SINGLE  •  1989s PRODUCTION',
+          subMeta: 'FINNXIII  |  1989s PRODUCTION',
+          cardLines: [
+            { text: 'P H Í A', size: 14, weight: '700' },
+            { text: 'S A U', size: 14, weight: '700' },
+            { text: 'M Ộ T', size: 14, weight: '700' },
+            { text: '- C Ô', size: 13, weight: '600' },
+            { text: 'G Á I', size: 17, weight: '900' }
+          ]
+        };
+
+        const cardLines = meta.cardLines || [
+          { text: 'L Y R I C', size: 14, weight: '700' },
+          { text: 'V I D E O', size: 15, weight: '900' }
+        ];
+
+        const cardW = width * (cardLines.length > 5 ? 0.105 : 0.095);
+        const cardH = height * (cardLines.length > 5 ? 0.38 : 0.34);
         const cardX = width * 0.72;
-        const cardY = height * 0.42;
+        const cardY = height * (cardLines.length > 5 ? 0.39 : 0.42);
 
         ctx.save();
         ctx.fillStyle = '#de708b';
         ctx.shadowColor = 'rgba(222, 112, 139, 0.55)';
         ctx.shadowBlur = 24;
-        ctx.fillRect(cardX, cardY, cardW, cardH);
+        if (ctx.roundRect) {
+          ctx.beginPath();
+          ctx.roundRect(cardX, cardY, cardW, cardH, 4);
+          ctx.fill();
+        } else {
+          ctx.fillRect(cardX, cardY, cardW, cardH);
+        }
 
         ctx.textAlign = 'center';
         ctx.fillStyle = '#ffffff';
         ctx.shadowColor = 'rgba(0,0,0,0.3)';
         ctx.shadowBlur = 4;
 
-        const cardLines = [
-          { text: 'P H Í A', size: 14, weight: '700' },
-          { text: 'S A U', size: 14, weight: '700' },
-          { text: 'M Ộ T', size: 14, weight: '700' },
-          { text: '- C Ô', size: 13, weight: '600' },
-          { text: 'G Á I', size: 17, weight: '900' }
-        ];
-
         const lineStep = cardH / (cardLines.length + 0.8);
         cardLines.forEach((item, idx) => {
           ctx.font = `${item.weight} ${item.size}px "Montserrat", sans-serif`;
-          ctx.fillText(item.text, cardX + cardW / 2, cardY + 28 + idx * lineStep);
+          ctx.fillText(item.text, cardX + cardW / 2, cardY + (cardLines.length > 5 ? 24 : 28) + idx * lineStep);
         });
         ctx.restore();
 
@@ -143,10 +158,10 @@ window.LYRIC_TEMPLATES = {
         ctx.save();
         ctx.font = '700 12px "Montserrat", sans-serif';
         ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
-        ctx.letterSpacing = '0.2em';
+        ctx.letterSpacing = '0.15em';
         ctx.shadowColor = 'rgba(0,0,0,0.6)';
         ctx.shadowBlur = 8;
-        ctx.fillText('SOOBIN HOÀNG SƠN  •  NEW SINGLE  •  1989s PRODUCTION', width * 0.08, height * 0.12);
+        ctx.fillText(meta.topMeta || 'OFFICIAL MUSIC LYRIC VIDEO', width * 0.08, height * 0.12);
         ctx.restore();
 
         ctx.restore();
@@ -156,7 +171,8 @@ window.LYRIC_TEMPLATES = {
         ctx.save();
         ctx.font = '600 11px "Montserrat", sans-serif';
         ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
-        ctx.fillText('FINNXIII  |  1989s PRODUCTION', width * 0.08, height * 0.94);
+        const meta = window.CURRENT_SONG_META || { subMeta: 'FINNXIII  |  1989s PRODUCTION' };
+        ctx.fillText(meta.subMeta || 'FINNXIII  |  LYRICSTUDIO PRO', width * 0.08, height * 0.94);
         ctx.restore();
       }
     },
@@ -272,7 +288,13 @@ window.LYRIC_TEMPLATES = {
           }
 
           ctx.fillStyle = '#de708b'; // Authentic Dusty Rose
-          ctx.fillRect(grp.startX, boxY, curW, boxH);
+          if (ctx.roundRect) {
+            ctx.beginPath();
+            ctx.roundRect(grp.startX, boxY, curW, boxH, 3);
+            ctx.fill();
+          } else {
+            ctx.fillRect(grp.startX, boxY, curW, boxH);
+          }
           ctx.restore();
         }
       });
@@ -705,7 +727,13 @@ function autoSplitLineWords(lineText, lineStart, lineEnd) {
     const isHighlight = [
       'EM', 'ANH', 'CÔ GÁI', 'CÔ', 'GÁI', 'NGUỒN SỐNG', 'NGUỒN', 'SỐNG',
       'LÙI BƯỚC', 'LÙI', 'BƯỚC', 'GIỌT LỆ NÀO', 'GIỌT', 'LỆ', 'NÀO',
-      'NÓI RA', 'NÓI', 'RA', 'ĐÔI MẮT', 'ĐÔI', 'MẮT', 'HẾT', 'TẤT', 'CẢ'
+      'NÓI RA', 'NÓI', 'RA', 'ĐÔI MẮT', 'ĐÔI', 'MẮT', 'HẾT', 'TẤT', 'CẢ',
+      'NẮM TAY', 'NẮM', 'TAY', 'MÃI MÃI', 'MÃI', 'LẤP LÁNH', 'LẤP', 'LÁNH', 'RÕ HƠN', 'RÕ', 'HƠN',
+      'SỔ LỒNG', 'SỔ', 'LỒNG', 'LẤY CHỒNG', 'LẤY', 'CHỒNG', 'ĐAU LÒNG', 'ĐAU', 'LÒNG',
+      'QUA CẦU', 'TRẦU CAU', 'MƯA NGÂU', 'CHIA CÁCH', 'XẺ ĐÔI', 'TIM MÌNH',
+      'LỤC BÌNH TRÔI', 'LỤC', 'BÌNH', 'TRÔI', 'TÍM HOA', 'TÍM', 'HOA',
+      'XIẾT CHẶT', 'CẤT BƯỚC', 'SANG SÔNG', 'SẮC HOA CHUNG TÌNH', 'SẮC HOA', 'CHUNG TÌNH',
+      'CHỜ MONG', 'THAO THỨC', 'BÊN ẤY'
     ].includes(cleanWord);
 
     return {

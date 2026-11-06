@@ -37,8 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const audioNameDisplay = document.getElementById('audioNameDisplay');
   const audioDurationDisplay = document.getElementById('audioDurationDisplay');
   const btnReplaceAudio = document.getElementById('btnReplaceAudio');
+  const chipSampleGanhHao = document.getElementById('chipSampleGanhHao');
   const chipSample1 = document.getElementById('chipSample1');
   const chipSample2 = document.getElementById('chipSample2');
+  const btnLoadDemoGanhHao = document.getElementById('btnLoadDemoGanhHao');
   const btnLoadDemo1 = document.getElementById('btnLoadDemo1');
   const btnLoadDemo2 = document.getElementById('btnLoadDemo2');
 
@@ -46,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const imageFileInput = document.getElementById('imageFileInput');
   const imageThumbsGrid = document.getElementById('imageThumbsGrid');
   const selectTransition = document.getElementById('selectTransition');
+  const btnAddGanhHaoPack = document.getElementById('btnAddGanhHaoPack');
   const btnAddPortraitPack = document.getElementById('btnAddPortraitPack');
   const btnAddSunsetPack = document.getElementById('btnAddSunsetPack');
   const btnAddCyberPack = document.getElementById('btnAddCyberPack');
@@ -565,6 +568,19 @@ document.addEventListener('DOMContentLoaded', () => {
 [00:19.00] Một ngày bình yên trôi qua nhẹ nhàng`
   };
 
+  const DEMO_PRESET_GANH_HAO = (window.DEMO_PRESET_GANH_HAO) ? {
+    audioUrl: window.DEMO_PRESET_GANH_HAO.audioUrl,
+    audioName: `${window.DEMO_PRESET_GANH_HAO.audioTitle} - ${window.DEMO_PRESET_GANH_HAO.audioArtist}`,
+    audioDuration: window.DEMO_PRESET_GANH_HAO.audioDuration || 352.8,
+    duration: window.DEMO_PRESET_GANH_HAO.audioDuration || 352.8,
+    images: window.DEMO_PRESET_GANH_HAO.imageUrls,
+    template: 'finnxiii',
+    transition: 'kenburns',
+    aspectRatio: '16-9',
+    songMeta: window.DEMO_PRESET_GANH_HAO.songMeta,
+    parsedStanzas: window.DEMO_PRESET_GANH_HAO.wordsData
+  } : null;
+
   // === AUTO-SAVE STATUS LISTENER ===
   historyManager.onAutoSaveStatusChange = (status, text) => {
     if (autoSaveIndicator && autoSaveText) {
@@ -603,8 +619,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (state.audioUrl) {
       coreAudio.src = state.audioUrl;
       audioNameDisplay.textContent = state.audioName || 'File âm thanh';
-      audioDurationDisplay.textContent = `${formatTime(state.audioDuration || 60)} • Audio Ready`;
-      engine.setDuration(state.audioDuration || 60);
+      const dur = state.audioDuration || state.duration || 352.8;
+      audioDurationDisplay.textContent = `${formatTime(dur)} • Audio Ready`;
+      labelTotalTime.textContent = formatTime(dur);
+      engine.setDuration(dur);
     }
 
     // 2. Images
@@ -1238,13 +1256,24 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('mouseup', () => { isDragging = false; });
 
   function updateProgressUI(t) {
-    const dur = coreAudio.duration || engine.totalDuration || 60;
+    const dur = (coreAudio && coreAudio.duration && !isNaN(coreAudio.duration) && coreAudio.duration > 0)
+      ? coreAudio.duration
+      : (engine.totalDuration || 352.8);
     const pct = Math.min(100, Math.max(0, (t / dur) * 100));
     timelineFill.style.width = `${pct}%`;
     timelineThumb.style.left = `${pct}%`;
     labelCurrentTime.textContent = formatTime(t);
     labelTotalTime.textContent = formatTime(dur);
   }
+
+  coreAudio.addEventListener('loadedmetadata', () => {
+    if (coreAudio.duration && !isNaN(coreAudio.duration) && coreAudio.duration > 0) {
+      engine.setDuration(coreAudio.duration);
+      audioDurationDisplay.textContent = `${formatTime(coreAudio.duration)} • Audio Ready`;
+      labelTotalTime.textContent = formatTime(coreAudio.duration);
+      updateProgressUI(coreAudio.currentTime || 0);
+    }
+  });
 
   function highlightActiveLyricRow(t) {
     const stanzas = engine.lyricsData;
@@ -1327,20 +1356,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Preset chips
-  chipSample1.addEventListener('click', () => {
-    chipSample1.classList.add('active');
-    chipSample2.classList.remove('active');
-    applyProjectState(DEMO_PRESET_1);
-  });
-  btnLoadDemo1.addEventListener('click', () => applyProjectState(DEMO_PRESET_1));
+  // Preset handlers
+  function selectPresetGanhHao() {
+    if (chipSampleGanhHao) chipSampleGanhHao.classList.add('active');
+    if (chipSample1) chipSample1.classList.remove('active');
+    if (chipSample2) chipSample2.classList.remove('active');
+    if (DEMO_PRESET_GANH_HAO) {
+      window.CURRENT_SONG_META = window.DEMO_PRESET_GANH_HAO.songMeta;
+      applyProjectState(DEMO_PRESET_GANH_HAO);
+    }
+  }
 
-  chipSample2.addEventListener('click', () => {
-    chipSample2.classList.add('active');
-    chipSample1.classList.remove('active');
+  function selectPreset1() {
+    if (chipSample1) chipSample1.classList.add('active');
+    if (chipSampleGanhHao) chipSampleGanhHao.classList.remove('active');
+    if (chipSample2) chipSample2.classList.remove('active');
+    window.CURRENT_SONG_META = {
+      topMeta: 'SOOBIN HOÀNG SƠN  •  NEW SINGLE  •  1989s PRODUCTION',
+      subMeta: 'FINNXIII  |  1989s PRODUCTION',
+      cardLines: [
+        { text: 'P H Í A', size: 14, weight: '700' },
+        { text: 'S A U', size: 14, weight: '700' },
+        { text: 'M Ộ T', size: 14, weight: '700' },
+        { text: '- C Ô', size: 13, weight: '600' },
+        { text: 'G Á I', size: 17, weight: '900' }
+      ]
+    };
+    applyProjectState(DEMO_PRESET_1);
+  }
+
+  function selectPreset2() {
+    if (chipSample2) chipSample2.classList.add('active');
+    if (chipSampleGanhHao) chipSampleGanhHao.classList.remove('active');
+    if (chipSample1) chipSample1.classList.remove('active');
+    window.CURRENT_SONG_META = null;
     applyProjectState(DEMO_PRESET_2);
+  }
+
+  chipSampleGanhHao?.addEventListener('click', selectPresetGanhHao);
+  btnLoadDemoGanhHao?.addEventListener('click', selectPresetGanhHao);
+
+  chipSample1?.addEventListener('click', selectPreset1);
+  btnLoadDemo1?.addEventListener('click', selectPreset1);
+
+  chipSample2?.addEventListener('click', selectPreset2);
+  btnLoadDemo2?.addEventListener('click', selectPreset2);
+
+  btnAddGanhHaoPack?.addEventListener('click', () => {
+    if (window.DEMO_PRESET_GANH_HAO && window.DEMO_PRESET_GANH_HAO.imageUrls) {
+      loadImagesFromUrls(window.DEMO_PRESET_GANH_HAO.imageUrls);
+    }
   });
-  btnLoadDemo2.addEventListener('click', () => applyProjectState(DEMO_PRESET_2));
 
   btnAddPortraitPack.addEventListener('click', () => {
     loadImagesFromUrls([
@@ -1403,8 +1469,12 @@ document.addEventListener('DOMContentLoaded', () => {
     updateProgressUI(0);
   });
 
-  // Reset auto-save to ensure latest DEMO_PRESET_1 word timing loads fresh
-  applyProjectState(DEMO_PRESET_1);
+  // Default initial load: Đêm Gành Hào (Còn Thương Sắc Hoa Chung Tình)
+  if (DEMO_PRESET_GANH_HAO) {
+    selectPresetGanhHao();
+  } else {
+    selectPreset1();
+  }
   updateHistoryBadge();
 
   // Test time parameter for snapshot inspections & verification
