@@ -9,7 +9,7 @@ window.DEMO_PRESET_GANH_HAO = {
   audioArtist: 'Quý Bình',
   audioInfo: 'OST Sông Phố Nhà Ghe • Sáng tác: Lê Phương',
   audioUrl: 'assets/samples/dem_ganh_hao.mp3',
-  audioDuration: 355.05,
+  audioDuration: 353.23,
   template: 'finnxiii',
   transition: 'kenburns',
   aspectRatio: '16-9',
