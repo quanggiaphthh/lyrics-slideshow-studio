@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const exportProgressPct = document.getElementById('exportProgressPct');
   const exportTimeReadout = document.getElementById('exportTimeReadout');
   const btnCancelExport = document.getElementById('btnCancelExport');
+  const btnFinishEarlyExport = document.getElementById('btnFinishEarlyExport');
 
   // History & Auto-Save Elements
   const autoSaveIndicator = document.getElementById('autoSaveIndicator');
@@ -90,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.engine = engine;
   window.coreAudio = coreAudio;
+  window.exporter = exporter;
   window.getCurrentProjectState = () => currentProjectState;
 
   let isPlaying = false;
@@ -1531,10 +1533,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // === EXPORT VIDEO 60FPS ===
-  function startVideoExport() {
-    exportModalBackdrop.classList.add('active');
+  const exportModalTitle = document.getElementById('exportModalTitle');
+  const exportModalSub = document.getElementById('exportModalSub');
+  const exportSpinner = document.querySelector('.export-spinner');
+
+  function resetExportModalUI() {
+    if (exportSpinner) exportSpinner.style.display = 'block';
+    if (exportModalTitle) exportModalTitle.textContent = 'Đang Xuất Video 60FPS...';
+    if (exportModalSub) exportModalSub.textContent = 'Vui lòng giữ tab này mở trong quá trình ghi hình';
+    if (btnFinishEarlyExport) btnFinishEarlyExport.style.display = 'inline-flex';
     exportProgressBarFill.style.width = '0%';
     exportProgressPct.textContent = '0%';
+    btnCancelExport.textContent = 'Hủy Quá Trình';
+    btnCancelExport.classList.remove('accent');
+  }
+
+  function startVideoExport() {
+    if (isPlaying) {
+      pauseVideo();
+    }
+
+    resetExportModalUI();
+    const dur = coreAudio.duration || engine.totalDuration || 353.23;
+    exportModalBackdrop.classList.add('active');
+    exportTimeReadout.textContent = `00:00 / ${formatTime(dur)}`;
 
     exporter.onProgress = (pct, curr, total) => {
       exportProgressBarFill.style.width = `${pct}%`;
@@ -1543,22 +1565,40 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     exporter.onComplete = (blob, filename) => {
-      setTimeout(() => {
-        exportModalBackdrop.classList.remove('active');
-        alert(`🎉 Xuất video thành công!\nFile đã được tải về: ${filename}`);
-      }, 500);
+      if (exportSpinner) exportSpinner.style.display = 'none';
+      if (btnFinishEarlyExport) btnFinishEarlyExport.style.display = 'none';
+      if (exportModalTitle) exportModalTitle.textContent = '🎉 Xuất Video Thành Công!';
+      const mb = (blob.size / (1024 * 1024)).toFixed(1);
+      if (exportModalSub) exportModalSub.textContent = `File video ${filename} (${mb} MB) đã được tải về máy của bạn!`;
+      exportProgressBarFill.style.width = '100%';
+      exportProgressPct.textContent = '100%';
+      btnCancelExport.textContent = 'Hoàn Tất & Đóng';
+      btnCancelExport.classList.add('accent');
     };
 
     exporter.onError = (err) => {
-      exportModalBackdrop.classList.remove('active');
-      alert(`Lỗi khi xuất video: ${err.message || err}`);
+      if (exportSpinner) exportSpinner.style.display = 'none';
+      if (btnFinishEarlyExport) btnFinishEarlyExport.style.display = 'none';
+      if (exportModalTitle) exportModalTitle.textContent = '⚠️ Xuất Video Thất Bại';
+      if (exportModalSub) exportModalSub.textContent = `Chi tiết lỗi: ${err.message || err}`;
+      btnCancelExport.textContent = 'Đóng';
     };
 
     exporter.startExport({ fps: 60 });
   }
 
+  window.startVideoExport = startVideoExport;
+
   btnStartExport.addEventListener('click', startVideoExport);
   btnQuickExport.addEventListener('click', startVideoExport);
+
+  btnFinishEarlyExport?.addEventListener('click', () => {
+    if (exporter.isRecording) {
+      if (exportModalTitle) exportModalTitle.textContent = 'Đang đóng gói file video...';
+      if (btnFinishEarlyExport) btnFinishEarlyExport.style.display = 'none';
+      exporter.stopExport();
+    }
+  });
 
   btnCancelExport.addEventListener('click', () => {
     exporter.cancelExport();

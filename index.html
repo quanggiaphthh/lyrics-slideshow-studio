@@ -397,7 +397,13 @@
         <span id="exportTimeReadout">00:00 / 01:10</span>
       </div>
 
-      <button class="btn-header" id="btnCancelExport" style="margin-top:0.5rem">Hủy Quá Trình</button>
+      <div class="export-modal-actions" style="display:flex; gap:0.6rem; margin-top:0.75rem; width:100%; justify-content:center; flex-wrap:wrap;">
+        <button class="btn-header accent" id="btnFinishEarlyExport" style="display:none; font-size:0.85rem; padding:0.55rem 1rem;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Lưu & Tải Đoạn Này
+        </button>
+        <button class="btn-header" id="btnCancelExport" style="font-size:0.85rem; padding:0.55rem 1rem;">Hủy Quá Trình</button>
+      </div>
     </div>
   </div>
 
