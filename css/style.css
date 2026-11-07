@@ -836,15 +836,24 @@ body {
 
 /* Timeline */
 .timeline-track-wrap {
-  padding: 6px 0;
+  padding: 10px 0;
   cursor: pointer;
+  position: relative;
+  user-select: none;
+  touch-action: none;
 }
 
 .timeline-bg {
   height: 6px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 3px;
   position: relative;
+  transition: height 0.15s ease;
+}
+
+.timeline-track-wrap:hover .timeline-bg,
+.timeline-track-wrap.dragging .timeline-bg {
+  height: 8px;
 }
 
 .timeline-fill {
@@ -861,17 +870,21 @@ body {
   position: absolute;
   top: 50%;
   left: 0%;
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: #ffffff;
   border: 3px solid var(--accent-primary);
   transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  pointer-events: none;
+  z-index: 2;
 }
 
-.timeline-track-wrap:hover .timeline-thumb {
-  transform: translate(-50%, -50%) scale(1);
+.timeline-track-wrap:hover .timeline-thumb,
+.timeline-track-wrap.dragging .timeline-thumb {
+  transform: translate(-50%, -50%) scale(1.25);
+  box-shadow: 0 0 12px rgba(222, 112, 139, 0.85);
 }
 
 .timeline-dots-container {

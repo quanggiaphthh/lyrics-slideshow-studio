@@ -921,9 +921,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <span class="lyric-item-text">${s.text}</span>
       `;
       row.addEventListener('click', () => {
-        coreAudio.currentTime = s.start;
-        updateProgressUI(s.start);
-        renderCurrentFrame();
+        applySeek(s.start, true);
         if (!isPlaying) playVideo();
       });
       lyricsSyncList.appendChild(row);
@@ -1146,23 +1144,26 @@ document.addEventListener('DOMContentLoaded', () => {
     return smoothPlayTime;
   }
 
-  function renderCurrentFrame() {
-    engine.renderFrame(coreAudio.currentTime);
+  function renderCurrentFrame(explicitTime) {
+    const t = (explicitTime !== undefined) ? explicitTime : (coreAudio.currentTime || 0);
+    engine.renderFrame(t);
   }
 
   function loop() {
     if (isPlaying) {
-      const t = getSmoothedAudioTime();
-      engine.renderFrame(t);
-      updateProgressUI(t);
+      if (!isDragging) {
+        const t = getSmoothedAudioTime();
+        engine.renderFrame(t);
+        updateProgressUI(t);
 
-      const energy = engine.beatEnergy;
-      liveWaveBars.forEach((bar, i) => {
-        const height = Math.max(3, Math.min(20, (energy * 20) + Math.sin(t * 10 + i) * 6));
-        bar.style.height = `${height}px`;
-      });
+        const energy = engine.beatEnergy;
+        liveWaveBars.forEach((bar, i) => {
+          const height = Math.max(3, Math.min(20, (energy * 20) + Math.sin(t * 10 + i) * 6));
+          bar.style.height = `${height}px`;
+        });
 
-      highlightActiveLyricRow(t);
+        highlightActiveLyricRow(t);
+      }
       animId = requestAnimationFrame(loop);
     }
   }
@@ -1204,12 +1205,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   btnRestart.addEventListener('click', () => {
-    coreAudio.currentTime = 0;
-    smoothPlayTime = 0;
-    lastAudioTime = 0;
-    lastPerfTimestamp = performance.now();
-    updateProgressUI(0);
-    renderCurrentFrame();
+    applySeek(0, true);
     playVideo();
   });
 
@@ -1233,27 +1229,129 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // === HIGH-PRECISION SCRUBBING & TIMELINE SEEKING ===
   let isDragging = false;
-  function seekFromEvent(e) {
+  let wasPlayingBeforeDrag = false;
+  let lastSeekThrottleTime = 0;
+
+  function getTimeFromPointerEvent(e) {
     const rect = timelineTrackWrap.getBoundingClientRect();
-    const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-    const targetTime = ratio * (coreAudio.duration || engine.totalDuration || 60);
-    coreAudio.currentTime = targetTime;
-    smoothPlayTime = targetTime;
-    lastAudioTime = targetTime;
-    lastPerfTimestamp = performance.now();
-    updateProgressUI(targetTime);
-    renderCurrentFrame();
+    const clientX = (e.clientX !== undefined)
+      ? e.clientX
+      : (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
+    const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / Math.max(1, rect.width)));
+    const dur = (coreAudio && coreAudio.duration && !isNaN(coreAudio.duration) && coreAudio.duration > 0)
+      ? coreAudio.duration
+      : (engine.totalDuration || 353.23);
+    return ratio * dur;
   }
 
-  timelineTrackWrap.addEventListener('mousedown', (e) => {
+  function applySeek(targetTime, commitAudio = true) {
+    const dur = (coreAudio && coreAudio.duration && !isNaN(coreAudio.duration) && coreAudio.duration > 0)
+      ? coreAudio.duration
+      : (engine.totalDuration || 353.23);
+    targetTime = Math.max(0, Math.min(targetTime, dur));
+
+    updateProgressUI(targetTime);
+    renderCurrentFrame(targetTime);
+    highlightActiveLyricRow(targetTime);
+
+    if (commitAudio) {
+      coreAudio.currentTime = targetTime;
+      smoothPlayTime = targetTime;
+      lastAudioTime = targetTime;
+      lastPerfTimestamp = performance.now();
+    }
+  }
+
+  function onScrubStart(e) {
+    if (e.button !== undefined && e.button !== 0) return;
     isDragging = true;
-    seekFromEvent(e);
+    wasPlayingBeforeDrag = isPlaying;
+    timelineTrackWrap.classList.add('dragging');
+
+    if (wasPlayingBeforeDrag) {
+      coreAudio.pause();
+    }
+
+    if (timelineTrackWrap.setPointerCapture && e.pointerId !== undefined) {
+      try { timelineTrackWrap.setPointerCapture(e.pointerId); } catch (_) {}
+    }
+
+    const targetTime = getTimeFromPointerEvent(e);
+    applySeek(targetTime, true);
+    if (e.cancelable) e.preventDefault();
+  }
+
+  function onScrubMove(e) {
+    if (!isDragging) return;
+    const targetTime = getTimeFromPointerEvent(e);
+
+    // Instant 60FPS visual scrub feedback
+    updateProgressUI(targetTime);
+    renderCurrentFrame(targetTime);
+    highlightActiveLyricRow(targetTime);
+
+    // Throttle audio seek requests during dragging (every 65ms) to prevent decoder churn
+    const now = performance.now();
+    if (now - lastSeekThrottleTime > 65) {
+      coreAudio.currentTime = targetTime;
+      smoothPlayTime = targetTime;
+      lastAudioTime = targetTime;
+      lastPerfTimestamp = performance.now();
+      lastSeekThrottleTime = now;
+    }
+    if (e.cancelable) e.preventDefault();
+  }
+
+  function onScrubEnd(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    timelineTrackWrap.classList.remove('dragging');
+
+    if (timelineTrackWrap.releasePointerCapture && e.pointerId !== undefined) {
+      try { timelineTrackWrap.releasePointerCapture(e.pointerId); } catch (_) {}
+    }
+
+    const targetTime = getTimeFromPointerEvent(e);
+    applySeek(targetTime, true);
+
+    if (wasPlayingBeforeDrag) {
+      playVideo();
+    }
+    if (e.cancelable) e.preventDefault();
+  }
+
+  // Pointer events support desktop mouse, tablet stylus, and touch natively
+  timelineTrackWrap.addEventListener('pointerdown', onScrubStart);
+  timelineTrackWrap.addEventListener('pointermove', onScrubMove);
+  timelineTrackWrap.addEventListener('pointerup', onScrubEnd);
+  timelineTrackWrap.addEventListener('pointercancel', onScrubEnd);
+
+  // Window-level safety listeners in case pointer leaves element or window
+  window.addEventListener('pointerup', (e) => { if (isDragging) onScrubEnd(e); });
+  window.addEventListener('mouseup', (e) => { if (isDragging) onScrubEnd(e); });
+  window.addEventListener('touchend', (e) => { if (isDragging) onScrubEnd(e); });
+
+  // Native audio sync events
+  coreAudio.addEventListener('seeked', () => {
+    if (!isDragging) {
+      smoothPlayTime = coreAudio.currentTime;
+      lastAudioTime = coreAudio.currentTime;
+      lastPerfTimestamp = performance.now();
+      updateProgressUI(coreAudio.currentTime);
+      renderCurrentFrame(coreAudio.currentTime);
+      highlightActiveLyricRow(coreAudio.currentTime);
+    }
   });
-  window.addEventListener('mousemove', (e) => {
-    if (isDragging) seekFromEvent(e);
+
+  coreAudio.addEventListener('timeupdate', () => {
+    if (!isPlaying && !isDragging) {
+      updateProgressUI(coreAudio.currentTime);
+      renderCurrentFrame(coreAudio.currentTime);
+      highlightActiveLyricRow(coreAudio.currentTime);
+    }
   });
-  window.addEventListener('mouseup', () => { isDragging = false; });
 
   function updateProgressUI(t) {
     const dur = (coreAudio && coreAudio.duration && !isNaN(coreAudio.duration) && coreAudio.duration > 0)
