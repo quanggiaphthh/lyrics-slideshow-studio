@@ -250,6 +250,7 @@ window.LYRIC_TEMPLATES = {
           text: w.text,
           start: w.start,
           end: w.end || (w.start + 0.6),
+          sustain: w.sustain !== undefined ? w.sustain : ((w.end || (w.start + 0.6)) - w.start),
           isUpperKey,
           boxHighlight,
           colorAccent,
@@ -309,43 +310,44 @@ window.LYRIC_TEMPLATES = {
       });
       if (currentGroup) highlightGroups.push(currentGroup);
 
-      // --- 1. DRAW UNIFIED DUSTY ROSE HIGHLIGHTER BOXES ---
+      // --- 1. DRAW LIQUID RIBBON HIGHLIGHTER BOXES (AUTHENTIC MARKER STROKE) ---
       highlightGroups.forEach(grp => {
         if (time >= grp.startTime) {
           const grpAge = time - grp.startTime;
-          const boxDur = 0.40; // Silky 400ms wipe
+          const boxDur = 0.38; // Silky 380ms expansion wipe
           const boxProg = Math.min(1, Math.max(0, grpAge / boxDur));
-          const boxEase = 1 - Math.pow(1 - boxProg, 3.5);
+          const boxEase = 1 - Math.pow(1 - boxProg, 4); // Quartic ease-out
 
           const fullW = grp.endX - grp.startX;
           const curW = fullW * boxEase;
 
-          const floatOffset = (1 - boxEase) * 5;
+          // Height bounce: starts slightly thicker (1.06) and settles to 1.0
+          const hBounce = 1.0 + (1 - boxEase) * 0.06;
+          const floatOffset = (1 - boxEase) * 9;
+          const boxH = (grp.fontSize + grp.padY * 2) * hBounce;
           const boxY = y - grp.fontSize * 0.86 + floatOffset;
-          const boxH = grp.fontSize + grp.padY * 2;
 
           const isVoicing = time >= grp.startTime && time <= grp.endTime;
 
           ctx.save();
-          const boxAlpha = Math.min(1, grpAge / 0.16);
+          const boxAlpha = Math.min(1, grpAge / 0.14);
           ctx.globalAlpha = ctx.globalAlpha * boxAlpha;
 
-          if (isVoicing) {
-            ctx.shadowColor = 'rgba(222, 112, 139, 0.85)';
-            ctx.shadowBlur = 20;
-          } else {
-            ctx.shadowColor = 'rgba(222, 112, 139, 0.35)';
-            ctx.shadowBlur = 10;
-          }
+          // Ambient bloom shadow
+          ctx.shadowColor = isVoicing ? 'rgba(222, 112, 139, 0.85)' : 'rgba(222, 112, 139, 0.40)';
+          ctx.shadowBlur = isVoicing ? 24 : 12;
 
+          // Draw skewed ribbon polygon (tape cut angle ~ -5.5 degrees)
+          const skewOffset = 4.5;
           ctx.fillStyle = '#de708b'; // Authentic Dusty Rose
-          if (ctx.roundRect) {
-            ctx.beginPath();
-            ctx.roundRect(grp.startX, boxY, curW, boxH, 4);
-            ctx.fill();
-          } else {
-            ctx.fillRect(grp.startX, boxY, curW, boxH);
-          }
+          ctx.beginPath();
+          ctx.moveTo(grp.startX + skewOffset, boxY);
+          ctx.lineTo(grp.startX + curW + skewOffset, boxY);
+          ctx.lineTo(grp.startX + curW - skewOffset, boxY + boxH);
+          ctx.lineTo(grp.startX - skewOffset, boxY + boxH);
+          ctx.closePath();
+          ctx.fill();
+
           ctx.restore();
         }
       });
@@ -355,22 +357,44 @@ window.LYRIC_TEMPLATES = {
         if (time >= mw.start) {
           const wAge = time - mw.start;
           const isVoicing = time >= mw.start && time <= mw.end;
+          const sustainDur = mw.sustain;
 
-          // Ultra-smooth quintic deceleration entrance (380ms duration)
-          const enterDur = 0.38;
+          // Phase 1: Silky quartic deceleration entrance (440ms duration)
+          const enterDur = 0.44;
           const normProg = Math.min(1, Math.max(0, wAge / enterDur));
-          const enterEase = 1 - Math.pow(1 - normProg, 3.5);
+          const enterEase = 1 - Math.pow(1 - normProg, 4);
 
-          // Silky Hermite smoothstep alpha ramp (220ms duration)
-          const alphaProg = Math.min(1, Math.max(0, wAge / 0.22));
+          // Hermite cubic smoothstep alpha ramp (200ms duration)
+          const alphaProg = Math.min(1, Math.max(0, wAge / 0.20));
           const alphaFade = alphaProg * alphaProg * (3 - 2 * alphaProg);
 
-          // Gentle 5px float-up
-          const floatY = (1 - enterEase) * 5;
-          const totalY = floatY;
+          // Gentle 14px float-up glide with natural deceleration
+          const floatY = (1 - enterEase) * 14;
 
-          // Subtle micro-scale bloom on entrance (0.97 -> 1.0)
-          const wordScale = 0.97 + 0.03 * enterEase;
+          // Subtle micro-scale bloom (0.94 -> 1.0 with soft spring overshoot on uppercase keywords)
+          let wordScale;
+          if (mw.isUpperKey) {
+            wordScale = 0.93 + 0.10 * enterEase - 0.03 * Math.pow(enterEase, 2);
+          } else {
+            wordScale = 0.95 + 0.05 * enterEase;
+          }
+
+          // Phase 2: Active Vocal Sustain & Vibrato Breathing (Độ ngân của bài hát)
+          let vocalDriftY = 0;
+          let vocalGlowPulse = 0;
+          if (isVoicing) {
+            const vocalAge = time - mw.start;
+            if (sustainDur >= 1.0) {
+              // Gentle breathing vibrato wave:
+              vocalDriftY = Math.sin(vocalAge * 4.8) * 1.5;
+              vocalGlowPulse = 0.5 + Math.sin(vocalAge * 4.8) * 0.4;
+            } else {
+              vocalDriftY = Math.sin(vocalAge * 4.0) * 0.8;
+              vocalGlowPulse = 0.3;
+            }
+          }
+
+          const totalY = floatY + vocalDriftY;
 
           ctx.save();
           ctx.globalAlpha = ctx.globalAlpha * alphaFade;
@@ -393,22 +417,22 @@ window.LYRIC_TEMPLATES = {
           } else if (mw.colorAccent) {
             // Text drawn directly in accent Dusty Rose color (matching reference video 'nên ANH')
             ctx.fillStyle = '#de708b';
-            ctx.shadowColor = isVoicing ? 'rgba(222, 112, 139, 0.85)' : 'rgba(0, 0, 0, 0.70)';
-            ctx.shadowBlur = isVoicing ? 16 : 8;
+            ctx.shadowColor = isVoicing ? 'rgba(222, 112, 139, 0.95)' : 'rgba(0, 0, 0, 0.70)';
+            ctx.shadowBlur = isVoicing ? (18 + vocalGlowPulse * 10) : 8;
             ctx.shadowOffsetX = 0;
             ctx.shadowOffsetY = 1.2;
           } else if (mw.isUpperKey) {
             // Uppercase key words (e.g. RÕ HƠN, LẤP, LÁNH, MÃI MÃI, SỔ LỒNG)
             ctx.fillStyle = '#ffffff';
-            ctx.shadowColor = isVoicing ? 'rgba(255, 255, 255, 0.90)' : 'rgba(0, 0, 0, 0.90)';
-            ctx.shadowBlur = isVoicing ? 18 : 10;
+            ctx.shadowColor = isVoicing ? 'rgba(255, 255, 255, 0.95)' : 'rgba(0, 0, 0, 0.90)';
+            ctx.shadowBlur = isVoicing ? (20 + vocalGlowPulse * 10) : 10;
             ctx.shadowOffsetX = 0;
             ctx.shadowOffsetY = 1.5;
           } else {
             // Regular lyric word
             ctx.fillStyle = '#ffffff';
-            ctx.shadowColor = isVoicing ? 'rgba(255, 255, 255, 0.75)' : 'rgba(0, 0, 0, 0.85)';
-            ctx.shadowBlur = isVoicing ? 14 : 9;
+            ctx.shadowColor = isVoicing ? 'rgba(255, 255, 255, 0.85)' : 'rgba(0, 0, 0, 0.85)';
+            ctx.shadowBlur = isVoicing ? (16 + vocalGlowPulse * 6) : 9;
             ctx.shadowOffsetX = 0;
             ctx.shadowOffsetY = 1.2;
           }

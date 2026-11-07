@@ -1818,290 +1818,309 @@
     ]
   },
   {
-    "sec": "Đoạn Kết 1",
-    "phrase": "dòng nhớ trong tim",
+    "sec": "Chuyển đoạn (rit.)",
+    "phrase": "Dòng nhớ trong tim",
     "words": [
       {
-        "w": "dòng",
-        "start": 283.04,
-        "end": 284.8,
-        "note": "Vào vọng cổ trầm ấm"
+        "w": "Dòng",
+        "start": 284.5,
+        "end": 285.0,
+        "sustain": "0.5s",
+        "note": "Bắt đầu chuyển đoạn chậm dần (rit.)"
       },
       {
         "w": "nhớ",
-        "start": 284.8,
-        "end": 285.6,
-        "note": "Luyến nốt"
+        "start": 285.0,
+        "end": 285.5,
+        "sustain": "0.5s",
+        "note": "Nhả chữ vừa"
       },
       {
         "w": "trong",
-        "start": 285.6,
-        "end": 286.2,
-        "note": "Trầm"
+        "start": 285.5,
+        "end": 286.0,
+        "sustain": "0.5s",
+        "note": "Lướt nhẹ"
       },
       {
         "w": "tim",
-        "start": 286.2,
-        "end": 287.72,
+        "start": 286.0,
+        "end": 287.5,
+        "sustain": "1.5s",
         "note": "Ngân sâu lắng"
       }
     ]
   },
   {
-    "sec": "Đoạn Kết 1",
-    "phrase": "LÀM SAO CHIA CẮT",
+    "sec": "Nhấn cao trào",
+    "phrase": "LÀM SAO CHIA CÁCH",
     "words": [
       {
         "w": "LÀM",
-        "start": 287.72,
-        "end": 289.0,
-        "note": "Nhấn (Box highlight)"
+        "start": 288.0,
+        "end": 288.5,
+        "sustain": "0.5s",
+        "note": "Nhấn âm"
       },
       {
         "w": "SAO",
-        "start": 289.0,
-        "end": 290.0,
-        "note": "Kéo (Box highlight)"
+        "start": 288.5,
+        "end": 289.0,
+        "sustain": "0.5s",
+        "note": "Giữ nốt"
       },
       {
         "w": "CHIA",
-        "start": 290.0,
-        "end": 291.2,
-        "note": "Nâng giọng (Box highlight)"
+        "start": 289.0,
+        "end": 289.5,
+        "sustain": "0.5s",
+        "note": "Lên nhẹ"
       },
       {
-        "w": "CẮT",
-        "start": 291.2,
-        "end": 293.0,
-        "note": "Ngắt nghẹn (Box highlight)"
+        "w": "CÁCH",
+        "start": 289.5,
+        "end": 290.8,
+        "sustain": "1.3s",
+        "note": "Ngân dứt vế"
       }
     ]
   },
   {
-    "sec": "Đoạn Kết 2",
-    "phrase": "người thương...",
+    "sec": "Tâm sự",
+    "phrase": "Người thương CÓ HAY...",
     "words": [
       {
-        "w": "người",
-        "start": 294.0,
-        "end": 295.6,
-        "note": "Gọi người xưa"
+        "w": "Người",
+        "start": 291.0,
+        "end": 291.5,
+        "sustain": "0.5s",
+        "note": "Hát nấc tâm trạng"
       },
       {
-        "w": "thương...",
-        "start": 295.6,
-        "end": 298.24,
-        "note": "Ngân dài thổn thức"
-      }
-    ]
-  },
-  {
-    "sec": "Đoạn Kết 2",
-    "phrase": "CÓ HAY...",
-    "words": [
+        "w": "thương",
+        "start": 291.5,
+        "end": 292.0,
+        "sustain": "0.5s",
+        "note": "Vuốt nốt"
+      },
       {
         "w": "CÓ",
-        "start": 298.5,
-        "end": 300.2,
-        "note": "Chất chứa (Box highlight)"
+        "start": 292.0,
+        "end": 292.5,
+        "sustain": "0.5s",
+        "note": "Nhả nhanh"
       },
       {
         "w": "HAY...",
-        "start": 300.2,
-        "end": 304.88,
-        "note": "Ngân dài miên man (Box highlight)"
+        "start": 292.5,
+        "end": 294.2,
+        "sustain": "1.7s",
+        "note": "Ngân rung nhẹ"
       }
     ]
   },
   {
-    "sec": "Đoạn Kết 3",
-    "phrase": "đêm dài mình anh",
+    "sec": "Khắc khoải",
+    "phrase": "Đêm dài Mình anh THAO THỨC",
     "words": [
       {
-        "w": "đêm",
-        "start": 308.0,
-        "end": 309.72,
-        "note": "Đêm vắng"
+        "w": "Đêm",
+        "start": 295.0,
+        "end": 296.0,
+        "sustain": "1.0s",
+        "note": "Xuống thấp, nhấn mạnh"
       },
       {
         "w": "dài",
-        "start": 309.72,
-        "end": 310.8,
-        "note": "Kéo"
+        "start": 296.0,
+        "end": 297.6,
+        "sustain": "1.6s",
+        "note": "Ngân trầm kéo dài"
       },
       {
-        "w": "mình",
-        "start": 310.8,
-        "end": 312.46,
-        "note": "Lẻ loi"
+        "w": "Mình",
+        "start": 298.0,
+        "end": 298.6,
+        "sustain": "0.6s",
+        "note": "Nhịp dằn"
       },
       {
         "w": "anh",
-        "start": 312.46,
-        "end": 313.42,
-        "note": "Color accent"
-      }
-    ]
-  },
-  {
-    "sec": "Đoạn Kết 3",
-    "phrase": "THAO THỨC,",
-    "words": [
-      {
-        "w": "THAO",
-        "start": 313.42,
-        "end": 314.75,
-        "note": "Trằn trọc (Box highlight)"
+        "start": 298.6,
+        "end": 299.2,
+        "sustain": "0.6s",
+        "note": "Giữ âm"
       },
       {
-        "w": "THỨC,",
-        "start": 314.75,
-        "end": 318.18,
-        "note": "Ngân kéo dài (Box highlight)"
+        "w": "THAO",
+        "start": 299.2,
+        "end": 299.8,
+        "sustain": "0.6s",
+        "note": "Chuyển nốt"
+      },
+      {
+        "w": "THỨC",
+        "start": 299.8,
+        "end": 301.4,
+        "sustain": "1.6s",
+        "note": "Ngân ngắt nhịp"
       }
     ]
   },
   {
-    "sec": "Đoạn Kết 3",
-    "phrase": "em giờ biết lòng buồn vui",
+    "sec": "Tâm trạng",
+    "phrase": "Em giờ Biết lòng BUỒN VUI",
     "words": [
       {
-        "w": "em",
-        "start": 318.5,
-        "end": 319.72,
-        "note": "Color accent"
+        "w": "Em",
+        "start": 302.0,
+        "end": 303.0,
+        "sustain": "1.0s",
+        "note": "Nhấn tiếng kêu gọi"
       },
       {
         "w": "giờ",
-        "start": 319.72,
-        "end": 320.2,
-        "note": "Lướt"
+        "start": 303.0,
+        "end": 304.6,
+        "sustain": "1.6s",
+        "note": "Ngân nhẹ"
       },
       {
-        "w": "biết",
-        "start": 320.2,
-        "end": 320.8,
-        "note": "Nối"
+        "w": "Biết",
+        "start": 305.0,
+        "end": 305.6,
+        "sustain": "0.6s",
+        "note": "Lấy nhịp"
       },
       {
         "w": "lòng",
-        "start": 320.8,
-        "end": 321.45,
-        "note": "Trầm"
+        "start": 305.6,
+        "end": 306.2,
+        "sustain": "0.6s",
+        "note": "Hạ nốt"
       },
       {
-        "w": "buồn",
-        "start": 321.45,
-        "end": 322.2,
-        "note": "Lắng"
+        "w": "BUỒN",
+        "start": 306.2,
+        "end": 306.8,
+        "sustain": "0.6s",
+        "note": "Nén cảm xúc"
       },
       {
-        "w": "vui",
-        "start": 322.2,
-        "end": 323.8,
-        "note": "Ngân nhẹ"
+        "w": "VUI",
+        "start": 306.8,
+        "end": 308.5,
+        "sustain": "1.7s",
+        "note": "Ngân luyến buồn"
       }
     ]
   },
   {
-    "sec": "Đoạn Kết 4",
-    "phrase": "em về làm dâu",
+    "sec": "Xót xa",
+    "phrase": "Em về Làm dâu BÊN ẤY...",
     "words": [
       {
-        "w": "em",
-        "start": 324.0,
-        "end": 325.2,
-        "note": "Color accent"
+        "w": "Em",
+        "start": 309.0,
+        "end": 310.0,
+        "sustain": "1.0s",
+        "note": "Nhắc lại tên"
       },
       {
         "w": "về",
-        "start": 325.2,
-        "end": 326.0,
-        "note": "Lướt"
+        "start": 310.0,
+        "end": 311.4,
+        "sustain": "1.4s",
+        "note": "Ngân buông thõng"
       },
       {
-        "w": "làm",
-        "start": 326.0,
-        "end": 327.2,
-        "note": "Chùng nốt"
+        "w": "Làm",
+        "start": 312.0,
+        "end": 312.6,
+        "sustain": "0.6s",
+        "note": "Nhịp chậm"
       },
       {
         "w": "dâu",
-        "start": 327.2,
-        "end": 328.5,
-        "note": "Rơi"
-      }
-    ]
-  },
-  {
-    "sec": "Đoạn Kết 4",
-    "phrase": "BÊN ẤY...",
-    "words": [
+        "start": 312.6,
+        "end": 313.2,
+        "sustain": "0.6s",
+        "note": "Tròn âm"
+      },
       {
         "w": "BÊN",
-        "start": 328.5,
-        "end": 331.0,
-        "note": "Bến người ta (Box highlight)"
+        "start": 313.2,
+        "end": 313.8,
+        "sustain": "0.6s",
+        "note": "Lướt"
       },
       {
         "w": "ẤY...",
-        "start": 331.0,
-        "end": 336.56,
-        "note": "Ngân dài trĩu nặng (Box highlight)"
+        "start": 313.8,
+        "end": 315.6,
+        "sustain": "1.8s",
+        "note": "Ngân xa dần"
       }
     ]
   },
   {
-    "sec": "Đoạn Kết 5 (Outro)",
-    "phrase": "bên này...",
+    "sec": "Kết bài da diết",
+    "phrase": "Bên này... VẪN HOÀI... CHỜ... MONG...",
     "words": [
       {
-        "w": "bên",
-        "start": 337.5,
-        "end": 338.24,
-        "note": "Bến quê nhà"
+        "w": "Bên",
+        "start": 316.2,
+        "end": 317.0,
+        "sustain": "0.8s",
+        "note": "Bắt đầu câu kết bài"
       },
       {
         "w": "này...",
-        "start": 338.24,
-        "end": 338.9,
-        "note": "Lặng"
-      }
-    ]
-  },
-  {
-    "sec": "Đoạn Kết 5 (Outro)",
-    "phrase": "vẫn hoài",
-    "words": [
-      {
-        "w": "vẫn",
-        "start": 338.9,
-        "end": 339.2,
-        "note": "Thủy chung"
+        "start": 317.0,
+        "end": 319.6,
+        "sustain": "2.6s",
+        "note": "Ngân dài trầm buồn"
       },
       {
-        "w": "hoài",
-        "start": 339.2,
-        "end": 339.78,
-        "note": "Ngân nối"
-      }
-    ]
-  },
-  {
-    "sec": "Đoạn Kết 5 (Outro)",
-    "phrase": "CHỜ MONG...",
-    "words": [
+        "w": "VẪN",
+        "start": 320.0,
+        "end": 320.6,
+        "sustain": "0.6s",
+        "note": "Nhấn dấu ngã"
+      },
       {
-        "w": "CHỜ",
-        "start": 339.78,
-        "end": 349.04,
-        "note": "Ngân dài 9.26s kỳ vĩ (Box highlight)"
+        "w": "HOÀI...",
+        "start": 320.6,
+        "end": 323.8,
+        "sustain": "3.2s",
+        "note": "Ngân kéo dài da diết"
+      },
+      {
+        "w": "CHỜ...",
+        "start": 324.6,
+        "end": 327.4,
+        "sustain": "2.8s",
+        "note": "Ngân rung, giảm dần âm lượng"
       },
       {
         "w": "MONG...",
-        "start": 349.04,
-        "end": 351.5,
-        "note": "Khép bài hát trong tiếng sóng nước (Box highlight)"
+        "start": 328.0,
+        "end": 330.8,
+        "sustain": "2.8s",
+        "note": "Tiếng hát dứt hẳn, tan vào nhạc"
+      }
+    ]
+  },
+  {
+    "sec": "Outro Solo",
+    "phrase": "(Nhạc kết thúc)",
+    "words": [
+      {
+        "w": "(Đàn bầu solo)",
+        "start": 330.8,
+        "end": 353.2,
+        "sustain": "22.4s",
+        "note": "Đàn bầu solo & fade out kết bài"
       }
     ]
   }

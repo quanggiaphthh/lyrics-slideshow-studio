@@ -35,6 +35,21 @@ class LyricEngine {
 
     // Easing helper
     this.easeSnappy = this.cubicBezier(0.16, 1, 0.3, 1);
+
+    // 35mm Cinematic Film Grain Texture Generator (Pre-rendered offscreen pattern)
+    this.noiseCanvas = document.createElement('canvas');
+    this.noiseCanvas.width = 128;
+    this.noiseCanvas.height = 128;
+    const nCtx = this.noiseCanvas.getContext('2d');
+    const nData = nCtx.createImageData(128, 128);
+    for (let i = 0; i < nData.data.length; i += 4) {
+      const val = (Math.random() * 255) | 0;
+      nData.data[i] = val;
+      nData.data[i + 1] = val;
+      nData.data[i + 2] = val;
+      nData.data[i + 3] = (Math.random() * 24) | 0; // ~9% subtle organic opacity
+    }
+    nCtx.putImageData(nData, 0, 0);
   }
 
   updateDimensions(ratio) {
@@ -304,8 +319,8 @@ class LyricEngine {
 
     if (!this.lyricsData || this.lyricsData.length === 0) return;
 
-    // Search active stanza with extended 0.70s exit window for buttery smooth transitions
-    const exitThreshold = 0.70;
+    // Search active stanza with extended 0.85s exit window for buttery smooth transitions
+    const exitThreshold = 0.85;
     let activeStanza = null;
     for (let i = 0; i < this.lyricsData.length; i++) {
       const stanza = this.lyricsData[i];
@@ -319,40 +334,30 @@ class LyricEngine {
 
     const stanzaDuration = activeStanza.end - activeStanza.start;
 
-    // Smooth Hermite cubic exit transition during the exit window
-    let exitAlpha = 1.0;
-    let exitOffsetY = 0;
-    if (time > activeStanza.end) {
-      const exitProgress = Math.min(1, Math.max(0, (time - activeStanza.end) / exitThreshold));
-      // Hermite smoothstep curve:
-      const exitEase = exitProgress * exitProgress * (3 - 2 * exitProgress);
-      exitAlpha = 1 - exitEase;
-      exitOffsetY = -exitEase * 18;
-    }
-
-    ctx.save();
-    ctx.globalAlpha = exitAlpha;
-
     const isVertical = this.aspectRatio === '9-16';
     const lines = activeStanza.lines || [{ text: activeStanza.text || '', start: activeStanza.start, end: activeStanza.end }];
     const layout = activeStanza.layout || 'left';
+
+    // Organic whole-stanza micro-drift (keeps words breathing naturally during vocal sustain)
+    const stanzaDriftY = Math.sin((time - activeStanza.start) * 1.5) * 1.6;
 
     // Dynamic baseY and lineSpacing based on layout and line count
     let baseY;
     let lineSpacing;
     if (layout === 'lower') {
-      baseY = isVertical ? H * 0.74 + exitOffsetY : H * 0.70 + exitOffsetY;
+      baseY = isVertical ? H * 0.74 : H * 0.70;
       lineSpacing = isVertical ? H * 0.048 : Math.round(H * 0.055);
     } else if (lines.length >= 5) {
-      baseY = isVertical ? H * 0.44 + exitOffsetY : H * 0.28 + exitOffsetY;
+      baseY = isVertical ? H * 0.44 : H * 0.28;
       lineSpacing = isVertical ? H * 0.052 : Math.round(H * 0.058); // ~42px on 720p
     } else if (lines.length >= 3) {
-      baseY = isVertical ? H * 0.48 + exitOffsetY : H * 0.34 + exitOffsetY;
+      baseY = isVertical ? H * 0.48 : H * 0.34;
       lineSpacing = isVertical ? H * 0.058 : Math.round(H * 0.065); // ~47px on 720p
     } else {
-      baseY = isVertical ? H * 0.54 + exitOffsetY : H * 0.40 + exitOffsetY;
+      baseY = isVertical ? H * 0.54 : H * 0.40;
       lineSpacing = isVertical ? H * 0.065 : Math.round(H * 0.075);
     }
+    baseY += stanzaDriftY;
 
     // Dynamic baseX and indentStep based on layout archetype
     let baseX;
@@ -376,6 +381,22 @@ class LyricEngine {
       // If line hasn't started yet, skip
       if (time < lineStart) return;
 
+      // Cascade Staggered Exit (dòng trên bay trước, dòng dưới bay sau)
+      let lineExitAlpha = 1.0;
+      let lineExitOffsetY = 0;
+      if (time > activeStanza.end) {
+        const lineExitDelay = idx * 0.08;
+        const lineExitStart = activeStanza.end + lineExitDelay;
+        if (time > lineExitStart) {
+          const lineExitProg = Math.min(1, Math.max(0, (time - lineExitStart) / 0.45));
+          const exitEase = lineExitProg * lineExitProg * (3 - 2 * lineExitProg); // Hermite smoothstep
+          lineExitAlpha = Math.max(0, 1 - exitEase);
+          lineExitOffsetY = -exitEase * 14;
+        }
+      }
+
+      if (lineExitAlpha <= 0.001) return;
+
       const lineDur = Math.max(0.3, lineEnd - lineStart);
       const lineProgress = Math.max(0, Math.min(1, (time - lineStart) / lineDur));
       const isCurrent = time >= lineStart && time <= lineEnd;
@@ -383,20 +404,33 @@ class LyricEngine {
       // Staircase indent offset
       const indentOffset = (line.indent !== undefined ? line.indent : idx) * indentStep;
       const posX = baseX + indentOffset;
-      const posY = baseY + (idx * lineSpacing);
+      const posY = baseY + (idx * lineSpacing) + lineExitOffsetY;
 
       // Completed lines dim slightly to focus on the active singing line
-      const lineFocusAlpha = isCurrent ? 1.0 : 0.82;
+      const lineFocusAlpha = isCurrent ? 1.0 : 0.84;
 
       ctx.save();
-      ctx.globalAlpha = exitAlpha * lineFocusAlpha;
+      ctx.globalAlpha = lineExitAlpha * lineFocusAlpha;
 
       // Delegate line styling and word-by-word reveal to template definition with layout
       this.currentTemplate.drawLyricLine(ctx, line, posX, posY, W, H, time, lineProgress, isCurrent, layout);
 
       ctx.restore();
     });
+  }
 
+  // === 35MM CINEMATIC FILM GRAIN TEXTURE ===
+  drawCinematicGrain(W, H) {
+    if (!this.noiseCanvas) return;
+    const ctx = this.ctx;
+    ctx.save();
+    ctx.globalCompositeOperation = 'overlay';
+    ctx.globalAlpha = 0.14; // soft and subtle
+    const pat = ctx.createPattern(this.noiseCanvas, 'repeat');
+    ctx.fillStyle = pat;
+    // Jitter grain position each frame for authentic flickering film grain
+    ctx.translate(Math.random() * 128, Math.random() * 128);
+    ctx.fillRect(-128, -128, W + 256, H + 256);
     ctx.restore();
   }
 
@@ -409,7 +443,7 @@ class LyricEngine {
 
     // Active stanza lookup
     let activeStanza = null;
-    const exitThreshold = 0.70;
+    const exitThreshold = 0.85;
     if (this.lyricsData) {
       for (let i = 0; i < this.lyricsData.length; i++) {
         const s = this.lyricsData[i];
@@ -437,6 +471,9 @@ class LyricEngine {
 
     // 6. Draw Synchronized Kinetic Lyrics (Word-by-Word)
     this.drawLyrics(time);
+
+    // 7. Subtle 35mm Cinematic Film Grain Layer
+    this.drawCinematicGrain(W, H);
   }
 
   cubicBezier(p0, p1, p2, p3) {
