@@ -1,7 +1,7 @@
 /**
- * LYRICSTUDIO PRO - 60FPS VIDEO EXPORT RECORDER
+ * LYRICSTUDIO PRO - 60FPS VIDEO EXPORT RECORDER (G2 ENHANCED)
  * Captures Canvas 60fps stream + Web Audio destination and downloads MP4/WebM
- * Synchronized with dedicated 60fps render loop to prevent browser frame stalls.
+ * Features robust State Machine, Strict Cancellation Semantics, and Dynamic Naming.
  */
 
 class VideoExporter {
@@ -10,7 +10,12 @@ class VideoExporter {
     this.audio = audioElement;
     this.mediaRecorder = null;
     this.recordedChunks = [];
-    this.isRecording = false;
+    
+    // State machine: idle | preparing | recording | finalizing | completed | cancelled | failed
+    this.exportState = 'idle';
+    // Intent: null | finish_full | save_partial | cancel
+    this.completionIntent = null;
+
     this.renderAnimId = null;
     this.recordDestination = null;
     this.onProgress = null;
@@ -18,9 +23,40 @@ class VideoExporter {
     this.onError = null;
   }
 
+  get isRecording() {
+    return this.exportState === 'recording' || this.exportState === 'preparing';
+  }
+
+  generateFilename(ext) {
+    let rawTitle = 'lyric_video';
+    try {
+      if (typeof window.getCurrentProjectState === 'function') {
+        const state = window.getCurrentProjectState();
+        rawTitle = state.audioTitle || state.audioName || rawTitle;
+      } else if (window.DEMO_PRESET_GANH_HAO?.audioTitle) {
+        rawTitle = window.DEMO_PRESET_GANH_HAO.audioTitle;
+      }
+    } catch (e) {}
+
+    // Sanitize Unicode and Windows reserved characters: < > : " / \ | ? *
+    let safeTitle = String(rawTitle)
+      .normalize('NFC')
+      .replace(/[<>:"/\\|?*\x00-\x1F]/g, '_')
+      .replace(/\s+/g, '_')
+      .trim();
+
+    if (!safeTitle || safeTitle === '.') safeTitle = 'lyric_video';
+    return `${safeTitle.slice(0, 80)}_60fps_${Date.now()}.${ext}`;
+  }
+
   async startExport(options = {}) {
-    if (this.isRecording) return;
-    this.isRecording = true;
+    if (this.exportState !== 'idle' && this.exportState !== 'completed' && this.exportState !== 'cancelled' && this.exportState !== 'failed') {
+      console.warn('Export already in progress in state:', this.exportState);
+      return;
+    }
+
+    this.exportState = 'preparing';
+    this.completionIntent = null;
     this.recordedChunks = [];
 
     const canvas = this.engine.canvas;
@@ -45,17 +81,15 @@ class VideoExporter {
 
       // 3. Connect audio stream
       let audioTracks = [];
-      // Try direct captureStream from HTMLAudioElement first
       if (typeof this.audio.captureStream === 'function') {
         try {
           const stream = this.audio.captureStream();
           audioTracks = stream.getAudioTracks();
         } catch (e) {
-          console.warn('HTMLAudioElement.captureStream failed, fallback to Web Audio:', e);
+          console.warn('HTMLAudioElement.captureStream fallback to Web Audio:', e);
         }
       }
 
-      // Fallback to Web Audio destination node
       if (audioTracks.length === 0 && this.engine.audioCtx) {
         try {
           if (!this.recordDestination) {
@@ -74,6 +108,8 @@ class VideoExporter {
         for (const track of audioTracks) {
           canvasStream.addTrack(track);
         }
+      } else {
+        console.warn('[EXP-03] Warning: No audio tracks available for export stream!');
       }
 
       // 4. Select best supported MIME type
@@ -95,6 +131,8 @@ class VideoExporter {
       }
       if (!selectedMime) selectedMime = 'video/webm';
 
+      console.log(`[Export Diagnostics] Target MIME: ${selectedMime}, Duration: ${duration.toFixed(2)}s, AudioTracks: ${audioTracks.length}, VideoTracks: ${canvasStream.getVideoTracks().length}`);
+
       // 5. Initialize MediaRecorder
       const recOptions = {
         mimeType: selectedMime,
@@ -115,30 +153,50 @@ class VideoExporter {
       };
 
       this.mediaRecorder.onstop = () => {
+        const intent = this.completionIntent;
         this.cleanup();
-        const blob = new Blob(this.recordedChunks, { type: selectedMime });
-        const ext = selectedMime.includes('mp4') ? 'mp4' : 'webm';
-        const rawTitle = (window.DEMO_PRESET_GANH_HAO?.audioTitle || 'dem_ganh_hao_lyric_video');
-        const safeTitle = rawTitle.replace(/[^\w\s-]/gi, '').trim().replace(/\s+/g, '_');
-        const filename = `${safeTitle}_60fps_${Date.now()}.${ext}`;
 
-        // Trigger automatic file download
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(() => {
-          document.body.removeChild(a);
-          URL.revokeObjectURL(url);
-        }, 3000);
+        // STRICT CANCELLATION SEMANTICS: Do not download or fire complete if cancelled or failed
+        if (intent === 'cancel' || this.exportState === 'cancelled' || this.exportState === 'failed') {
+          console.log('[Export] Cancelled cleanly - discarding recorded chunks, no file downloaded.');
+          if (this.exportState !== 'failed') this.exportState = 'cancelled';
+          this.recordedChunks = [];
+          return;
+        }
 
-        if (this.onComplete) this.onComplete(blob, filename);
+        if (intent === 'finish_full' || intent === 'save_partial') {
+          this.exportState = 'completed';
+          if (!this.recordedChunks.length) {
+            console.error('[Export] Error: No chunks recorded on completion!');
+            if (this.onError) this.onError(new Error('Không nhận được dữ liệu video nào từ trình duyệt.'));
+            return;
+          }
+
+          const blob = new Blob(this.recordedChunks, { type: selectedMime });
+          const ext = selectedMime.includes('mp4') ? 'mp4' : 'webm';
+          const filename = this.generateFilename(ext);
+
+          console.log(`[Export Success] Download ready: ${filename} (${(blob.size / (1024*1024)).toFixed(2)} MB, Chunks: ${this.recordedChunks.length})`);
+
+          // Trigger automatic file download
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          setTimeout(() => {
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+          }, 3000);
+
+          if (this.onComplete) this.onComplete(blob, filename);
+        }
       };
 
       this.mediaRecorder.onerror = (e) => {
         console.error('MediaRecorder error event:', e);
+        this.exportState = 'failed';
         this.cleanup();
         if (this.onError) this.onError(e.error || e);
       };
@@ -153,20 +211,26 @@ class VideoExporter {
 
       // 7. Start recording in slices of 200ms
       this.mediaRecorder.start(200);
+      this.exportState = 'recording';
 
       // 8. Start audio playback
       try {
         await this.audio.play();
       } catch (playErr) {
         console.error('Failed to play audio during export:', playErr);
+        this.completionIntent = 'cancel';
+        this.exportState = 'failed';
         this.cleanup();
+        if (this.mediaRecorder && this.mediaRecorder.state !== 'inactive') {
+          try { this.mediaRecorder.stop(); } catch (e) {}
+        }
         if (this.onError) this.onError(playErr);
         return;
       }
 
-      // 9. Dedicated 60FPS export render loop to feed canvasStream and update UI
+      // 9. Dedicated 60FPS export render loop
       const renderExportLoop = () => {
-        if (!this.isRecording) return;
+        if (this.exportState !== 'recording') return;
 
         const t = this.audio.currentTime;
 
@@ -181,7 +245,7 @@ class VideoExporter {
 
         // Check completion (only check ended after at least 3 seconds of playback)
         if (t >= duration - 0.1 || (t > 3.0 && this.audio.ended)) {
-          this.stopExport();
+          this.stopExport('finish_full');
           return;
         }
 
@@ -192,13 +256,13 @@ class VideoExporter {
 
     } catch (fatalErr) {
       console.error('Fatal export initialization error:', fatalErr);
+      this.exportState = 'failed';
       this.cleanup();
       if (this.onError) this.onError(fatalErr);
     }
   }
 
   cleanup() {
-    this.isRecording = false;
     if (this.renderAnimId) {
       cancelAnimationFrame(this.renderAnimId);
       this.renderAnimId = null;
@@ -210,9 +274,12 @@ class VideoExporter {
     }
   }
 
-  stopExport() {
-    if (!this.isRecording) return;
+  stopExport(intent = 'finish_full') {
+    if (this.exportState !== 'recording' && this.exportState !== 'preparing') return;
+    this.completionIntent = intent;
+    this.exportState = 'finalizing';
     this.cleanup();
+
     if (this.mediaRecorder && this.mediaRecorder.state !== 'inactive') {
       try {
         this.mediaRecorder.stop();
@@ -222,8 +289,15 @@ class VideoExporter {
     }
   }
 
+  savePartialExport() {
+    this.stopExport('save_partial');
+  }
+
   cancelExport() {
+    this.completionIntent = 'cancel';
+    this.exportState = 'cancelled';
     this.cleanup();
+
     if (this.mediaRecorder && this.mediaRecorder.state !== 'inactive') {
       try {
         this.mediaRecorder.stop();

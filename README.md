@@ -119,6 +119,32 @@ Truy cập trình duyệt (ưu tiên Google Chrome, Microsoft Edge hoặc Firefo
 
 ---
 
+## 📖 Tài liệu kỹ thuật & Kiến trúc (Documentation)
+
+- [AGENTS.md](AGENTS.md): Quy chuẩn cho AI agent / kỹ sư tiếp quản dự án.
+- [docs/PROJECT_GOAL.md](docs/PROJECT_GOAL.md): 7 Mục tiêu cốt lõi và tiêu chuẩn hoàn thành (Definition of Done).
+- [docs/MASTER_PLAN.md](docs/MASTER_PLAN.md): Lộ trình nâng cấp từ G0 đến G6, mã định danh task và trạng thái.
+- [docs/PROJECT_MEMORY.md](docs/PROJECT_MEMORY.md): Nhật ký phiên làm việc, mốc commit SHA và lịch sử kiểm thử.
+- [docs/DECISIONS.md](docs/DECISIONS.md): Hồ sơ quyết định kiến trúc (ADRs).
+- [docs/QA_EVIDENCE.md](docs/QA_EVIDENCE.md): Bằng chứng kiểm thử tự động, log ffprobe và chứng thực chất lượng.
+- [assets/PROVENANCE.md](assets/PROVENANCE.md): Nguồn gốc dữ liệu, bản quyền, ca khúc master và checksum SHA-256.
+
+---
+
+## 🧪 Kiểm thử tự động (Automated Verification)
+
+Chạy toàn bộ 7 bộ kiểm thử chuẩn hóa (Canonical Test Suite) bao gồm bảo mật, chuyển đoạn lời, đồng bộ ngân, MediaStore IndexedDB, ffprobe video probe và điều khiển UX:
+
+```bash
+python tests/run_all_tests.py
+```
+
+Kết quả nghiệm thu: 7/7 suites PASS (100% đạt chuẩn Release Gate).
+
+---
+
+---
+
 ## 📜 Giấy phép (License)
 
 Dự án được phát hành theo giấy phép [MIT License](LICENSE).

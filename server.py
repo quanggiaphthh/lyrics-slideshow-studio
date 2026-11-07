@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-LYRICSTUDIO PRO - LOCAL SERVER & STATIC RUNNER
+LYRICSTUDIO PRO - LOCAL SERVER & STATIC RUNNER (SECURED)
 High-performance multithreaded server with full HTTP 206 Byte Range support for audio/video seeking.
+Secured against path traversal, LAN exposure, and directory leaks.
 """
 
 import http.server
@@ -9,12 +10,14 @@ import socketserver
 import os
 import sys
 import urllib.parse
+from pathlib import Path
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
-PORT = 5000
-DIRECTORY = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = Path(__file__).resolve().parent
+HOST = os.environ.get('STUDIO_HOST', '127.0.0.1')
+PORT = int(os.environ.get('STUDIO_PORT', 5000))
 
 class ThreadingHTTPServer(socketserver.ThreadingTCPServer, http.server.HTTPServer):
     daemon_threads = True
@@ -22,13 +25,14 @@ class ThreadingHTTPServer(socketserver.ThreadingTCPServer, http.server.HTTPServe
 
 class StudioHTTPHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, directory=DIRECTORY, **kwargs)
+        super().__init__(*args, directory=str(ROOT_DIR), **kwargs)
 
     def end_headers(self):
-        # Enable CORS and range requests
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Access-Control-Allow-Methods', 'GET, HEAD, POST, OPTIONS')
-        self.send_header('Access-Control-Allow-Headers', '*')
+        origin = self.headers.get('Origin', '')
+        if origin and (origin.startswith('http://localhost') or origin.startswith('http://127.0.0.1')):
+            self.send_header('Access-Control-Allow-Origin', origin)
+            self.send_header('Access-Control-Allow-Methods', 'GET, HEAD, POST, OPTIONS')
+            self.send_header('Access-Control-Allow-Headers', 'Range, Content-Type')
         self.send_header('Accept-Ranges', 'bytes')
         super().end_headers()
 
@@ -48,20 +52,28 @@ class StudioHTTPHandler(http.server.SimpleHTTPRequestHandler):
         if not clean_path or clean_path == '':
             clean_path = 'index.html'
 
-        full_path = os.path.abspath(os.path.join(DIRECTORY, clean_path))
-
-        if not full_path.startswith(DIRECTORY):
+        # Resolve path canonically and verify containment in ROOT_DIR
+        try:
+            target_path = (ROOT_DIR / clean_path).resolve()
+            rel_path = target_path.relative_to(ROOT_DIR)
+        except (ValueError, RuntimeError):
             self.send_error(403, "Forbidden")
             return
 
-        if not os.path.exists(full_path) or os.path.isdir(full_path):
+        # Deny access to hidden files/folders (.git, .env, etc.)
+        if any(part.startswith('.') for part in rel_path.parts):
+            self.send_error(403, "Forbidden")
+            return
+
+        if not target_path.exists() or target_path.is_dir():
             if is_head:
                 super().do_HEAD()
             else:
                 super().do_GET()
             return
 
-        file_size = os.path.getsize(full_path)
+        full_path = str(target_path)
+        file_size = target_path.stat().st_size
         content_type = self.guess_type(full_path)
         range_header = self.headers.get('Range')
 
@@ -134,39 +146,40 @@ class StudioHTTPHandler(http.server.SimpleHTTPRequestHandler):
             return
 
     def guess_type(self, path):
-        if path.endswith('.mp3'):
+        p_str = str(path)
+        if p_str.endswith('.mp3'):
             return 'audio/mpeg'
-        elif path.endswith('.wav'):
+        elif p_str.endswith('.wav'):
             return 'audio/wav'
-        elif path.endswith('.m4a'):
+        elif p_str.endswith('.m4a'):
             return 'audio/mp4'
-        elif path.endswith('.webm'):
+        elif p_str.endswith('.webm'):
             return 'video/webm'
-        elif path.endswith('.mp4'):
+        elif p_str.endswith('.mp4'):
             return 'video/mp4'
-        elif path.endswith('.js'):
+        elif p_str.endswith('.js'):
             return 'application/javascript; charset=utf-8'
-        elif path.endswith('.css'):
+        elif p_str.endswith('.css'):
             return 'text/css; charset=utf-8'
-        elif path.endswith('.html'):
+        elif p_str.endswith('.html'):
             return 'text/html; charset=utf-8'
-        elif path.endswith('.json'):
+        elif p_str.endswith('.json') or p_str.endswith('.lyricproj'):
             return 'application/json; charset=utf-8'
-        return super().guess_type(path)
+        return super().guess_type(p_str)
 
     def log_message(self, format, *args):
-        # Keep terminal log informative but concise
-        if '206' in str(args) or '404' in str(args) or '500' in str(args):
+        # Filter terminal noise, show only informative status codes
+        if any(code in str(args) for code in ['206', '403', '404', '416', '500']):
             super().log_message(format, *args)
 
-def run_server(port=PORT):
+def run_server(port=PORT, host=HOST):
     for p in [port, 5001, 8080, 8000]:
         try:
-            httpd = ThreadingHTTPServer(("", p), StudioHTTPHandler)
+            httpd = ThreadingHTTPServer((host, p), StudioHTTPHandler)
             print("==================================================")
             print(f"  LYRICSTUDIO PRO SERVER RUNNING (HTTP 206 SEEK SUPPORTED)")
-            print(f"  URL: http://localhost:{p}")
-            print(f"  Root: {DIRECTORY}")
+            print(f"  URL: http://{host}:{p}")
+            print(f"  Root: {ROOT_DIR}")
             print("==================================================")
             httpd.serve_forever()
             break

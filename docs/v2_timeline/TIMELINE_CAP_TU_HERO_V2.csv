@@ -1,0 +1,134 @@
+﻿id,line_id,section,start_s,end_s,duration_s,pair,render_text,hero_text,hero,pair_size,lyric_line,time_source,sustain_hint,verification,note
+P001,L01,Mở đầu,4.2,11.1,6.9,Hò ơi,HÒ ƠI,HÒ ƠI,1,2,Hò ơi,EST,Ngân dài (dự kiến),CẦN NGHE QA,Hò/ơi ngân dài; phân biệt onset và reverb cần nghe kiểm
+P002,L02,Mở đầu,18.5,20.15,1.65,Ai xuôi,Ai xuôi,,0,2,Ai xuôi con sáo xổ lồng,EST,Ngân vừa (dự kiến),CẦN NGHE QA,Nguồn lyrics tham chiếu ghi xuôi/xổ; đối chiếu cách phát âm
+P003,L02,Mở đầu,20.15,21.9,1.74,con sáo,con sáo,,0,2,Ai xuôi con sáo xổ lồng,EST,Ngân vừa (dự kiến),CẦN NGHE QA,Nguồn lyrics tham chiếu ghi xuôi/xổ; đối chiếu cách phát âm
+P004,L02,Mở đầu,21.9,25.0,3.1,xổ lồng,XỔ LỒNG,XỔ LỒNG,1,2,Ai xuôi con sáo xổ lồng,EST,Ngân dài (dự kiến),CẦN NGHE QA,Nguồn lyrics tham chiếu ghi xuôi/xổ; đối chiếu cách phát âm
+P005,L03,Mở đầu,29.0,30.82,1.82,Cho em,Cho em,,0,2,Cho em nỡ vội,EST,Ngân vừa (dự kiến),CẦN NGHE QA,
+P006,L03,Mở đầu,30.82,34.1,3.28,nỡ vội,NỠ VỘI,NỠ VỘI,1,2,Cho em nỡ vội,EST,Ngân dài (dự kiến),CẦN NGHE QA,
+P007,L04,Mở đầu,38.2,46.0,7.8,Hò ơi,HÒ ƠI,HÒ ƠI,1,2,Hò ơi,EST,Ngân dài (dự kiến),CẦN NGHE QA,Ngân dài
+P008,L05,Mở đầu,52.0,53.7,1.7,Cho em,Cho em,,0,2,Cho em nỡ vội,EST,Ngân vừa (dự kiến),CẦN NGHE QA,
+P009,L05,Mở đầu,53.7,56.8,3.1,nỡ vội,NỠ VỘI,NỠ VỘI,1,2,Cho em nỡ vội,EST,Ngân dài (dự kiến),CẦN NGHE QA,
+P010,L06,Mở đầu,57.0,59.4,2.4,Lấy chồng,Lấy chồng,,0,2,Lấy chồng bỏ anh,EST,Ngân vừa (dự kiến),CẦN NGHE QA,Cụm cuối có thể ngân
+P011,L06,Mở đầu,59.4,63.8,4.4,bỏ anh,BỎ ANH,BỎ ANH,1,2,Lấy chồng bỏ anh,EST,Ngân dài (dự kiến),CẦN NGHE QA,Cụm cuối có thể ngân
+P012,L07,Đoạn 1,78.5,79.54,1.04,Sáo bay,Sáo bay,,0,2,Sáo bay theo chồng đâu biết là đau lòng anh lắm,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT bỏ 2 âm tiết đầu; bù theo cấu trúc nhạc
+P013,L07,Đoạn 1,79.54,80.62,1.08,theo chồng,theo chồng,,0,2,Sáo bay theo chồng đâu biết là đau lòng anh lắm,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT bỏ 2 âm tiết đầu; bù theo cấu trúc nhạc
+P014,L07,Đoạn 1,80.62,81.93,1.31,đâu biết là,đâu biết là,,0,3,Sáo bay theo chồng đâu biết là đau lòng anh lắm,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT bỏ 2 âm tiết đầu; bù theo cấu trúc nhạc
+P015,L07,Đoạn 1,81.93,83.05,1.11,đau lòng,ĐAU LÒNG,ĐAU LÒNG,1,2,Sáo bay theo chồng đâu biết là đau lòng anh lắm,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT bỏ 2 âm tiết đầu; bù theo cấu trúc nhạc
+P016,L07,Đoạn 1,83.05,84.73,1.68,anh lắm,anh lắm,,0,2,Sáo bay theo chồng đâu biết là đau lòng anh lắm,MIX,Ngân vừa (dự kiến),CẦN NGHE QA,SRT bỏ 2 âm tiết đầu; bù theo cấu trúc nhạc
+P017,L08,Đoạn 1,86.47,87.59,1.12,Xót xa,Xót xa,,0,2,Xót xa lặng thầm nhìn theo bước em qua cầu,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P018,L08,Đoạn 1,87.59,88.8,1.21,lặng thầm,LẶNG THẦM,LẶNG THẦM,1,2,Xót xa lặng thầm nhìn theo bước em qua cầu,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P019,L08,Đoạn 1,88.8,89.77,0.96,nhìn theo,nhìn theo,,0,2,Xót xa lặng thầm nhìn theo bước em qua cầu,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P020,L08,Đoạn 1,89.77,91.05,1.28,bước em,bước em,,0,2,Xót xa lặng thầm nhìn theo bước em qua cầu,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P021,L08,Đoạn 1,91.05,92.69,1.64,qua cầu,qua cầu,,0,2,Xót xa lặng thầm nhìn theo bước em qua cầu,SRT,Ngân vừa (dự kiến),CẦN NGHE QA,
+P022,L09,Đoạn 1,93.79,94.6,0.81,Ngày nào,Ngày nào,,0,2,Ngày nào có nhau ta trao ước hẹn trầu cau,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P023,L09,Đoạn 1,94.6,95.52,0.92,có nhau,có nhau,,0,2,Ngày nào có nhau ta trao ước hẹn trầu cau,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P024,L09,Đoạn 1,95.52,96.43,0.91,ta trao,ta trao,,0,2,Ngày nào có nhau ta trao ước hẹn trầu cau,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P025,L09,Đoạn 1,96.43,97.15,0.72,ước hẹn,ƯỚC HẸN,ƯỚC HẸN,1,2,Ngày nào có nhau ta trao ước hẹn trầu cau,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P026,L09,Đoạn 1,97.15,98.59,1.44,trầu cau,trầu cau,,0,2,Ngày nào có nhau ta trao ước hẹn trầu cau,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P027,L10,Đoạn 1,100.71,101.63,0.92,Mong duyên,Mong duyên,,0,2,Mong duyên ban đầu trời thương không đổ mưa ngâu,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P028,L10,Đoạn 1,101.63,102.6,0.96,ban đầu,ban đầu,,0,2,Mong duyên ban đầu trời thương không đổ mưa ngâu,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P029,L10,Đoạn 1,102.6,103.53,0.93,trời thương,trời thương,,0,2,Mong duyên ban đầu trời thương không đổ mưa ngâu,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P030,L10,Đoạn 1,103.53,104.45,0.93,không đổ,không đổ,,0,2,Mong duyên ban đầu trời thương không đổ mưa ngâu,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P031,L10,Đoạn 1,104.45,105.95,1.5,mưa ngâu,MƯA NGÂU,MƯA NGÂU,1,2,Mong duyên ban đầu trời thương không đổ mưa ngâu,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P032,L11,Đoạn 1,107.67,108.62,0.95,Bóng em,Bóng em,,0,2,Bóng em xa dần anh biết là một lần chia cách,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,Cụm cuối 3 âm tiết
+P033,L11,Đoạn 1,108.62,109.38,0.76,xa dần,xa dần,,0,2,Bóng em xa dần anh biết là một lần chia cách,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,Cụm cuối 3 âm tiết
+P034,L11,Đoạn 1,109.38,110.35,0.97,anh biết,anh biết,,0,2,Bóng em xa dần anh biết là một lần chia cách,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,Cụm cuối 3 âm tiết
+P035,L11,Đoạn 1,110.35,111.03,0.67,là một,là một,,0,2,Bóng em xa dần anh biết là một lần chia cách,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,Cụm cuối 3 âm tiết
+P036,L11,Đoạn 1,111.03,112.81,1.78,lần chia cách,lần CHIA CÁCH,CHIA CÁCH,1,3,Bóng em xa dần anh biết là một lần chia cách,SRT,Ngân vừa (dự kiến),CẦN NGHE QA,Cụm cuối 3 âm tiết
+P037,L12,Đoạn 1,114.65,115.78,1.13,Trách ai,Trách ai,,0,2,Trách ai vô tình đành tâm xẻ đôi tim mình,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,xẻ / xé cần nghe xác nhận
+P038,L12,Đoạn 1,115.78,117.04,1.26,vô tình,VÔ TÌNH,VÔ TÌNH,1,2,Trách ai vô tình đành tâm xẻ đôi tim mình,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,xẻ / xé cần nghe xác nhận
+P039,L12,Đoạn 1,117.04,118.03,0.99,đành tâm,đành tâm,,0,2,Trách ai vô tình đành tâm xẻ đôi tim mình,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,xẻ / xé cần nghe xác nhận
+P040,L12,Đoạn 1,118.03,119.25,1.21,xẻ đôi,xẻ đôi,,0,2,Trách ai vô tình đành tâm xẻ đôi tim mình,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,xẻ / xé cần nghe xác nhận
+P041,L12,Đoạn 1,119.25,120.91,1.66,tim mình,tim mình,,0,2,Trách ai vô tình đành tâm xẻ đôi tim mình,SRT,Ngân vừa (dự kiến),CẦN NGHE QA,xẻ / xé cần nghe xác nhận
+P042,L13,Đoạn 1,121.79,122.75,0.96,Dặn lòng,Dặn lòng,,0,2,Dặn lòng cố quên,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,Khác bản tự nhận dạng Dành lòng
+P043,L13,Đoạn 1,122.75,124.19,1.44,cố quên,CỐ QUÊN,CỐ QUÊN,1,2,Dặn lòng cố quên,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,Khác bản tự nhận dạng Dành lòng
+P044,L14,Đoạn 1,124.63,125.56,0.93,Sao đêm,Sao đêm,,0,2,Sao đêm vẫn thầm gọi tên,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P045,L14,Đoạn 1,125.56,126.5,0.94,vẫn thầm,vẫn thầm,,0,2,Sao đêm vẫn thầm gọi tên,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P046,L14,Đoạn 1,126.5,127.95,1.45,gọi tên,GỌI TÊN,GỌI TÊN,1,2,Sao đêm vẫn thầm gọi tên,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P047,L15,Đoạn 1,128.95,130.07,1.12,Ai ru,Ai ru,,0,2,Ai ru trong chiều cho lòng càng nhớ em nhiều,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT bị cắt trước chữ nhiều; bù theo audio/đoạn hát
+P048,L15,Đoạn 1,130.07,131.16,1.09,trong chiều,trong chiều,,0,2,Ai ru trong chiều cho lòng càng nhớ em nhiều,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT bị cắt trước chữ nhiều; bù theo audio/đoạn hát
+P049,L15,Đoạn 1,131.16,132.3,1.14,cho lòng,cho lòng,,0,2,Ai ru trong chiều cho lòng càng nhớ em nhiều,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT bị cắt trước chữ nhiều; bù theo audio/đoạn hát
+P050,L15,Đoạn 1,132.3,133.45,1.14,càng nhớ,CÀNG NHỚ,CÀNG NHỚ,1,2,Ai ru trong chiều cho lòng càng nhớ em nhiều,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT bị cắt trước chữ nhiều; bù theo audio/đoạn hát
+P051,L15,Đoạn 1,133.45,135.15,1.7,em nhiều,em nhiều,,0,2,Ai ru trong chiều cho lòng càng nhớ em nhiều,MIX,Ngân vừa (dự kiến),CẦN NGHE QA,SRT bị cắt trước chữ nhiều; bù theo audio/đoạn hát
+P052,L16,Điệp khúc 1,141.7,146.1,4.4,À ơi,À ƠI,À ƠI,1,2,À ơi,EST,Ngân dài (dự kiến),CẦN NGHE QA,Ngân dài
+P053,L17,Điệp khúc 1,146.1,147.6,1.5,Em nỡ,Em nỡ,,0,2,Em nỡ sao em,EST,Ngân vừa (dự kiến),CẦN NGHE QA,
+P054,L17,Điệp khúc 1,147.6,150.35,2.75,sao em,SAO EM,SAO EM,1,2,Em nỡ sao em,EST,Ngân dài (dự kiến),CẦN NGHE QA,
+P055,L18,Điệp khúc 1,150.35,151.43,1.08,Bỏ anh,Bỏ anh,,0,2,Bỏ anh một mình,EST,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P056,L18,Điệp khúc 1,151.43,153.0,1.57,một mình,MỘT MÌNH,MỘT MÌNH,1,2,Bỏ anh một mình,EST,Ngân vừa (dự kiến),CẦN NGHE QA,
+P057,L19,Điệp khúc 1,153.0,154.19,1.19,Lục bình,LỤC BÌNH,LỤC BÌNH,1,2,Lục bình trôi chẳng biết nơi neo,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,ASR nhận nhầm Rồi chẳng biết nơi nào
+P058,L19,Điệp khúc 1,154.19,155.52,1.32,trôi chẳng biết,trôi chẳng biết,,0,3,Lục bình trôi chẳng biết nơi neo,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,ASR nhận nhầm Rồi chẳng biết nơi nào
+P059,L19,Điệp khúc 1,155.52,157.55,2.03,nơi neo,nơi neo,,0,2,Lục bình trôi chẳng biết nơi neo,MIX,Ngân vừa (dự kiến),CẦN NGHE QA,ASR nhận nhầm Rồi chẳng biết nơi nào
+P060,L20,Điệp khúc 1,157.61,159.39,1.78,Còn thương,CÒN THƯƠNG,CÒN THƯƠNG,1,2,Còn thương tóc em buông dài,MIX,Ngân vừa (dự kiến),CẦN NGHE QA,SRT nghe sai tóc em muôn vàn
+P061,L20,Điệp khúc 1,159.39,161.0,1.61,tóc em,tóc em,,0,2,Còn thương tóc em buông dài,MIX,Ngân vừa (dự kiến),CẦN NGHE QA,SRT nghe sai tóc em muôn vàn
+P062,L20,Điệp khúc 1,161.0,164.1,3.1,buông dài,buông dài,,0,2,Còn thương tóc em buông dài,MIX,Ngân dài (dự kiến),CẦN NGHE QA,SRT nghe sai tóc em muôn vàn
+P063,L21,Điệp khúc 1,164.69,165.74,1.05,Tím hoa,Tím hoa,,0,2,Tím hoa anh cài em cười siết chặt vòng tay,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT bỏ Tím
+P064,L21,Điệp khúc 1,165.74,166.68,0.94,anh cài,anh cài,,0,2,Tím hoa anh cài em cười siết chặt vòng tay,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT bỏ Tím
+P065,L21,Điệp khúc 1,166.68,167.68,1.0,em cười,em cười,,0,2,Tím hoa anh cài em cười siết chặt vòng tay,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT bỏ Tím
+P066,L21,Điệp khúc 1,167.68,168.79,1.1,siết chặt,siết chặt,,0,2,Tím hoa anh cài em cười siết chặt vòng tay,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT bỏ Tím
+P067,L21,Điệp khúc 1,168.79,170.4,1.61,vòng tay,VÒNG TAY,VÒNG TAY,1,2,Tím hoa anh cài em cười siết chặt vòng tay,MIX,Ngân vừa (dự kiến),CẦN NGHE QA,SRT bỏ Tím
+P068,L22,Điệp khúc 1,171.69,175.16,3.47,À ơi,À ƠI,À ƠI,1,2,À ơi,SRT,Ngân dài (dự kiến),CẦN NGHE QA,Kết thúc câu hò có độ không chắc cao
+P069,L23,Điệp khúc 1,175.17,176.46,1.29,Em nỡ,Em nỡ,,0,2,Em nỡ sao em,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P070,L23,Điệp khúc 1,176.46,178.6,2.14,sao em,SAO EM,SAO EM,1,2,Em nỡ sao em,MIX,Ngân vừa (dự kiến),CẦN NGHE QA,
+P071,L24,Điệp khúc 1,178.6,179.4,0.8,Nói thương,Nói thương,,0,2,Nói thương anh nhiều,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P072,L24,Điệp khúc 1,179.4,180.7,1.3,anh nhiều,ANH NHIỀU,ANH NHIỀU,1,2,Nói thương anh nhiều,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P073,L25,Điệp khúc 1,180.7,181.93,1.23,Đành lòng em,Đành lòng em,,0,3,Đành lòng em cất bước sang sông,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P074,L25,Điệp khúc 1,181.93,182.96,1.03,cất bước,cất bước,,0,2,Đành lòng em cất bước sang sông,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P075,L25,Điệp khúc 1,182.96,184.39,1.43,sang sông,SANG SÔNG,SANG SÔNG,1,2,Đành lòng em cất bước sang sông,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P076,L26,Điệp khúc 1,185.87,187.18,1.31,Vì đâu,Vì đâu,,0,2,Vì đâu dở dang duyên mình,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P077,L26,Điệp khúc 1,187.18,188.3,1.13,dở dang,DỞ DANG,DỞ DANG,1,2,Vì đâu dở dang duyên mình,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P078,L26,Điệp khúc 1,188.3,190.59,2.29,duyên mình,duyên mình,,0,2,Vì đâu dở dang duyên mình,SRT,Ngân vừa (dự kiến),CẦN NGHE QA,
+P079,L27,Điệp khúc 1,192.31,193.12,0.81,Sắc hoa,Sắc hoa,,0,2,Sắc hoa chung tình chưa phai màu,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P080,L27,Điệp khúc 1,193.12,193.93,0.81,chung tình,CHUNG TÌNH,CHUNG TÌNH,1,2,Sắc hoa chung tình chưa phai màu,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P081,L27,Điệp khúc 1,193.93,195.57,1.64,chưa phai màu,chưa phai màu,,0,3,Sắc hoa chung tình chưa phai màu,SRT,Ngân vừa (dự kiến),CẦN NGHE QA,
+P082,L28,Điệp khúc 1,196.15,197.23,1.08,Nỡ nào,Nỡ nào,,0,2,Nỡ nào người đi,MIX,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P083,L28,Điệp khúc 1,197.23,199.2,1.97,người đi,NGƯỜI ĐI,NGƯỜI ĐI,1,2,Nỡ nào người đi,MIX,Ngân vừa (dự kiến),CẦN NGHE QA,
+P084,L29,Điệp khúc 2,226.4,230.8,4.4,À ơi,À ƠI,À ƠI,1,2,À ơi,REPEAT,Ngân dài (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P085,L30,Điệp khúc 2,230.8,232.35,1.55,Em nỡ,Em nỡ,,0,2,Em nỡ sao em,REPEAT,Ngân vừa (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P086,L30,Điệp khúc 2,232.35,235.05,2.7,sao em,SAO EM,SAO EM,1,2,Em nỡ sao em,REPEAT,Ngân dài (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P087,L31,Điệp khúc 2,235.05,236.1,1.05,Bỏ anh,Bỏ anh,,0,2,Bỏ anh một mình,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P088,L31,Điệp khúc 2,236.1,237.7,1.6,một mình,MỘT MÌNH,MỘT MÌNH,1,2,Bỏ anh một mình,REPEAT,Ngân vừa (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P089,L32,Điệp khúc 2,237.7,238.81,1.11,Lục bình,LỤC BÌNH,LỤC BÌNH,1,2,Lục bình trôi chẳng biết nơi neo,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P090,L32,Điệp khúc 2,238.81,240.28,1.47,trôi chẳng biết,trôi chẳng biết,,0,3,Lục bình trôi chẳng biết nơi neo,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P091,L32,Điệp khúc 2,240.28,242.25,1.97,nơi neo,nơi neo,,0,2,Lục bình trôi chẳng biết nơi neo,REPEAT,Ngân vừa (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P092,L33,Điệp khúc 2,242.31,244.11,1.8,Còn thương,CÒN THƯƠNG,CÒN THƯƠNG,1,2,Còn thương tóc em buông dài,REPEAT,Ngân vừa (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P093,L33,Điệp khúc 2,244.11,245.66,1.54,tóc em,tóc em,,0,2,Còn thương tóc em buông dài,REPEAT,Ngân vừa (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P094,L33,Điệp khúc 2,245.66,248.8,3.14,buông dài,buông dài,,0,2,Còn thương tóc em buông dài,REPEAT,Ngân dài (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P095,L34,Điệp khúc 2,249.39,250.44,1.05,Tím hoa,Tím hoa,,0,2,Tím hoa anh cài em cười siết chặt vòng tay,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P096,L34,Điệp khúc 2,250.44,251.39,0.95,anh cài,anh cài,,0,2,Tím hoa anh cài em cười siết chặt vòng tay,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P097,L34,Điệp khúc 2,251.39,252.48,1.09,em cười,em cười,,0,2,Tím hoa anh cài em cười siết chặt vòng tay,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P098,L34,Điệp khúc 2,252.48,253.55,1.07,siết chặt,siết chặt,,0,2,Tím hoa anh cài em cười siết chặt vòng tay,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P099,L34,Điệp khúc 2,253.55,255.1,1.55,vòng tay,VÒNG TAY,VÒNG TAY,1,2,Tím hoa anh cài em cười siết chặt vòng tay,REPEAT,Ngân vừa (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P100,L35,Điệp khúc 2,256.39,259.86,3.47,À ơi,À ƠI,À ƠI,1,2,À ơi,REPEAT,Ngân dài (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P101,L36,Điệp khúc 2,259.87,261.07,1.2,Em nỡ,Em nỡ,,0,2,Em nỡ sao em,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P102,L36,Điệp khúc 2,261.07,263.3,2.23,sao em,SAO EM,SAO EM,1,2,Em nỡ sao em,REPEAT,Ngân vừa (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P103,L37,Điệp khúc 2,263.3,264.1,0.8,Nói thương,Nói thương,,0,2,Nói thương anh nhiều,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P104,L37,Điệp khúc 2,264.1,265.4,1.3,anh nhiều,ANH NHIỀU,ANH NHIỀU,1,2,Nói thương anh nhiều,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P105,L38,Điệp khúc 2,265.4,266.58,1.18,Đành lòng em,Đành lòng em,,0,3,Đành lòng em cất bước sang sông,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P106,L38,Điệp khúc 2,266.58,267.61,1.03,cất bước,cất bước,,0,2,Đành lòng em cất bước sang sông,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P107,L38,Điệp khúc 2,267.61,269.09,1.48,sang sông,SANG SÔNG,SANG SÔNG,1,2,Đành lòng em cất bước sang sông,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P108,L39,Điệp khúc 2,270.57,271.74,1.17,Vì đâu,Vì đâu,,0,2,Vì đâu dở dang duyên mình,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P109,L39,Điệp khúc 2,271.74,273.01,1.27,dở dang,DỞ DANG,DỞ DANG,1,2,Vì đâu dở dang duyên mình,REPEAT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P110,L39,Điệp khúc 2,273.01,275.29,2.28,duyên mình,duyên mình,,0,2,Vì đâu dở dang duyên mình,REPEAT,Ngân vừa (dự kiến),CẦN NGHE QA,"Mốc chuyển từ điệp khúc 1 bằng so khớp chroma (+84,7 giây); vẫn cần nghe xác nhận ở bản phối"
+P111,L40,Điệp khúc 2,277.35,278.08,0.73,Sắc hoa,Sắc hoa,,0,2,Sắc hoa chung tình chưa phai màu,REPEAT+SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT có lời nhận sai Qua chung tình vào 04:37.414
+P112,L40,Điệp khúc 2,278.08,278.8,0.72,chung tình,CHUNG TÌNH,CHUNG TÌNH,1,2,Sắc hoa chung tình chưa phai màu,REPEAT+SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT có lời nhận sai Qua chung tình vào 04:37.414
+P113,L40,Điệp khúc 2,278.8,280.23,1.43,chưa phai màu,chưa phai màu,,0,3,Sắc hoa chung tình chưa phai màu,REPEAT+SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT có lời nhận sai Qua chung tình vào 04:37.414
+P114,L41,Điệp khúc 2,280.73,281.61,0.88,Nỡ nào,Nỡ nào,,0,2,Nỡ nào người đi,REPEAT+SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT nhận dạng 04:40.734–04:42.414
+P115,L41,Điệp khúc 2,281.61,283.0,1.39,người đi,NGƯỜI ĐI,NGƯỜI ĐI,1,2,Nỡ nào người đi,REPEAT+SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,SRT nhận dạng 04:40.734–04:42.414
+P116,L42,Kết,284.63,285.37,0.74,Dòng nhớ,DÒNG NHỚ,DÒNG NHỚ,1,2,Dòng nhớ trong tim,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P117,L42,Kết,285.37,286.61,1.24,trong tim,trong tim,,0,2,Dòng nhớ trong tim,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P118,L43,Kết,287.83,288.51,0.68,Làm sao,Làm sao,,0,2,Làm sao chia cách,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Bản lời tham chiếu ghi chia cắt, nghe cần xác minh"
+P119,L43,Kết,288.51,289.43,0.92,chia cách,CHIA CÁCH,CHIA CÁCH,1,2,Làm sao chia cách,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,"Bản lời tham chiếu ghi chia cắt, nghe cần xác minh"
+P120,L44,Kết,291.13,291.87,0.74,Người thương,NGƯỜI THƯƠNG,NGƯỜI THƯƠNG,1,2,Người thương có hay,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P121,L44,Kết,291.87,292.97,1.1,có hay,có hay,,0,2,Người thương có hay,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P122,L45,Kết,295.15,296.38,1.23,Đêm dài,Đêm dài,,0,2,Đêm dài mình anh thao thức,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P123,L45,Kết,296.38,297.56,1.18,mình anh,mình anh,,0,2,Đêm dài mình anh thao thức,SRT,Ngắn/đều (dự kiến),CẦN NGHE QA,
+P124,L45,Kết,297.56,299.77,2.21,thao thức,THAO THỨC,THAO THỨC,1,2,Đêm dài mình anh thao thức,SRT,Ngân vừa (dự kiến),CẦN NGHE QA,
+P125,L46,Kết,301.1,302.78,1.68,Em giờ,Em giờ,,0,2,Em giờ biết lòng buồn vui,MIX,Ngân vừa (dự kiến),CẦN NGHE QA,ASR nghe sai miếng lòng; cần xác nhận từ biết
+P126,L46,Kết,302.78,304.51,1.73,biết lòng,biết lòng,,0,2,Em giờ biết lòng buồn vui,MIX,Ngân vừa (dự kiến),CẦN NGHE QA,ASR nghe sai miếng lòng; cần xác nhận từ biết
+P127,L46,Kết,304.51,307.7,3.19,buồn vui,BUỒN VUI,BUỒN VUI,1,2,Em giờ biết lòng buồn vui,MIX,Ngân dài (dự kiến),CẦN NGHE QA,ASR nghe sai miếng lòng; cần xác nhận từ biết
+P128,L47,Kết,309.8,311.6,1.8,Em về,Em về,,0,2,Em về làm dâu bên ấy,EST,Ngân vừa (dự kiến),CẦN NGHE QA,
+P129,L47,Kết,311.6,313.34,1.74,làm dâu,làm dâu,,0,2,Em về làm dâu bên ấy,EST,Ngân vừa (dự kiến),CẦN NGHE QA,
+P130,L47,Kết,313.34,316.7,3.36,bên ấy,BÊN ẤY,BÊN ẤY,1,2,Em về làm dâu bên ấy,EST,Ngân dài (dự kiến),CẦN NGHE QA,
+P131,L48,Kết,316.8,318.61,1.81,Bên này,BÊN NÀY,BÊN NÀY,1,2,Bên này vẫn hoài,EST,Ngân vừa (dự kiến),CẦN NGHE QA,
+P132,L48,Kết,318.61,322.1,3.49,vẫn hoài,vẫn hoài,,0,2,Bên này vẫn hoài,EST,Ngân dài (dự kiến),CẦN NGHE QA,
+P133,L49,Kết,325.1,331.9,6.8,Chờ mong,CHỜ MONG,CHỜ MONG,1,2,Chờ mong,EST,Ngân dài (dự kiến),CẦN NGHE QA,Mốc kết vocal phỏng đoán; nhạc kết và reverb còn tiếp diễn

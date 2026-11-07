@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const historyListContainer = document.getElementById('historyListContainer');
   const btnHistoryNewProject = document.getElementById('btnHistoryNewProject');
   const btnImportProjectJson = document.getElementById('btnImportProjectJson');
+  const btnExportProjectJson = document.getElementById('btnExportProjectJson');
   const importProjectJsonFileInput = document.getElementById('importProjectJsonFileInput');
   const btnClearHistory = document.getElementById('btnClearHistory');
 
@@ -94,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.exporter = exporter;
   window.getCurrentProjectState = () => currentProjectState;
 
+  let activeLoopStanza = null;
   let isPlaying = false;
   let animId = null;
   let activeImageObjects = [];
@@ -668,15 +670,36 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCurrentFrame();
   }
 
+  // === SAFE MEDIA URL SANITIZATION (SEC-02) ===
+  function sanitizeMediaUrl(url) {
+    if (!url || typeof url !== 'string') return '';
+    const trimmed = url.trim();
+    if (
+      trimmed.startsWith('http://') ||
+      trimmed.startsWith('https://') ||
+      trimmed.startsWith('blob:') ||
+      trimmed.startsWith('data:image/') ||
+      trimmed.startsWith('assets/') ||
+      trimmed.startsWith('/') ||
+      trimmed.startsWith('./')
+    ) {
+      return trimmed;
+    }
+    return '';
+  }
+
   function loadImagesFromUrls(urls) {
     activeImageObjects = [];
-    imageThumbsGrid.innerHTML = '';
+    imageThumbsGrid.textContent = '';
     let loadedCount = 0;
 
     urls.forEach((url, idx) => {
+      const safeUrl = sanitizeMediaUrl(url);
+      if (!safeUrl) return;
+
       const img = new Image();
       img.crossOrigin = 'anonymous';
-      img.src = url;
+      img.src = safeUrl;
       img.onload = () => {
         loadedCount++;
         if (loadedCount === urls.length) {
@@ -688,15 +711,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const thumb = document.createElement('div');
       thumb.className = `thumb-item ${idx === 0 ? 'active' : ''}`;
-      thumb.innerHTML = `
-        <img src="${url}" alt="Slide ${idx + 1}">
-        <span class="thumb-order-badge">${idx + 1}</span>
-        <button class="thumb-del-btn" title="Xóa ảnh">&times;</button>
-      `;
-      thumb.querySelector('.thumb-del-btn').addEventListener('click', (e) => {
+
+      const thumbImg = document.createElement('img');
+      thumbImg.src = safeUrl;
+      thumbImg.alt = `Slide ${idx + 1}`;
+
+      const badge = document.createElement('span');
+      badge.className = 'thumb-order-badge';
+      badge.textContent = `${idx + 1}`;
+
+      const delBtn = document.createElement('button');
+      delBtn.className = 'thumb-del-btn';
+      delBtn.title = 'Xóa ảnh';
+      delBtn.textContent = '×';
+      delBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         removeImage(idx);
       });
+
+      thumb.appendChild(thumbImg);
+      thumb.appendChild(badge);
+      thumb.appendChild(delBtn);
       imageThumbsGrid.appendChild(thumb);
     });
 
@@ -713,19 +748,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderThumbnails() {
-    imageThumbsGrid.innerHTML = '';
+    imageThumbsGrid.textContent = '';
     activeImageObjects.forEach((img, idx) => {
       const thumb = document.createElement('div');
       thumb.className = `thumb-item ${idx === 0 ? 'active' : ''}`;
-      thumb.innerHTML = `
-        <img src="${img.src}">
-        <span class="thumb-order-badge">${idx + 1}</span>
-        <button class="thumb-del-btn" title="Xóa ảnh">&times;</button>
-      `;
-      thumb.querySelector('.thumb-del-btn').addEventListener('click', (e) => {
+
+      const thumbImg = document.createElement('img');
+      thumbImg.src = sanitizeMediaUrl(img.src);
+      thumbImg.alt = `Slide ${idx + 1}`;
+
+      const badge = document.createElement('span');
+      badge.className = 'thumb-order-badge';
+      badge.textContent = `${idx + 1}`;
+
+      const delBtn = document.createElement('button');
+      delBtn.className = 'thumb-del-btn';
+      delBtn.title = 'Xóa ảnh';
+      delBtn.textContent = '×';
+      delBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         removeImage(idx);
       });
+
+      thumb.appendChild(thumbImg);
+      thumb.appendChild(badge);
+      thumb.appendChild(delBtn);
       imageThumbsGrid.appendChild(thumb);
     });
   }
@@ -912,26 +959,112 @@ document.addEventListener('DOMContentLoaded', () => {
       end: Math.round(end * 100) / 100,
       text: text,
       indent: idx % 3,
+      status: 'estimated',
       lines: stanzaLines
     };
   }
 
   function renderLyricsListUI(stanzas) {
-    lyricsSyncList.innerHTML = '';
+    lyricsSyncList.textContent = '';
     stanzas.forEach((s) => {
       const row = document.createElement('div');
       row.className = 'lyric-item-row';
       row.id = `row_${s.id}`;
-      row.innerHTML = `
-        <span class="lyric-item-time">${formatTime(s.start)}</span>
-        <span class="lyric-item-text">${s.text}</span>
-      `;
+
+      const timeSpan = document.createElement('span');
+      timeSpan.className = 'lyric-item-time';
+      timeSpan.textContent = formatTime(s.start);
+
+      const textSpan = document.createElement('span');
+      textSpan.className = 'lyric-item-text';
+      textSpan.textContent = s.text;
+
+      const badgeSpan = document.createElement('span');
+      const isReviewed = (s.status === 'reviewed' || s.acoustic_reviewed || s.status === 'aligned');
+      badgeSpan.className = `badge-timing ${isReviewed ? 'reviewed' : 'estimated'}`;
+      badgeSpan.textContent = isReviewed ? 'Chuẩn' : 'Ước lượng';
+      badgeSpan.title = isReviewed ? 'Mốc thời gian chuẩn âm học đã kiểm duyệt' : 'Mốc thời gian phân bổ ước lượng';
+
+      // Interactive timing controls: phrase loop & +/-50ms nudge (UX-03)
+      const ctrlDiv = document.createElement('div');
+      ctrlDiv.className = 'lyric-item-controls';
+
+      const btnLoop = document.createElement('button');
+      btnLoop.className = `lyric-loop-btn ${activeLoopStanza === s ? 'active' : ''}`;
+      btnLoop.title = 'Phát lặp lại câu này để căn chỉnh tai nghe';
+      btnLoop.textContent = '🔁';
+      btnLoop.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (activeLoopStanza === s) {
+          activeLoopStanza = null;
+          btnLoop.classList.remove('active');
+        } else {
+          document.querySelectorAll('.lyric-loop-btn').forEach(b => b.classList.remove('active'));
+          activeLoopStanza = s;
+          btnLoop.classList.add('active');
+          applySeek(s.start, true);
+          if (!isPlaying) playVideo();
+        }
+      });
+
+      const btnNudgeBack = document.createElement('button');
+      btnNudgeBack.className = 'lyric-nudge-btn';
+      btnNudgeBack.title = 'Lùi sớm 50ms (-0.05s)';
+      btnNudgeBack.textContent = '-50ms';
+      btnNudgeBack.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nudgeStanzaTiming(s, -0.05);
+        timeSpan.textContent = formatTime(s.start);
+      });
+
+      const btnNudgeForward = document.createElement('button');
+      btnNudgeForward.className = 'lyric-nudge-btn';
+      btnNudgeForward.title = 'Tiến trễ 50ms (+0.05s)';
+      btnNudgeForward.textContent = '+50ms';
+      btnNudgeForward.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nudgeStanzaTiming(s, +0.05);
+        timeSpan.textContent = formatTime(s.start);
+      });
+
+      ctrlDiv.appendChild(btnLoop);
+      ctrlDiv.appendChild(btnNudgeBack);
+      ctrlDiv.appendChild(btnNudgeForward);
+
+      row.appendChild(timeSpan);
+      row.appendChild(textSpan);
+      row.appendChild(badgeSpan);
+      row.appendChild(ctrlDiv);
+
       row.addEventListener('click', () => {
         applySeek(s.start, true);
         if (!isPlaying) playVideo();
       });
       lyricsSyncList.appendChild(row);
     });
+  }
+
+  function nudgeStanzaTiming(stanza, deltaSec) {
+    stanza.start = Math.max(0, +(stanza.start + deltaSec).toFixed(3));
+    stanza.end = Math.max(stanza.start + 0.5, +(stanza.end + deltaSec).toFixed(3));
+    
+    // Shift lines & words if present
+    if (Array.isArray(stanza.lines)) {
+      stanza.lines.forEach(line => {
+        if (typeof line.start === 'number') line.start = Math.max(0, +(line.start + deltaSec).toFixed(3));
+        if (typeof line.end === 'number') line.end = Math.max(0, +(line.end + deltaSec).toFixed(3));
+        if (Array.isArray(line.words)) {
+          line.words.forEach(w => {
+            if (typeof w.start === 'number') w.start = Math.max(0, +(w.start + deltaSec).toFixed(3));
+            if (typeof w.end === 'number') w.end = Math.max(0, +(w.end + deltaSec).toFixed(3));
+          });
+        }
+      });
+    }
+
+    renderCurrentFrame();
+    buildTimelineDots(engine.lyricsData, engine.totalDuration);
+    triggerStateUpdate();
   }
 
   function buildTimelineDots(stanzas, duration) {
@@ -1012,51 +1145,103 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderHistoryList() {
     const list = historyManager.getHistory();
-    historyListContainer.innerHTML = '';
+    historyListContainer.textContent = '';
 
     if (list.length === 0) {
-      historyListContainer.innerHTML = `
-        <div class="history-empty-placeholder">
-          <p>Chưa có bản nháp nào được lưu trong lịch sử.</p>
-          <p style="font-size:0.75rem; margin-top:4px">Bấm nút "Lưu Bản Nháp" ở thanh trên để ghi lại tiến trình của bạn!</p>
-        </div>
-      `;
+      const emptyDiv = document.createElement('div');
+      emptyDiv.className = 'history-empty-placeholder';
+      const p1 = document.createElement('p');
+      p1.textContent = 'Chưa có bản nháp nào được lưu trong lịch sử.';
+      const p2 = document.createElement('p');
+      p2.style.fontSize = '0.75rem';
+      p2.style.marginTop = '4px';
+      p2.textContent = 'Bấm nút "Lưu Bản Nháp" ở thanh trên để ghi lại tiến trình của bạn!';
+      emptyDiv.appendChild(p1);
+      emptyDiv.appendChild(p2);
+      historyListContainer.appendChild(emptyDiv);
       return;
     }
 
     list.forEach(item => {
       const card = document.createElement('div');
       card.className = 'history-card';
-      const thumbSrc = item.thumbnail || (item.state.images && item.state.images[0]) || 'assets/samples/bg_clean_720p.jpg';
+      const thumbSrc = item.thumbnail || (item.state && item.state.images && item.state.images[0]) || 'assets/samples/bg_clean_720p.jpg';
 
-      card.innerHTML = `
-        <div class="history-card-left">
-          <img src="${thumbSrc}" class="history-thumb" alt="Preview">
-          <div class="history-meta">
-            <div class="history-title">${item.name}</div>
-            <div class="history-details">
-              <span>🕒 ${item.formattedTime}</span>
-              <span class="history-tag">${item.template.toUpperCase()}</span>
-              <span>${item.aspectRatio}</span>
-            </div>
-          </div>
-        </div>
-        <div class="history-card-actions">
-          <button class="btn-history-restore" title="Khôi phục trạng thái này">Khôi Phục</button>
-          <button class="btn-history-del" title="Xóa bản nháp">&times;</button>
-        </div>
-      `;
+      const leftDiv = document.createElement('div');
+      leftDiv.className = 'history-card-left';
 
-      card.querySelector('.btn-history-restore').addEventListener('click', () => {
+      const thumbImg = document.createElement('img');
+      thumbImg.src = sanitizeMediaUrl(thumbSrc);
+      thumbImg.className = 'history-thumb';
+      thumbImg.alt = 'Preview';
+
+      const metaDiv = document.createElement('div');
+      metaDiv.className = 'history-meta';
+
+      const titleDiv = document.createElement('div');
+      titleDiv.className = 'history-title';
+      titleDiv.textContent = item.name || 'Bản nháp';
+
+      const detailsDiv = document.createElement('div');
+      detailsDiv.className = 'history-details';
+
+      const timeSpan = document.createElement('span');
+      timeSpan.textContent = `🕒 ${item.formattedTime || ''}`;
+
+      const tagSpan = document.createElement('span');
+      tagSpan.className = 'history-tag';
+      tagSpan.textContent = String(item.template || 'template').toUpperCase();
+
+      const ratioSpan = document.createElement('span');
+      ratioSpan.textContent = item.aspectRatio || '16-9';
+
+      detailsDiv.appendChild(timeSpan);
+      detailsDiv.appendChild(tagSpan);
+      detailsDiv.appendChild(ratioSpan);
+
+      metaDiv.appendChild(titleDiv);
+      metaDiv.appendChild(detailsDiv);
+
+      leftDiv.appendChild(thumbImg);
+      leftDiv.appendChild(metaDiv);
+
+      const actionsDiv = document.createElement('div');
+      actionsDiv.className = 'history-card-actions';
+
+      const restoreBtn = document.createElement('button');
+      restoreBtn.className = 'btn-history-restore';
+      restoreBtn.title = 'Khôi phục trạng thái này';
+      restoreBtn.textContent = 'Khôi Phục';
+      restoreBtn.addEventListener('click', () => {
         applyProjectState(item.state);
         closeHistoryModal();
       });
 
-      card.querySelector('.btn-history-del').addEventListener('click', () => {
+      const exportSnapshotBtn = document.createElement('button');
+      exportSnapshotBtn.className = 'btn-history-restore';
+      exportSnapshotBtn.style.background = '#374151';
+      exportSnapshotBtn.title = 'Xuất bản nháp này ra file .lyricproj';
+      exportSnapshotBtn.textContent = 'Xuất';
+      exportSnapshotBtn.addEventListener('click', () => {
+        historyManager.exportProjectFile(item.state, `${item.name.replace(/[^\w-]/g, '_')}.lyricproj`);
+      });
+
+      const delBtn = document.createElement('button');
+      delBtn.className = 'btn-history-del';
+      delBtn.title = 'Xóa bản nháp';
+      delBtn.textContent = '×';
+      delBtn.addEventListener('click', () => {
         historyManager.deleteSnapshot(item.id);
         renderHistoryList();
         updateHistoryBadge();
       });
+
+      actionsDiv.appendChild(restoreBtn);
+      actionsDiv.appendChild(exportSnapshotBtn);
+      actionsDiv.appendChild(delBtn);
+
+      card.appendChild(leftDiv);
+      card.appendChild(actionsDiv);
 
       historyListContainer.appendChild(card);
     });
@@ -1083,6 +1268,10 @@ document.addEventListener('DOMContentLoaded', () => {
       applyProjectState(DEMO_PRESET_1);
       closeHistoryModal();
     }
+  });
+
+  btnExportProjectJson?.addEventListener('click', () => {
+    historyManager.exportProjectFile(currentProjectState);
   });
 
   btnImportProjectJson.addEventListener('click', () => importProjectJsonFileInput.click());
@@ -1159,6 +1348,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isPlaying) {
       if (!isDragging) {
         const t = getSmoothedAudioTime();
+        if (activeLoopStanza && t >= activeLoopStanza.end) {
+          applySeek(activeLoopStanza.start, true);
+        }
         engine.renderFrame(t);
         updateProgressUI(t);
 
@@ -1421,6 +1613,12 @@ document.addEventListener('DOMContentLoaded', () => {
     audioNameDisplay.textContent = file.name;
     audioDurationDisplay.textContent = 'Đang giải mã âm thanh...';
 
+    // Store raw file blob into IndexedDB for persistence across reloads (DATA-01)
+    historyManager.mediaStore.put('draft_audio_blob', file).then(() => {
+      currentProjectState.hasCustomAudio = true;
+      currentProjectState.audioFileName = file.name;
+    }).catch(e => console.warn('Failed to cache audio blob in MediaStore:', e));
+
     coreAudio.onloadedmetadata = () => {
       const dur = coreAudio.duration;
       audioDurationDisplay.textContent = `${formatTime(dur)} • ${(file.size / (1024*1024)).toFixed(1)} MB`;
@@ -1443,7 +1641,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let loaded = 0;
     const newImgs = [];
 
-    files.forEach(f => {
+    files.forEach((f, idx) => {
+      historyManager.mediaStore.put(`draft_image_blob_${idx}`, f).catch(e => console.warn('Failed to cache image blob:', e));
       const img = new Image();
       img.src = URL.createObjectURL(f);
       img.onload = () => {
@@ -1451,6 +1650,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newImgs.push(img);
         if (loaded === files.length) {
           activeImageObjects = activeImageObjects.concat(newImgs);
+          currentProjectState.customImagesCount = activeImageObjects.length;
           engine.setImages(activeImageObjects);
           renderThumbnails();
           renderCurrentFrame();
@@ -1458,6 +1658,95 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
     });
+  }
+
+  async function restoreDraftState(state) {
+    if (!state) return;
+
+    // Check if custom audio was saved in IndexedDB
+    if (state.hasCustomAudio) {
+      try {
+        const audioBlob = await historyManager.mediaStore.get('draft_audio_blob');
+        if (audioBlob) {
+          state.audioUrl = URL.createObjectURL(audioBlob);
+        }
+      } catch (err) {
+        console.warn('Could not restore audio blob from MediaStore:', err);
+      }
+    }
+
+    // Check if custom images were saved in IndexedDB
+    if (state.customImagesCount && state.customImagesCount > 0) {
+      try {
+        const restoredImgs = [];
+        for (let i = 0; i < state.customImagesCount; i++) {
+          const imgBlob = await historyManager.mediaStore.get(`draft_image_blob_${i}`);
+          if (imgBlob) {
+            restoredImgs.push(URL.createObjectURL(imgBlob));
+          }
+        }
+        if (restoredImgs.length > 0) {
+          state.images = restoredImgs;
+        }
+      } catch (err) {
+        console.warn('Could not restore image blobs from MediaStore:', err);
+      }
+    }
+
+    applyProjectState(state);
+  }
+
+  function checkAndPromptDraftRecovery() {
+    const draft = historyManager.getAutoSave();
+    if (!draft || !draft.state) return;
+
+    const state = draft.state;
+    // Don't prompt if draft is empty
+    const hasContent = state.lyricsRaw || (state.parsedStanzas && state.parsedStanzas.length > 0) || state.hasCustomAudio;
+    if (!hasContent) return;
+
+    const timeStr = draft.updatedAt ? new Date(draft.updatedAt).toLocaleTimeString() : 'trước đó';
+
+    const banner = document.createElement('div');
+    banner.id = 'draftRecoveryBanner';
+    banner.className = 'restore-draft-banner';
+
+    const content = document.createElement('div');
+    content.className = 'draft-banner-content';
+
+    const icon = document.createElement('span');
+    icon.textContent = '💾';
+
+    const text = document.createElement('span');
+    text.textContent = `Phát hiện bản thảo chưa lưu từ phiên làm việc trước (${timeStr}). Bạn có muốn khôi phục không?`;
+
+    const actions = document.createElement('div');
+    actions.className = 'draft-banner-actions';
+
+    const btnRestore = document.createElement('button');
+    btnRestore.className = 'btn-banner-action';
+    btnRestore.textContent = 'Khôi phục bản thảo';
+    btnRestore.onclick = async () => {
+      await restoreDraftState(state);
+      banner.remove();
+    };
+
+    const btnDismiss = document.createElement('button');
+    btnDismiss.className = 'btn-banner-close';
+    btnDismiss.title = 'Bỏ qua';
+    btnDismiss.textContent = '✕';
+    btnDismiss.onclick = () => {
+      banner.remove();
+    };
+
+    actions.appendChild(btnRestore);
+    actions.appendChild(btnDismiss);
+    content.appendChild(icon);
+    content.appendChild(text);
+    content.appendChild(actions);
+    banner.appendChild(content);
+
+    document.body.insertBefore(banner, document.body.firstChild);
   }
 
   // Preset handlers
@@ -1596,7 +1885,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (exporter.isRecording) {
       if (exportModalTitle) exportModalTitle.textContent = 'Đang đóng gói file video...';
       if (btnFinishEarlyExport) btnFinishEarlyExport.style.display = 'none';
-      exporter.stopExport();
+      exporter.savePartialExport();
     }
   });
 
@@ -1618,6 +1907,9 @@ document.addEventListener('DOMContentLoaded', () => {
     selectPreset1();
   }
   updateHistoryBadge();
+
+  // Check for auto-saved draft and prompt user non-destructively (DATA-01)
+  checkAndPromptDraftRecovery();
 
   // Test time parameter for snapshot inspections & verification
   const urlParams = new URLSearchParams(window.location.search);
