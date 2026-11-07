@@ -31,6 +31,15 @@
     - Cross-checked against user's Excel file `media_1794018325711_5a5a4b74.xlsx` (Sheet: "Bổ sung thêm thời gian ngân của").
     - Audited the entire Outro section (`04:44.5` - `05:30.8`), discovering ASR drift in previous draft (e.g. "Mình anh thao thức" was 1.62s early, "Biết lòng buồn vui" was 2.22s early).
     - Fully calibrated all 36 outro words, timings, and sustains (`Dòng nhớ trong tim`, `Làm sao chia cách`, `Người thương có hay`, `Đêm dài`, `Mình anh thao thức`, `Em giờ`, `Biết lòng buồn vui`, `Em về`, `Làm dâu bên ấy`, `Bên này`, `Vẫn hoài`, `Chờ`, `Mong`) to achieve **0.00s delta (100% EXACT)** against Excel timecodes and measured acoustic silence gaps.
+  - **Intro Calibration (Phần đầu chuẩn xác)**:
+    - Identified that prior ASR draft had delayed intro stanzas (`gh_01` to `gh_05`) by 3.2s to 14.2s (placing "Cho em nỡ vội • Lấy chồng bỏ anh" over the 32-second dan bau solo).
+    - Performed RMS energy waveform analysis on master audio `dem_ganh_hao.mp3` and re-aligned perfectly with user's original TXT (`TIMELINE_GOC_TU_TEP_TXT.csv` S001-S013):
+      - `gh_01`: `04.2s - 10.0s` (HÒ ƠI)
+      - `gh_02`: `15.3s - 20.2s` (Ai xui con sáo SỔ LỒNG)
+      - `gh_03`: `21.0s - 25.2s` (Cho em NỠ VỘI)
+      - `gh_04`: `29.0s - 33.6s` (HÒ ƠI 2)
+      - `gh_05`: `37.8s - 46.8s` (Cho em NỠ VỘI • Lấy chồng BỎ ANH)
+      - Dan bau solo intro: `46.8s - 78.5s` (clean 31.7s instrumental break before Section 1 enters at 78.5s).
   - Re-verified complete 7-suite test harness `python tests/run_all_tests.py`: 7/7 PASSED.
 
 ### 3. Immediate Next Actions

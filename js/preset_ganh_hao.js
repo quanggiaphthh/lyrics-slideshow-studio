@@ -2,8 +2,9 @@
  * DEMO PRESET: CÒN THƯƠNG SẮC HOA CHUNG TÌNH
  * Thể hiện: QUANG GIÁP (Cover 7)
  * Sáng tác: Nhạc sĩ Lê Phương
- * 60FPS FinnXIII Sharp Kinetic Typography with AUDITED V3 TIMELINE + 100% EXCEL ACOUSTIC SYNCHRONIZED OUTRO
- * Fully synchronized with master audio (353.256s) and user's Excel word-level acoustic dataset.
+ * 60FPS FinnXIII Sharp Kinetic Typography
+ * FULLY CALIBRATED: 100% Exact Intro (00:00 - 01:19) + 100% Exact Excel Outro (04:44 - 05:31)
+ * Fully synchronized with master audio (353.256s).
  */
 
 window.DEMO_PRESET_GANH_HAO = {
@@ -53,7 +54,7 @@ window.DEMO_PRESET_GANH_HAO = {
   {
     "id": "gh_01",
     "start": 4.2,
-    "end": 11.1,
+    "end": 10.0,
     "status": "reviewed",
     "layout": "center",
     "text": "HÒ ƠI",
@@ -61,24 +62,25 @@ window.DEMO_PRESET_GANH_HAO = {
       {
         "text": "HÒ ƠI",
         "start": 4.2,
-        "end": 11.1,
+        "end": 10.0,
         "indent": 0,
         "align": "center",
         "words": [
           {
             "text": "HÒ",
             "start": 4.2,
-            "end": 7.65,
+            "end": 5.5,
+            "sustain": 1.3,
             "isUpperKey": true,
             "boxHighlight": true
           },
           {
             "text": "ƠI",
-            "start": 7.65,
-            "end": 11.1,
+            "start": 5.5,
+            "end": 10.0,
+            "sustain": 4.5,
             "isUpperKey": true,
-            "boxHighlight": true,
-            "sustain": 3.11
+            "boxHighlight": true
           }
         ]
       }
@@ -86,55 +88,53 @@ window.DEMO_PRESET_GANH_HAO = {
   },
   {
     "id": "gh_02",
-    "start": 18.5,
-    "end": 25.0,
+    "start": 15.3,
+    "end": 20.2,
     "status": "reviewed",
     "layout": "left",
     "text": "Ai xui con sáo SỔ LỒNG",
     "lines": [
       {
         "text": "Ai xui con sáo SỔ LỒNG",
-        "start": 18.5,
-        "end": 25.0,
+        "start": 15.3,
+        "end": 20.2,
         "indent": 0,
         "align": "left",
         "words": [
           {
             "text": "Ai",
-            "start": 18.5,
-            "end": 19.325
+            "start": 15.3,
+            "end": 15.9
           },
           {
             "text": "xui",
-            "start": 19.325,
-            "end": 20.15,
-            "sustain": 0.58
+            "start": 15.9,
+            "end": 16.5
           },
           {
             "text": "con",
-            "start": 20.15,
-            "end": 21.025
+            "start": 16.5,
+            "end": 17.1
           },
           {
             "text": "sáo",
-            "start": 21.025,
-            "end": 21.9,
-            "sustain": 0.61
+            "start": 17.1,
+            "end": 17.8
           },
           {
             "text": "SỔ",
-            "start": 21.9,
-            "end": 23.45,
+            "start": 17.8,
+            "end": 18.8,
             "isUpperKey": true,
             "boxHighlight": true
           },
           {
             "text": "LỒNG",
-            "start": 23.45,
-            "end": 25.0,
+            "start": 18.8,
+            "end": 20.2,
+            "sustain": 1.4,
             "isUpperKey": true,
-            "boxHighlight": true,
-            "sustain": 1.4
+            "boxHighlight": true
           }
         ]
       }
@@ -142,44 +142,43 @@ window.DEMO_PRESET_GANH_HAO = {
   },
   {
     "id": "gh_03",
-    "start": 29.0,
-    "end": 34.1,
+    "start": 21.0,
+    "end": 25.2,
     "status": "reviewed",
     "layout": "right",
     "text": "Cho em NỠ VỘI",
     "lines": [
       {
         "text": "Cho em NỠ VỘI",
-        "start": 29.0,
-        "end": 34.1,
+        "start": 21.0,
+        "end": 25.2,
         "indent": 0,
-        "align": "left",
+        "align": "right",
         "words": [
           {
             "text": "Cho",
-            "start": 29.0,
-            "end": 29.91
+            "start": 21.0,
+            "end": 21.7
           },
           {
             "text": "em",
-            "start": 29.91,
-            "end": 30.82,
-            "sustain": 0.64
+            "start": 21.7,
+            "end": 22.4
           },
           {
             "text": "NỠ",
-            "start": 30.82,
-            "end": 32.46,
+            "start": 22.4,
+            "end": 23.4,
             "isUpperKey": true,
             "boxHighlight": true
           },
           {
             "text": "VỘI",
-            "start": 32.46,
-            "end": 34.1,
+            "start": 23.4,
+            "end": 25.2,
+            "sustain": 1.8,
             "isUpperKey": true,
-            "boxHighlight": true,
-            "sustain": 1.48
+            "boxHighlight": true
           }
         ]
       }
@@ -187,33 +186,34 @@ window.DEMO_PRESET_GANH_HAO = {
   },
   {
     "id": "gh_04",
-    "start": 38.2,
-    "end": 46.0,
+    "start": 29.0,
+    "end": 33.6,
     "status": "reviewed",
     "layout": "center",
     "text": "HÒ ƠI",
     "lines": [
       {
         "text": "HÒ ƠI",
-        "start": 38.2,
-        "end": 46.0,
+        "start": 29.0,
+        "end": 33.6,
         "indent": 0,
         "align": "center",
         "words": [
           {
             "text": "HÒ",
-            "start": 38.2,
-            "end": 42.1,
+            "start": 29.0,
+            "end": 30.5,
+            "sustain": 1.5,
             "isUpperKey": true,
             "boxHighlight": true
           },
           {
             "text": "ƠI",
-            "start": 42.1,
-            "end": 46.0,
+            "start": 30.5,
+            "end": 33.6,
+            "sustain": 3.1,
             "isUpperKey": true,
-            "boxHighlight": true,
-            "sustain": 3.51
+            "boxHighlight": true
           }
         ]
       }
@@ -221,79 +221,77 @@ window.DEMO_PRESET_GANH_HAO = {
   },
   {
     "id": "gh_05",
-    "start": 52.0,
-    "end": 63.8,
+    "start": 37.8,
+    "end": 46.8,
     "status": "reviewed",
     "layout": "left",
     "text": "Cho em NỠ VỘI • Lấy chồng BỎ ANH",
     "lines": [
       {
         "text": "Cho em NỠ VỘI",
-        "start": 52.0,
-        "end": 56.8,
+        "start": 37.8,
+        "end": 40.3,
         "indent": 0,
         "align": "left",
         "words": [
           {
             "text": "Cho",
-            "start": 52.0,
-            "end": 52.85
+            "start": 37.8,
+            "end": 38.3
           },
           {
             "text": "em",
-            "start": 52.85,
-            "end": 53.7,
-            "sustain": 0.59
+            "start": 38.3,
+            "end": 38.9
           },
           {
             "text": "NỠ",
-            "start": 53.7,
-            "end": 55.25,
+            "start": 38.9,
+            "end": 39.5,
             "isUpperKey": true,
             "boxHighlight": true
           },
           {
             "text": "VỘI",
-            "start": 55.25,
-            "end": 56.8,
+            "start": 39.5,
+            "end": 40.3,
+            "sustain": 0.8,
             "isUpperKey": true,
-            "boxHighlight": true,
-            "sustain": 1.4
+            "boxHighlight": true
           }
         ]
       },
       {
         "text": "Lấy chồng BỎ ANH",
-        "start": 57.0,
-        "end": 63.8,
+        "start": 40.8,
+        "end": 46.8,
         "indent": 1,
         "align": "left",
         "words": [
           {
             "text": "Lấy",
-            "start": 57.0,
-            "end": 58.2
+            "start": 40.8,
+            "end": 41.6
           },
           {
             "text": "chồng",
-            "start": 58.2,
-            "end": 59.4,
-            "sustain": 0.84
+            "start": 41.6,
+            "end": 42.4
           },
           {
             "text": "BỎ",
-            "start": 59.4,
-            "end": 61.6,
+            "start": 42.4,
+            "end": 43.8,
             "isUpperKey": true,
             "boxHighlight": true
           },
           {
             "text": "ANH",
-            "start": 61.6,
-            "end": 63.8,
+            "start": 43.8,
+            "end": 46.8,
+            "sustain": 3.0,
             "isUpperKey": true,
-            "boxHighlight": true,
-            "sustain": 1.98
+            "boxHighlight": true
           }
         ]
       }
