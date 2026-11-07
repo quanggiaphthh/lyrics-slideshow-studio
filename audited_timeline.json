@@ -1,1824 +1,1673 @@
 [
   {
-    "sec": "Hò Mở Đầu 1",
+    "sec": "gh_0",
     "phrase": "HÒ ƠI...",
     "words": [
       {
         "w": "HÒ",
-        "start": 14.8,
-        "end": 16.3,
-        "note": "Ngân cao mở đầu câu hò"
+        "start": 3.5,
+        "end": 4.5,
+        "sustain": "1.0s",
+        "isUpperKey": true
       },
       {
         "w": "ƠI...",
-        "start": 16.3,
-        "end": 17.5,
-        "note": "Luyến láy hạ âm"
+        "start": 4.5,
+        "end": 5.5,
+        "sustain": "1.0s",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Hò Mở Đầu 1",
-    "phrase": "ai xuôi con sáo",
+    "sec": "gh_0",
+    "phrase": "ai xui con sáo",
     "words": [
       {
         "w": "ai",
-        "start": 17.8,
-        "end": 18.4,
-        "note": "Âm nhẹ"
+        "start": 15.5,
+        "end": 16.0
       },
       {
-        "w": "xuôi",
-        "start": 18.4,
-        "end": 19.1,
-        "note": "Lướt"
+        "w": "xui",
+        "start": 16.0,
+        "end": 16.5
       },
       {
         "w": "con",
-        "start": 19.1,
-        "end": 19.7,
-        "note": "Âm đệm"
+        "start": 16.5,
+        "end": 17.0
       },
       {
         "w": "sáo",
-        "start": 19.7,
-        "end": 20.8,
-        "note": "Ngân nhẹ"
+        "start": 17.0,
+        "end": 17.8
       }
     ]
   },
   {
-    "sec": "Hò Mở Đầu 1",
+    "sec": "gh_0",
     "phrase": "SỔ LỒNG,",
     "words": [
       {
         "w": "SỔ",
-        "start": 21.0,
-        "end": 22.4,
-        "note": "Nhấn giọng (Box highlight)"
+        "start": 17.8,
+        "end": 18.8,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "LỒNG,",
-        "start": 22.4,
-        "end": 24.5,
-        "note": "Luyến dài xúc cảm"
+        "start": 18.8,
+        "end": 20.2,
+        "sustain": "1.4s",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Hò Mở Đầu 1",
+    "sec": "gh_0",
     "phrase": "cho em nỡ vội",
     "words": [
       {
         "w": "cho",
-        "start": 24.8,
-        "end": 25.4,
-        "note": "Nhẹ"
+        "start": 20.5,
+        "end": 21.5
       },
       {
         "w": "em",
-        "start": 25.4,
-        "end": 26.1,
-        "note": "Color accent"
+        "start": 21.5,
+        "end": 22.1
       },
       {
         "w": "nỡ",
-        "start": 26.1,
-        "end": 26.8,
-        "note": "Trầm"
+        "start": 22.1,
+        "end": 22.8
       },
       {
         "w": "vội",
-        "start": 26.8,
-        "end": 27.8,
-        "note": "Vuốt nhỏ dần"
+        "start": 22.8,
+        "end": 24.0,
+        "sustain": "1.2s"
       }
     ]
   },
   {
-    "sec": "Hò Mở Đầu 2",
-    "phrase": "HÒ ƠI...",
-    "words": [
-      {
-        "w": "HÒ",
-        "start": 28.5,
-        "end": 30.54,
-        "note": "Ngân dài câu hò 2"
-      },
-      {
-        "w": "ƠI...",
-        "start": 30.54,
-        "end": 33.8,
-        "note": "Luyến láy vọng âm"
-      }
-    ]
-  },
-  {
-    "sec": "Hò Mở Đầu 2",
+    "sec": "gh_1",
     "phrase": "cho em nỡ vội",
     "words": [
       {
         "w": "cho",
-        "start": 36.88,
-        "end": 37.8,
-        "note": "Bắt nhịp"
+        "start": 37.0,
+        "end": 38.3
       },
       {
         "w": "em",
-        "start": 37.8,
-        "end": 38.4,
-        "note": "Color accent"
+        "start": 38.3,
+        "end": 38.8
       },
       {
         "w": "nỡ",
-        "start": 38.4,
-        "end": 39.0,
-        "note": "Nhấn"
+        "start": 38.8,
+        "end": 39.4
       },
       {
         "w": "vội",
-        "start": 39.0,
-        "end": 39.64,
-        "note": "Lướt"
+        "start": 39.4,
+        "end": 40.0
       }
     ]
   },
   {
-    "sec": "Hò Mở Đầu 2",
+    "sec": "gh_1",
     "phrase": "LẤY CHỒNG",
     "words": [
       {
         "w": "LẤY",
-        "start": 39.64,
-        "end": 41.34,
-        "note": "Nhấn mạnh (Box highlight)"
+        "start": 40.2,
+        "end": 41.2,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "CHỒNG",
-        "start": 41.34,
-        "end": 41.8,
-        "note": "Đậm"
+        "start": 41.2,
+        "end": 42.0,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Hò Mở Đầu 2",
+    "sec": "gh_1",
     "phrase": "BỎ ANH...",
     "words": [
       {
         "w": "BỎ",
-        "start": 41.8,
-        "end": 43.04,
-        "note": "Nghẹn ngào"
+        "start": 42.0,
+        "end": 43.5,
+        "colorAccent": true,
+        "isUpperKey": true
       },
       {
         "w": "ANH...",
-        "start": 43.04,
-        "end": 46.8,
-        "note": "Ngân dài xót xa (Color accent)"
+        "start": 43.5,
+        "end": 46.5,
+        "sustain": "3.0s",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 1",
+    "sec": "gh_2",
     "phrase": "sáo bay theo chồng",
     "words": [
       {
         "w": "sáo",
-        "start": 78.5,
-        "end": 79.74,
-        "note": "Bắt đầu vào nhạc"
+        "start": 78.8,
+        "end": 79.7
       },
       {
         "w": "bay",
-        "start": 79.74,
-        "end": 80.1,
-        "note": "Lướt"
+        "start": 79.7,
+        "end": 80.1
       },
       {
         "w": "theo",
         "start": 80.1,
-        "end": 80.68,
-        "note": "Nối"
+        "end": 80.6
       },
       {
         "w": "chồng",
-        "start": 80.68,
-        "end": 81.06,
-        "note": "Rơi nốt"
+        "start": 80.6,
+        "end": 81.3
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 1",
+    "sec": "gh_2",
     "phrase": "đâu biết là",
     "words": [
       {
         "w": "đâu",
-        "start": 81.06,
-        "end": 81.36,
-        "note": "Nhẹ"
+        "start": 81.5,
+        "end": 82.2
       },
       {
         "w": "biết",
-        "start": 81.36,
-        "end": 82.36,
-        "note": "Ngân"
+        "start": 82.2,
+        "end": 82.4
       },
       {
         "w": "là",
-        "start": 82.36,
-        "end": 82.82,
-        "note": "Chuyển tiếp"
+        "start": 82.4,
+        "end": 82.8
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 1",
+    "sec": "gh_2",
     "phrase": "ĐAU LÒNG",
     "words": [
       {
         "w": "ĐAU",
-        "start": 82.82,
-        "end": 83.36,
-        "note": "Nhấn (Box highlight)"
+        "start": 82.8,
+        "end": 83.3,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "LÒNG",
-        "start": 83.36,
+        "start": 83.3,
         "end": 83.7,
-        "note": "Box highlight"
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 1",
+    "sec": "gh_2",
     "phrase": "ANH LẮM",
     "words": [
       {
         "w": "ANH",
         "start": 83.7,
-        "end": 84.0,
-        "note": "Color accent"
+        "end": 84.2,
+        "isUpperKey": true
       },
       {
         "w": "LẮM",
-        "start": 84.0,
-        "end": 85.06,
-        "note": "Ngân cuối câu"
+        "start": 84.2,
+        "end": 85.0,
+        "sustain": "0.8s",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 2",
+    "sec": "gh_3",
     "phrase": "xót xa lặng thầm",
     "words": [
       {
         "w": "xót",
-        "start": 85.5,
-        "end": 86.68,
-        "note": "Khởi đầu buồn"
+        "start": 85.8,
+        "end": 86.8
       },
       {
         "w": "xa",
-        "start": 86.68,
-        "end": 87.24,
-        "note": "Ngân"
+        "start": 86.8,
+        "end": 87.2
       },
       {
         "w": "lặng",
-        "start": 87.24,
-        "end": 88.38,
-        "note": "Trầm"
+        "start": 87.2,
+        "end": 87.6
       },
       {
         "w": "thầm",
-        "start": 88.38,
-        "end": 89.14,
-        "note": "Lắng"
+        "start": 87.6,
+        "end": 88.3
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 2",
+    "sec": "gh_3",
     "phrase": "nhìn theo bước em",
     "words": [
       {
         "w": "nhìn",
-        "start": 89.14,
-        "end": 89.6,
-        "note": "Nối"
+        "start": 88.3,
+        "end": 89.2
       },
       {
         "w": "theo",
-        "start": 89.6,
-        "end": 90.12,
-        "note": "Lướt"
+        "start": 89.2,
+        "end": 89.7
       },
       {
         "w": "bước",
-        "start": 90.12,
-        "end": 90.54,
-        "note": "Gõ nhịp"
+        "start": 89.7,
+        "end": 90.2
       },
       {
         "w": "em",
-        "start": 90.54,
-        "end": 91.14,
-        "note": "Color accent"
+        "start": 90.2,
+        "end": 90.8
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 2",
+    "sec": "gh_3",
     "phrase": "QUA CẦU",
     "words": [
       {
         "w": "QUA",
-        "start": 91.14,
-        "end": 91.78,
-        "note": "Nhấn (Box highlight)"
+        "start": 90.8,
+        "end": 91.8,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "CẦU",
-        "start": 91.78,
-        "end": 93.3,
-        "note": "Ngân kéo dài (Box highlight)"
+        "start": 91.8,
+        "end": 93.0,
+        "sustain": "1.2s",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 3",
+    "sec": "gh_4",
     "phrase": "ngày nào có nhau",
     "words": [
       {
         "w": "ngày",
         "start": 93.6,
-        "end": 94.2,
-        "note": "Bắt đầu kỷ niệm"
+        "end": 94.1
       },
       {
         "w": "nào",
-        "start": 94.2,
-        "end": 94.45,
-        "note": "Lướt"
+        "start": 94.1,
+        "end": 94.4
       },
       {
         "w": "có",
-        "start": 94.45,
-        "end": 94.8,
-        "note": "Nối"
+        "start": 94.4,
+        "end": 94.7
       },
       {
         "w": "nhau",
-        "start": 94.8,
-        "end": 95.8,
-        "note": "Ngân"
+        "start": 94.7,
+        "end": 95.6
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 3",
+    "sec": "gh_4",
     "phrase": "ta trao ước hẹn",
     "words": [
       {
         "w": "ta",
-        "start": 95.8,
-        "end": 96.5,
-        "note": "Nhẹ"
+        "start": 95.6,
+        "end": 96.2
       },
       {
         "w": "trao",
-        "start": 96.5,
-        "end": 97.34,
-        "note": "Mượt"
+        "start": 96.2,
+        "end": 96.7
       },
       {
         "w": "ước",
-        "start": 97.34,
-        "end": 97.6,
-        "note": "Lướt"
+        "start": 96.7,
+        "end": 97.1
       },
       {
         "w": "hẹn",
-        "start": 97.6,
-        "end": 98.2,
-        "note": "Khép nốt"
+        "start": 97.1,
+        "end": 97.5
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 3",
+    "sec": "gh_4",
     "phrase": "TRẦU CAU",
     "words": [
       {
         "w": "TRẦU",
-        "start": 98.2,
-        "end": 98.8,
-        "note": "Nhấn (Box highlight)"
+        "start": 97.5,
+        "end": 98.6,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "CAU",
-        "start": 98.8,
-        "end": 99.97,
-        "note": "Ngân rền (Box highlight)"
+        "start": 98.6,
+        "end": 99.8,
+        "sustain": "1.2s",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 4",
+    "sec": "gh_5",
     "phrase": "mong duyên ban đầu",
     "words": [
       {
         "w": "mong",
-        "start": 100.0,
-        "end": 100.84,
-        "note": "Khởi đầu câu"
+        "start": 100.2,
+        "end": 100.9
       },
       {
         "w": "duyên",
-        "start": 100.84,
-        "end": 101.44,
-        "note": "Luyến"
+        "start": 100.9,
+        "end": 101.5
       },
       {
         "w": "ban",
-        "start": 101.44,
-        "end": 101.72,
-        "note": "Lướt"
+        "start": 101.5,
+        "end": 101.8
       },
       {
         "w": "đầu",
-        "start": 101.72,
-        "end": 102.5,
-        "note": "Ngân"
+        "start": 101.8,
+        "end": 102.5
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 4",
+    "sec": "gh_5",
     "phrase": "trời thương",
     "words": [
       {
         "w": "trời",
-        "start": 102.5,
-        "end": 103.5,
-        "note": "Mở rộng âm vực"
+        "start": 102.8,
+        "end": 103.4
       },
       {
         "w": "thương",
-        "start": 103.5,
-        "end": 104.4,
-        "note": "Ngân cảm xúc"
+        "start": 103.4,
+        "end": 103.8
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 4",
+    "sec": "gh_5",
     "phrase": "không đổ MƯA NGÂU",
     "words": [
       {
         "w": "không",
-        "start": 104.4,
-        "end": 104.7,
-        "note": "Chuyển tiếp"
+        "start": 103.8,
+        "end": 104.3
       },
       {
         "w": "đổ",
-        "start": 104.7,
-        "end": 105.2,
-        "note": "Nối nốt"
+        "start": 104.3,
+        "end": 104.8
       },
       {
         "w": "MƯA",
-        "start": 105.2,
-        "end": 105.6,
-        "note": "Nhấn (Box highlight)"
+        "start": 104.8,
+        "end": 105.5,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "NGÂU",
-        "start": 105.6,
-        "end": 106.8,
-        "note": "Ngân dài (Box highlight)"
+        "start": 105.5,
+        "end": 106.5,
+        "sustain": "1.0s",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 5",
+    "sec": "gh_6",
     "phrase": "bóng em xa dần",
     "words": [
       {
         "w": "bóng",
-        "start": 107.2,
-        "end": 107.9,
-        "note": "Bắt đầu đoạn B"
+        "start": 107.3,
+        "end": 107.9
       },
       {
         "w": "em",
         "start": 107.9,
-        "end": 108.2,
-        "note": "Color accent"
+        "end": 108.3
       },
       {
         "w": "xa",
-        "start": 108.2,
-        "end": 108.7,
-        "note": "Kéo dài"
+        "start": 108.3,
+        "end": 108.8
       },
       {
         "w": "dần",
-        "start": 108.7,
-        "end": 109.5,
-        "note": "Hạ giọng"
+        "start": 108.8,
+        "end": 109.5
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 5",
+    "sec": "gh_6",
     "phrase": "ANH biết là",
     "words": [
       {
         "w": "ANH",
-        "start": 109.5,
-        "end": 110.2,
-        "note": "Color accent"
+        "start": 109.8,
+        "end": 110.4,
+        "colorAccent": true,
+        "isUpperKey": true
       },
       {
         "w": "biết",
-        "start": 110.2,
-        "end": 110.7,
-        "note": "Luyến"
+        "start": 110.4,
+        "end": 110.8
       },
       {
         "w": "là",
-        "start": 110.7,
-        "end": 111.3,
-        "note": "Nối"
+        "start": 110.8,
+        "end": 111.2
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 5",
+    "sec": "gh_6",
     "phrase": "một lần CHIA CÁCH",
     "words": [
       {
         "w": "một",
-        "start": 111.3,
-        "end": 111.86,
-        "note": "Bắt nhịp"
+        "start": 111.2,
+        "end": 111.7
       },
       {
         "w": "lần",
-        "start": 111.86,
-        "end": 112.1,
-        "note": "Nối"
+        "start": 111.7,
+        "end": 112.2
       },
       {
         "w": "CHIA",
-        "start": 112.1,
-        "end": 112.5,
-        "note": "Nhấn (Box highlight)"
+        "start": 112.2,
+        "end": 112.8,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "CÁCH",
-        "start": 112.5,
-        "end": 113.8,
-        "note": "Gắt (Box highlight)"
+        "start": 112.8,
+        "end": 113.5,
+        "sustain": "0.7s",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 6",
+    "sec": "gh_7",
     "phrase": "trách ai vô tình",
     "words": [
       {
         "w": "trách",
-        "start": 114.2,
-        "end": 114.9,
-        "note": "Oán trách"
+        "start": 114.4,
+        "end": 114.9
       },
       {
         "w": "ai",
         "start": 114.9,
-        "end": 115.3,
-        "note": "Lướt"
+        "end": 115.4
       },
       {
         "w": "vô",
-        "start": 115.3,
-        "end": 115.9,
-        "note": "Nhấn"
+        "start": 115.4,
+        "end": 115.8
       },
       {
         "w": "tình",
-        "start": 115.9,
-        "end": 116.8,
-        "note": "Rơi"
+        "start": 115.8,
+        "end": 116.8
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 6",
+    "sec": "gh_7",
     "phrase": "đành tâm",
     "words": [
       {
         "w": "đành",
-        "start": 116.8,
-        "end": 117.5,
-        "note": "Nghẹn ngào"
+        "start": 117.0,
+        "end": 117.5
       },
       {
         "w": "tâm",
         "start": 117.5,
-        "end": 118.2,
-        "note": "Ngân nhẹ"
+        "end": 118.0
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 6",
-    "phrase": "XẺ ĐÔI",
+    "sec": "gh_7",
+    "phrase": "XẺ ĐÔI TIM MÌNH",
     "words": [
       {
         "w": "XẺ",
-        "start": 118.2,
-        "end": 118.9,
-        "note": "Đau đớn (Box highlight)"
+        "start": 118.0,
+        "end": 118.6,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "ĐÔI",
-        "start": 118.9,
-        "end": 119.8,
-        "note": "Box highlight"
-      }
-    ]
-  },
-  {
-    "sec": "Lời 1 - Khổ 6",
-    "phrase": "TIM MÌNH",
-    "words": [
+        "start": 118.6,
+        "end": 119.2,
+        "isUpperKey": true
+      },
       {
         "w": "TIM",
-        "start": 119.8,
-        "end": 120.3,
-        "note": "Color accent"
+        "start": 119.2,
+        "end": 119.8,
+        "isUpperKey": true
       },
       {
         "w": "MÌNH",
-        "start": 120.3,
-        "end": 121.2,
-        "note": "Ngân kết khổ"
+        "start": 119.8,
+        "end": 120.8,
+        "sustain": "1.0s",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 7",
+    "sec": "gh_8",
     "phrase": "dặn lòng cố quên",
     "words": [
       {
         "w": "dặn",
-        "start": 121.5,
-        "end": 122.1,
-        "note": "Tự nhủ"
+        "start": 121.2,
+        "end": 122.0
       },
       {
         "w": "lòng",
-        "start": 122.1,
-        "end": 122.5,
-        "note": "Lướt"
+        "start": 122.0,
+        "end": 122.5
       },
       {
         "w": "cố",
         "start": 122.5,
-        "end": 123.32,
-        "note": "Gắng gượng"
+        "end": 122.9
       },
       {
         "w": "quên",
-        "start": 123.32,
-        "end": 124.2,
-        "note": "Ngân dài"
+        "start": 122.9,
+        "end": 123.8
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 7",
+    "sec": "gh_8",
     "phrase": "sao đêm vẫn thường",
     "words": [
       {
         "w": "sao",
-        "start": 124.2,
-        "end": 124.8,
-        "note": "Hỏi lòng"
+        "start": 124.0,
+        "end": 124.5
       },
       {
         "w": "đêm",
-        "start": 124.8,
-        "end": 125.25,
-        "note": "Trầm"
+        "start": 124.5,
+        "end": 124.9
       },
       {
         "w": "vẫn",
-        "start": 125.25,
-        "end": 125.6,
-        "note": "Nối"
+        "start": 124.9,
+        "end": 125.3
       },
       {
         "w": "thường",
-        "start": 125.6,
-        "end": 126.5,
-        "note": "Kéo nốt"
+        "start": 125.3,
+        "end": 125.8
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 7",
+    "sec": "gh_8",
     "phrase": "gọi tên EM",
     "words": [
       {
         "w": "gọi",
-        "start": 126.5,
-        "end": 127.1,
-        "note": "Khao khát"
+        "start": 125.8,
+        "end": 126.3
       },
       {
         "w": "tên",
-        "start": 127.1,
-        "end": 127.6,
-        "note": "Nâng giọng"
+        "start": 126.3,
+        "end": 126.8
       },
       {
         "w": "EM",
-        "start": 127.6,
-        "end": 128.5,
-        "note": "Vang ngân (Color accent)"
+        "start": 126.8,
+        "end": 127.8,
+        "sustain": "1.0s",
+        "colorAccent": true,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 8",
+    "sec": "gh_9",
     "phrase": "ai ru trong chiều",
     "words": [
       {
         "w": "ai",
-        "start": 128.8,
-        "end": 129.5,
-        "note": "Khởi đầu câu ru"
+        "start": 128.5,
+        "end": 129.2
       },
       {
         "w": "ru",
-        "start": 129.5,
-        "end": 130.0,
-        "note": "Luyến mềm"
+        "start": 129.2,
+        "end": 129.6
       },
       {
         "w": "trong",
-        "start": 130.0,
-        "end": 130.5,
-        "note": "Trầm"
+        "start": 129.6,
+        "end": 130.0
       },
       {
         "w": "chiều",
-        "start": 130.5,
-        "end": 131.8,
-        "note": "Ngân dài mênh mang"
+        "start": 130.0,
+        "end": 131.2
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 8",
+    "sec": "gh_9",
     "phrase": "cho lòng càng nhớ",
     "words": [
       {
         "w": "cho",
-        "start": 131.8,
-        "end": 132.3,
-        "note": "Nối"
+        "start": 131.2,
+        "end": 131.9
       },
       {
         "w": "lòng",
-        "start": 132.3,
-        "end": 132.8,
-        "note": "Lắng"
+        "start": 131.9,
+        "end": 132.5
       },
       {
         "w": "càng",
-        "start": 132.8,
-        "end": 133.4,
-        "note": "Tăng cường độ"
+        "start": 132.5,
+        "end": 133.0
       },
       {
         "w": "nhớ",
-        "start": 133.4,
-        "end": 134.4,
-        "note": "Da diết"
+        "start": 133.0,
+        "end": 133.5
       }
     ]
   },
   {
-    "sec": "Lời 1 - Khổ 8",
+    "sec": "gh_9",
     "phrase": "EM NHIỀU...",
     "words": [
       {
         "w": "EM",
-        "start": 134.4,
-        "end": 135.2,
-        "note": "Color accent"
+        "start": 133.5,
+        "end": 134.5,
+        "colorAccent": true,
+        "isUpperKey": true
       },
       {
         "w": "NHIỀU...",
-        "start": 135.2,
-        "end": 140.8,
-        "note": "Ngân cực dài trước điệp khúc (Box highlight)"
+        "start": 134.5,
+        "end": 138.5,
+        "sustain": "4.0s",
+        "boxHighlight": true,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
-    "phrase": "À ƠI...",
+    "sec": "gh_10",
+    "phrase": "À ƠI... em nỡ sao em",
     "words": [
       {
         "w": "À",
-        "start": 141.5,
-        "end": 143.66,
-        "note": "Vút cao bùng nổ"
+        "start": 142.6,
+        "end": 143.8,
+        "sustain": "1.2s",
+        "isUpperKey": true
       },
       {
         "w": "ƠI...",
-        "start": 143.66,
-        "end": 146.42,
-        "note": "Ngân dài luyến láy da diết"
-      }
-    ]
-  },
-  {
-    "sec": "Điệp Khúc 1",
-    "phrase": "EM nỡ sao em",
-    "words": [
+        "start": 143.8,
+        "end": 145.5,
+        "sustain": "1.7s",
+        "isUpperKey": true
+      },
       {
-        "w": "EM",
-        "start": 146.42,
-        "end": 147.1,
-        "note": "Trách móc (Color accent)"
+        "w": "em",
+        "start": 145.5,
+        "end": 146.8
       },
       {
         "w": "nỡ",
-        "start": 147.1,
-        "end": 147.3,
-        "note": "Nhấn"
+        "start": 146.8,
+        "end": 147.3
       },
       {
         "w": "sao",
         "start": 147.3,
-        "end": 147.7,
-        "note": "Lướt"
+        "end": 147.8
       },
       {
         "w": "em",
-        "start": 147.7,
-        "end": 148.5,
-        "note": "Color accent"
+        "start": 147.8,
+        "end": 149.2,
+        "sustain": "1.4s"
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
+    "sec": "gh_10",
     "phrase": "bỏ anh một mình",
     "words": [
       {
         "w": "bỏ",
-        "start": 148.5,
-        "end": 150.3,
-        "note": "Hẫng hụt"
+        "start": 149.5,
+        "end": 150.3
       },
       {
         "w": "anh",
         "start": 150.3,
-        "end": 150.7,
-        "note": "Color accent"
+        "end": 150.7
       },
       {
         "w": "một",
         "start": 150.7,
-        "end": 151.3,
-        "note": "Trầm"
+        "end": 151.0
       },
       {
         "w": "mình",
-        "start": 151.3,
-        "end": 152.12,
-        "note": "Cô độc"
+        "start": 151.0,
+        "end": 151.8
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
+    "sec": "gh_10",
     "phrase": "LỤC BÌNH TRÔI",
     "words": [
       {
         "w": "LỤC",
-        "start": 152.5,
-        "end": 153.1,
-        "note": "Nhấn (Box highlight)"
+        "start": 151.8,
+        "end": 152.7,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "BÌNH",
-        "start": 153.1,
-        "end": 153.5,
-        "note": "Lướt (Box highlight)"
+        "start": 152.7,
+        "end": 153.2,
+        "isUpperKey": true
       },
       {
         "w": "TRÔI",
-        "start": 153.5,
-        "end": 154.5,
-        "note": "Trôi nổi (Box highlight)"
+        "start": 153.2,
+        "end": 154.0,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
+    "sec": "gh_10",
     "phrase": "chẳng biết nơi neo",
     "words": [
       {
         "w": "chẳng",
-        "start": 154.5,
-        "end": 155.0,
-        "note": "Vô định"
+        "start": 154.0,
+        "end": 154.4
       },
       {
         "w": "biết",
-        "start": 155.0,
-        "end": 155.3,
-        "note": "Lướt"
+        "start": 154.4,
+        "end": 154.8
       },
       {
         "w": "nơi",
-        "start": 155.3,
-        "end": 155.8,
-        "note": "Kéo dài"
+        "start": 154.8,
+        "end": 155.3
       },
       {
         "w": "neo",
-        "start": 155.8,
-        "end": 156.8,
-        "note": "Rơi"
+        "start": 155.3,
+        "end": 156.2,
+        "sustain": "0.9s"
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
-    "phrase": "CÒN THƯƠNG",
+    "sec": "gh_11",
+    "phrase": "CÒN THƯƠNG tóc em buông dài",
     "words": [
       {
         "w": "CÒN",
-        "start": 157.57,
-        "end": 158.4,
-        "note": "Bắt nhịp kỷ niệm"
+        "start": 157.0,
+        "end": 157.8,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "THƯƠNG",
-        "start": 158.4,
-        "end": 159.68,
-        "note": "Ngân ấm áp"
-      }
-    ]
-  },
-  {
-    "sec": "Điệp Khúc 1",
-    "phrase": "tóc em buông dài",
-    "words": [
+        "start": 157.8,
+        "end": 159.5,
+        "sustain": "1.7s",
+        "isUpperKey": true
+      },
       {
         "w": "tóc",
-        "start": 159.7,
-        "end": 160.4,
-        "note": "Nhẹ"
+        "start": 159.5,
+        "end": 160.7
       },
       {
         "w": "em",
-        "start": 160.4,
-        "end": 160.8,
-        "note": "Color accent"
+        "start": 160.7,
+        "end": 161.2
       },
       {
         "w": "buông",
-        "start": 160.8,
-        "end": 161.4,
-        "note": "Mềm mại"
+        "start": 161.2,
+        "end": 161.6
       },
       {
         "w": "dài",
-        "start": 161.4,
-        "end": 162.2,
-        "note": "Ngân"
+        "start": 161.6,
+        "end": 163.0,
+        "sustain": "1.4s"
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
-    "phrase": "TÍM HOA",
+    "sec": "gh_11",
+    "phrase": "TÍM HOA anh cài",
     "words": [
       {
         "w": "TÍM",
-        "start": 162.2,
-        "end": 162.9,
-        "note": "Sắc hoa (Box highlight)"
+        "start": 163.5,
+        "end": 164.5,
+        "colorAccent": true,
+        "isUpperKey": true
       },
       {
         "w": "HOA",
-        "start": 162.9,
-        "end": 163.8,
-        "note": "Ngân (Box highlight)"
-      }
-    ]
-  },
-  {
-    "sec": "Điệp Khúc 1",
-    "phrase": "anh cài em cười",
-    "words": [
+        "start": 164.5,
+        "end": 165.2,
+        "isUpperKey": true
+      },
       {
         "w": "anh",
-        "start": 163.8,
-        "end": 164.4,
-        "note": "Color accent"
+        "start": 165.2,
+        "end": 165.5
       },
       {
         "w": "cài",
-        "start": 164.4,
-        "end": 165.0,
-        "note": "Nối"
-      },
+        "start": 165.5,
+        "end": 166.0
+      }
+    ]
+  },
+  {
+    "sec": "gh_11",
+    "phrase": "em cười SIẾT CHẶT VÒNG TAY",
+    "words": [
       {
         "w": "em",
-        "start": 165.0,
-        "end": 165.5,
-        "note": "Color accent"
+        "start": 166.0,
+        "end": 166.5
       },
       {
         "w": "cười",
-        "start": 165.5,
-        "end": 166.43,
-        "note": "Hạnh phúc xưa"
-      }
-    ]
-  },
-  {
-    "sec": "Điệp Khúc 1",
-    "phrase": "XIẾT CHẶT VÒNG TAY",
-    "words": [
+        "start": 166.5,
+        "end": 167.2
+      },
       {
-        "w": "XIẾT",
-        "start": 166.68,
-        "end": 167.43,
-        "note": "Căng nốt cao trào"
+        "w": "SIẾT",
+        "start": 167.2,
+        "end": 167.8,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "CHẶT",
-        "start": 167.43,
-        "end": 168.1,
-        "note": "Gắt nhịp"
+        "start": 167.8,
+        "end": 168.2,
+        "isUpperKey": true
       },
       {
         "w": "VÒNG",
-        "start": 168.1,
-        "end": 168.68,
-        "note": "Lướt"
+        "start": 168.2,
+        "end": 168.8,
+        "isUpperKey": true
       },
       {
         "w": "TAY",
-        "start": 168.68,
-        "end": 171.14,
-        "note": "Ngân sâu lắng"
+        "start": 168.8,
+        "end": 170.0,
+        "sustain": "1.2s",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
-    "phrase": "À ƠI...",
+    "sec": "gh_12",
+    "phrase": "À ƠI... em nỡ sao em",
     "words": [
       {
         "w": "À",
-        "start": 171.14,
-        "end": 172.5,
-        "note": "Nấc nghẹn cao độ"
+        "start": 171.0,
+        "end": 172.0,
+        "isUpperKey": true
       },
       {
         "w": "ƠI...",
-        "start": 172.5,
-        "end": 174.4,
-        "note": "Ngân luyến đau đớn"
+        "start": 172.0,
+        "end": 174.2,
+        "sustain": "2.2s",
+        "isUpperKey": true
+      },
+      {
+        "w": "em",
+        "start": 174.5,
+        "end": 175.0
+      },
+      {
+        "w": "nỡ",
+        "start": 175.0,
+        "end": 175.5
+      },
+      {
+        "w": "sao",
+        "start": 175.5,
+        "end": 176.0
+      },
+      {
+        "w": "em",
+        "start": 176.0,
+        "end": 176.5
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
+    "sec": "gh_12",
     "phrase": "nói thương anh nhiều",
     "words": [
       {
         "w": "nói",
-        "start": 174.4,
-        "end": 175.4,
-        "note": "Trách lời hứa"
+        "start": 176.5,
+        "end": 177.5
       },
       {
         "w": "thương",
-        "start": 175.4,
-        "end": 176.3,
-        "note": "Luyến"
+        "start": 177.5,
+        "end": 178.5
       },
       {
         "w": "anh",
-        "start": 176.3,
-        "end": 177.28,
-        "note": "Color accent"
+        "start": 178.5,
+        "end": 179.2
       },
       {
         "w": "nhiều",
-        "start": 177.28,
-        "end": 178.4,
-        "note": "Kéo dài"
+        "start": 179.2,
+        "end": 180.2,
+        "sustain": "1.0s"
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
-    "phrase": "đành lòng EM",
+    "sec": "gh_12",
+    "phrase": "đành lòng EM CẤT BƯỚC",
     "words": [
       {
         "w": "đành",
-        "start": 178.4,
-        "end": 179.3,
-        "note": "Nghẹn"
+        "start": 180.5,
+        "end": 181.1
       },
       {
         "w": "lòng",
-        "start": 179.3,
-        "end": 179.8,
-        "note": "Trầm"
+        "start": 181.1,
+        "end": 181.5
       },
       {
         "w": "EM",
-        "start": 179.8,
-        "end": 180.8,
-        "note": "Thảng thốt (Color accent)"
-      }
-    ]
-  },
-  {
-    "sec": "Điệp Khúc 1",
-    "phrase": "CẤT BƯỚC",
-    "words": [
+        "start": 181.5,
+        "end": 182.0,
+        "colorAccent": true,
+        "isUpperKey": true
+      },
       {
         "w": "CẤT",
-        "start": 180.8,
-        "end": 181.6,
-        "note": "Nhấn (Box highlight)"
+        "start": 182.0,
+        "end": 182.6,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "BƯỚC",
-        "start": 181.6,
-        "end": 182.4,
-        "note": "Box highlight"
+        "start": 182.6,
+        "end": 183.5,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
+    "sec": "gh_12",
     "phrase": "SANG SÔNG...",
     "words": [
       {
         "w": "SANG",
-        "start": 182.4,
-        "end": 182.9,
-        "note": "Biệt ly"
+        "start": 183.5,
+        "end": 184.8,
+        "isUpperKey": true
       },
       {
         "w": "SÔNG...",
-        "start": 182.9,
-        "end": 184.5,
-        "note": "Ngân dài qua câu sau"
+        "start": 184.8,
+        "end": 187.2,
+        "sustain": "2.4s",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
+    "sec": "gh_13",
     "phrase": "vì đâu dở dang duyên mình",
     "words": [
       {
         "w": "vì",
-        "start": 184.66,
-        "end": 186.0,
-        "note": "Than thở"
+        "start": 187.8,
+        "end": 188.5
       },
       {
         "w": "đâu",
-        "start": 186.0,
-        "end": 186.86,
-        "note": "Trầm ngâm"
+        "start": 188.5,
+        "end": 189.2
       },
       {
         "w": "dở",
-        "start": 186.86,
-        "end": 187.8,
-        "note": "Nấc"
+        "start": 189.2,
+        "end": 189.7
       },
       {
         "w": "dang",
-        "start": 187.8,
-        "end": 188.8,
-        "note": "Nối"
+        "start": 189.7,
+        "end": 190.2
       },
       {
         "w": "duyên",
-        "start": 188.8,
-        "end": 189.6,
-        "note": "Lướt"
+        "start": 190.2,
+        "end": 190.8
       },
       {
         "w": "mình",
-        "start": 189.6,
-        "end": 190.34,
-        "note": "Rơi"
+        "start": 190.8,
+        "end": 192.0,
+        "sustain": "1.2s"
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
+    "sec": "gh_13",
     "phrase": "SẮC HOA CHUNG TÌNH",
     "words": [
       {
         "w": "SẮC",
-        "start": 190.34,
-        "end": 191.4,
-        "note": "Đỉnh cao trào (Box highlight)"
+        "start": 192.2,
+        "end": 192.8,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "HOA",
-        "start": 191.4,
-        "end": 192.3,
-        "note": "Vang sáng (Box highlight)"
+        "start": 192.8,
+        "end": 193.4,
+        "isUpperKey": true
       },
       {
         "w": "CHUNG",
-        "start": 192.3,
-        "end": 193.04,
-        "note": "Son sắt (Box highlight)"
+        "start": 193.4,
+        "end": 194.0,
+        "isUpperKey": true
       },
       {
         "w": "TÌNH",
-        "start": 193.04,
-        "end": 194.2,
-        "note": "Ngân da diết (Box highlight)"
+        "start": 194.0,
+        "end": 194.5,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
+    "sec": "gh_13",
     "phrase": "chưa phai màu",
     "words": [
       {
         "w": "chưa",
-        "start": 194.2,
-        "end": 194.78,
-        "note": "Trăn trở"
+        "start": 194.5,
+        "end": 195.0
       },
       {
         "w": "phai",
-        "start": 194.78,
-        "end": 195.52,
-        "note": "Luyến"
+        "start": 195.0,
+        "end": 195.5
       },
       {
         "w": "màu",
-        "start": 195.52,
-        "end": 196.34,
-        "note": "Rơi nốt"
+        "start": 195.5,
+        "end": 196.0
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 1",
+    "sec": "gh_13",
     "phrase": "NỠ NÀO NGƯỜI ĐI...",
     "words": [
       {
         "w": "NỠ",
-        "start": 196.34,
-        "end": 196.8,
-        "note": "Nghẹn"
+        "start": 196.0,
+        "end": 196.6,
+        "colorAccent": true,
+        "isUpperKey": true
       },
       {
         "w": "NÀO",
-        "start": 196.8,
-        "end": 197.4,
-        "note": "Lên giọng"
+        "start": 196.6,
+        "end": 197.2,
+        "isUpperKey": true
       },
       {
         "w": "NGƯỜI",
-        "start": 197.4,
-        "end": 197.9,
-        "note": "Trầm"
+        "start": 197.2,
+        "end": 197.8,
+        "isUpperKey": true
       },
       {
         "w": "ĐI...",
-        "start": 197.9,
+        "start": 197.8,
         "end": 199.5,
-        "note": "Ngân dài chuyển vào gian tấu"
+        "sustain": "1.7s",
+        "boxHighlight": true,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 2",
-    "phrase": "À ƠI...",
-    "words": [
-      {
-        "w": "À",
-        "start": 226.5,
-        "end": 228.54,
-        "note": "Bùng nổ điệp khúc 2"
-      },
-      {
-        "w": "ƠI...",
-        "start": 228.54,
-        "end": 230.64,
-        "note": "Ngân dài réo rắt"
-      }
-    ]
-  },
-  {
-    "sec": "Điệp Khúc 2",
-    "phrase": "EM nỡ sao em",
-    "words": [
-      {
-        "w": "EM",
-        "start": 230.64,
-        "end": 231.88,
-        "note": "Color accent"
-      },
-      {
-        "w": "nỡ",
-        "start": 231.88,
-        "end": 232.14,
-        "note": "Nhấn"
-      },
-      {
-        "w": "sao",
-        "start": 232.14,
-        "end": 232.32,
-        "note": "Lướt"
-      },
-      {
-        "w": "em",
-        "start": 232.32,
-        "end": 233.1,
-        "note": "Color accent"
-      }
-    ]
-  },
-  {
-    "sec": "Điệp Khúc 2",
+    "sec": "gh_14",
     "phrase": "bỏ anh một mình",
     "words": [
       {
         "w": "bỏ",
-        "start": 233.1,
-        "end": 235.02,
-        "note": "Chùng giọng"
+        "start": 234.8,
+        "end": 235.1
       },
       {
         "w": "anh",
-        "start": 235.02,
-        "end": 235.34,
-        "note": "Color accent"
+        "start": 235.1,
+        "end": 235.4
       },
       {
         "w": "một",
-        "start": 235.34,
-        "end": 235.98,
-        "note": "Nối"
+        "start": 235.4,
+        "end": 235.8
       },
       {
         "w": "mình",
-        "start": 235.98,
-        "end": 236.8,
-        "note": "Khép nốt"
+        "start": 235.8,
+        "end": 236.5
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 2",
+    "sec": "gh_14",
     "phrase": "LỤC BÌNH TRÔI",
     "words": [
       {
         "w": "LỤC",
-        "start": 237.0,
+        "start": 236.8,
         "end": 237.5,
-        "note": "Box highlight"
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "BÌNH",
         "start": 237.5,
-        "end": 238.1,
-        "note": "Box highlight"
+        "end": 238.0,
+        "isUpperKey": true
       },
       {
         "w": "TRÔI",
-        "start": 238.1,
+        "start": 238.0,
         "end": 238.8,
-        "note": "Box highlight"
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 2",
+    "sec": "gh_14",
     "phrase": "chẳng biết nơi neo",
     "words": [
       {
         "w": "chẳng",
         "start": 238.8,
-        "end": 239.2,
-        "note": "Vô định"
+        "end": 239.2
       },
       {
         "w": "biết",
         "start": 239.2,
-        "end": 239.6,
-        "note": "Lướt"
+        "end": 239.6
       },
       {
         "w": "nơi",
         "start": 239.6,
-        "end": 240.2,
-        "note": "Kéo"
+        "end": 240.0
       },
       {
         "w": "neo",
-        "start": 240.2,
-        "end": 241.5,
-        "note": "Rơi"
+        "start": 240.0,
+        "end": 240.8,
+        "sustain": "0.8s"
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 2",
-    "phrase": "CÒN THƯƠNG",
+    "sec": "gh_15",
+    "phrase": "CÒN THƯƠNG tóc em buông dài",
     "words": [
       {
         "w": "CÒN",
-        "start": 242.0,
-        "end": 243.2,
-        "note": "Ấm áp"
+        "start": 241.5,
+        "end": 242.6,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "THƯƠNG",
-        "start": 243.2,
+        "start": 242.6,
         "end": 244.5,
-        "note": "Ngân"
-      }
-    ]
-  },
-  {
-    "sec": "Điệp Khúc 2",
-    "phrase": "tóc em buông dài",
-    "words": [
+        "sustain": "1.9s",
+        "isUpperKey": true
+      },
       {
         "w": "tóc",
         "start": 244.5,
-        "end": 245.2,
-        "note": "Nhẹ"
+        "end": 245.8
       },
       {
         "w": "em",
-        "start": 245.2,
-        "end": 245.8,
-        "note": "Color accent"
+        "start": 245.8,
+        "end": 246.3
       },
       {
         "w": "buông",
-        "start": 245.8,
-        "end": 246.5,
-        "note": "Mềm"
+        "start": 246.3,
+        "end": 246.8
       },
       {
         "w": "dài",
-        "start": 246.5,
-        "end": 247.3,
-        "note": "Kéo"
+        "start": 246.8,
+        "end": 247.5
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 2",
-    "phrase": "TÍM HOA",
+    "sec": "gh_15",
+    "phrase": "TÍM HOA anh cài",
     "words": [
       {
         "w": "TÍM",
-        "start": 247.3,
-        "end": 248.1,
-        "note": "Sắc hoa (Box highlight)"
+        "start": 248.5,
+        "end": 249.5,
+        "colorAccent": true,
+        "isUpperKey": true
       },
       {
         "w": "HOA",
-        "start": 248.1,
-        "end": 249.0,
-        "note": "Box highlight"
-      }
-    ]
-  },
-  {
-    "sec": "Điệp Khúc 2",
-    "phrase": "anh cài em cười",
-    "words": [
+        "start": 249.5,
+        "end": 250.0,
+        "isUpperKey": true
+      },
       {
         "w": "anh",
-        "start": 249.0,
-        "end": 249.7,
-        "note": "Color accent"
+        "start": 250.0,
+        "end": 250.4
       },
       {
         "w": "cài",
-        "start": 249.7,
-        "end": 250.3,
-        "note": "Nối"
-      },
+        "start": 250.4,
+        "end": 251.0
+      }
+    ]
+  },
+  {
+    "sec": "gh_15",
+    "phrase": "em cười SIẾT CHẶT VÒNG TAY",
+    "words": [
       {
         "w": "em",
-        "start": 250.3,
-        "end": 250.94,
-        "note": "Color accent"
+        "start": 251.0,
+        "end": 251.5
       },
       {
         "w": "cười",
-        "start": 250.94,
-        "end": 251.8,
-        "note": "Ngân tươi"
-      }
-    ]
-  },
-  {
-    "sec": "Điệp Khúc 2",
-    "phrase": "XIẾT CHẶT VÒNG TAY",
-    "words": [
+        "start": 251.5,
+        "end": 252.2
+      },
       {
-        "w": "XIẾT",
-        "start": 251.8,
-        "end": 252.7,
-        "note": "Cao trào"
+        "w": "SIẾT",
+        "start": 252.2,
+        "end": 252.8,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "CHẶT",
-        "start": 252.7,
-        "end": 253.12,
-        "note": "Chắc"
+        "start": 252.8,
+        "end": 253.2,
+        "isUpperKey": true
       },
       {
         "w": "VÒNG",
-        "start": 253.12,
-        "end": 253.6,
-        "note": "Lướt"
+        "start": 253.2,
+        "end": 253.7,
+        "isUpperKey": true
       },
       {
         "w": "TAY",
-        "start": 253.6,
-        "end": 255.5,
-        "note": "Ngân sâu"
+        "start": 253.7,
+        "end": 254.5,
+        "sustain": "0.8s",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 2",
-    "phrase": "À ƠI...",
+    "sec": "gh_16",
+    "phrase": "À ƠI... em nỡ sao em",
     "words": [
       {
         "w": "À",
-        "start": 256.0,
-        "end": 257.5,
-        "note": "Vang vọng"
+        "start": 255.5,
+        "end": 256.9,
+        "isUpperKey": true
       },
       {
         "w": "ƠI...",
-        "start": 257.5,
-        "end": 260.15,
-        "note": "Ngân dài xé lòng"
+        "start": 256.9,
+        "end": 259.0,
+        "sustain": "2.1s",
+        "isUpperKey": true
+      },
+      {
+        "w": "em",
+        "start": 259.2,
+        "end": 259.7
+      },
+      {
+        "w": "nỡ",
+        "start": 259.7,
+        "end": 260.1
+      },
+      {
+        "w": "sao",
+        "start": 260.1,
+        "end": 260.6
+      },
+      {
+        "w": "em",
+        "start": 260.6,
+        "end": 261.0
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 2",
+    "sec": "gh_16",
     "phrase": "nói thương anh nhiều",
     "words": [
       {
         "w": "nói",
-        "start": 260.15,
-        "end": 261.2,
-        "note": "Trách"
+        "start": 261.0,
+        "end": 262.0
       },
       {
         "w": "thương",
-        "start": 261.2,
-        "end": 261.8,
-        "note": "Luyến"
+        "start": 262.0,
+        "end": 263.0
       },
       {
         "w": "anh",
-        "start": 261.8,
-        "end": 262.5,
-        "note": "Color accent"
+        "start": 263.0,
+        "end": 263.8
       },
       {
         "w": "nhiều",
-        "start": 262.5,
-        "end": 263.5,
-        "note": "Kéo"
+        "start": 263.8,
+        "end": 264.8,
+        "sustain": "1.0s"
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 2",
-    "phrase": "đành lòng EM",
+    "sec": "gh_16",
+    "phrase": "đành lòng EM CẤT BƯỚC",
     "words": [
       {
         "w": "đành",
-        "start": 263.5,
-        "end": 264.2,
-        "note": "Nghẹn"
+        "start": 264.8,
+        "end": 265.7
       },
       {
         "w": "lòng",
-        "start": 264.2,
-        "end": 264.8,
-        "note": "Trầm"
+        "start": 265.7,
+        "end": 266.1
       },
       {
         "w": "EM",
-        "start": 264.8,
-        "end": 265.8,
-        "note": "Color accent"
-      }
-    ]
-  },
-  {
-    "sec": "Điệp Khúc 2",
-    "phrase": "CẤT BƯỚC",
-    "words": [
+        "start": 266.1,
+        "end": 266.6,
+        "colorAccent": true,
+        "isUpperKey": true
+      },
       {
         "w": "CẤT",
-        "start": 265.8,
-        "end": 266.5,
-        "note": "Box highlight"
+        "start": 266.6,
+        "end": 267.2,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "BƯỚC",
-        "start": 266.5,
-        "end": 267.2,
-        "note": "Box highlight"
+        "start": 267.2,
+        "end": 268.0,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 2",
+    "sec": "gh_16",
     "phrase": "SANG SÔNG...",
     "words": [
       {
         "w": "SANG",
-        "start": 267.2,
-        "end": 267.8,
-        "note": "Biệt ly"
+        "start": 268.0,
+        "end": 269.5,
+        "isUpperKey": true
       },
       {
         "w": "SÔNG...",
-        "start": 267.8,
-        "end": 269.5,
-        "note": "Kéo dài"
+        "start": 269.5,
+        "end": 271.7,
+        "sustain": "2.2s",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 2",
+    "sec": "gh_17",
     "phrase": "vì đâu dở dang duyên mình",
     "words": [
       {
         "w": "vì",
-        "start": 269.5,
-        "end": 270.5,
-        "note": "Trầm ngâm"
+        "start": 272.8,
+        "end": 273.5
       },
       {
         "w": "đâu",
-        "start": 270.5,
-        "end": 271.3,
-        "note": "Thở dài"
+        "start": 273.5,
+        "end": 274.0
       },
       {
         "w": "dở",
-        "start": 271.3,
-        "end": 272.0,
-        "note": "Nấc"
+        "start": 274.0,
+        "end": 274.5
       },
       {
         "w": "dang",
-        "start": 272.0,
-        "end": 272.85,
-        "note": "Nối"
+        "start": 274.5,
+        "end": 275.0
       },
       {
         "w": "duyên",
-        "start": 272.85,
-        "end": 273.5,
-        "note": "Lướt"
+        "start": 275.0,
+        "end": 275.6
       },
       {
         "w": "mình",
-        "start": 273.5,
-        "end": 274.2,
-        "note": "Rơi"
+        "start": 275.6,
+        "end": 276.8,
+        "sustain": "1.2s"
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 2",
+    "sec": "gh_17",
     "phrase": "SẮC HOA CHUNG TÌNH",
     "words": [
       {
         "w": "SẮC",
-        "start": 274.2,
-        "end": 275.2,
-        "note": "Đỉnh cao trào cuối (Box highlight)"
+        "start": 276.8,
+        "end": 277.3,
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "HOA",
-        "start": 275.2,
-        "end": 276.0,
-        "note": "Vang sáng (Box highlight)"
+        "start": 277.3,
+        "end": 277.8,
+        "isUpperKey": true
       },
       {
         "w": "CHUNG",
-        "start": 276.0,
-        "end": 276.6,
-        "note": "Son sắt (Box highlight)"
+        "start": 277.8,
+        "end": 278.4,
+        "isUpperKey": true
       },
       {
         "w": "TÌNH",
-        "start": 276.6,
-        "end": 277.5,
-        "note": "Ngân da diết (Box highlight)"
+        "start": 278.4,
+        "end": 279.0,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 2",
+    "sec": "gh_17",
     "phrase": "chưa phai màu",
     "words": [
       {
         "w": "chưa",
-        "start": 277.5,
-        "end": 278.2,
-        "note": "Xao xuyến"
+        "start": 279.0,
+        "end": 279.4
       },
       {
         "w": "phai",
-        "start": 278.2,
-        "end": 279.46,
-        "note": "Luyến"
+        "start": 279.4,
+        "end": 279.8
       },
       {
         "w": "màu",
-        "start": 279.46,
-        "end": 280.34,
-        "note": "Rơi nốt"
+        "start": 279.8,
+        "end": 280.2
       }
     ]
   },
   {
-    "sec": "Điệp Khúc 2",
+    "sec": "gh_17",
     "phrase": "NỠ NÀO NGƯỜI ĐI...",
     "words": [
       {
         "w": "NỠ",
-        "start": 280.34,
-        "end": 280.88,
-        "note": "Nghẹn ngào"
+        "start": 280.2,
+        "end": 280.8,
+        "colorAccent": true,
+        "isUpperKey": true
       },
       {
         "w": "NÀO",
-        "start": 280.88,
-        "end": 281.18,
-        "note": "Nấc"
+        "start": 280.8,
+        "end": 281.3,
+        "isUpperKey": true
       },
       {
         "w": "NGƯỜI",
-        "start": 281.18,
-        "end": 281.7,
-        "note": "Trầm"
+        "start": 281.3,
+        "end": 281.8,
+        "isUpperKey": true
       },
       {
         "w": "ĐI...",
-        "start": 281.7,
+        "start": 281.8,
         "end": 283.0,
-        "note": "Ngân kết điệp khúc"
+        "sustain": "1.2s",
+        "boxHighlight": true,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Chuyển đoạn (rit.)",
+    "sec": "gh_18",
     "phrase": "Dòng nhớ trong tim",
     "words": [
       {
@@ -1847,12 +1696,13 @@
         "start": 286.0,
         "end": 287.5,
         "sustain": "1.5s",
-        "note": "Ngân sâu lắng"
+        "note": "Ngân sâu lắng",
+        "boxHighlight": true
       }
     ]
   },
   {
-    "sec": "Nhấn cao trào",
+    "sec": "gh_18",
     "phrase": "LÀM SAO CHIA CÁCH",
     "words": [
       {
@@ -1860,34 +1710,39 @@
         "start": 288.0,
         "end": 288.5,
         "sustain": "0.5s",
-        "note": "Nhấn âm"
+        "note": "Nhấn âm",
+        "boxHighlight": true,
+        "isUpperKey": true
       },
       {
         "w": "SAO",
         "start": 288.5,
         "end": 289.0,
         "sustain": "0.5s",
-        "note": "Giữ nốt"
+        "note": "Giữ nốt",
+        "isUpperKey": true
       },
       {
         "w": "CHIA",
         "start": 289.0,
         "end": 289.5,
         "sustain": "0.5s",
-        "note": "Lên nhẹ"
+        "note": "Lên nhẹ",
+        "isUpperKey": true
       },
       {
         "w": "CÁCH",
         "start": 289.5,
         "end": 290.8,
         "sustain": "1.3s",
-        "note": "Ngân dứt vế"
+        "note": "Ngân dứt vế",
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Tâm sự",
-    "phrase": "Người thương CÓ HAY...",
+    "sec": "gh_19",
+    "phrase": "Người thương",
     "words": [
       {
         "w": "Người",
@@ -1902,26 +1757,35 @@
         "end": 292.0,
         "sustain": "0.5s",
         "note": "Vuốt nốt"
-      },
+      }
+    ]
+  },
+  {
+    "sec": "gh_19",
+    "phrase": "CÓ HAY...",
+    "words": [
       {
         "w": "CÓ",
         "start": 292.0,
         "end": 292.5,
         "sustain": "0.5s",
-        "note": "Nhả nhanh"
+        "note": "Nhả nhanh",
+        "isUpperKey": true
       },
       {
         "w": "HAY...",
         "start": 292.5,
         "end": 294.2,
         "sustain": "1.7s",
-        "note": "Ngân rung nhẹ"
+        "note": "Ngân rung nhẹ",
+        "boxHighlight": true,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Khắc khoải",
-    "phrase": "Đêm dài Mình anh THAO THỨC",
+    "sec": "gh_20",
+    "phrase": "Đêm dài",
     "words": [
       {
         "w": "Đêm",
@@ -1935,8 +1799,15 @@
         "start": 296.0,
         "end": 297.6,
         "sustain": "1.6s",
-        "note": "Ngân trầm kéo dài"
-      },
+        "note": "Ngân trầm kéo dài",
+        "boxHighlight": true
+      }
+    ]
+  },
+  {
+    "sec": "gh_20",
+    "phrase": "Mình anh",
+    "words": [
       {
         "w": "Mình",
         "start": 298.0,
@@ -1950,33 +1821,43 @@
         "end": 299.2,
         "sustain": "0.6s",
         "note": "Giữ âm"
-      },
+      }
+    ]
+  },
+  {
+    "sec": "gh_20",
+    "phrase": "THAO THỨC",
+    "words": [
       {
         "w": "THAO",
         "start": 299.2,
         "end": 299.8,
         "sustain": "0.6s",
-        "note": "Chuyển nốt"
+        "note": "Chuyển nốt",
+        "isUpperKey": true
       },
       {
         "w": "THỨC",
         "start": 299.8,
         "end": 301.4,
         "sustain": "1.6s",
-        "note": "Ngân ngắt nhịp"
+        "note": "Ngân ngắt nhịp",
+        "boxHighlight": true,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Tâm trạng",
-    "phrase": "Em giờ Biết lòng BUỒN VUI",
+    "sec": "gh_21",
+    "phrase": "Em giờ",
     "words": [
       {
         "w": "Em",
         "start": 302.0,
         "end": 303.0,
         "sustain": "1.0s",
-        "note": "Nhấn tiếng kêu gọi"
+        "note": "Nhấn tiếng kêu gọi",
+        "colorAccent": true
       },
       {
         "w": "giờ",
@@ -1984,7 +1865,13 @@
         "end": 304.6,
         "sustain": "1.6s",
         "note": "Ngân nhẹ"
-      },
+      }
+    ]
+  },
+  {
+    "sec": "gh_21",
+    "phrase": "Biết lòng",
+    "words": [
       {
         "w": "Biết",
         "start": 305.0,
@@ -1998,33 +1885,43 @@
         "end": 306.2,
         "sustain": "0.6s",
         "note": "Hạ nốt"
-      },
+      }
+    ]
+  },
+  {
+    "sec": "gh_21",
+    "phrase": "BUỒN VUI",
+    "words": [
       {
         "w": "BUỒN",
         "start": 306.2,
         "end": 306.8,
         "sustain": "0.6s",
-        "note": "Nén cảm xúc"
+        "note": "Nén cảm xúc",
+        "isUpperKey": true
       },
       {
         "w": "VUI",
         "start": 306.8,
         "end": 308.5,
         "sustain": "1.7s",
-        "note": "Ngân luyến buồn"
+        "note": "Ngân luyến buồn",
+        "boxHighlight": true,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Xót xa",
-    "phrase": "Em về Làm dâu BÊN ẤY...",
+    "sec": "gh_22",
+    "phrase": "Em về",
     "words": [
       {
         "w": "Em",
         "start": 309.0,
         "end": 310.0,
         "sustain": "1.0s",
-        "note": "Nhắc lại tên"
+        "note": "Nhắc lại tên",
+        "colorAccent": true
       },
       {
         "w": "về",
@@ -2032,7 +1929,13 @@
         "end": 311.4,
         "sustain": "1.4s",
         "note": "Ngân buông thõng"
-      },
+      }
+    ]
+  },
+  {
+    "sec": "gh_22",
+    "phrase": "Làm dâu",
+    "words": [
       {
         "w": "Làm",
         "start": 312.0,
@@ -2046,26 +1949,35 @@
         "end": 313.2,
         "sustain": "0.6s",
         "note": "Tròn âm"
-      },
+      }
+    ]
+  },
+  {
+    "sec": "gh_22",
+    "phrase": "BÊN ẤY...",
+    "words": [
       {
         "w": "BÊN",
         "start": 313.2,
         "end": 313.8,
         "sustain": "0.6s",
-        "note": "Lướt"
+        "note": "Lướt",
+        "isUpperKey": true
       },
       {
         "w": "ẤY...",
         "start": 313.8,
         "end": 315.6,
         "sustain": "1.8s",
-        "note": "Ngân xa dần"
+        "note": "Ngân xa dần",
+        "boxHighlight": true,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Kết bài da diết",
-    "phrase": "Bên này... VẪN HOÀI... CHỜ... MONG...",
+    "sec": "gh_23",
+    "phrase": "Bên này...",
     "words": [
       {
         "w": "Bên",
@@ -2079,44 +1991,64 @@
         "start": 317.0,
         "end": 319.6,
         "sustain": "2.6s",
-        "note": "Ngân dài trầm buồn"
-      },
+        "note": "Ngân dài trầm buồn",
+        "boxHighlight": true
+      }
+    ]
+  },
+  {
+    "sec": "gh_23",
+    "phrase": "VẪN HOÀI...",
+    "words": [
       {
         "w": "VẪN",
         "start": 320.0,
         "end": 320.6,
         "sustain": "0.6s",
-        "note": "Nhấn dấu ngã"
+        "note": "Nhấn dấu ngã",
+        "isUpperKey": true
       },
       {
         "w": "HOÀI...",
         "start": 320.6,
         "end": 323.8,
         "sustain": "3.2s",
-        "note": "Ngân kéo dài da diết"
-      },
+        "note": "Ngân kéo dài da diết",
+        "boxHighlight": true,
+        "isUpperKey": true
+      }
+    ]
+  },
+  {
+    "sec": "gh_23",
+    "phrase": "CHỜ... MONG...",
+    "words": [
       {
         "w": "CHỜ...",
         "start": 324.6,
         "end": 327.4,
         "sustain": "2.8s",
-        "note": "Ngân rung, giảm dần âm lượng"
+        "note": "Ngân rung, giảm dần âm lượng",
+        "colorAccent": true,
+        "isUpperKey": true
       },
       {
         "w": "MONG...",
         "start": 328.0,
         "end": 330.8,
         "sustain": "2.8s",
-        "note": "Tiếng hát dứt hẳn, tan vào nhạc"
+        "note": "Tiếng hát dứt hẳn, tan vào nhạc",
+        "boxHighlight": true,
+        "isUpperKey": true
       }
     ]
   },
   {
-    "sec": "Outro Solo",
-    "phrase": "(Nhạc kết thúc)",
+    "sec": "gh_24",
+    "phrase": "(Đàn bầu solo & fade out kết bài)",
     "words": [
       {
-        "w": "(Đàn bầu solo)",
+        "w": "(Đàn bầu solo & fade out kết bài)",
         "start": 330.8,
         "end": 353.2,
         "sustain": "22.4s",

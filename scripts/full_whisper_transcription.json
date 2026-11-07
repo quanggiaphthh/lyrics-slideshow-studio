@@ -1,0 +1,1734 @@
+[
+  {
+    "start": 3.52,
+    "end": 23.43,
+    "text": "Ơ, đây xui con xáu xô lòng cho em nỡ dồi",
+    "words": [
+      {
+        "word": "Ơ,",
+        "start": 3.52,
+        "end": 4.6,
+        "prob": 0.481
+      },
+      {
+        "word": "đây",
+        "start": 15.64,
+        "end": 15.8,
+        "prob": 0.153
+      },
+      {
+        "word": "xui",
+        "start": 15.8,
+        "end": 16.34,
+        "prob": 0.585
+      },
+      {
+        "word": "con",
+        "start": 16.34,
+        "end": 16.82,
+        "prob": 0.821
+      },
+      {
+        "word": "xáu",
+        "start": 16.82,
+        "end": 18.0,
+        "prob": 0.673
+      },
+      {
+        "word": "xô",
+        "start": 18.0,
+        "end": 18.54,
+        "prob": 0.585
+      },
+      {
+        "word": "lòng",
+        "start": 18.54,
+        "end": 19.02,
+        "prob": 0.776
+      },
+      {
+        "word": "cho",
+        "start": 20.59,
+        "end": 21.59,
+        "prob": 0.507
+      },
+      {
+        "word": "em",
+        "start": 21.59,
+        "end": 22.07,
+        "prob": 0.998
+      },
+      {
+        "word": "nỡ",
+        "start": 22.07,
+        "end": 22.65,
+        "prob": 0.836
+      },
+      {
+        "word": "dồi",
+        "start": 22.65,
+        "end": 23.43,
+        "prob": 0.524
+      }
+    ]
+  },
+  {
+    "start": 24.13,
+    "end": 81.3,
+    "text": "nỡ dồi, lấy chồng bò, đau bay theo chồng",
+    "words": [
+      {
+        "word": "nỡ",
+        "start": 24.13,
+        "end": 24.89,
+        "prob": 0.698
+      },
+      {
+        "word": "dồi,",
+        "start": 39.35,
+        "end": 40.05,
+        "prob": 0.98
+      },
+      {
+        "word": "lấy",
+        "start": 40.39,
+        "end": 41.35,
+        "prob": 0.852
+      },
+      {
+        "word": "chồng",
+        "start": 41.35,
+        "end": 41.85,
+        "prob": 0.64
+      },
+      {
+        "word": "bò,",
+        "start": 41.85,
+        "end": 42.71,
+        "prob": 0.929
+      },
+      {
+        "word": "đau",
+        "start": 79.52,
+        "end": 79.76,
+        "prob": 0.561
+      },
+      {
+        "word": "bay",
+        "start": 79.76,
+        "end": 80.16,
+        "prob": 0.799
+      },
+      {
+        "word": "theo",
+        "start": 80.16,
+        "end": 80.6,
+        "prob": 0.996
+      },
+      {
+        "word": "chồng",
+        "start": 80.6,
+        "end": 81.3,
+        "prob": 0.951
+      }
+    ]
+  },
+  {
+    "start": 81.7,
+    "end": 84.76,
+    "text": "đâu biết là đau lòng ánh lắm",
+    "words": [
+      {
+        "word": "đâu",
+        "start": 81.7,
+        "end": 82.24,
+        "prob": 0.456
+      },
+      {
+        "word": "biết",
+        "start": 82.24,
+        "end": 82.44,
+        "prob": 0.996
+      },
+      {
+        "word": "là",
+        "start": 82.44,
+        "end": 82.9,
+        "prob": 0.995
+      },
+      {
+        "word": "đau",
+        "start": 82.9,
+        "end": 83.36,
+        "prob": 0.963
+      },
+      {
+        "word": "lòng",
+        "start": 83.36,
+        "end": 83.72,
+        "prob": 0.97
+      },
+      {
+        "word": "ánh",
+        "start": 83.72,
+        "end": 84.16,
+        "prob": 0.698
+      },
+      {
+        "word": "lắm",
+        "start": 84.16,
+        "end": 84.76,
+        "prob": 0.542
+      }
+    ]
+  },
+  {
+    "start": 85.98,
+    "end": 92.72,
+    "text": "xóng xa lặng thầm nhìn theo bước em qua cầu",
+    "words": [
+      {
+        "word": "xóng",
+        "start": 85.98,
+        "end": 86.82,
+        "prob": 0.386
+      },
+      {
+        "word": "xa",
+        "start": 86.82,
+        "end": 87.24,
+        "prob": 0.967
+      },
+      {
+        "word": "lặng",
+        "start": 87.24,
+        "end": 87.66,
+        "prob": 0.57
+      },
+      {
+        "word": "thầm",
+        "start": 87.66,
+        "end": 88.34,
+        "prob": 0.774
+      },
+      {
+        "word": "nhìn",
+        "start": 88.34,
+        "end": 89.4,
+        "prob": 0.967
+      },
+      {
+        "word": "theo",
+        "start": 89.4,
+        "end": 90.0,
+        "prob": 0.994
+      },
+      {
+        "word": "bước",
+        "start": 90.0,
+        "end": 90.56,
+        "prob": 0.936
+      },
+      {
+        "word": "em",
+        "start": 90.56,
+        "end": 91.18,
+        "prob": 0.985
+      },
+      {
+        "word": "qua",
+        "start": 91.18,
+        "end": 91.72,
+        "prob": 0.749
+      },
+      {
+        "word": "cầu",
+        "start": 91.72,
+        "end": 92.72,
+        "prob": 0.753
+      }
+    ]
+  },
+  {
+    "start": 93.6,
+    "end": 100.22,
+    "text": "Ngày nào có nhau ta trao ước hèn trầu cao",
+    "words": [
+      {
+        "word": "Ngày",
+        "start": 93.6,
+        "end": 94.12,
+        "prob": 0.302
+      },
+      {
+        "word": "nào",
+        "start": 94.12,
+        "end": 94.42,
+        "prob": 0.977
+      },
+      {
+        "word": "có",
+        "start": 94.42,
+        "end": 94.64,
+        "prob": 0.98
+      },
+      {
+        "word": "nhau",
+        "start": 94.64,
+        "end": 95.58,
+        "prob": 0.965
+      },
+      {
+        "word": "ta",
+        "start": 95.58,
+        "end": 96.5,
+        "prob": 0.493
+      },
+      {
+        "word": "trao",
+        "start": 96.5,
+        "end": 97.2,
+        "prob": 0.807
+      },
+      {
+        "word": "ước",
+        "start": 97.2,
+        "end": 97.4,
+        "prob": 0.84
+      },
+      {
+        "word": "hèn",
+        "start": 97.4,
+        "end": 97.72,
+        "prob": 0.66
+      },
+      {
+        "word": "trầu",
+        "start": 97.72,
+        "end": 98.24,
+        "prob": 0.801
+      },
+      {
+        "word": "cao",
+        "start": 98.24,
+        "end": 100.22,
+        "prob": 0.847
+      }
+    ]
+  },
+  {
+    "start": 100.22,
+    "end": 105.96,
+    "text": "mong duyên bang đầu, trời thương không đố mưa ngâu",
+    "words": [
+      {
+        "word": "mong",
+        "start": 100.22,
+        "end": 100.94,
+        "prob": 0.528
+      },
+      {
+        "word": "duyên",
+        "start": 100.94,
+        "end": 101.48,
+        "prob": 0.57
+      },
+      {
+        "word": "bang",
+        "start": 101.48,
+        "end": 101.78,
+        "prob": 0.577
+      },
+      {
+        "word": "đầu,",
+        "start": 101.78,
+        "end": 102.42,
+        "prob": 0.972
+      },
+      {
+        "word": "trời",
+        "start": 102.86,
+        "end": 103.52,
+        "prob": 0.837
+      },
+      {
+        "word": "thương",
+        "start": 103.52,
+        "end": 104.12,
+        "prob": 0.988
+      },
+      {
+        "word": "không",
+        "start": 104.12,
+        "end": 104.48,
+        "prob": 0.964
+      },
+      {
+        "word": "đố",
+        "start": 104.48,
+        "end": 104.84,
+        "prob": 0.732
+      },
+      {
+        "word": "mưa",
+        "start": 104.84,
+        "end": 105.36,
+        "prob": 0.913
+      },
+      {
+        "word": "ngâu",
+        "start": 105.36,
+        "end": 105.96,
+        "prob": 0.834
+      }
+    ]
+  },
+  {
+    "start": 107.38,
+    "end": 113.22,
+    "text": "bong em xa dần, anh biết là một lần chia cánh",
+    "words": [
+      {
+        "word": "bong",
+        "start": 107.38,
+        "end": 107.9,
+        "prob": 0.155
+      },
+      {
+        "word": "em",
+        "start": 107.9,
+        "end": 108.28,
+        "prob": 0.981
+      },
+      {
+        "word": "xa",
+        "start": 108.28,
+        "end": 108.82,
+        "prob": 0.969
+      },
+      {
+        "word": "dần,",
+        "start": 108.82,
+        "end": 109.48,
+        "prob": 0.842
+      },
+      {
+        "word": "anh",
+        "start": 109.96,
+        "end": 110.44,
+        "prob": 0.95
+      },
+      {
+        "word": "biết",
+        "start": 110.44,
+        "end": 110.66,
+        "prob": 0.994
+      },
+      {
+        "word": "là",
+        "start": 110.66,
+        "end": 111.06,
+        "prob": 0.996
+      },
+      {
+        "word": "một",
+        "start": 111.06,
+        "end": 111.46,
+        "prob": 0.869
+      },
+      {
+        "word": "lần",
+        "start": 111.46,
+        "end": 111.82,
+        "prob": 0.99
+      },
+      {
+        "word": "chia",
+        "start": 111.82,
+        "end": 112.28,
+        "prob": 0.925
+      },
+      {
+        "word": "cánh",
+        "start": 112.28,
+        "end": 113.22,
+        "prob": 0.842
+      }
+    ]
+  },
+  {
+    "start": 114.4,
+    "end": 120.74,
+    "text": "tránh ai vô tình, đánh tấm sẽ đôi tim mình",
+    "words": [
+      {
+        "word": "tránh",
+        "start": 114.4,
+        "end": 114.92,
+        "prob": 0.615
+      },
+      {
+        "word": "ai",
+        "start": 114.92,
+        "end": 115.42,
+        "prob": 0.985
+      },
+      {
+        "word": "vô",
+        "start": 115.42,
+        "end": 115.84,
+        "prob": 0.895
+      },
+      {
+        "word": "tình,",
+        "start": 115.84,
+        "end": 116.36,
+        "prob": 0.922
+      },
+      {
+        "word": "đánh",
+        "start": 117.2,
+        "end": 117.6,
+        "prob": 0.739
+      },
+      {
+        "word": "tấm",
+        "start": 117.6,
+        "end": 118.0,
+        "prob": 0.702
+      },
+      {
+        "word": "sẽ",
+        "start": 118.0,
+        "end": 118.7,
+        "prob": 0.69
+      },
+      {
+        "word": "đôi",
+        "start": 118.7,
+        "end": 119.42,
+        "prob": 0.978
+      },
+      {
+        "word": "tim",
+        "start": 119.42,
+        "end": 119.94,
+        "prob": 0.792
+      },
+      {
+        "word": "mình",
+        "start": 119.94,
+        "end": 120.74,
+        "prob": 0.975
+      }
+    ]
+  },
+  {
+    "start": 120.74,
+    "end": 127.5,
+    "text": "giành lòng cô quên, sao đêm dẫn thầm gọi tên",
+    "words": [
+      {
+        "word": "giành",
+        "start": 120.74,
+        "end": 122.02,
+        "prob": 0.276
+      },
+      {
+        "word": "lòng",
+        "start": 122.02,
+        "end": 122.44,
+        "prob": 0.955
+      },
+      {
+        "word": "cô",
+        "start": 122.44,
+        "end": 122.84,
+        "prob": 0.534
+      },
+      {
+        "word": "quên,",
+        "start": 122.84,
+        "end": 123.88,
+        "prob": 0.978
+      },
+      {
+        "word": "sao",
+        "start": 124.46,
+        "end": 124.76,
+        "prob": 0.817
+      },
+      {
+        "word": "đêm",
+        "start": 124.76,
+        "end": 125.18,
+        "prob": 0.931
+      },
+      {
+        "word": "dẫn",
+        "start": 125.18,
+        "end": 125.66,
+        "prob": 0.691
+      },
+      {
+        "word": "thầm",
+        "start": 125.66,
+        "end": 126.02,
+        "prob": 0.816
+      },
+      {
+        "word": "gọi",
+        "start": 126.02,
+        "end": 126.52,
+        "prob": 0.949
+      },
+      {
+        "word": "tên",
+        "start": 126.52,
+        "end": 127.5,
+        "prob": 0.935
+      }
+    ]
+  },
+  {
+    "start": 127.5,
+    "end": 135.16,
+    "text": "ai rù trong chiều cho lòng càng nhớ em nhiều",
+    "words": [
+      {
+        "word": "ai",
+        "start": 127.5,
+        "end": 129.16,
+        "prob": 0.169
+      },
+      {
+        "word": "rù",
+        "start": 129.16,
+        "end": 129.58,
+        "prob": 0.534
+      },
+      {
+        "word": "trong",
+        "start": 129.58,
+        "end": 129.94,
+        "prob": 0.777
+      },
+      {
+        "word": "chiều",
+        "start": 129.94,
+        "end": 131.08,
+        "prob": 0.97
+      },
+      {
+        "word": "cho",
+        "start": 131.08,
+        "end": 131.9,
+        "prob": 0.389
+      },
+      {
+        "word": "lòng",
+        "start": 131.9,
+        "end": 132.36,
+        "prob": 0.995
+      },
+      {
+        "word": "càng",
+        "start": 132.36,
+        "end": 133.04,
+        "prob": 0.839
+      },
+      {
+        "word": "nhớ",
+        "start": 133.04,
+        "end": 133.64,
+        "prob": 0.97
+      },
+      {
+        "word": "em",
+        "start": 133.64,
+        "end": 134.3,
+        "prob": 0.984
+      },
+      {
+        "word": "nhiều",
+        "start": 134.3,
+        "end": 135.16,
+        "prob": 0.707
+      }
+    ]
+  },
+  {
+    "start": 146.96,
+    "end": 155.78,
+    "text": "Ơ sao em, bỏ anh một mình lúc bình trôi chẳng biết nơi nè",
+    "words": [
+      {
+        "word": "Ơ",
+        "start": 146.96,
+        "end": 147.38,
+        "prob": 0.258
+      },
+      {
+        "word": "sao",
+        "start": 147.38,
+        "end": 147.76,
+        "prob": 0.917
+      },
+      {
+        "word": "em,",
+        "start": 147.76,
+        "end": 148.78,
+        "prob": 0.995
+      },
+      {
+        "word": "bỏ",
+        "start": 149.86,
+        "end": 150.34,
+        "prob": 0.837
+      },
+      {
+        "word": "anh",
+        "start": 150.34,
+        "end": 150.7,
+        "prob": 0.989
+      },
+      {
+        "word": "một",
+        "start": 150.7,
+        "end": 151.1,
+        "prob": 0.827
+      },
+      {
+        "word": "mình",
+        "start": 151.1,
+        "end": 151.54,
+        "prob": 0.529
+      },
+      {
+        "word": "lúc",
+        "start": 151.54,
+        "end": 152.7,
+        "prob": 0.398
+      },
+      {
+        "word": "bình",
+        "start": 152.7,
+        "end": 153.0,
+        "prob": 0.805
+      },
+      {
+        "word": "trôi",
+        "start": 153.0,
+        "end": 153.58,
+        "prob": 0.968
+      },
+      {
+        "word": "chẳng",
+        "start": 153.58,
+        "end": 154.12,
+        "prob": 0.981
+      },
+      {
+        "word": "biết",
+        "start": 154.12,
+        "end": 154.48,
+        "prob": 0.995
+      },
+      {
+        "word": "nơi",
+        "start": 154.48,
+        "end": 155.02,
+        "prob": 0.996
+      },
+      {
+        "word": "nè",
+        "start": 155.02,
+        "end": 155.78,
+        "prob": 0.822
+      }
+    ]
+  },
+  {
+    "start": 156.78,
+    "end": 162.54,
+    "text": "còn thương tóc em muốn dài",
+    "words": [
+      {
+        "word": "còn",
+        "start": 156.78,
+        "end": 157.86,
+        "prob": 0.0
+      },
+      {
+        "word": "thương",
+        "start": 157.86,
+        "end": 159.5,
+        "prob": 0.802
+      },
+      {
+        "word": "tóc",
+        "start": 159.5,
+        "end": 160.72,
+        "prob": 0.692
+      },
+      {
+        "word": "em",
+        "start": 160.72,
+        "end": 161.18,
+        "prob": 0.953
+      },
+      {
+        "word": "muốn",
+        "start": 161.18,
+        "end": 161.62,
+        "prob": 0.633
+      },
+      {
+        "word": "dài",
+        "start": 161.62,
+        "end": 162.54,
+        "prob": 0.927
+      }
+    ]
+  },
+  {
+    "start": 163.78,
+    "end": 169.54,
+    "text": "tím khoa anh cài em cười xíu chặt dòng tay",
+    "words": [
+      {
+        "word": "tím",
+        "start": 163.78,
+        "end": 164.42,
+        "prob": 0.43
+      },
+      {
+        "word": "khoa",
+        "start": 164.42,
+        "end": 165.0,
+        "prob": 0.765
+      },
+      {
+        "word": "anh",
+        "start": 165.0,
+        "end": 165.28,
+        "prob": 0.988
+      },
+      {
+        "word": "cài",
+        "start": 165.28,
+        "end": 165.82,
+        "prob": 0.781
+      },
+      {
+        "word": "em",
+        "start": 165.82,
+        "end": 166.48,
+        "prob": 0.96
+      },
+      {
+        "word": "cười",
+        "start": 166.48,
+        "end": 167.2,
+        "prob": 0.985
+      },
+      {
+        "word": "xíu",
+        "start": 167.2,
+        "end": 167.78,
+        "prob": 0.501
+      },
+      {
+        "word": "chặt",
+        "start": 167.78,
+        "end": 168.02,
+        "prob": 0.814
+      },
+      {
+        "word": "dòng",
+        "start": 168.02,
+        "end": 168.54,
+        "prob": 0.77
+      },
+      {
+        "word": "tay",
+        "start": 168.54,
+        "end": 169.54,
+        "prob": 0.426
+      }
+    ]
+  },
+  {
+    "start": 170.78,
+    "end": 180.2,
+    "text": "Ơ ơi, em nỡ sao em, nói thương anh nhiều",
+    "words": [
+      {
+        "word": "Ơ",
+        "start": 170.78,
+        "end": 172.0,
+        "prob": 0.305
+      },
+      {
+        "word": "ơi,",
+        "start": 172.0,
+        "end": 174.04,
+        "prob": 0.21
+      },
+      {
+        "word": "em",
+        "start": 174.74,
+        "end": 175.04,
+        "prob": 0.988
+      },
+      {
+        "word": "nỡ",
+        "start": 175.04,
+        "end": 175.54,
+        "prob": 0.665
+      },
+      {
+        "word": "sao",
+        "start": 175.54,
+        "end": 176.08,
+        "prob": 0.838
+      },
+      {
+        "word": "em,",
+        "start": 176.08,
+        "end": 177.36,
+        "prob": 0.99
+      },
+      {
+        "word": "nói",
+        "start": 178.06,
+        "end": 178.5,
+        "prob": 0.822
+      },
+      {
+        "word": "thương",
+        "start": 178.5,
+        "end": 179.08,
+        "prob": 0.987
+      },
+      {
+        "word": "anh",
+        "start": 179.08,
+        "end": 179.5,
+        "prob": 0.991
+      },
+      {
+        "word": "nhiều",
+        "start": 179.5,
+        "end": 180.2,
+        "prob": 0.76
+      }
+    ]
+  },
+  {
+    "start": 180.2,
+    "end": 187.19,
+    "text": "đành lòng em cực mước sang sang gì đâu",
+    "words": [
+      {
+        "word": "đành",
+        "start": 180.2,
+        "end": 181.08,
+        "prob": 0.17
+      },
+      {
+        "word": "lòng",
+        "start": 181.08,
+        "end": 181.44,
+        "prob": 0.965
+      },
+      {
+        "word": "em",
+        "start": 181.44,
+        "end": 181.94,
+        "prob": 0.985
+      },
+      {
+        "word": "cực",
+        "start": 181.94,
+        "end": 182.42,
+        "prob": 0.765
+      },
+      {
+        "word": "mước",
+        "start": 182.42,
+        "end": 182.94,
+        "prob": 0.837
+      },
+      {
+        "word": "sang",
+        "start": 182.94,
+        "end": 183.4,
+        "prob": 0.929
+      },
+      {
+        "word": "sang",
+        "start": 183.4,
+        "end": 184.42,
+        "prob": 0.176
+      },
+      {
+        "word": "gì",
+        "start": 186.09,
+        "end": 186.51,
+        "prob": 0.161
+      },
+      {
+        "word": "đâu",
+        "start": 186.51,
+        "end": 187.19,
+        "prob": 0.949
+      }
+    ]
+  },
+  {
+    "start": 187.87,
+    "end": 195.31,
+    "text": "nhớ giang duyên minh, rắc qua chung tình chưa vai màu",
+    "words": [
+      {
+        "word": "nhớ",
+        "start": 187.87,
+        "end": 189.17,
+        "prob": 0.545
+      },
+      {
+        "word": "giang",
+        "start": 189.17,
+        "end": 189.65,
+        "prob": 0.597
+      },
+      {
+        "word": "duyên",
+        "start": 189.65,
+        "end": 190.11,
+        "prob": 0.822
+      },
+      {
+        "word": "minh,",
+        "start": 190.11,
+        "end": 192.15,
+        "prob": 0.822
+      },
+      {
+        "word": "rắc",
+        "start": 192.15,
+        "end": 192.53,
+        "prob": 0.684
+      },
+      {
+        "word": "qua",
+        "start": 192.53,
+        "end": 192.99,
+        "prob": 0.878
+      },
+      {
+        "word": "chung",
+        "start": 192.99,
+        "end": 193.43,
+        "prob": 0.785
+      },
+      {
+        "word": "tình",
+        "start": 193.43,
+        "end": 193.91,
+        "prob": 0.748
+      },
+      {
+        "word": "chưa",
+        "start": 193.91,
+        "end": 194.41,
+        "prob": 0.594
+      },
+      {
+        "word": "vai",
+        "start": 194.41,
+        "end": 194.81,
+        "prob": 0.321
+      },
+      {
+        "word": "màu",
+        "start": 194.81,
+        "end": 195.31,
+        "prob": 0.863
+      }
+    ]
+  },
+  {
+    "start": 195.79,
+    "end": 240.7,
+    "text": "nơi nào người đi, bỏ anh lúc bình trôi chẳng biết nơi nè",
+    "words": [
+      {
+        "word": "nơi",
+        "start": 195.79,
+        "end": 196.37,
+        "prob": 0.276
+      },
+      {
+        "word": "nào",
+        "start": 196.37,
+        "end": 196.89,
+        "prob": 0.99
+      },
+      {
+        "word": "người",
+        "start": 196.89,
+        "end": 197.51,
+        "prob": 0.785
+      },
+      {
+        "word": "đi,",
+        "start": 197.51,
+        "end": 198.37,
+        "prob": 0.989
+      },
+      {
+        "word": "bỏ",
+        "start": 234.72,
+        "end": 235.04,
+        "prob": 0.671
+      },
+      {
+        "word": "anh",
+        "start": 235.04,
+        "end": 235.36,
+        "prob": 0.987
+      },
+      {
+        "word": "lúc",
+        "start": 237.0,
+        "end": 237.42,
+        "prob": 0.433
+      },
+      {
+        "word": "bình",
+        "start": 237.42,
+        "end": 237.76,
+        "prob": 0.907
+      },
+      {
+        "word": "trôi",
+        "start": 237.76,
+        "end": 238.46,
+        "prob": 0.7
+      },
+      {
+        "word": "chẳng",
+        "start": 238.46,
+        "end": 238.96,
+        "prob": 0.967
+      },
+      {
+        "word": "biết",
+        "start": 238.96,
+        "end": 239.34,
+        "prob": 0.994
+      },
+      {
+        "word": "nơi",
+        "start": 239.34,
+        "end": 239.96,
+        "prob": 0.997
+      },
+      {
+        "word": "nè",
+        "start": 239.96,
+        "end": 240.7,
+        "prob": 0.823
+      }
+    ]
+  },
+  {
+    "start": 241.7,
+    "end": 247.72,
+    "text": "còn thương tóc em muốn dài",
+    "words": [
+      {
+        "word": "còn",
+        "start": 241.7,
+        "end": 242.58,
+        "prob": 0.0
+      },
+      {
+        "word": "thương",
+        "start": 242.58,
+        "end": 244.44,
+        "prob": 0.854
+      },
+      {
+        "word": "tóc",
+        "start": 244.44,
+        "end": 245.82,
+        "prob": 0.595
+      },
+      {
+        "word": "em",
+        "start": 245.82,
+        "end": 246.28,
+        "prob": 0.986
+      },
+      {
+        "word": "muốn",
+        "start": 246.28,
+        "end": 246.7,
+        "prob": 0.478
+      },
+      {
+        "word": "dài",
+        "start": 246.7,
+        "end": 247.72,
+        "prob": 0.836
+      }
+    ]
+  },
+  {
+    "start": 248.7,
+    "end": 254.54,
+    "text": "tím khoa anh cài em cười xíu chặt dòng tay",
+    "words": [
+      {
+        "word": "tím",
+        "start": 248.7,
+        "end": 249.34,
+        "prob": 0.307
+      },
+      {
+        "word": "khoa",
+        "start": 249.34,
+        "end": 249.88,
+        "prob": 0.455
+      },
+      {
+        "word": "anh",
+        "start": 249.88,
+        "end": 250.2,
+        "prob": 0.984
+      },
+      {
+        "word": "cài",
+        "start": 250.2,
+        "end": 250.72,
+        "prob": 0.772
+      },
+      {
+        "word": "em",
+        "start": 250.72,
+        "end": 251.32,
+        "prob": 0.974
+      },
+      {
+        "word": "cười",
+        "start": 251.32,
+        "end": 252.02,
+        "prob": 0.984
+      },
+      {
+        "word": "xíu",
+        "start": 252.02,
+        "end": 252.7,
+        "prob": 0.515
+      },
+      {
+        "word": "chặt",
+        "start": 252.7,
+        "end": 252.92,
+        "prob": 0.662
+      },
+      {
+        "word": "dòng",
+        "start": 252.92,
+        "end": 253.5,
+        "prob": 0.616
+      },
+      {
+        "word": "tay",
+        "start": 253.5,
+        "end": 254.54,
+        "prob": 0.363
+      }
+    ]
+  },
+  {
+    "start": 255.7,
+    "end": 264.86,
+    "text": "Ơ ơi, em nỡ sao em, nói thương anh nhiều",
+    "words": [
+      {
+        "word": "Ơ",
+        "start": 255.7,
+        "end": 256.9,
+        "prob": 0.318
+      },
+      {
+        "word": "ơi,",
+        "start": 256.9,
+        "end": 258.72,
+        "prob": 0.114
+      },
+      {
+        "word": "em",
+        "start": 259.38,
+        "end": 259.66,
+        "prob": 0.972
+      },
+      {
+        "word": "nỡ",
+        "start": 259.66,
+        "end": 260.08,
+        "prob": 0.726
+      },
+      {
+        "word": "sao",
+        "start": 260.08,
+        "end": 260.54,
+        "prob": 0.94
+      },
+      {
+        "word": "em,",
+        "start": 260.54,
+        "end": 261.8,
+        "prob": 0.992
+      },
+      {
+        "word": "nói",
+        "start": 262.74,
+        "end": 263.14,
+        "prob": 0.656
+      },
+      {
+        "word": "thương",
+        "start": 263.14,
+        "end": 263.72,
+        "prob": 0.983
+      },
+      {
+        "word": "anh",
+        "start": 263.72,
+        "end": 264.04,
+        "prob": 0.982
+      },
+      {
+        "word": "nhiều",
+        "start": 264.04,
+        "end": 264.86,
+        "prob": 0.998
+      }
+    ]
+  },
+  {
+    "start": 264.86,
+    "end": 271.72,
+    "text": "đành lòng em cực mước sang sang gì đâu",
+    "words": [
+      {
+        "word": "đành",
+        "start": 264.86,
+        "end": 265.7,
+        "prob": 0.12
+      },
+      {
+        "word": "lòng",
+        "start": 265.7,
+        "end": 266.06,
+        "prob": 0.968
+      },
+      {
+        "word": "em",
+        "start": 266.06,
+        "end": 266.56,
+        "prob": 0.989
+      },
+      {
+        "word": "cực",
+        "start": 266.56,
+        "end": 267.04,
+        "prob": 0.596
+      },
+      {
+        "word": "mước",
+        "start": 267.04,
+        "end": 267.54,
+        "prob": 0.824
+      },
+      {
+        "word": "sang",
+        "start": 267.54,
+        "end": 267.98,
+        "prob": 0.964
+      },
+      {
+        "word": "sang",
+        "start": 267.98,
+        "end": 268.46,
+        "prob": 0.001
+      },
+      {
+        "word": "gì",
+        "start": 268.46,
+        "end": 270.52,
+        "prob": 0.017
+      },
+      {
+        "word": "đâu",
+        "start": 270.52,
+        "end": 271.72,
+        "prob": 0.922
+      }
+    ]
+  },
+  {
+    "start": 272.92,
+    "end": 280.3,
+    "text": "nhớ giang duyên minh, rắc qua chung tình chưa vai màu",
+    "words": [
+      {
+        "word": "nhớ",
+        "start": 272.92,
+        "end": 273.92,
+        "prob": 0.321
+      },
+      {
+        "word": "giang",
+        "start": 273.92,
+        "end": 274.42,
+        "prob": 0.415
+      },
+      {
+        "word": "duyên",
+        "start": 274.42,
+        "end": 274.88,
+        "prob": 0.55
+      },
+      {
+        "word": "minh,",
+        "start": 274.88,
+        "end": 276.8,
+        "prob": 0.858
+      },
+      {
+        "word": "rắc",
+        "start": 276.8,
+        "end": 277.18,
+        "prob": 0.353
+      },
+      {
+        "word": "qua",
+        "start": 277.18,
+        "end": 277.66,
+        "prob": 0.953
+      },
+      {
+        "word": "chung",
+        "start": 277.66,
+        "end": 278.08,
+        "prob": 0.84
+      },
+      {
+        "word": "tình",
+        "start": 278.08,
+        "end": 278.54,
+        "prob": 0.699
+      },
+      {
+        "word": "chưa",
+        "start": 278.54,
+        "end": 279.08,
+        "prob": 0.862
+      },
+      {
+        "word": "vai",
+        "start": 279.08,
+        "end": 279.5,
+        "prob": 0.038
+      },
+      {
+        "word": "màu",
+        "start": 279.5,
+        "end": 280.3,
+        "prob": 0.766
+      }
+    ]
+  },
+  {
+    "start": 280.3,
+    "end": 289.38,
+    "text": "nơi nào người đi, dòng nhớ trong tim làm sao chia cách",
+    "words": [
+      {
+        "word": "nơi",
+        "start": 280.3,
+        "end": 280.88,
+        "prob": 0.065
+      },
+      {
+        "word": "nào",
+        "start": 280.88,
+        "end": 281.3,
+        "prob": 0.993
+      },
+      {
+        "word": "người",
+        "start": 281.3,
+        "end": 281.76,
+        "prob": 0.938
+      },
+      {
+        "word": "đi,",
+        "start": 281.76,
+        "end": 282.94,
+        "prob": 0.974
+      },
+      {
+        "word": "dòng",
+        "start": 284.5,
+        "end": 284.86,
+        "prob": 0.407
+      },
+      {
+        "word": "nhớ",
+        "start": 284.86,
+        "end": 285.46,
+        "prob": 0.987
+      },
+      {
+        "word": "trong",
+        "start": 285.46,
+        "end": 285.96,
+        "prob": 0.881
+      },
+      {
+        "word": "tim",
+        "start": 285.96,
+        "end": 286.64,
+        "prob": 0.535
+      },
+      {
+        "word": "làm",
+        "start": 286.64,
+        "end": 288.02,
+        "prob": 0.728
+      },
+      {
+        "word": "sao",
+        "start": 288.02,
+        "end": 288.48,
+        "prob": 0.991
+      },
+      {
+        "word": "chia",
+        "start": 288.48,
+        "end": 288.96,
+        "prob": 0.982
+      },
+      {
+        "word": "cách",
+        "start": 288.96,
+        "end": 289.38,
+        "prob": 0.793
+      }
+    ]
+  },
+  {
+    "start": 290.38,
+    "end": 293.46,
+    "text": "người thương có hay",
+    "words": [
+      {
+        "word": "người",
+        "start": 290.38,
+        "end": 291.36,
+        "prob": 0.006
+      },
+      {
+        "word": "thương",
+        "start": 291.36,
+        "end": 291.9,
+        "prob": 0.888
+      },
+      {
+        "word": "có",
+        "start": 291.9,
+        "end": 292.26,
+        "prob": 0.967
+      },
+      {
+        "word": "hay",
+        "start": 292.26,
+        "end": 293.46,
+        "prob": 0.931
+      }
+    ]
+  },
+  {
+    "start": 294.38,
+    "end": 299.88,
+    "text": "đêm dài mình anh tháo thức",
+    "words": [
+      {
+        "word": "đêm",
+        "start": 294.38,
+        "end": 295.6,
+        "prob": 0.64
+      },
+      {
+        "word": "dài",
+        "start": 295.6,
+        "end": 297.1,
+        "prob": 0.958
+      },
+      {
+        "word": "mình",
+        "start": 297.1,
+        "end": 298.32,
+        "prob": 0.649
+      },
+      {
+        "word": "anh",
+        "start": 298.32,
+        "end": 298.76,
+        "prob": 0.906
+      },
+      {
+        "word": "tháo",
+        "start": 298.76,
+        "end": 299.36,
+        "prob": 0.741
+      },
+      {
+        "word": "thức",
+        "start": 299.36,
+        "end": 299.88,
+        "prob": 0.695
+      }
+    ]
+  },
+  {
+    "start": 301.3,
+    "end": 307.46,
+    "text": "em giờ miếng lòng buồn vua",
+    "words": [
+      {
+        "word": "em",
+        "start": 301.3,
+        "end": 302.7,
+        "prob": 0.755
+      },
+      {
+        "word": "giờ",
+        "start": 302.7,
+        "end": 304.08,
+        "prob": 0.783
+      },
+      {
+        "word": "miếng",
+        "start": 304.08,
+        "end": 305.6,
+        "prob": 0.695
+      },
+      {
+        "word": "lòng",
+        "start": 305.6,
+        "end": 305.88,
+        "prob": 0.84
+      },
+      {
+        "word": "buồn",
+        "start": 305.88,
+        "end": 306.5,
+        "prob": 0.968
+      },
+      {
+        "word": "vua",
+        "start": 306.5,
+        "end": 307.46,
+        "prob": 0.487
+      }
+    ]
+  },
+  {
+    "start": 308.8,
+    "end": 314.36,
+    "text": "em về làm dấu bên này",
+    "words": [
+      {
+        "word": "em",
+        "start": 308.8,
+        "end": 309.96,
+        "prob": 0.938
+      },
+      {
+        "word": "về",
+        "start": 309.96,
+        "end": 310.84,
+        "prob": 0.951
+      },
+      {
+        "word": "làm",
+        "start": 310.84,
+        "end": 312.56,
+        "prob": 0.979
+      },
+      {
+        "word": "dấu",
+        "start": 312.56,
+        "end": 313.1,
+        "prob": 0.731
+      },
+      {
+        "word": "bên",
+        "start": 313.1,
+        "end": 313.46,
+        "prob": 0.983
+      },
+      {
+        "word": "này",
+        "start": 313.46,
+        "end": 314.36,
+        "prob": 0.833
+      }
+    ]
+  },
+  {
+    "start": 314.36,
+    "end": 325.54,
+    "text": "bên này dẫn mua chờ",
+    "words": [
+      {
+        "word": "bên",
+        "start": 314.36,
+        "end": 316.74,
+        "prob": 0.017
+      },
+      {
+        "word": "này",
+        "start": 316.74,
+        "end": 317.82,
+        "prob": 0.979
+      },
+      {
+        "word": "dẫn",
+        "start": 317.82,
+        "end": 320.24,
+        "prob": 0.462
+      },
+      {
+        "word": "mua",
+        "start": 320.24,
+        "end": 320.96,
+        "prob": 0.532
+      },
+      {
+        "word": "chờ",
+        "start": 324.7,
+        "end": 325.54,
+        "prob": 0.534
+      }
+    ]
+  }
+]

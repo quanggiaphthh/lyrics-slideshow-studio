@@ -88,6 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const exporter = new VideoExporter(engine, coreAudio);
   const historyManager = new ProjectHistoryManager();
 
+  window.engine = engine;
+  window.coreAudio = coreAudio;
+  window.getCurrentProjectState = () => currentProjectState;
+
   let isPlaying = false;
   let animId = null;
   let activeImageObjects = [];
