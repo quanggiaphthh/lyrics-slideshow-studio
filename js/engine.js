@@ -341,21 +341,21 @@ class LyricEngine {
     // Organic whole-stanza micro-drift (keeps words breathing naturally during vocal sustain)
     const stanzaDriftY = Math.sin((time - activeStanza.start) * 1.5) * 1.6;
 
-    // Dynamic baseY and lineSpacing based on layout and line count
+    // Dynamic baseY and lineSpacing based on layout and line count (Generous, balanced breathing room)
     let baseY;
     let lineSpacing;
     if (layout === 'lower') {
-      baseY = isVertical ? H * 0.74 : H * 0.70;
-      lineSpacing = isVertical ? H * 0.048 : Math.round(H * 0.055);
+      baseY = isVertical ? H * 0.72 : H * 0.68;
+      lineSpacing = isVertical ? Math.round(H * 0.065) : Math.round(H * 0.078);
     } else if (lines.length >= 5) {
-      baseY = isVertical ? H * 0.44 : H * 0.28;
-      lineSpacing = isVertical ? H * 0.052 : Math.round(H * 0.058); // ~42px on 720p
+      baseY = isVertical ? H * 0.38 : H * 0.22;
+      lineSpacing = isVertical ? Math.round(H * 0.062) : Math.round(H * 0.076);
     } else if (lines.length >= 3) {
-      baseY = isVertical ? H * 0.48 : H * 0.34;
-      lineSpacing = isVertical ? H * 0.058 : Math.round(H * 0.065); // ~47px on 720p
+      baseY = isVertical ? H * 0.42 : H * 0.28;
+      lineSpacing = isVertical ? Math.round(H * 0.072) : Math.round(H * 0.088);
     } else {
-      baseY = isVertical ? H * 0.54 : H * 0.40;
-      lineSpacing = isVertical ? H * 0.065 : Math.round(H * 0.075);
+      baseY = isVertical ? H * 0.48 : H * 0.34;
+      lineSpacing = isVertical ? Math.round(H * 0.085) : Math.round(H * 0.105);
     }
     baseY += stanzaDriftY;
 
@@ -363,15 +363,15 @@ class LyricEngine {
     let baseX;
     let indentStep;
     if (layout === 'right') {
-      baseX = isVertical ? W * 0.44 : W * 0.52;
-      indentStep = isVertical ? 16 : 32;
+      baseX = isVertical ? W * 0.38 : W * 0.46;
+      indentStep = isVertical ? 20 : 40;
     } else if (layout === 'center' || layout === 'lower') {
       baseX = W * 0.5;
       indentStep = 0;
     } else {
       // default: left layout
-      baseX = isVertical ? W * 0.07 : W * 0.08;
-      indentStep = isVertical ? 18 : 36;
+      baseX = isVertical ? W * 0.06 : W * 0.08;
+      indentStep = isVertical ? 20 : 40;
     }
 
     lines.forEach((line, idx) => {

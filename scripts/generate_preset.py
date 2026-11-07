@@ -421,7 +421,7 @@ words_data = [
     "start": 121.0,
     "end": 128.0,
     "layout": "left",
-    "text": "dặn lòng cố quên sao đêm vẫn thường gọi tên EM",
+    "text": "dặn lòng cố quên sao đêm vẫn thầm gọi tên EM",
     "indent": 0,
     "lines": [
       {
@@ -438,7 +438,7 @@ words_data = [
         ]
       },
       {
-        "text": "sao đêm vẫn thường",
+        "text": "sao đêm vẫn thầm",
         "start": 124.0,
         "end": 125.8,
         "indent": 1,
@@ -447,7 +447,7 @@ words_data = [
           { "text": "sao", "start": 124.0, "end": 124.5 },
           { "text": "đêm", "start": 124.5, "end": 124.9 },
           { "text": "vẫn", "start": 124.9, "end": 125.3 },
-          { "text": "thường", "start": 125.3, "end": 125.8 }
+          { "text": "thầm", "start": 125.3, "end": 125.8 }
         ]
       },
       {
@@ -1246,28 +1246,6 @@ words_data = [
         "words": [
           { "text": "CHỜ...", "start": 324.6, "end": 327.4, "isUpperKey": True, "colorAccent": True, "sustain": 2.8, "note": "Ngân rung, giảm dần âm lượng" },
           { "text": "MONG...", "start": 328.0, "end": 330.8, "isUpperKey": True, "boxHighlight": True, "sustain": 2.8, "note": "Tiếng hát dứt hẳn, tan vào nhạc" }
-        ]
-      }
-    ]
-  },
-
-  # --- gh_24: Instrumental Outro Solo (EXCEL ROW 38) ---
-  {
-    "id": "gh_24",
-    "start": 330.8,
-    "end": 353.2,
-    "layout": "lower",
-    "text": "(Đàn bầu solo & fade out kết bài)",
-    "indent": 0,
-    "lines": [
-      {
-        "text": "(Đàn bầu solo & fade out kết bài)",
-        "start": 330.8,
-        "end": 353.2,
-        "indent": 0,
-        "align": "center",
-        "words": [
-          { "text": "(Đàn bầu solo & fade out kết bài)", "start": 330.8, "end": 353.2, "sustain": 22.4, "note": "Đàn bầu solo & fade out kết bài" }
         ]
       }
     ]

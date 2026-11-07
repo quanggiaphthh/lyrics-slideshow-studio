@@ -216,7 +216,7 @@ window.LYRIC_TEMPLATES = {
     drawLyricLine: (ctx, line, x, y, width, height, time, lineProgress, isCurrent, layout = 'left') => {
       ctx.save();
 
-      const baseFontSize = Math.round(height * 0.040); // Compact, elegant ~29px on 720p
+      const baseFontSize = Math.round(height * 0.052); // Crisp, bold legible typography (~37.5px on 720p, ~56px on 1080p)
       const words = line.words || autoSplitLineWords(line.text, line.start, line.end);
 
       // Pre-calculate word metrics and line width
@@ -235,14 +235,14 @@ window.LYRIC_TEMPLATES = {
           !boxHighlight && ['ANH', 'EM', 'anh', 'em', 'TIM MÌNH'].includes(cleanWord)
         );
 
-        const wordFontSize = isUpperKey ? Math.round(baseFontSize * 1.32) : baseFontSize;
+        const wordFontSize = isUpperKey ? Math.round(baseFontSize * 1.36) : baseFontSize;
         const fontWeight = isUpperKey ? '900' : '600';
         ctx.font = `${fontWeight} ${wordFontSize}px "Montserrat", sans-serif`;
 
         const wordW = ctx.measureText(w.text).width;
-        const padX = isUpperKey ? 9 : 8;
-        const padY = 5;
-        const spacing = boxHighlight ? 10 : (isUpperKey ? 12 : 9);
+        const padX = isUpperKey ? Math.round(baseFontSize * 0.28) : Math.round(baseFontSize * 0.24);
+        const padY = Math.round(baseFontSize * 0.16);
+        const spacing = boxHighlight ? Math.round(baseFontSize * 0.40) : (isUpperKey ? Math.round(baseFontSize * 0.46) : Math.round(baseFontSize * 0.36));
         lineTotalW += wordW + spacing;
 
         return {
@@ -338,7 +338,7 @@ window.LYRIC_TEMPLATES = {
           ctx.shadowBlur = isVoicing ? 24 : 12;
 
           // Draw skewed ribbon polygon (tape cut angle ~ -5.5 degrees)
-          const skewOffset = 4.5;
+          const skewOffset = Math.max(5, Math.round(grp.fontSize * 0.12));
           ctx.fillStyle = '#de708b'; // Authentic Dusty Rose
           ctx.beginPath();
           ctx.moveTo(grp.startX + skewOffset, boxY);

@@ -41,7 +41,6 @@ try {
   await send('Page.enable');
   await send('Runtime.enable');
 
-  // Let preset load
   await new Promise(r => setTimeout(r, 2000));
 
   // Inspect state
@@ -50,19 +49,21 @@ try {
       try {
         const proj = window.getCurrentProjectState ? window.getCurrentProjectState() : {};
         const lyrics = window.engine ? window.engine.lyricsData : [];
+        const gh8 = lyrics ? lyrics.find(l => l.id === 'gh_8') : null;
         return JSON.stringify({
           audioDuration: proj.audioDuration,
           lyricsCount: lyrics ? lyrics.length : 0,
-          firstLyric: lyrics && lyrics[0] ? { id: lyrics[0].id, start: lyrics[0].start, end: lyrics[0].end, text: lyrics[0].text } : null,
-          climaxLyric: lyrics && lyrics[18] ? { id: lyrics[18].id, start: lyrics[18].start, end: lyrics[18].end, text: lyrics[18].text } : null,
-          outroLyric: lyrics && lyrics[23] ? { id: lyrics[23].id, start: lyrics[23].start, end: lyrics[23].end, text: lyrics[23].text } : null
+          gh8_text: gh8 ? gh8.text : null,
+          gh8_lines: gh8 ? gh8.lines.map(l => l.text) : null,
+          lastStanzaId: lyrics && lyrics.length ? lyrics[lyrics.length - 1].id : null,
+          lastStanzaText: lyrics && lyrics.length ? lyrics[lyrics.length - 1].text : null
         });
       } catch (e) {
         return JSON.stringify({ error: e.message });
       }
     })()`
   });
-  console.log('Evaluate result:', stateRes.result.value);
+  console.log('Evaluate result:', JSON.parse(stateRes.result.value));
 
   async function snap(sec, filename) {
     await send('Runtime.evaluate', {
@@ -78,23 +79,23 @@ try {
     console.log(`Saved screenshot at ${sec}s to ${filename}`);
   }
 
-  // 1. 00:04s Intro ("HÒ ƠI...")
-  await snap(4.0, 'test_intro_4s.png');
+  // 1. 00:19s Intro ("SỔ LỒNG")
+  await snap(19.0, 'screenshot_intro_19s.png');
 
-  // 2. 00:19s Intro ("SỔ LỒNG")
-  await snap(19.0, 'test_intro_19s.png');
+  // 2. 02:05s Verse 1 ("vẫn thầm gọi tên EM")
+  await snap(125.5, 'screenshot_gh8_van_tham_125s.png');
 
-  // 3. 01:22s Verse 1 ("ĐAU LÒNG")
-  await snap(83.0, 'test_verse1_83s.png');
+  // 3. 02:24s Chorus 1 ("À ƠI... em nỡ sao em")
+  await snap(144.0, 'screenshot_chorus1_144s.png');
 
-  // 4. 02:25s Chorus 1 ("À ƠI... EM NỠ SAO EM")
-  await snap(144.0, 'test_chorus1_144s.png');
+  // 4. 04:49s Climax ("LÀM SAO CHIA CÁCH")
+  await snap(289.0, 'screenshot_climax_289s.png');
 
-  // 5. 04:46.5s Climax ("DÒNG NHỚ TRONG TIM")
-  await snap(286.5, 'test_climax_286s.png');
+  // 5. 05:22s Outro ("BÊN NÀY... VẪN HOÀI...")
+  await snap(322.0, 'screenshot_outro_322s.png');
 
-  // 6. 05:22s Outro ("BÊN NÀY... VẪN HOÀI...")
-  await snap(322.0, 'test_outro_322s.png');
+  // 6. 05:35s Instrumental Outro Solo (Should have NO TEXT!)
+  await snap(335.0, 'screenshot_outro_solo_335s.png');
 
   ws.close();
 } finally {

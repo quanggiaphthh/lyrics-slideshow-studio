@@ -639,7 +639,7 @@
   },
   {
     "sec": "gh_8",
-    "phrase": "sao đêm vẫn thường",
+    "phrase": "sao đêm vẫn thầm",
     "words": [
       {
         "w": "sao",
@@ -657,7 +657,7 @@
         "end": 125.3
       },
       {
-        "w": "thường",
+        "w": "thầm",
         "start": 125.3,
         "end": 125.8
       }
@@ -2040,19 +2040,6 @@
         "note": "Tiếng hát dứt hẳn, tan vào nhạc",
         "boxHighlight": true,
         "isUpperKey": true
-      }
-    ]
-  },
-  {
-    "sec": "gh_24",
-    "phrase": "(Đàn bầu solo & fade out kết bài)",
-    "words": [
-      {
-        "w": "(Đàn bầu solo & fade out kết bài)",
-        "start": 330.8,
-        "end": 353.2,
-        "sustain": "22.4s",
-        "note": "Đàn bầu solo & fade out kết bài"
       }
     ]
   }

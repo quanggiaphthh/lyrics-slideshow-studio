@@ -815,7 +815,7 @@ window.DEMO_PRESET_GANH_HAO = {
     "start": 121.0,
     "end": 128.0,
     "layout": "left",
-    "text": "dặn lòng cố quên sao đêm vẫn thường gọi tên EM",
+    "text": "dặn lòng cố quên sao đêm vẫn thầm gọi tên EM",
     "indent": 0,
     "lines": [
       {
@@ -848,7 +848,7 @@ window.DEMO_PRESET_GANH_HAO = {
         ]
       },
       {
-        "text": "sao đêm vẫn thường",
+        "text": "sao đêm vẫn thầm",
         "start": 124.0,
         "end": 125.8,
         "indent": 1,
@@ -870,7 +870,7 @@ window.DEMO_PRESET_GANH_HAO = {
             "end": 125.3
           },
           {
-            "text": "thường",
+            "text": "thầm",
             "start": 125.3,
             "end": 125.8
           }
@@ -2550,32 +2550,6 @@ window.DEMO_PRESET_GANH_HAO = {
             "boxHighlight": true,
             "sustain": 2.8,
             "note": "Tiếng hát dứt hẳn, tan vào nhạc"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "gh_24",
-    "start": 330.8,
-    "end": 353.2,
-    "layout": "lower",
-    "text": "(Đàn bầu solo & fade out kết bài)",
-    "indent": 0,
-    "lines": [
-      {
-        "text": "(Đàn bầu solo & fade out kết bài)",
-        "start": 330.8,
-        "end": 353.2,
-        "indent": 0,
-        "align": "center",
-        "words": [
-          {
-            "text": "(Đàn bầu solo & fade out kết bài)",
-            "start": 330.8,
-            "end": 353.2,
-            "sustain": 22.4,
-            "note": "Đàn bầu solo & fade out kết bài"
           }
         ]
       }
