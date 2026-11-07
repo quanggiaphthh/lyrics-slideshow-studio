@@ -827,10 +827,12 @@ function autoSplitLineWords(lineText, lineStart, lineEnd) {
 
     return {
       text: word,
-      start: lineStart + (idx * wordDur),
-      end: lineStart + ((idx + 1) * wordDur),
+      start: Math.round((lineStart + (idx * wordDur)) * 100) / 100,
+      end: Math.round((lineStart + ((idx + 1) * wordDur)) * 100) / 100,
       isUpperKey: isUpperKey,
-      isHighlight: isHighlight
+      isHighlight: isHighlight,
+      timingStatus: 'estimated',
+      sustain: null
     };
   });
 }

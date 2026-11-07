@@ -957,6 +957,7 @@ document.addEventListener('DOMContentLoaded', () => {
       end: Math.round(end * 100) / 100,
       text: text,
       indent: idx % 3,
+      status: 'estimated',
       lines: stanzaLines
     };
   }
@@ -976,8 +977,15 @@ document.addEventListener('DOMContentLoaded', () => {
       textSpan.className = 'lyric-item-text';
       textSpan.textContent = s.text;
 
+      const badgeSpan = document.createElement('span');
+      const isReviewed = (s.status === 'reviewed' || s.acoustic_reviewed || s.status === 'aligned');
+      badgeSpan.className = `badge-timing ${isReviewed ? 'reviewed' : 'estimated'}`;
+      badgeSpan.textContent = isReviewed ? 'Chuẩn' : 'Ước lượng';
+      badgeSpan.title = isReviewed ? 'Mốc thời gian chuẩn âm học đã kiểm duyệt' : 'Mốc thời gian phân bổ ước lượng';
+
       row.appendChild(timeSpan);
       row.appendChild(textSpan);
+      row.appendChild(badgeSpan);
 
       row.addEventListener('click', () => {
         applySeek(s.start, true);
