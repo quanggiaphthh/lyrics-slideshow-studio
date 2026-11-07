@@ -1312,3 +1312,39 @@ body {
   cursor: pointer;
   padding: 0 4px;
 }
+
+.lyric-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.lyric-nudge-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #a5b4fc;
+  font-size: 0.65rem;
+  padding: 2px 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.lyric-nudge-btn:hover {
+  background: rgba(99, 102, 241, 0.3);
+  color: #fff;
+  border-color: #818cf8;
+}
+.lyric-loop-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #94a3b8;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.lyric-loop-btn.active {
+  background: #6366f1;
+  color: #fff;
+  border-color: #818cf8;
+}

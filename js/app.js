@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.exporter = exporter;
   window.getCurrentProjectState = () => currentProjectState;
 
+  let activeLoopStanza = null;
   let isPlaying = false;
   let animId = null;
   let activeImageObjects = [];
@@ -984,9 +985,56 @@ document.addEventListener('DOMContentLoaded', () => {
       badgeSpan.textContent = isReviewed ? 'Chuẩn' : 'Ước lượng';
       badgeSpan.title = isReviewed ? 'Mốc thời gian chuẩn âm học đã kiểm duyệt' : 'Mốc thời gian phân bổ ước lượng';
 
+      // Interactive timing controls: phrase loop & +/-50ms nudge (UX-03)
+      const ctrlDiv = document.createElement('div');
+      ctrlDiv.className = 'lyric-item-controls';
+
+      const btnLoop = document.createElement('button');
+      btnLoop.className = `lyric-loop-btn ${activeLoopStanza === s ? 'active' : ''}`;
+      btnLoop.title = 'Phát lặp lại câu này để căn chỉnh tai nghe';
+      btnLoop.textContent = '🔁';
+      btnLoop.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (activeLoopStanza === s) {
+          activeLoopStanza = null;
+          btnLoop.classList.remove('active');
+        } else {
+          document.querySelectorAll('.lyric-loop-btn').forEach(b => b.classList.remove('active'));
+          activeLoopStanza = s;
+          btnLoop.classList.add('active');
+          applySeek(s.start, true);
+          if (!isPlaying) playVideo();
+        }
+      });
+
+      const btnNudgeBack = document.createElement('button');
+      btnNudgeBack.className = 'lyric-nudge-btn';
+      btnNudgeBack.title = 'Lùi sớm 50ms (-0.05s)';
+      btnNudgeBack.textContent = '-50ms';
+      btnNudgeBack.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nudgeStanzaTiming(s, -0.05);
+        timeSpan.textContent = formatTime(s.start);
+      });
+
+      const btnNudgeForward = document.createElement('button');
+      btnNudgeForward.className = 'lyric-nudge-btn';
+      btnNudgeForward.title = 'Tiến trễ 50ms (+0.05s)';
+      btnNudgeForward.textContent = '+50ms';
+      btnNudgeForward.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nudgeStanzaTiming(s, +0.05);
+        timeSpan.textContent = formatTime(s.start);
+      });
+
+      ctrlDiv.appendChild(btnLoop);
+      ctrlDiv.appendChild(btnNudgeBack);
+      ctrlDiv.appendChild(btnNudgeForward);
+
       row.appendChild(timeSpan);
       row.appendChild(textSpan);
       row.appendChild(badgeSpan);
+      row.appendChild(ctrlDiv);
 
       row.addEventListener('click', () => {
         applySeek(s.start, true);
@@ -994,6 +1042,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       lyricsSyncList.appendChild(row);
     });
+  }
+
+  function nudgeStanzaTiming(stanza, deltaSec) {
+    stanza.start = Math.max(0, +(stanza.start + deltaSec).toFixed(3));
+    stanza.end = Math.max(stanza.start + 0.5, +(stanza.end + deltaSec).toFixed(3));
+    
+    // Shift lines & words if present
+    if (Array.isArray(stanza.lines)) {
+      stanza.lines.forEach(line => {
+        if (typeof line.start === 'number') line.start = Math.max(0, +(line.start + deltaSec).toFixed(3));
+        if (typeof line.end === 'number') line.end = Math.max(0, +(line.end + deltaSec).toFixed(3));
+        if (Array.isArray(line.words)) {
+          line.words.forEach(w => {
+            if (typeof w.start === 'number') w.start = Math.max(0, +(w.start + deltaSec).toFixed(3));
+            if (typeof w.end === 'number') w.end = Math.max(0, +(w.end + deltaSec).toFixed(3));
+          });
+        }
+      });
+    }
+
+    renderCurrentFrame();
+    buildTimelineDots(engine.lyricsData, engine.totalDuration);
+    triggerStateUpdate();
   }
 
   function buildTimelineDots(stanzas, duration) {
@@ -1277,6 +1348,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isPlaying) {
       if (!isDragging) {
         const t = getSmoothedAudioTime();
+        if (activeLoopStanza && t >= activeLoopStanza.end) {
+          applySeek(activeLoopStanza.start, true);
+        }
         engine.renderFrame(t);
         updateProgressUI(t);
 

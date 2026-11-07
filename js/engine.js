@@ -261,19 +261,31 @@ class LyricEngine {
     if (remainingTime < transitionTime && numImages > 1) {
       const fadeProgress = 1 - (remainingTime / transitionTime);
 
-      this.drawCoverImage(currentImg, zoomScale, panX, 1 - fadeProgress);
-
       if (this.transitionType === 'slide') {
-        const slideOffsetX = (1 - fadeProgress) * W;
-        ctx.save();
-        ctx.translate(slideOffsetX, 0);
-        this.drawCoverImage(nextImg, 1.02, 0, 1);
-        ctx.restore();
+        // Push-slide horizontal
+        this.drawCoverImage(currentImg, zoomScale, -fadeProgress * W, 0, 1);
+        this.drawCoverImage(nextImg, 1.02, (1 - fadeProgress) * W, 0, 1);
+      } else if (this.transitionType === 'zoom') {
+        // Dynamic push-in zoom transition
+        const currentZoom = zoomScale * (1 + fadeProgress * 0.35);
+        const nextZoom = 0.88 + 0.14 * fadeProgress;
+        this.drawCoverImage(currentImg, currentZoom, panX, 0, 1 - fadeProgress);
+        this.drawCoverImage(nextImg, nextZoom, 0, 0, fadeProgress);
+      } else if (this.transitionType === 'diagonal') {
+        // Smooth diagonal push transition
+        const currentOffX = -fadeProgress * W * 0.6;
+        const currentOffY = -fadeProgress * H * 0.6;
+        const nextOffX = (1 - fadeProgress) * W * 0.6;
+        const nextOffY = (1 - fadeProgress) * H * 0.6;
+        this.drawCoverImage(currentImg, zoomScale, currentOffX, currentOffY, 1 - fadeProgress * 0.3);
+        this.drawCoverImage(nextImg, 1.02, nextOffX, nextOffY, fadeProgress);
       } else {
-        this.drawCoverImage(nextImg, 1.02, 0, fadeProgress);
+        // Classic Ken Burns crossfade drift
+        this.drawCoverImage(currentImg, zoomScale, panX, 0, 1 - fadeProgress);
+        this.drawCoverImage(nextImg, 1.02, -(slideProgress * 15), 0, fadeProgress);
       }
     } else {
-      this.drawCoverImage(currentImg, zoomScale, panX, 1);
+      this.drawCoverImage(currentImg, zoomScale, panX, 0, 1);
     }
 
     // Soft overall cinematic ambient scrim to ensure high text contrast
@@ -283,7 +295,7 @@ class LyricEngine {
     ctx.restore();
   }
 
-  drawCoverImage(img, scale = 1, panOffset = 0, opacity = 1) {
+  drawCoverImage(img, scale = 1, panOffsetX = 0, panOffsetY = 0, opacity = 1) {
     if (!img || !img.complete || img.naturalWidth === 0) return;
     const ctx = this.ctx;
     const W = this.width;
@@ -304,8 +316,8 @@ class LyricEngine {
       renderH = renderW / imgRatio;
     }
 
-    const offsetX = (W - renderW) / 2 + panOffset;
-    const offsetY = (H - renderH) / 2;
+    const offsetX = (W - renderW) / 2 + panOffsetX;
+    const offsetY = (H - renderH) / 2 + panOffsetY;
 
     ctx.drawImage(img, offsetX, offsetY, renderW, renderH);
     ctx.restore();

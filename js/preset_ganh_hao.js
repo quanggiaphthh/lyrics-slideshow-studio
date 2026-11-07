@@ -30,8 +30,13 @@ window.DEMO_PRESET_GANH_HAO = {
   ],
   songMeta: {
     title: 'CÒN THƯƠNG SẮC HOA CHUNG TÌNH',
+    composer: 'LÊ PHƯƠNG',
+    performer: 'QUÝ BÌNH',
+    originalWork: 'OST SÔNG PHỐ NHÀ GHE',
     artist: 'QUÝ BÌNH',
     info: 'OST SÔNG PHỐ NHÀ GHE  •  SÁNG TÁC: LÊ PHƯƠNG',
+    topMeta: 'QUÝ BÌNH  •  CÒN THƯƠNG SẮC HOA CHUNG TÌNH  •  OST SÔNG PHỐ NHÀ GHE',
+    subMeta: 'SÁNG TÁC: LÊ PHƯƠNG  |  TRÌNH BÀY: QUÝ BÌNH',
     cardLines: [
       { text: 'C Ò N', size: 14, weight: '700' },
       { text: 'T H Ư Ơ N G', size: 13, weight: '700' },

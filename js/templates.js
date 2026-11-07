@@ -123,9 +123,12 @@ window.LYRIC_TEMPLATES = {
           { text: 'V I D E O', size: 15, weight: '900' }
         ];
 
-        const cardW = width * (cardLines.length > 5 ? 0.105 : 0.095);
+        const isVertical = height > width;
+        const isSquare = Math.abs(width - height) < 50;
+
+        const cardW = isVertical ? width * 0.16 : (isSquare ? width * 0.12 : width * (cardLines.length > 5 ? 0.105 : 0.095));
         const cardH = height * (cardLines.length > 5 ? 0.38 : 0.34);
-        const cardX = width * 0.72;
+        const cardX = isVertical ? width * 0.88 - cardW : width * 0.72;
         const cardY = height * (cardLines.length > 5 ? 0.39 : 0.42);
 
         ctx.save();
@@ -267,10 +270,35 @@ window.LYRIC_TEMPLATES = {
         lineTotalW -= wordMetrics[wordMetrics.length - 1].spacing;
       }
 
+      // Safe area auto-reflow for 16:9, 9:16 vertical, and 1:1 square (UX-02)
+      const isVertical = height > width;
+      const isSquare = Math.abs(width - height) < 50;
+      const safeMargin = isVertical ? 40 : (isSquare ? 48 : 64);
+      const maxAvailableWidth = width - safeMargin * 2;
+
+      let scaleFactor = 1.0;
+      if (lineTotalW > maxAvailableWidth && maxAvailableWidth > 0) {
+        scaleFactor = maxAvailableWidth / lineTotalW;
+      }
+
+      // If scaleFactor < 1.0, scale metrics so the line fits comfortably without clipping
+      if (scaleFactor < 1.0) {
+        lineTotalW *= scaleFactor;
+        wordMetrics.forEach(mw => {
+          mw.wordW *= scaleFactor;
+          mw.wordFontSize = Math.round(mw.wordFontSize * scaleFactor);
+          mw.padX = Math.round(mw.padX * scaleFactor);
+          mw.padY = Math.round(mw.padY * scaleFactor);
+          mw.spacing *= scaleFactor;
+        });
+      }
+
       // Compute starting X based on layout and alignment
       let curX = x;
       if (layout === 'center' || line.align === 'center' || layout === 'lower') {
         curX = Math.round((width - lineTotalW) / 2);
+      } else {
+        curX = Math.max(safeMargin, Math.min(curX, width - safeMargin - lineTotalW));
       }
 
       const measuredWords = wordMetrics.map(mw => {

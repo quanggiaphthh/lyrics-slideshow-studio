@@ -16,11 +16,11 @@
 | **G3** | **TIM-02** | P1 | Explicitly label `ESTIMATED` vs `ALIGNED` vs `REVIEWED` | **DONE** | Word timing provenance & UI badges (`df2c121`) |
 | **G3** | **TIM-03** | P1 | Separate vocal sustain from hold duration & vibrato | **DONE** | Explicit sustain schema vs visual effects (`df2c121`) |
 | **G3** | **TIM-04** | P1 | Canonical timeline dataset & QA sample metrics | **DONE** | Audio SHA-256 verified, 266 words, 69 sustains (`df2c121`) |
-| **G4** | **DATA-01**| P1 | Auto-save recovery on startup & IndexedDB Blob storage | **DONE** | MediaStore IndexedDB + non-destructive banner (D01-D03 PASS) |
-| **G4** | **DATA-02**| P1 | Versioned `.lyricproj` schema validation & safe import | **DONE** | Validates schema, preserves words/sustain/status (D02 PASS) |
-| **G5** | **UX-01**  | P2 | Audit transition types (implement zoom/diagonal or hide) | **TODO** | True Ken Burns, Slide, Zoom implementations |
-| **G5** | **UX-02**  | P1 | Multi-ratio safe area & auto-reflow (16:9, 9:16, 1:1) | **TODO** | Safe boundaries for vertical & square aspect ratios |
-| **G5** | **UX-03**  | P1 | Visual word timing adjustment table (loop & nudge) | **TODO** | Quick ±20ms/50ms nudge & phrase loop |
-| **G5** | **META-01**| P2 | Separate song metadata fields & provenance | **TODO** | Title, Composer, Performer separation |
+| **G4** | **DATA-01**| P1 | Auto-save recovery on startup & IndexedDB Blob storage | **DONE** | MediaStore IndexedDB + non-destructive banner (D01-D03 PASS) (`9ae1586`) |
+| **G4** | **DATA-02**| P1 | Versioned `.lyricproj` schema validation & safe import | **DONE** | Validates schema, preserves words/sustain/status (D02 PASS) (`9ae1586`) |
+| **G5** | **UX-01**  | P2 | Audit transition types (implement zoom/diagonal or hide) | **DONE** | 4 true transitions: kenburns, slide, zoom, diagonal (U01 PASS) |
+| **G5** | **UX-02**  | P1 | Multi-ratio safe area & auto-reflow (16:9, 9:16, 1:1) | **DONE** | Safe boundaries, auto-scale font for 16:9, 9:16, 1:1 (U02 PASS) |
+| **G5** | **UX-03**  | P1 | Visual word timing adjustment table (loop & nudge) | **DONE** | Interactive phrase loop + ±50ms nudge controls (U03 PASS) |
+| **G5** | **META-01**| P2 | Separate song metadata fields & provenance | **DONE** | Composer (Lê Phương) vs Performer (Quý Bình) (M01 PASS) |
 | **G6** | **QA-01**  | P0 | Portable test runner (relative paths, no user dir hardcodes) | **TODO** | Self-contained Node & Python test scripts |
 | **G6** | **DOCS-01**| P1 | README & Provenance documentation | **TODO** | Update README with verified status and instructions |
