@@ -668,15 +668,36 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCurrentFrame();
   }
 
+  // === SAFE MEDIA URL SANITIZATION (SEC-02) ===
+  function sanitizeMediaUrl(url) {
+    if (!url || typeof url !== 'string') return '';
+    const trimmed = url.trim();
+    if (
+      trimmed.startsWith('http://') ||
+      trimmed.startsWith('https://') ||
+      trimmed.startsWith('blob:') ||
+      trimmed.startsWith('data:image/') ||
+      trimmed.startsWith('assets/') ||
+      trimmed.startsWith('/') ||
+      trimmed.startsWith('./')
+    ) {
+      return trimmed;
+    }
+    return '';
+  }
+
   function loadImagesFromUrls(urls) {
     activeImageObjects = [];
-    imageThumbsGrid.innerHTML = '';
+    imageThumbsGrid.textContent = '';
     let loadedCount = 0;
 
     urls.forEach((url, idx) => {
+      const safeUrl = sanitizeMediaUrl(url);
+      if (!safeUrl) return;
+
       const img = new Image();
       img.crossOrigin = 'anonymous';
-      img.src = url;
+      img.src = safeUrl;
       img.onload = () => {
         loadedCount++;
         if (loadedCount === urls.length) {
@@ -688,15 +709,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const thumb = document.createElement('div');
       thumb.className = `thumb-item ${idx === 0 ? 'active' : ''}`;
-      thumb.innerHTML = `
-        <img src="${url}" alt="Slide ${idx + 1}">
-        <span class="thumb-order-badge">${idx + 1}</span>
-        <button class="thumb-del-btn" title="Xóa ảnh">&times;</button>
-      `;
-      thumb.querySelector('.thumb-del-btn').addEventListener('click', (e) => {
+
+      const thumbImg = document.createElement('img');
+      thumbImg.src = safeUrl;
+      thumbImg.alt = `Slide ${idx + 1}`;
+
+      const badge = document.createElement('span');
+      badge.className = 'thumb-order-badge';
+      badge.textContent = `${idx + 1}`;
+
+      const delBtn = document.createElement('button');
+      delBtn.className = 'thumb-del-btn';
+      delBtn.title = 'Xóa ảnh';
+      delBtn.textContent = '×';
+      delBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         removeImage(idx);
       });
+
+      thumb.appendChild(thumbImg);
+      thumb.appendChild(badge);
+      thumb.appendChild(delBtn);
       imageThumbsGrid.appendChild(thumb);
     });
 
@@ -713,19 +746,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderThumbnails() {
-    imageThumbsGrid.innerHTML = '';
+    imageThumbsGrid.textContent = '';
     activeImageObjects.forEach((img, idx) => {
       const thumb = document.createElement('div');
       thumb.className = `thumb-item ${idx === 0 ? 'active' : ''}`;
-      thumb.innerHTML = `
-        <img src="${img.src}">
-        <span class="thumb-order-badge">${idx + 1}</span>
-        <button class="thumb-del-btn" title="Xóa ảnh">&times;</button>
-      `;
-      thumb.querySelector('.thumb-del-btn').addEventListener('click', (e) => {
+
+      const thumbImg = document.createElement('img');
+      thumbImg.src = sanitizeMediaUrl(img.src);
+      thumbImg.alt = `Slide ${idx + 1}`;
+
+      const badge = document.createElement('span');
+      badge.className = 'thumb-order-badge';
+      badge.textContent = `${idx + 1}`;
+
+      const delBtn = document.createElement('button');
+      delBtn.className = 'thumb-del-btn';
+      delBtn.title = 'Xóa ảnh';
+      delBtn.textContent = '×';
+      delBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         removeImage(idx);
       });
+
+      thumb.appendChild(thumbImg);
+      thumb.appendChild(badge);
+      thumb.appendChild(delBtn);
       imageThumbsGrid.appendChild(thumb);
     });
   }
@@ -917,15 +962,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderLyricsListUI(stanzas) {
-    lyricsSyncList.innerHTML = '';
+    lyricsSyncList.textContent = '';
     stanzas.forEach((s) => {
       const row = document.createElement('div');
       row.className = 'lyric-item-row';
       row.id = `row_${s.id}`;
-      row.innerHTML = `
-        <span class="lyric-item-time">${formatTime(s.start)}</span>
-        <span class="lyric-item-text">${s.text}</span>
-      `;
+
+      const timeSpan = document.createElement('span');
+      timeSpan.className = 'lyric-item-time';
+      timeSpan.textContent = formatTime(s.start);
+
+      const textSpan = document.createElement('span');
+      textSpan.className = 'lyric-item-text';
+      textSpan.textContent = s.text;
+
+      row.appendChild(timeSpan);
+      row.appendChild(textSpan);
+
       row.addEventListener('click', () => {
         applySeek(s.start, true);
         if (!isPlaying) playVideo();
@@ -1012,51 +1065,93 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderHistoryList() {
     const list = historyManager.getHistory();
-    historyListContainer.innerHTML = '';
+    historyListContainer.textContent = '';
 
     if (list.length === 0) {
-      historyListContainer.innerHTML = `
-        <div class="history-empty-placeholder">
-          <p>Chưa có bản nháp nào được lưu trong lịch sử.</p>
-          <p style="font-size:0.75rem; margin-top:4px">Bấm nút "Lưu Bản Nháp" ở thanh trên để ghi lại tiến trình của bạn!</p>
-        </div>
-      `;
+      const emptyDiv = document.createElement('div');
+      emptyDiv.className = 'history-empty-placeholder';
+      const p1 = document.createElement('p');
+      p1.textContent = 'Chưa có bản nháp nào được lưu trong lịch sử.';
+      const p2 = document.createElement('p');
+      p2.style.fontSize = '0.75rem';
+      p2.style.marginTop = '4px';
+      p2.textContent = 'Bấm nút "Lưu Bản Nháp" ở thanh trên để ghi lại tiến trình của bạn!';
+      emptyDiv.appendChild(p1);
+      emptyDiv.appendChild(p2);
+      historyListContainer.appendChild(emptyDiv);
       return;
     }
 
     list.forEach(item => {
       const card = document.createElement('div');
       card.className = 'history-card';
-      const thumbSrc = item.thumbnail || (item.state.images && item.state.images[0]) || 'assets/samples/bg_clean_720p.jpg';
+      const thumbSrc = item.thumbnail || (item.state && item.state.images && item.state.images[0]) || 'assets/samples/bg_clean_720p.jpg';
 
-      card.innerHTML = `
-        <div class="history-card-left">
-          <img src="${thumbSrc}" class="history-thumb" alt="Preview">
-          <div class="history-meta">
-            <div class="history-title">${item.name}</div>
-            <div class="history-details">
-              <span>🕒 ${item.formattedTime}</span>
-              <span class="history-tag">${item.template.toUpperCase()}</span>
-              <span>${item.aspectRatio}</span>
-            </div>
-          </div>
-        </div>
-        <div class="history-card-actions">
-          <button class="btn-history-restore" title="Khôi phục trạng thái này">Khôi Phục</button>
-          <button class="btn-history-del" title="Xóa bản nháp">&times;</button>
-        </div>
-      `;
+      const leftDiv = document.createElement('div');
+      leftDiv.className = 'history-card-left';
 
-      card.querySelector('.btn-history-restore').addEventListener('click', () => {
+      const thumbImg = document.createElement('img');
+      thumbImg.src = sanitizeMediaUrl(thumbSrc);
+      thumbImg.className = 'history-thumb';
+      thumbImg.alt = 'Preview';
+
+      const metaDiv = document.createElement('div');
+      metaDiv.className = 'history-meta';
+
+      const titleDiv = document.createElement('div');
+      titleDiv.className = 'history-title';
+      titleDiv.textContent = item.name || 'Bản nháp';
+
+      const detailsDiv = document.createElement('div');
+      detailsDiv.className = 'history-details';
+
+      const timeSpan = document.createElement('span');
+      timeSpan.textContent = `🕒 ${item.formattedTime || ''}`;
+
+      const tagSpan = document.createElement('span');
+      tagSpan.className = 'history-tag';
+      tagSpan.textContent = String(item.template || 'template').toUpperCase();
+
+      const ratioSpan = document.createElement('span');
+      ratioSpan.textContent = item.aspectRatio || '16-9';
+
+      detailsDiv.appendChild(timeSpan);
+      detailsDiv.appendChild(tagSpan);
+      detailsDiv.appendChild(ratioSpan);
+
+      metaDiv.appendChild(titleDiv);
+      metaDiv.appendChild(detailsDiv);
+
+      leftDiv.appendChild(thumbImg);
+      leftDiv.appendChild(metaDiv);
+
+      const actionsDiv = document.createElement('div');
+      actionsDiv.className = 'history-card-actions';
+
+      const restoreBtn = document.createElement('button');
+      restoreBtn.className = 'btn-history-restore';
+      restoreBtn.title = 'Khôi phục trạng thái này';
+      restoreBtn.textContent = 'Khôi Phục';
+      restoreBtn.addEventListener('click', () => {
         applyProjectState(item.state);
         closeHistoryModal();
       });
 
-      card.querySelector('.btn-history-del').addEventListener('click', () => {
+      const delBtn = document.createElement('button');
+      delBtn.className = 'btn-history-del';
+      delBtn.title = 'Xóa bản nháp';
+      delBtn.textContent = '×';
+      delBtn.addEventListener('click', () => {
         historyManager.deleteSnapshot(item.id);
         renderHistoryList();
         updateHistoryBadge();
       });
+
+      actionsDiv.appendChild(restoreBtn);
+      actionsDiv.appendChild(delBtn);
+
+      card.appendChild(leftDiv);
+      card.appendChild(actionsDiv);
 
       historyListContainer.appendChild(card);
     });

@@ -311,6 +311,33 @@ class LyricEngine {
     ctx.restore();
   }
 
+  // === ACTIVE STANZA RESOLUTION (PRIORITIZES INCOMING STANZA OVER OVERLAPPING EXITING STANZA) ===
+  getActiveStanza(time) {
+    if (!this.lyricsData || this.lyricsData.length === 0) return null;
+    const exitThreshold = 0.85;
+
+    // Collect all candidates within [start, end + exitThreshold]
+    const candidates = [];
+    for (let i = 0; i < this.lyricsData.length; i++) {
+      const s = this.lyricsData[i];
+      if (time >= s.start && time <= s.end + exitThreshold) {
+        candidates.push(s);
+      }
+    }
+    if (candidates.length === 0) return null;
+    if (candidates.length === 1) return candidates[0];
+
+    // Priority:
+    // Any candidate that has started (s.start <= time): pick the latest started one (incoming)
+    const started = candidates.filter(s => time >= s.start);
+    if (started.length > 0) {
+      started.sort((a, b) => b.start - a.start);
+      return started[0];
+    }
+    candidates.sort((a, b) => a.start - b.start);
+    return candidates[0];
+  }
+
   // === LYRICS MOTION RENDERER (WORD-BY-WORD KINETIC TIMING & DYNAMIC LAYOUTS) ===
   drawLyrics(time) {
     const ctx = this.ctx;
@@ -319,27 +346,38 @@ class LyricEngine {
 
     if (!this.lyricsData || this.lyricsData.length === 0) return;
 
-    // Search active stanza with extended 0.85s exit window for buttery smooth transitions
     const exitThreshold = 0.85;
-    let activeStanza = null;
+    const activeStanza = this.getActiveStanza(time);
+    if (!activeStanza) return;
+
+    // Check if there is an outgoing stanza still in its exit transition window
+    let outgoingStanza = null;
     for (let i = 0; i < this.lyricsData.length; i++) {
-      const stanza = this.lyricsData[i];
-      if (time >= stanza.start && time <= stanza.end + exitThreshold) {
-        activeStanza = stanza;
+      const s = this.lyricsData[i];
+      if (s !== activeStanza && time >= s.start && time > s.end && time <= s.end + exitThreshold) {
+        outgoingStanza = s;
         break;
       }
     }
 
-    if (!activeStanza) return;
+    // Render outgoing stanza in transition background (fading out)
+    if (outgoingStanza) {
+      this.drawSingleStanza(outgoingStanza, time, W, H, true);
+    }
+    // Render current active stanza
+    this.drawSingleStanza(activeStanza, time, W, H, false);
+  }
 
-    const stanzaDuration = activeStanza.end - activeStanza.start;
+  drawSingleStanza(stanza, time, W, H, isOutgoing = false) {
+    const ctx = this.ctx;
+    const stanzaDuration = stanza.end - stanza.start;
 
     const isVertical = this.aspectRatio === '9-16';
-    const lines = activeStanza.lines || [{ text: activeStanza.text || '', start: activeStanza.start, end: activeStanza.end }];
-    const layout = activeStanza.layout || 'left';
+    const lines = stanza.lines || [{ text: stanza.text || '', start: stanza.start, end: stanza.end }];
+    const layout = stanza.layout || 'left';
 
     // Organic whole-stanza micro-drift (keeps words breathing naturally during vocal sustain)
-    const stanzaDriftY = Math.sin((time - activeStanza.start) * 1.5) * 1.6;
+    const stanzaDriftY = Math.sin((time - stanza.start) * 1.5) * 1.6;
 
     // Dynamic baseY and lineSpacing based on layout and line count (Generous, balanced breathing room)
     let baseY;
@@ -375,8 +413,8 @@ class LyricEngine {
     }
 
     lines.forEach((line, idx) => {
-      const lineStart = line.start !== undefined ? line.start : activeStanza.start + (idx / lines.length) * stanzaDuration;
-      const lineEnd = line.end !== undefined ? line.end : activeStanza.start + ((idx + 1) / lines.length) * stanzaDuration;
+      const lineStart = line.start !== undefined ? line.start : stanza.start + (idx / lines.length) * stanzaDuration;
+      const lineEnd = line.end !== undefined ? line.end : stanza.start + ((idx + 1) / lines.length) * stanzaDuration;
 
       // If line hasn't started yet, skip
       if (time < lineStart) return;
@@ -384,9 +422,9 @@ class LyricEngine {
       // Cascade Staggered Exit (dòng trên bay trước, dòng dưới bay sau)
       let lineExitAlpha = 1.0;
       let lineExitOffsetY = 0;
-      if (time > activeStanza.end) {
+      if (time > stanza.end) {
         const lineExitDelay = idx * 0.08;
-        const lineExitStart = activeStanza.end + lineExitDelay;
+        const lineExitStart = stanza.end + lineExitDelay;
         if (time > lineExitStart) {
           const lineExitProg = Math.min(1, Math.max(0, (time - lineExitStart) / 0.45));
           const exitEase = lineExitProg * lineExitProg * (3 - 2 * lineExitProg); // Hermite smoothstep
@@ -407,7 +445,7 @@ class LyricEngine {
       const posY = baseY + (idx * lineSpacing) + lineExitOffsetY;
 
       // Completed lines dim slightly to focus on the active singing line
-      const lineFocusAlpha = isCurrent ? 1.0 : 0.84;
+      const lineFocusAlpha = isCurrent ? 1.0 : (isOutgoing ? 0.6 : 0.84);
 
       ctx.save();
       ctx.globalAlpha = lineExitAlpha * lineFocusAlpha;
@@ -441,18 +479,8 @@ class LyricEngine {
     const W = this.width;
     const H = this.height;
 
-    // Active stanza lookup
-    let activeStanza = null;
-    const exitThreshold = 0.85;
-    if (this.lyricsData) {
-      for (let i = 0; i < this.lyricsData.length; i++) {
-        const s = this.lyricsData[i];
-        if (time >= s.start && time <= s.end + exitThreshold) {
-          activeStanza = s;
-          break;
-        }
-      }
-    }
+    // Active stanza lookup (prioritizes incoming stanza)
+    const activeStanza = this.getActiveStanza(time);
 
     // 1. Clear background
     ctx.clearRect(0, 0, W, H);

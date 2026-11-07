@@ -137,18 +137,122 @@ class ProjectHistoryManager {
     }, 2000);
   }
 
+  // === VALIDATION & SCHEMA VERIFICATION (SEC-02 & DATA-02) ===
+  validateProjectSchema(data) {
+    if (!data || typeof data !== 'object') {
+      return { valid: false, error: 'Project data must be a valid JSON object' };
+    }
+
+    // Unpack project if nested
+    const proj = data.project ? data.project : data;
+
+    // Validate images
+    const safeImages = [];
+    if (Array.isArray(proj.images)) {
+      if (proj.images.length > 100) {
+        return { valid: false, error: 'Maximum 100 images allowed per project' };
+      }
+      for (const img of proj.images) {
+        const url = (typeof img === 'string') ? img : (img && img.src ? img.src : '');
+        if (typeof url === 'string') {
+          const trimmed = url.trim();
+          // Disallow javascript: or executable protocols
+          if (
+            trimmed.startsWith('javascript:') ||
+            trimmed.startsWith('vbscript:') ||
+            trimmed.startsWith('data:text/html')
+          ) {
+            continue; // skip dangerous protocols
+          }
+          if (trimmed.length > 0) safeImages.push(trimmed);
+        }
+      }
+    }
+
+    // Validate stanzas
+    const safeStanzas = [];
+    if (Array.isArray(proj.parsedStanzas)) {
+      if (proj.parsedStanzas.length > 2000) {
+        return { valid: false, error: 'Maximum 2000 lyric stanzas allowed per project' };
+      }
+      for (let i = 0; i < proj.parsedStanzas.length; i++) {
+        const s = proj.parsedStanzas[i];
+        if (!s || typeof s !== 'object') continue;
+        const start = typeof s.start === 'number' && !isNaN(s.start) && s.start >= 0 ? s.start : 0;
+        const end = typeof s.end === 'number' && !isNaN(s.end) && s.end >= start ? s.end : start + 3;
+        const text = typeof s.text === 'string' ? s.text : '';
+        const id = s.id ? String(s.id).replace(/[^\w-]/g, '') : `stanza_${i}`;
+
+        // Validate lines if present
+        const lines = [];
+        if (Array.isArray(s.lines)) {
+          for (const l of s.lines) {
+            if (!l || typeof l !== 'object') continue;
+            lines.push({
+              text: typeof l.text === 'string' ? l.text : '',
+              start: typeof l.start === 'number' ? l.start : start,
+              end: typeof l.end === 'number' ? l.end : end,
+              indent: typeof l.indent === 'number' ? l.indent : 0,
+              words: Array.isArray(l.words) ? l.words : []
+            });
+          }
+        }
+
+        safeStanzas.push({
+          id,
+          start,
+          end,
+          text,
+          layout: ['left', 'right', 'center', 'lower'].includes(s.layout) ? s.layout : 'left',
+          lines: lines.length > 0 ? lines : [{ text, start, end }]
+        });
+      }
+    }
+
+    const safeDuration = typeof proj.audioDuration === 'number' && proj.audioDuration > 0
+      ? proj.audioDuration
+      : (typeof proj.duration === 'number' && proj.duration > 0 ? proj.duration : 70.0);
+
+    return {
+      valid: true,
+      project: {
+        audioName: typeof proj.audioName === 'string' ? proj.audioName.slice(0, 200) : '',
+        audioUrl: typeof proj.audioUrl === 'string' ? proj.audioUrl : '',
+        audioDuration: safeDuration,
+        duration: safeDuration,
+        images: safeImages,
+        template: ['finnxiii', 'lofi', 'cyberpunk', 'classic', 'pop'].includes(proj.template) ? proj.template : 'finnxiii',
+        transition: ['kenburns', 'slide', 'zoom', 'diagonal'].includes(proj.transition) ? proj.transition : 'kenburns',
+        aspectRatio: ['16-9', '9-16', '1-1'].includes(proj.aspectRatio) ? proj.aspectRatio : '16-9',
+        lyricsRaw: typeof proj.lyricsRaw === 'string' ? proj.lyricsRaw : '',
+        parsedStanzas: safeStanzas
+      }
+    };
+  }
+
   importProjectFile(file, callback) {
+    if (!file) {
+      callback(new Error('No file selected'), null);
+      return;
+    }
+    // Limit file size to 25MB
+    if (file.size > 25 * 1024 * 1024) {
+      callback(new Error('File quá lớn (vượt quá giới hạn an toàn 25MB)'), null);
+      return;
+    }
+
     const reader = new FileReader();
     reader.onload = (e) => {
       try {
-        const json = JSON.parse(e.target.result);
-        if (json.project) {
-          callback(null, json.project);
-        } else {
-          callback(null, json);
+        const rawJson = JSON.parse(e.target.result);
+        const validation = this.validateProjectSchema(rawJson);
+        if (!validation.valid) {
+          callback(new Error(`Tệp dự án không hợp lệ: ${validation.error}`), null);
+          return;
         }
+        callback(null, validation.project);
       } catch (err) {
-        callback(err, null);
+        callback(new Error(`Lỗi cú pháp JSON: ${err.message}`), null);
       }
     };
     reader.onerror = (err) => callback(err, null);
@@ -157,15 +261,24 @@ class ProjectHistoryManager {
 
   // === SANITIZATION HELPER ===
   sanitizeStateForStorage(state) {
-    // Avoid saving massive raw binary blobs to localStorage
+    // Retain clean images without corrupting base64 via substring
     const cleanImages = (state.images || []).map(img => {
-      if (typeof img === 'string') return img;
-      if (img.src && img.src.startsWith('data:') && img.src.length > 500000) {
-        // Thumbnail or compressed representation
-        return img.src.substring(0, 500000);
+      if (typeof img === 'string') {
+        // Skip excessively large inline base64 if over 1.5MB to protect localStorage quota
+        if (img.startsWith('data:') && img.length > 1500000) {
+          console.warn('Image data URI exceeds 1.5MB, skipped from localStorage draft.');
+          return '';
+        }
+        return img;
       }
-      return img.src || '';
-    });
+      if (img && img.src) {
+        if (typeof img.src === 'string' && img.src.startsWith('data:') && img.src.length > 1500000) {
+          return '';
+        }
+        return img.src || '';
+      }
+      return '';
+    }).filter(Boolean);
 
     return {
       audioName: state.audioName || '',
