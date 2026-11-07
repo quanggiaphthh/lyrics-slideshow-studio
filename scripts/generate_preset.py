@@ -421,7 +421,7 @@ words_data = [
     "start": 121.0,
     "end": 128.0,
     "layout": "left",
-    "text": "dặn lòng cố quên sao đêm vẫn thầm gọi tên EM",
+    "text": "dặn lòng cố quên sao đêm vẫn THẦM gọi tên",
     "indent": 0,
     "lines": [
       {
@@ -438,28 +438,27 @@ words_data = [
         ]
       },
       {
-        "text": "sao đêm vẫn thầm",
+        "text": "sao đêm vẫn THẦM",
         "start": 124.0,
-        "end": 125.8,
+        "end": 126.0,
         "indent": 1,
         "align": "left",
         "words": [
           { "text": "sao", "start": 124.0, "end": 124.5 },
           { "text": "đêm", "start": 124.5, "end": 124.9 },
           { "text": "vẫn", "start": 124.9, "end": 125.3 },
-          { "text": "thầm", "start": 125.3, "end": 125.8 }
+          { "text": "THẦM", "start": 125.3, "end": 126.0, "isUpperKey": True, "boxHighlight": True }
         ]
       },
       {
-        "text": "gọi tên EM",
-        "start": 125.8,
+        "text": "gọi tên",
+        "start": 126.0,
         "end": 127.8,
         "indent": 2,
         "align": "left",
         "words": [
-          { "text": "gọi", "start": 125.8, "end": 126.3 },
-          { "text": "tên", "start": 126.3, "end": 126.8 },
-          { "text": "EM", "start": 126.8, "end": 127.8, "isUpperKey": True, "colorAccent": True, "sustain": 1.0 }
+          { "text": "gọi", "start": 126.0, "end": 126.6 },
+          { "text": "tên", "start": 126.6, "end": 127.8, "sustain": 1.2 }
         ]
       }
     ]

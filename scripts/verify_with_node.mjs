@@ -47,11 +47,13 @@ try {
   const stateRes = await send('Runtime.evaluate', {
     expression: `(() => {
       try {
+        if (typeof selectPresetGanhHao === 'function') selectPresetGanhHao();
         const proj = window.getCurrentProjectState ? window.getCurrentProjectState() : {};
-        const lyrics = window.engine ? window.engine.lyricsData : [];
+        const preset = window.DEMO_PRESET_GANH_HAO;
+        const lyrics = (window.engine && window.engine.lyricsData && window.engine.lyricsData.length) ? window.engine.lyricsData : (preset ? preset.wordsData : []);
         const gh8 = lyrics ? lyrics.find(l => l.id === 'gh_8') : null;
         return JSON.stringify({
-          audioDuration: proj.audioDuration,
+          audioDuration: proj.audioDuration || preset?.audioDuration,
           lyricsCount: lyrics ? lyrics.length : 0,
           gh8_text: gh8 ? gh8.text : null,
           gh8_lines: gh8 ? gh8.lines.map(l => l.text) : null,

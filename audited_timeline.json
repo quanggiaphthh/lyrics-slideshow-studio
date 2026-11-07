@@ -639,7 +639,7 @@
   },
   {
     "sec": "gh_8",
-    "phrase": "sao đêm vẫn thầm",
+    "phrase": "sao đêm vẫn THẦM",
     "words": [
       {
         "w": "sao",
@@ -657,33 +657,28 @@
         "end": 125.3
       },
       {
-        "w": "thầm",
+        "w": "THẦM",
         "start": 125.3,
-        "end": 125.8
+        "end": 126.0,
+        "boxHighlight": true,
+        "isUpperKey": true
       }
     ]
   },
   {
     "sec": "gh_8",
-    "phrase": "gọi tên EM",
+    "phrase": "gọi tên",
     "words": [
       {
         "w": "gọi",
-        "start": 125.8,
-        "end": 126.3
+        "start": 126.0,
+        "end": 126.6
       },
       {
         "w": "tên",
-        "start": 126.3,
-        "end": 126.8
-      },
-      {
-        "w": "EM",
-        "start": 126.8,
+        "start": 126.6,
         "end": 127.8,
-        "sustain": "1.0s",
-        "colorAccent": true,
-        "isUpperKey": true
+        "sustain": "1.2s"
       }
     ]
   },

@@ -815,7 +815,7 @@ window.DEMO_PRESET_GANH_HAO = {
     "start": 121.0,
     "end": 128.0,
     "layout": "left",
-    "text": "dặn lòng cố quên sao đêm vẫn thầm gọi tên EM",
+    "text": "dặn lòng cố quên sao đêm vẫn THẦM gọi tên",
     "indent": 0,
     "lines": [
       {
@@ -848,9 +848,9 @@ window.DEMO_PRESET_GANH_HAO = {
         ]
       },
       {
-        "text": "sao đêm vẫn thầm",
+        "text": "sao đêm vẫn THẦM",
         "start": 124.0,
-        "end": 125.8,
+        "end": 126.0,
         "indent": 1,
         "align": "left",
         "words": [
@@ -870,36 +870,31 @@ window.DEMO_PRESET_GANH_HAO = {
             "end": 125.3
           },
           {
-            "text": "thầm",
+            "text": "THẦM",
             "start": 125.3,
-            "end": 125.8
+            "end": 126.0,
+            "isUpperKey": true,
+            "boxHighlight": true
           }
         ]
       },
       {
-        "text": "gọi tên EM",
-        "start": 125.8,
+        "text": "gọi tên",
+        "start": 126.0,
         "end": 127.8,
         "indent": 2,
         "align": "left",
         "words": [
           {
             "text": "gọi",
-            "start": 125.8,
-            "end": 126.3
+            "start": 126.0,
+            "end": 126.6
           },
           {
             "text": "tên",
-            "start": 126.3,
-            "end": 126.8
-          },
-          {
-            "text": "EM",
-            "start": 126.8,
+            "start": 126.6,
             "end": 127.8,
-            "isUpperKey": true,
-            "colorAccent": true,
-            "sustain": 1.0
+            "sustain": 1.2
           }
         ]
       }
