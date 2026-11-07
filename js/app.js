@@ -1691,7 +1691,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (exporter.isRecording) {
       if (exportModalTitle) exportModalTitle.textContent = 'Đang đóng gói file video...';
       if (btnFinishEarlyExport) btnFinishEarlyExport.style.display = 'none';
-      exporter.stopExport();
+      exporter.savePartialExport();
     }
   });
 
