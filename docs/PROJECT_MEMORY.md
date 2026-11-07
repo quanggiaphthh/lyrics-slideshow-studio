@@ -27,6 +27,10 @@
     - Fixed "Sắc hoa CHUNG TÌNH chưa phai màu" / "Nỡ nào NGƯỜI ĐI" (P081-P083, P113-P115) eliminating repeated "người".
     - Preserved "Lục bình trôi chẳng biết nơi neo" (P058, P090) and "Dặn lòng CỐ QUÊN • Sao đêm vẫn thầm GỌI TÊN" (P042-P046).
   - Stored V3 audit dataset, CSV, JSON, SRT, and HTML QA preview in `docs/v3_timeline/`.
+  - **Excel Acoustic Synchronization (100% Word-Level Match)**:
+    - Cross-checked against user's Excel file `media_1794018325711_5a5a4b74.xlsx` (Sheet: "Bổ sung thêm thời gian ngân của").
+    - Audited the entire Outro section (`04:44.5` - `05:30.8`), discovering ASR drift in previous draft (e.g. "Mình anh thao thức" was 1.62s early, "Biết lòng buồn vui" was 2.22s early).
+    - Fully calibrated all 36 outro words, timings, and sustains (`Dòng nhớ trong tim`, `Làm sao chia cách`, `Người thương có hay`, `Đêm dài`, `Mình anh thao thức`, `Em giờ`, `Biết lòng buồn vui`, `Em về`, `Làm dâu bên ấy`, `Bên này`, `Vẫn hoài`, `Chờ`, `Mong`) to achieve **0.00s delta (100% EXACT)** against Excel timecodes and measured acoustic silence gaps.
   - Re-verified complete 7-suite test harness `python tests/run_all_tests.py`: 7/7 PASSED.
 
 ### 3. Immediate Next Actions
