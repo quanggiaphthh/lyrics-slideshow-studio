@@ -1,0 +1,2908 @@
+[
+  {
+    "id": "p01",
+    "target_name": "Hò ơi (1)",
+    "window_start": 13.0,
+    "window_end": 21.0,
+    "transcribed_text": "Ai sẽ đi con chào, sống lắm lắm",
+    "words": [
+      {
+        "word": "Ai",
+        "start": 15.02,
+        "end": 15.74,
+        "prob": 0.21
+      },
+      {
+        "word": "sẽ",
+        "start": 15.74,
+        "end": 16.1,
+        "prob": 0.24
+      },
+      {
+        "word": "đi",
+        "start": 16.1,
+        "end": 16.44,
+        "prob": 0.14
+      },
+      {
+        "word": "con",
+        "start": 16.44,
+        "end": 16.8,
+        "prob": 0.35
+      },
+      {
+        "word": "chào,",
+        "start": 16.8,
+        "end": 17.66,
+        "prob": 0.55
+      },
+      {
+        "word": "sống",
+        "start": 18.24,
+        "end": 18.58,
+        "prob": 0.18
+      },
+      {
+        "word": "lắm",
+        "start": 18.58,
+        "end": 19.0,
+        "prob": 0.33
+      },
+      {
+        "word": "lắm",
+        "start": 19.0,
+        "end": 19.34,
+        "prob": 0.56
+      }
+    ]
+  },
+  {
+    "id": "p02",
+    "target_name": "ai xuôi con sáo sổ lồng",
+    "window_start": 17.0,
+    "window_end": 25.0,
+    "transcribed_text": "Nào sổ mùm lòng lòng, trời yêu yêu yêu yêu yêu yêu yêu",
+    "words": [
+      {
+        "word": "Nào",
+        "start": 17.0,
+        "end": 17.84,
+        "prob": 0.32
+      },
+      {
+        "word": "sổ",
+        "start": 17.84,
+        "end": 18.5,
+        "prob": 0.14
+      },
+      {
+        "word": "mùm",
+        "start": 18.5,
+        "end": 18.86,
+        "prob": 0.12
+      },
+      {
+        "word": "lòng",
+        "start": 18.86,
+        "end": 19.14,
+        "prob": 0.15
+      },
+      {
+        "word": "lòng,",
+        "start": 19.14,
+        "end": 19.3,
+        "prob": 0.44
+      },
+      {
+        "word": "trời",
+        "start": 21.06,
+        "end": 21.66,
+        "prob": 0.21
+      },
+      {
+        "word": "yêu",
+        "start": 21.66,
+        "end": 22.08,
+        "prob": 0.05
+      },
+      {
+        "word": "yêu",
+        "start": 22.08,
+        "end": 22.36,
+        "prob": 0.19
+      },
+      {
+        "word": "yêu",
+        "start": 22.36,
+        "end": 22.92,
+        "prob": 0.51
+      },
+      {
+        "word": "yêu",
+        "start": 22.92,
+        "end": 24.18,
+        "prob": 0.49
+      },
+      {
+        "word": "yêu",
+        "start": 24.18,
+        "end": 24.5,
+        "prob": 0.47
+      },
+      {
+        "word": "yêu",
+        "start": 24.5,
+        "end": 24.7,
+        "prob": 0.25
+      },
+      {
+        "word": "yêu",
+        "start": 24.7,
+        "end": 24.98,
+        "prob": 0.34
+      }
+    ]
+  },
+  {
+    "id": "p03",
+    "target_name": "cho em nỡ vội",
+    "window_start": 23.5,
+    "window_end": 29.5,
+    "transcribed_text": "",
+    "words": []
+  },
+  {
+    "id": "p04",
+    "target_name": "Hò ơi (2)",
+    "window_start": 28.5,
+    "window_end": 36.5,
+    "transcribed_text": "Hò ơi",
+    "words": [
+      {
+        "word": "Hò",
+        "start": 28.5,
+        "end": 30.54,
+        "prob": 0.08
+      },
+      {
+        "word": "ơi",
+        "start": 30.54,
+        "end": 31.3,
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "id": "p05",
+    "target_name": "cho em nỡ vội lấy chồng bỏ anh",
+    "window_start": 34.0,
+    "window_end": 47.0,
+    "transcribed_text": "cho em nỡ lấy chồng bỏ anh",
+    "words": [
+      {
+        "word": "cho",
+        "start": 36.88,
+        "end": 38.28,
+        "prob": 0.0
+      },
+      {
+        "word": "em",
+        "start": 38.28,
+        "end": 38.78,
+        "prob": 0.23
+      },
+      {
+        "word": "nỡ",
+        "start": 38.78,
+        "end": 39.64,
+        "prob": 0.15
+      },
+      {
+        "word": "lấy",
+        "start": 39.64,
+        "end": 41.34,
+        "prob": 0.51
+      },
+      {
+        "word": "chồng",
+        "start": 41.34,
+        "end": 41.8,
+        "prob": 0.19
+      },
+      {
+        "word": "bỏ",
+        "start": 41.8,
+        "end": 43.04,
+        "prob": 0.29
+      },
+      {
+        "word": "anh",
+        "start": 43.04,
+        "end": 45.04,
+        "prob": 0.02
+      }
+    ]
+  },
+  {
+    "id": "p06",
+    "target_name": "Sáo bay theo chồng đâu biết là đau lòng anh lắm",
+    "window_start": 78.5,
+    "window_end": 86.5,
+    "transcribed_text": "Sáo bay theo chồng đâu biết là đau lòng anh lắm",
+    "words": [
+      {
+        "word": "Sáo",
+        "start": 78.5,
+        "end": 79.74,
+        "prob": 0.08
+      },
+      {
+        "word": "bay",
+        "start": 79.74,
+        "end": 80.1,
+        "prob": 0.06
+      },
+      {
+        "word": "theo",
+        "start": 80.1,
+        "end": 80.68,
+        "prob": 0.0
+      },
+      {
+        "word": "chồng",
+        "start": 80.68,
+        "end": 81.06,
+        "prob": 0.37
+      },
+      {
+        "word": "đâu",
+        "start": 81.06,
+        "end": 81.36,
+        "prob": 0.0
+      },
+      {
+        "word": "biết",
+        "start": 81.36,
+        "end": 82.36,
+        "prob": 0.02
+      },
+      {
+        "word": "là",
+        "start": 82.36,
+        "end": 82.82,
+        "prob": 0.87
+      },
+      {
+        "word": "đau",
+        "start": 82.82,
+        "end": 83.36,
+        "prob": 0.29
+      },
+      {
+        "word": "lòng",
+        "start": 83.36,
+        "end": 83.7,
+        "prob": 0.46
+      },
+      {
+        "word": "anh",
+        "start": 83.7,
+        "end": 84.0,
+        "prob": 0.01
+      },
+      {
+        "word": "lắm",
+        "start": 84.0,
+        "end": 85.06,
+        "prob": 0.3
+      }
+    ]
+  },
+  {
+    "id": "p07",
+    "target_name": "Xót xa lặng thầm nhìn theo bước em qua cầu",
+    "window_start": 85.5,
+    "window_end": 94.0,
+    "transcribed_text": "Xót xa lặng thầm nhìn heo bước em qua cầu Này",
+    "words": [
+      {
+        "word": "Xót",
+        "start": 85.5,
+        "end": 86.68,
+        "prob": 0.03
+      },
+      {
+        "word": "xa",
+        "start": 86.68,
+        "end": 87.24,
+        "prob": 0.57
+      },
+      {
+        "word": "lặng",
+        "start": 87.24,
+        "end": 88.38,
+        "prob": 0.37
+      },
+      {
+        "word": "thầm",
+        "start": 88.38,
+        "end": 89.14,
+        "prob": 0.1
+      },
+      {
+        "word": "nhìn",
+        "start": 89.14,
+        "end": 89.32,
+        "prob": 0.17
+      },
+      {
+        "word": "heo",
+        "start": 89.32,
+        "end": 90.12,
+        "prob": 0.53
+      },
+      {
+        "word": "bước",
+        "start": 90.12,
+        "end": 90.54,
+        "prob": 0.27
+      },
+      {
+        "word": "em",
+        "start": 90.54,
+        "end": 91.14,
+        "prob": 0.09
+      },
+      {
+        "word": "qua",
+        "start": 91.14,
+        "end": 91.78,
+        "prob": 0.0
+      },
+      {
+        "word": "cầu",
+        "start": 91.78,
+        "end": 92.56,
+        "prob": 0.01
+      },
+      {
+        "word": "Này",
+        "start": 92.56,
+        "end": 93.98,
+        "prob": 0.24
+      }
+    ]
+  },
+  {
+    "id": "p08",
+    "target_name": "Ngày nào có nhau ta trao ước hẹn trầu cau",
+    "window_start": 93.0,
+    "window_end": 101.0,
+    "transcribed_text": "Ngày nào có nhau ta trao ước hẹn",
+    "words": [
+      {
+        "word": "Ngày",
+        "start": 93.0,
+        "end": 94.1,
+        "prob": 0.35
+      },
+      {
+        "word": "nào",
+        "start": 94.1,
+        "end": 94.34,
+        "prob": 0.01
+      },
+      {
+        "word": "có",
+        "start": 94.34,
+        "end": 94.62,
+        "prob": 0.14
+      },
+      {
+        "word": "nhau",
+        "start": 94.62,
+        "end": 95.52,
+        "prob": 0.05
+      },
+      {
+        "word": "ta",
+        "start": 95.52,
+        "end": 96.46,
+        "prob": 0.0
+      },
+      {
+        "word": "trao",
+        "start": 96.46,
+        "end": 97.34,
+        "prob": 0.02
+      },
+      {
+        "word": "ước",
+        "start": 97.34,
+        "end": 97.5,
+        "prob": 0.03
+      },
+      {
+        "word": "hẹn",
+        "start": 97.5,
+        "end": 97.84,
+        "prob": 0.34
+      },
+      {
+        "word": "",
+        "start": 97.84,
+        "end": 98.06,
+        "prob": 0.01
+      }
+    ]
+  },
+  {
+    "id": "p09",
+    "target_name": "Mong duyên ban đầu trời thương không đổ mưa ngâu",
+    "window_start": 99.5,
+    "window_end": 107.5,
+    "transcribed_text": "Mong duyên ban đầu trời thương không đổ mưa ngâu Này Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen Nguyen",
+    "words": [
+      {
+        "word": "Mong",
+        "start": 99.5,
+        "end": 100.84,
+        "prob": 0.01
+      },
+      {
+        "word": "duyên",
+        "start": 100.84,
+        "end": 101.44,
+        "prob": 0.44
+      },
+      {
+        "word": "ban",
+        "start": 101.44,
+        "end": 101.72,
+        "prob": 0.02
+      },
+      {
+        "word": "đầu",
+        "start": 101.72,
+        "end": 102.42,
+        "prob": 0.0
+      },
+      {
+        "word": "trời",
+        "start": 102.42,
+        "end": 103.5,
+        "prob": 0.13
+      },
+      {
+        "word": "thương",
+        "start": 103.5,
+        "end": 104.32,
+        "prob": 0.0
+      },
+      {
+        "word": "không",
+        "start": 104.32,
+        "end": 104.66,
+        "prob": 0.0
+      },
+      {
+        "word": "đổ",
+        "start": 104.66,
+        "end": 105.22,
+        "prob": 0.37
+      },
+      {
+        "word": "mưa",
+        "start": 105.22,
+        "end": 105.54,
+        "prob": 0.01
+      },
+      {
+        "word": "ngâu",
+        "start": 105.54,
+        "end": 106.2,
+        "prob": 0.08
+      },
+      {
+        "word": "Này",
+        "start": 107.0,
+        "end": 107.08,
+        "prob": 0.08
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.08,
+        "end": 107.16,
+        "prob": 0.14
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.16,
+        "end": 107.16,
+        "prob": 0.53
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.16,
+        "end": 107.16,
+        "prob": 0.69
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.16,
+        "end": 107.28,
+        "prob": 0.88
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.28,
+        "end": 107.28,
+        "prob": 0.94
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.28,
+        "end": 107.28,
+        "prob": 0.97
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.28,
+        "end": 107.28,
+        "prob": 0.97
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.28,
+        "end": 107.28,
+        "prob": 0.98
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.28,
+        "end": 107.28,
+        "prob": 0.98
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.28,
+        "end": 107.28,
+        "prob": 0.98
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.28,
+        "end": 107.28,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.28,
+        "end": 107.28,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.28,
+        "end": 107.28,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.28,
+        "end": 107.28,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.28,
+        "end": 107.28,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.28,
+        "end": 107.32,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.32,
+        "end": 107.32,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.32,
+        "end": 107.32,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.32,
+        "end": 107.32,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.32,
+        "end": 107.32,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.32,
+        "end": 107.32,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.32,
+        "end": 107.32,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.32,
+        "end": 107.32,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.32,
+        "end": 107.32,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.32,
+        "end": 107.32,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.32,
+        "end": 107.32,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.32,
+        "end": 107.36,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.36,
+        "end": 107.36,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.36,
+        "end": 107.36,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.36,
+        "end": 107.36,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.36,
+        "end": 107.36,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.36,
+        "end": 107.36,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.36,
+        "end": 107.36,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.36,
+        "end": 107.36,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.36,
+        "end": 107.36,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.36,
+        "end": 107.38,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.38,
+        "end": 107.42,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.42,
+        "end": 107.44,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.44,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.46,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.46,
+        "end": 107.48,
+        "prob": 0.99
+      },
+      {
+        "word": "Nguyen",
+        "start": 107.48,
+        "end": 107.48,
+        "prob": 0.99
+      }
+    ]
+  },
+  {
+    "id": "p10",
+    "target_name": "Bóng em xa dần anh biết là một lần chia cách",
+    "window_start": 106.5,
+    "window_end": 114.5,
+    "transcribed_text": "Bóng em xa dần anh biết là một lần chia cách Để không bỏ lỡ những video hấp dẫn",
+    "words": [
+      {
+        "word": "Bóng",
+        "start": 106.5,
+        "end": 107.9,
+        "prob": 0.49
+      },
+      {
+        "word": "em",
+        "start": 107.9,
+        "end": 108.14,
+        "prob": 0.0
+      },
+      {
+        "word": "xa",
+        "start": 108.14,
+        "end": 108.7,
+        "prob": 0.57
+      },
+      {
+        "word": "dần",
+        "start": 108.7,
+        "end": 109.2,
+        "prob": 0.02
+      },
+      {
+        "word": "anh",
+        "start": 109.2,
+        "end": 110.08,
+        "prob": 0.12
+      },
+      {
+        "word": "biết",
+        "start": 110.08,
+        "end": 110.6,
+        "prob": 0.9
+      },
+      {
+        "word": "là",
+        "start": 110.6,
+        "end": 111.02,
+        "prob": 0.79
+      },
+      {
+        "word": "một",
+        "start": 111.02,
+        "end": 111.86,
+        "prob": 0.01
+      },
+      {
+        "word": "lần",
+        "start": 111.86,
+        "end": 112.02,
+        "prob": 0.64
+      },
+      {
+        "word": "chia",
+        "start": 112.02,
+        "end": 112.3,
+        "prob": 0.0
+      },
+      {
+        "word": "cách",
+        "start": 112.3,
+        "end": 112.56,
+        "prob": 0.0
+      },
+      {
+        "word": "Để",
+        "start": 112.56,
+        "end": 112.78,
+        "prob": 0.06
+      },
+      {
+        "word": "không",
+        "start": 112.78,
+        "end": 113.2,
+        "prob": 0.5
+      },
+      {
+        "word": "bỏ",
+        "start": 113.2,
+        "end": 113.26,
+        "prob": 0.24
+      },
+      {
+        "word": "lỡ",
+        "start": 113.26,
+        "end": 114.1,
+        "prob": 0.54
+      },
+      {
+        "word": "những",
+        "start": 114.1,
+        "end": 114.48,
+        "prob": 0.37
+      },
+      {
+        "word": "video",
+        "start": 114.48,
+        "end": 114.48,
+        "prob": 0.32
+      },
+      {
+        "word": "hấp",
+        "start": 114.48,
+        "end": 114.48,
+        "prob": 0.16
+      },
+      {
+        "word": "dẫn",
+        "start": 114.48,
+        "end": 114.48,
+        "prob": 0.94
+      }
+    ]
+  },
+  {
+    "id": "p11",
+    "target_name": "Trách ai vô tình đành tâm xẻ đôi tim mình",
+    "window_start": 113.8,
+    "window_end": 121.8,
+    "transcribed_text": "Trách ai vô u u u u u u Cảm ơn xe hai đôi đôi đôi đôi đôi",
+    "words": [
+      {
+        "word": "Trách",
+        "start": 113.8,
+        "end": 114.86,
+        "prob": 0.24
+      },
+      {
+        "word": "ai",
+        "start": 114.86,
+        "end": 115.24,
+        "prob": 0.33
+      },
+      {
+        "word": "vô",
+        "start": 115.24,
+        "end": 115.84,
+        "prob": 0.6
+      },
+      {
+        "word": "u",
+        "start": 115.84,
+        "end": 116.08,
+        "prob": 0.01
+      },
+      {
+        "word": "u",
+        "start": 116.08,
+        "end": 116.74,
+        "prob": 0.46
+      },
+      {
+        "word": "u",
+        "start": 116.74,
+        "end": 116.74,
+        "prob": 0.71
+      },
+      {
+        "word": "u",
+        "start": 116.74,
+        "end": 117.2,
+        "prob": 0.75
+      },
+      {
+        "word": "u",
+        "start": 117.2,
+        "end": 117.4,
+        "prob": 0.69
+      },
+      {
+        "word": "u",
+        "start": 117.4,
+        "end": 117.64,
+        "prob": 0.78
+      },
+      {
+        "word": "Cảm",
+        "start": 117.64,
+        "end": 118.0,
+        "prob": 0.35
+      },
+      {
+        "word": "ơn",
+        "start": 118.0,
+        "end": 118.28,
+        "prob": 0.69
+      },
+      {
+        "word": "xe",
+        "start": 118.28,
+        "end": 118.7,
+        "prob": 0.42
+      },
+      {
+        "word": "hai",
+        "start": 118.7,
+        "end": 119.0,
+        "prob": 0.17
+      },
+      {
+        "word": "đôi",
+        "start": 119.0,
+        "end": 119.38,
+        "prob": 0.41
+      },
+      {
+        "word": "đôi",
+        "start": 119.38,
+        "end": 119.74,
+        "prob": 0.75
+      },
+      {
+        "word": "đôi",
+        "start": 119.74,
+        "end": 120.02,
+        "prob": 0.92
+      },
+      {
+        "word": "đôi",
+        "start": 120.02,
+        "end": 120.26,
+        "prob": 0.88
+      },
+      {
+        "word": "đôi",
+        "start": 120.26,
+        "end": 120.94,
+        "prob": 0.79
+      }
+    ]
+  },
+  {
+    "id": "p12",
+    "target_name": "Dặn lòng cố quên sao đêm vẫn thường gọi tên em",
+    "window_start": 121.0,
+    "window_end": 129.0,
+    "transcribed_text": "Dặn lòng lòng cố quên sao đêm vẫn thường gọi ơn",
+    "words": [
+      {
+        "word": "Dặn",
+        "start": 121.0,
+        "end": 122.08,
+        "prob": 0.28
+      },
+      {
+        "word": "lòng",
+        "start": 122.08,
+        "end": 122.44,
+        "prob": 0.67
+      },
+      {
+        "word": "lòng",
+        "start": 122.44,
+        "end": 122.82,
+        "prob": 0.37
+      },
+      {
+        "word": "cố",
+        "start": 122.82,
+        "end": 123.32,
+        "prob": 0.02
+      },
+      {
+        "word": "quên",
+        "start": 123.32,
+        "end": 123.8,
+        "prob": 0.15
+      },
+      {
+        "word": "sao",
+        "start": 123.8,
+        "end": 124.74,
+        "prob": 0.14
+      },
+      {
+        "word": "đêm",
+        "start": 124.74,
+        "end": 125.22,
+        "prob": 0.49
+      },
+      {
+        "word": "vẫn",
+        "start": 125.22,
+        "end": 125.54,
+        "prob": 0.0
+      },
+      {
+        "word": "thường",
+        "start": 125.54,
+        "end": 125.98,
+        "prob": 0.0
+      },
+      {
+        "word": "gọi",
+        "start": 125.98,
+        "end": 126.46,
+        "prob": 0.23
+      },
+      {
+        "word": "ơn",
+        "start": 126.46,
+        "end": 127.72,
+        "prob": 0.24
+      }
+    ]
+  },
+  {
+    "id": "p13",
+    "target_name": "Ai ru trong chiều cho lòng càng nhớ em nhiều",
+    "window_start": 128.5,
+    "window_end": 140.5,
+    "transcribed_text": "Ai anh trong trung chiều cho lòng càng nhớ em nhiều",
+    "words": [
+      {
+        "word": "Ai",
+        "start": 128.5,
+        "end": 129.12,
+        "prob": 0.61
+      },
+      {
+        "word": "anh",
+        "start": 129.12,
+        "end": 129.48,
+        "prob": 0.04
+      },
+      {
+        "word": "trong",
+        "start": 129.48,
+        "end": 129.94,
+        "prob": 0.1
+      },
+      {
+        "word": "trung",
+        "start": 129.94,
+        "end": 130.44,
+        "prob": 0.08
+      },
+      {
+        "word": "chiều",
+        "start": 130.44,
+        "end": 130.98,
+        "prob": 0.09
+      },
+      {
+        "word": "cho",
+        "start": 130.98,
+        "end": 131.84,
+        "prob": 0.19
+      },
+      {
+        "word": "lòng",
+        "start": 131.84,
+        "end": 132.26,
+        "prob": 0.49
+      },
+      {
+        "word": "càng",
+        "start": 132.26,
+        "end": 132.96,
+        "prob": 0.06
+      },
+      {
+        "word": "nhớ",
+        "start": 132.96,
+        "end": 133.6,
+        "prob": 0.49
+      },
+      {
+        "word": "em",
+        "start": 133.6,
+        "end": 134.4,
+        "prob": 0.78
+      },
+      {
+        "word": "nhiều",
+        "start": 134.4,
+        "end": 135.18,
+        "prob": 0.02
+      }
+    ]
+  },
+  {
+    "id": "p14",
+    "target_name": "À ơi em nỡ sao em bỏ anh một mình",
+    "window_start": 141.5,
+    "window_end": 153.0,
+    "transcribed_text": "À ơi em nỡ sao em bỏ anh một mình Cái gì đâu, cái gì đâu",
+    "words": [
+      {
+        "word": "À",
+        "start": 141.5,
+        "end": 143.66,
+        "prob": 0.02
+      },
+      {
+        "word": "ơi",
+        "start": 143.66,
+        "end": 146.42,
+        "prob": 0.03
+      },
+      {
+        "word": "em",
+        "start": 146.42,
+        "end": 147.06,
+        "prob": 0.0
+      },
+      {
+        "word": "nỡ",
+        "start": 147.06,
+        "end": 147.26,
+        "prob": 0.33
+      },
+      {
+        "word": "sao",
+        "start": 147.26,
+        "end": 147.62,
+        "prob": 0.01
+      },
+      {
+        "word": "em",
+        "start": 147.62,
+        "end": 148.44,
+        "prob": 0.13
+      },
+      {
+        "word": "bỏ",
+        "start": 148.44,
+        "end": 150.3,
+        "prob": 0.24
+      },
+      {
+        "word": "anh",
+        "start": 150.3,
+        "end": 150.62,
+        "prob": 0.16
+      },
+      {
+        "word": "một",
+        "start": 150.62,
+        "end": 151.3,
+        "prob": 0.03
+      },
+      {
+        "word": "mình",
+        "start": 151.3,
+        "end": 152.12,
+        "prob": 0.08
+      },
+      {
+        "word": "Cái",
+        "start": 152.12,
+        "end": 152.5,
+        "prob": 0.17
+      },
+      {
+        "word": "gì",
+        "start": 152.5,
+        "end": 152.54,
+        "prob": 0.17
+      },
+      {
+        "word": "đâu,",
+        "start": 152.54,
+        "end": 152.64,
+        "prob": 0.08
+      },
+      {
+        "word": "cái",
+        "start": 152.76,
+        "end": 152.8,
+        "prob": 0.34
+      },
+      {
+        "word": "gì",
+        "start": 152.8,
+        "end": 152.92,
+        "prob": 0.87
+      },
+      {
+        "word": "đâu",
+        "start": 152.92,
+        "end": 152.98,
+        "prob": 0.93
+      }
+    ]
+  },
+  {
+    "id": "p15",
+    "target_name": "Lục bình trôi chẳng biết nơi neo",
+    "window_start": 152.0,
+    "window_end": 158.0,
+    "transcribed_text": "Lục, lục, lục, trôi chẳng biết nơi neo",
+    "words": [
+      {
+        "word": "Lục,",
+        "start": 152.0,
+        "end": 152.74,
+        "prob": 0.03
+      },
+      {
+        "word": "lục,",
+        "start": 152.9,
+        "end": 153.1,
+        "prob": 0.93
+      },
+      {
+        "word": "lục,",
+        "start": 153.2,
+        "end": 153.2,
+        "prob": 0.86
+      },
+      {
+        "word": "trôi",
+        "start": 153.4,
+        "end": 153.52,
+        "prob": 0.28
+      },
+      {
+        "word": "chẳng",
+        "start": 153.52,
+        "end": 154.12,
+        "prob": 0.52
+      },
+      {
+        "word": "biết",
+        "start": 154.12,
+        "end": 154.28,
+        "prob": 0.0
+      },
+      {
+        "word": "nơi",
+        "start": 154.28,
+        "end": 154.96,
+        "prob": 0.43
+      },
+      {
+        "word": "neo",
+        "start": 154.96,
+        "end": 155.58,
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "id": "p16",
+    "target_name": "Còn thương tóc em buông dài tím hoa anh cài",
+    "window_start": 157.0,
+    "window_end": 164.0,
+    "transcribed_text": "Còn ứng ứng ứng ứng ứng ứng ứng ứng ứng ứng",
+    "words": [
+      {
+        "word": "Còn",
+        "start": 157.0,
+        "end": 158.06,
+        "prob": 0.43
+      },
+      {
+        "word": "ứng",
+        "start": 158.06,
+        "end": 158.82,
+        "prob": 0.1
+      },
+      {
+        "word": "ứng",
+        "start": 158.82,
+        "end": 160.82,
+        "prob": 0.27
+      },
+      {
+        "word": "ứng",
+        "start": 160.82,
+        "end": 161.5,
+        "prob": 0.49
+      },
+      {
+        "word": "ứng",
+        "start": 161.5,
+        "end": 161.74,
+        "prob": 0.49
+      },
+      {
+        "word": "ứng",
+        "start": 161.74,
+        "end": 161.96,
+        "prob": 0.54
+      },
+      {
+        "word": "ứng",
+        "start": 161.96,
+        "end": 162.06,
+        "prob": 0.64
+      },
+      {
+        "word": "ứng",
+        "start": 162.06,
+        "end": 163.2,
+        "prob": 0.78
+      },
+      {
+        "word": "ứng",
+        "start": 163.2,
+        "end": 163.68,
+        "prob": 0.87
+      },
+      {
+        "word": "ứng",
+        "start": 163.68,
+        "end": 163.98,
+        "prob": 0.89
+      },
+      {
+        "word": "ứng",
+        "start": 163.98,
+        "end": 163.98,
+        "prob": 0.92
+      }
+    ]
+  },
+  {
+    "id": "p17",
+    "target_name": "Em cười xiết chặt vòng tay",
+    "window_start": 162.5,
+    "window_end": 167.5,
+    "transcribed_text": "Thì mùa đại em em đi",
+    "words": [
+      {
+        "word": "Thì",
+        "start": 162.5,
+        "end": 164.34,
+        "prob": 0.39
+      },
+      {
+        "word": "mùa",
+        "start": 164.34,
+        "end": 165.18,
+        "prob": 0.34
+      },
+      {
+        "word": "đại",
+        "start": 165.18,
+        "end": 165.8,
+        "prob": 0.2
+      },
+      {
+        "word": "em",
+        "start": 165.8,
+        "end": 166.5,
+        "prob": 0.76
+      },
+      {
+        "word": "em",
+        "start": 166.5,
+        "end": 166.84,
+        "prob": 0.2
+      },
+      {
+        "word": "đi",
+        "start": 166.84,
+        "end": 167.28,
+        "prob": 0.22
+      }
+    ]
+  },
+  {
+    "id": "p18",
+    "target_name": "À ơi nói thương anh nhiều đành lòng em cất bước sang sông",
+    "window_start": 166.0,
+    "window_end": 183.0,
+    "transcribed_text": "Em ơi chỉ chắc chắc rộng đầy À ơi em nơ mà sao em nói ơn anh nhiều đành lòng em cất bước sang sông",
+    "words": [
+      {
+        "word": "Em",
+        "start": 166.0,
+        "end": 166.48,
+        "prob": 0.8
+      },
+      {
+        "word": "ơi",
+        "start": 166.48,
+        "end": 167.16,
+        "prob": 0.21
+      },
+      {
+        "word": "chỉ",
+        "start": 167.16,
+        "end": 167.66,
+        "prob": 0.05
+      },
+      {
+        "word": "chắc",
+        "start": 167.66,
+        "end": 168.06,
+        "prob": 0.6
+      },
+      {
+        "word": "chắc",
+        "start": 168.06,
+        "end": 168.3,
+        "prob": 0.79
+      },
+      {
+        "word": "rộng",
+        "start": 168.3,
+        "end": 168.68,
+        "prob": 0.4
+      },
+      {
+        "word": "đầy",
+        "start": 168.68,
+        "end": 171.14,
+        "prob": 0.37
+      },
+      {
+        "word": "À",
+        "start": 171.14,
+        "end": 172.0,
+        "prob": 0.01
+      },
+      {
+        "word": "ơi",
+        "start": 172.0,
+        "end": 174.4,
+        "prob": 0.04
+      },
+      {
+        "word": "em",
+        "start": 174.4,
+        "end": 175.04,
+        "prob": 0.12
+      },
+      {
+        "word": "nơ",
+        "start": 175.04,
+        "end": 175.4,
+        "prob": 0.36
+      },
+      {
+        "word": "mà",
+        "start": 175.4,
+        "end": 175.6,
+        "prob": 0.22
+      },
+      {
+        "word": "sao",
+        "start": 175.6,
+        "end": 176.16,
+        "prob": 0.33
+      },
+      {
+        "word": "em",
+        "start": 176.16,
+        "end": 177.28,
+        "prob": 0.97
+      },
+      {
+        "word": "nói",
+        "start": 177.28,
+        "end": 178.4,
+        "prob": 0.44
+      },
+      {
+        "word": "ơn",
+        "start": 178.4,
+        "end": 179.1,
+        "prob": 0.18
+      },
+      {
+        "word": "anh",
+        "start": 179.1,
+        "end": 179.5,
+        "prob": 0.93
+      },
+      {
+        "word": "nhiều",
+        "start": 179.5,
+        "end": 180.28,
+        "prob": 0.0
+      },
+      {
+        "word": "đành",
+        "start": 180.28,
+        "end": 181.08,
+        "prob": 0.05
+      },
+      {
+        "word": "lòng",
+        "start": 181.08,
+        "end": 181.46,
+        "prob": 0.47
+      },
+      {
+        "word": "em",
+        "start": 181.46,
+        "end": 181.8,
+        "prob": 0.05
+      },
+      {
+        "word": "cất",
+        "start": 181.8,
+        "end": 182.36,
+        "prob": 0.01
+      },
+      {
+        "word": "bước",
+        "start": 182.36,
+        "end": 182.64,
+        "prob": 0.31
+      },
+      {
+        "word": "sang",
+        "start": 182.64,
+        "end": 182.98,
+        "prob": 0.0
+      },
+      {
+        "word": "sông",
+        "start": 182.98,
+        "end": 182.98,
+        "prob": 0.01
+      }
+    ]
+  },
+  {
+    "id": "p19",
+    "target_name": "Vì đâu dở dang duyên mình sắc hoa chung tình",
+    "window_start": 182.5,
+    "window_end": 193.5,
+    "transcribed_text": "Vì đâu dở dang duyên mình sắc hoa chung tình",
+    "words": [
+      {
+        "word": "Vì",
+        "start": 184.66,
+        "end": 186.0,
+        "prob": 0.05
+      },
+      {
+        "word": "đâu",
+        "start": 186.0,
+        "end": 186.86,
+        "prob": 0.03
+      },
+      {
+        "word": "dở",
+        "start": 186.86,
+        "end": 189.1,
+        "prob": 0.01
+      },
+      {
+        "word": "dang",
+        "start": 189.1,
+        "end": 189.6,
+        "prob": 0.0
+      },
+      {
+        "word": "duyên",
+        "start": 189.6,
+        "end": 190.1,
+        "prob": 0.17
+      },
+      {
+        "word": "mình",
+        "start": 190.1,
+        "end": 190.34,
+        "prob": 0.2
+      },
+      {
+        "word": "sắc",
+        "start": 190.34,
+        "end": 192.2,
+        "prob": 0.01
+      },
+      {
+        "word": "hoa",
+        "start": 192.2,
+        "end": 193.04,
+        "prob": 0.32
+      },
+      {
+        "word": "chung",
+        "start": 193.04,
+        "end": 193.32,
+        "prob": 0.13
+      },
+      {
+        "word": "tình",
+        "start": 193.32,
+        "end": 193.48,
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "id": "p20",
+    "target_name": "Chưa phai màu nỡ nào người đi",
+    "window_start": 192.5,
+    "window_end": 199.5,
+    "transcribed_text": "Chưa phai cho anh lần cho phai màu nỡ nào người đi Để không bỏ lỡ lỡ lỡ lỡ lỡ lỡ lỡ l",
+    "words": [
+      {
+        "word": "Chưa",
+        "start": 192.5,
+        "end": 192.8,
+        "prob": 0.1
+      },
+      {
+        "word": "phai",
+        "start": 192.8,
+        "end": 193.04,
+        "prob": 0.0
+      },
+      {
+        "word": "cho",
+        "start": 193.04,
+        "end": 193.28,
+        "prob": 0.44
+      },
+      {
+        "word": "anh",
+        "start": 193.28,
+        "end": 193.52,
+        "prob": 0.37
+      },
+      {
+        "word": "lần",
+        "start": 193.52,
+        "end": 193.84,
+        "prob": 0.18
+      },
+      {
+        "word": "cho",
+        "start": 193.84,
+        "end": 194.32,
+        "prob": 0.04
+      },
+      {
+        "word": "phai",
+        "start": 194.32,
+        "end": 194.78,
+        "prob": 0.56
+      },
+      {
+        "word": "màu",
+        "start": 194.78,
+        "end": 195.52,
+        "prob": 0.0
+      },
+      {
+        "word": "nỡ",
+        "start": 195.52,
+        "end": 196.34,
+        "prob": 0.32
+      },
+      {
+        "word": "nào",
+        "start": 196.34,
+        "end": 196.78,
+        "prob": 0.08
+      },
+      {
+        "word": "người",
+        "start": 196.78,
+        "end": 197.66,
+        "prob": 0.0
+      },
+      {
+        "word": "đi",
+        "start": 197.66,
+        "end": 198.04,
+        "prob": 0.05
+      },
+      {
+        "word": "Để",
+        "start": 198.04,
+        "end": 198.3,
+        "prob": 0.04
+      },
+      {
+        "word": "không",
+        "start": 198.3,
+        "end": 198.3,
+        "prob": 0.46
+      },
+      {
+        "word": "bỏ",
+        "start": 198.3,
+        "end": 198.54,
+        "prob": 0.25
+      },
+      {
+        "word": "lỡ",
+        "start": 198.54,
+        "end": 198.82,
+        "prob": 0.56
+      },
+      {
+        "word": "lỡ",
+        "start": 198.82,
+        "end": 198.82,
+        "prob": 0.47
+      },
+      {
+        "word": "lỡ",
+        "start": 198.82,
+        "end": 198.82,
+        "prob": 0.68
+      },
+      {
+        "word": "lỡ",
+        "start": 198.82,
+        "end": 198.82,
+        "prob": 0.77
+      },
+      {
+        "word": "lỡ",
+        "start": 198.82,
+        "end": 198.84,
+        "prob": 0.88
+      },
+      {
+        "word": "lỡ",
+        "start": 198.84,
+        "end": 198.84,
+        "prob": 0.94
+      },
+      {
+        "word": "lỡ",
+        "start": 198.84,
+        "end": 199.16,
+        "prob": 0.95
+      },
+      {
+        "word": "l",
+        "start": 199.16,
+        "end": 199.48,
+        "prob": 0.94
+      }
+    ]
+  },
+  {
+    "id": "p21",
+    "target_name": "À ơi em nỡ sao em bỏ anh một mình",
+    "window_start": 226.5,
+    "window_end": 238.0,
+    "transcribed_text": "À ơi em nỡ sao em bỏ anh một mình Cảm ơn các bạn ạ",
+    "words": [
+      {
+        "word": "À",
+        "start": 226.5,
+        "end": 228.54,
+        "prob": 0.0
+      },
+      {
+        "word": "ơi",
+        "start": 228.54,
+        "end": 230.64,
+        "prob": 0.0
+      },
+      {
+        "word": "em",
+        "start": 230.64,
+        "end": 231.88,
+        "prob": 0.03
+      },
+      {
+        "word": "nỡ",
+        "start": 231.88,
+        "end": 232.14,
+        "prob": 0.29
+      },
+      {
+        "word": "sao",
+        "start": 232.14,
+        "end": 232.32,
+        "prob": 0.01
+      },
+      {
+        "word": "em",
+        "start": 232.32,
+        "end": 233.1,
+        "prob": 0.74
+      },
+      {
+        "word": "bỏ",
+        "start": 233.1,
+        "end": 235.02,
+        "prob": 0.23
+      },
+      {
+        "word": "anh",
+        "start": 235.02,
+        "end": 235.34,
+        "prob": 0.04
+      },
+      {
+        "word": "một",
+        "start": 235.34,
+        "end": 235.98,
+        "prob": 0.05
+      },
+      {
+        "word": "mình",
+        "start": 235.98,
+        "end": 236.66,
+        "prob": 0.09
+      },
+      {
+        "word": "Cảm",
+        "start": 236.66,
+        "end": 236.66,
+        "prob": 0.3
+      },
+      {
+        "word": "ơn",
+        "start": 236.66,
+        "end": 237.14,
+        "prob": 0.84
+      },
+      {
+        "word": "các",
+        "start": 237.14,
+        "end": 237.16,
+        "prob": 0.06
+      },
+      {
+        "word": "bạn",
+        "start": 237.16,
+        "end": 237.62,
+        "prob": 0.72
+      },
+      {
+        "word": "ạ",
+        "start": 237.62,
+        "end": 237.96,
+        "prob": 0.35
+      }
+    ]
+  },
+  {
+    "id": "p22",
+    "target_name": "Lục bình trôi chẳng biết nơi neo",
+    "window_start": 237.0,
+    "window_end": 243.0,
+    "transcribed_text": "Lục bình ủng bình, trôi chẳng biết nơi neo Cảm ơn",
+    "words": [
+      {
+        "word": "Lục",
+        "start": 237.0,
+        "end": 237.48,
+        "prob": 0.02
+      },
+      {
+        "word": "bình",
+        "start": 237.48,
+        "end": 237.62,
+        "prob": 0.13
+      },
+      {
+        "word": "ủng",
+        "start": 237.62,
+        "end": 237.88,
+        "prob": 0.39
+      },
+      {
+        "word": "bình,",
+        "start": 237.88,
+        "end": 237.96,
+        "prob": 0.38
+      },
+      {
+        "word": "trôi",
+        "start": 238.12,
+        "end": 238.38,
+        "prob": 0.08
+      },
+      {
+        "word": "chẳng",
+        "start": 238.38,
+        "end": 238.98,
+        "prob": 0.62
+      },
+      {
+        "word": "biết",
+        "start": 238.98,
+        "end": 239.2,
+        "prob": 0.0
+      },
+      {
+        "word": "nơi",
+        "start": 239.2,
+        "end": 239.88,
+        "prob": 0.4
+      },
+      {
+        "word": "neo",
+        "start": 239.88,
+        "end": 240.9,
+        "prob": 0.0
+      },
+      {
+        "word": "Cảm",
+        "start": 240.9,
+        "end": 242.98,
+        "prob": 0.32
+      },
+      {
+        "word": "ơn",
+        "start": 242.98,
+        "end": 242.98,
+        "prob": 0.7
+      }
+    ]
+  },
+  {
+    "id": "p23",
+    "target_name": "Còn thương tóc em buông dài tím hoa anh cài",
+    "window_start": 242.0,
+    "window_end": 249.5,
+    "transcribed_text": "Còn ấm ấm ấm ấm ấm ấm ấm Xin chào các bạn!",
+    "words": [
+      {
+        "word": "Còn",
+        "start": 242.0,
+        "end": 243.12,
+        "prob": 0.29
+      },
+      {
+        "word": "ấm",
+        "start": 243.12,
+        "end": 245.52,
+        "prob": 0.3
+      },
+      {
+        "word": "ấm",
+        "start": 245.52,
+        "end": 246.12,
+        "prob": 0.61
+      },
+      {
+        "word": "ấm",
+        "start": 246.12,
+        "end": 246.64,
+        "prob": 0.75
+      },
+      {
+        "word": "ấm",
+        "start": 246.64,
+        "end": 246.98,
+        "prob": 0.8
+      },
+      {
+        "word": "ấm",
+        "start": 246.98,
+        "end": 247.96,
+        "prob": 0.88
+      },
+      {
+        "word": "ấm",
+        "start": 247.96,
+        "end": 248.62,
+        "prob": 0.91
+      },
+      {
+        "word": "ấm",
+        "start": 248.62,
+        "end": 249.0,
+        "prob": 0.93
+      },
+      {
+        "word": "Xin",
+        "start": 249.0,
+        "end": 249.22,
+        "prob": 0.02
+      },
+      {
+        "word": "chào",
+        "start": 249.22,
+        "end": 249.36,
+        "prob": 0.64
+      },
+      {
+        "word": "các",
+        "start": 249.36,
+        "end": 249.36,
+        "prob": 0.09
+      },
+      {
+        "word": "bạn!",
+        "start": 249.36,
+        "end": 249.36,
+        "prob": 0.88
+      }
+    ]
+  },
+  {
+    "id": "p24",
+    "target_name": "Em cười xiết chặt vòng tay",
+    "window_start": 248.5,
+    "window_end": 254.0,
+    "transcribed_text": "Tiếm qua anh à thầy em người xích chặt chặt vòng vòng",
+    "words": [
+      {
+        "word": "Tiếm",
+        "start": 248.5,
+        "end": 249.36,
+        "prob": 0.57
+      },
+      {
+        "word": "qua",
+        "start": 249.36,
+        "end": 249.7,
+        "prob": 0.28
+      },
+      {
+        "word": "anh",
+        "start": 249.7,
+        "end": 250.1,
+        "prob": 0.17
+      },
+      {
+        "word": "à",
+        "start": 250.1,
+        "end": 250.32,
+        "prob": 0.15
+      },
+      {
+        "word": "thầy",
+        "start": 250.32,
+        "end": 250.94,
+        "prob": 0.48
+      },
+      {
+        "word": "em",
+        "start": 250.94,
+        "end": 251.24,
+        "prob": 0.73
+      },
+      {
+        "word": "người",
+        "start": 251.24,
+        "end": 251.92,
+        "prob": 0.07
+      },
+      {
+        "word": "xích",
+        "start": 251.92,
+        "end": 252.7,
+        "prob": 0.37
+      },
+      {
+        "word": "chặt",
+        "start": 252.7,
+        "end": 252.96,
+        "prob": 0.2
+      },
+      {
+        "word": "chặt",
+        "start": 252.96,
+        "end": 253.12,
+        "prob": 0.32
+      },
+      {
+        "word": "vòng",
+        "start": 253.12,
+        "end": 253.44,
+        "prob": 0.11
+      },
+      {
+        "word": "vòng",
+        "start": 253.44,
+        "end": 253.74,
+        "prob": 0.52
+      }
+    ]
+  },
+  {
+    "id": "p25",
+    "target_name": "À ơi nói thương anh nhiều đành lòng em cất bước sang sông",
+    "window_start": 253.5,
+    "window_end": 268.0,
+    "transcribed_text": "Nhi tài ạ ạ ạ ạ ạ ạ ạ ạ ạ ạ",
+    "words": [
+      {
+        "word": "Nhi",
+        "start": 253.5,
+        "end": 253.7,
+        "prob": 0.26
+      },
+      {
+        "word": "tài",
+        "start": 253.7,
+        "end": 254.62,
+        "prob": 0.52
+      },
+      {
+        "word": "ạ",
+        "start": 254.62,
+        "end": 256.94,
+        "prob": 0.08
+      },
+      {
+        "word": "ạ",
+        "start": 256.94,
+        "end": 257.86,
+        "prob": 0.25
+      },
+      {
+        "word": "ạ",
+        "start": 257.86,
+        "end": 258.52,
+        "prob": 0.46
+      },
+      {
+        "word": "ạ",
+        "start": 258.52,
+        "end": 259.52,
+        "prob": 0.57
+      },
+      {
+        "word": "ạ",
+        "start": 259.52,
+        "end": 259.52,
+        "prob": 0.67
+      },
+      {
+        "word": "ạ",
+        "start": 259.52,
+        "end": 259.54,
+        "prob": 0.73
+      },
+      {
+        "word": "ạ",
+        "start": 259.54,
+        "end": 259.88,
+        "prob": 0.76
+      },
+      {
+        "word": "ạ",
+        "start": 259.88,
+        "end": 259.88,
+        "prob": 0.81
+      },
+      {
+        "word": "ạ",
+        "start": 259.88,
+        "end": 260.52,
+        "prob": 0.84
+      },
+      {
+        "word": "ạ",
+        "start": 260.52,
+        "end": 267.98,
+        "prob": 0.87
+      }
+    ]
+  },
+  {
+    "id": "p26",
+    "target_name": "Vì đâu dở dang duyên mình sắc hoa chung tình",
+    "window_start": 267.5,
+    "window_end": 276.5,
+    "transcribed_text": "Sạm ơn ơn ơn ơn ơn ơn ơn",
+    "words": [
+      {
+        "word": "Sạm",
+        "start": 267.5,
+        "end": 268.18,
+        "prob": 0.16
+      },
+      {
+        "word": "ơn",
+        "start": 268.18,
+        "end": 268.7,
+        "prob": 0.36
+      },
+      {
+        "word": "ơn",
+        "start": 268.7,
+        "end": 271.24,
+        "prob": 0.14
+      },
+      {
+        "word": "ơn",
+        "start": 271.24,
+        "end": 271.24,
+        "prob": 0.53
+      },
+      {
+        "word": "ơn",
+        "start": 271.24,
+        "end": 272.72,
+        "prob": 0.72
+      },
+      {
+        "word": "ơn",
+        "start": 272.72,
+        "end": 273.44,
+        "prob": 0.83
+      },
+      {
+        "word": "ơn",
+        "start": 273.44,
+        "end": 273.5,
+        "prob": 0.83
+      },
+      {
+        "word": "ơn",
+        "start": 273.5,
+        "end": 273.7,
+        "prob": 0.91
+      }
+    ]
+  },
+  {
+    "id": "p27",
+    "target_name": "Chưa phai màu nỡ nào người đi",
+    "window_start": 275.5,
+    "window_end": 281.5,
+    "transcribed_text": "Chưa phai màu nỡ nào người đi",
+    "words": [
+      {
+        "word": "Chưa",
+        "start": 275.5,
+        "end": 277.1,
+        "prob": 0.15
+      },
+      {
+        "word": "phai",
+        "start": 277.1,
+        "end": 279.46,
+        "prob": 0.01
+      },
+      {
+        "word": "màu",
+        "start": 279.46,
+        "end": 280.34,
+        "prob": 0.02
+      },
+      {
+        "word": "nỡ",
+        "start": 280.34,
+        "end": 280.88,
+        "prob": 0.29
+      },
+      {
+        "word": "nào",
+        "start": 280.88,
+        "end": 281.18,
+        "prob": 0.01
+      },
+      {
+        "word": "người",
+        "start": 281.18,
+        "end": 281.48,
+        "prob": 0.0
+      },
+      {
+        "word": "đi",
+        "start": 281.48,
+        "end": 281.48,
+        "prob": 0.01
+      }
+    ]
+  },
+  {
+    "id": "p28",
+    "target_name": "Dòng nhớ trong tim làm sao chia cắt",
+    "window_start": 280.0,
+    "window_end": 293.5,
+    "transcribed_text": "Ông nữa nào ngồi đi, dòng nhớ ớ ớ ớ ớ ớ ớ ớ ớ",
+    "words": [
+      {
+        "word": "Ông",
+        "start": 280.0,
+        "end": 280.68,
+        "prob": 0.58
+      },
+      {
+        "word": "nữa",
+        "start": 280.68,
+        "end": 280.84,
+        "prob": 0.34
+      },
+      {
+        "word": "nào",
+        "start": 280.84,
+        "end": 281.18,
+        "prob": 0.92
+      },
+      {
+        "word": "ngồi",
+        "start": 281.18,
+        "end": 281.78,
+        "prob": 0.2
+      },
+      {
+        "word": "đi,",
+        "start": 281.78,
+        "end": 282.28,
+        "prob": 0.74
+      },
+      {
+        "word": "dòng",
+        "start": 283.04,
+        "end": 284.8,
+        "prob": 0.58
+      },
+      {
+        "word": "nhớ",
+        "start": 284.8,
+        "end": 285.28,
+        "prob": 0.39
+      },
+      {
+        "word": "ớ",
+        "start": 285.28,
+        "end": 285.62,
+        "prob": 0.1
+      },
+      {
+        "word": "ớ",
+        "start": 285.62,
+        "end": 285.74,
+        "prob": 0.5
+      },
+      {
+        "word": "ớ",
+        "start": 285.74,
+        "end": 285.8,
+        "prob": 0.5
+      },
+      {
+        "word": "ớ",
+        "start": 285.8,
+        "end": 286.04,
+        "prob": 0.51
+      },
+      {
+        "word": "ớ",
+        "start": 286.04,
+        "end": 286.2,
+        "prob": 0.53
+      },
+      {
+        "word": "ớ",
+        "start": 286.2,
+        "end": 286.7,
+        "prob": 0.54
+      },
+      {
+        "word": "ớ",
+        "start": 286.7,
+        "end": 287.72,
+        "prob": 0.57
+      },
+      {
+        "word": "ớ",
+        "start": 287.72,
+        "end": 293.48,
+        "prob": 0.6
+      }
+    ]
+  },
+  {
+    "id": "p29",
+    "target_name": "Người thương có hay",
+    "window_start": 293.5,
+    "window_end": 308.0,
+    "transcribed_text": "Để về nhà mình mắt nào hơn Em giơ, miếng lòng nào không vui",
+    "words": [
+      {
+        "word": "Để",
+        "start": 293.5,
+        "end": 295.62,
+        "prob": 0.5
+      },
+      {
+        "word": "về",
+        "start": 295.62,
+        "end": 296.04,
+        "prob": 0.04
+      },
+      {
+        "word": "nhà",
+        "start": 296.04,
+        "end": 296.76,
+        "prob": 0.48
+      },
+      {
+        "word": "mình",
+        "start": 296.76,
+        "end": 298.24,
+        "prob": 0.77
+      },
+      {
+        "word": "mắt",
+        "start": 298.24,
+        "end": 298.68,
+        "prob": 0.23
+      },
+      {
+        "word": "nào",
+        "start": 298.68,
+        "end": 299.24,
+        "prob": 0.14
+      },
+      {
+        "word": "hơn",
+        "start": 299.24,
+        "end": 300.78,
+        "prob": 0.12
+      },
+      {
+        "word": "Em",
+        "start": 300.78,
+        "end": 302.7,
+        "prob": 0.66
+      },
+      {
+        "word": "giơ,",
+        "start": 302.7,
+        "end": 303.76,
+        "prob": 0.16
+      },
+      {
+        "word": "miếng",
+        "start": 305.26,
+        "end": 305.56,
+        "prob": 0.52
+      },
+      {
+        "word": "lòng",
+        "start": 305.56,
+        "end": 305.94,
+        "prob": 0.53
+      },
+      {
+        "word": "nào",
+        "start": 305.94,
+        "end": 306.18,
+        "prob": 0.61
+      },
+      {
+        "word": "không",
+        "start": 306.18,
+        "end": 306.6,
+        "prob": 0.09
+      },
+      {
+        "word": "vui",
+        "start": 306.6,
+        "end": 307.52,
+        "prob": 0.53
+      }
+    ]
+  },
+  {
+    "id": "p30",
+    "target_name": "Đêm dài mình anh thao thức",
+    "window_start": 308.0,
+    "window_end": 319.0,
+    "transcribed_text": "Em dễ làm lao bên ngoài bên ngoài",
+    "words": [
+      {
+        "word": "Em",
+        "start": 308.0,
+        "end": 309.72,
+        "prob": 0.48
+      },
+      {
+        "word": "dễ",
+        "start": 309.72,
+        "end": 310.46,
+        "prob": 0.15
+      },
+      {
+        "word": "làm",
+        "start": 310.46,
+        "end": 312.46,
+        "prob": 0.48
+      },
+      {
+        "word": "lao",
+        "start": 312.46,
+        "end": 313.08,
+        "prob": 0.2
+      },
+      {
+        "word": "bên",
+        "start": 313.08,
+        "end": 313.42,
+        "prob": 0.27
+      },
+      {
+        "word": "ngoài",
+        "start": 313.42,
+        "end": 314.3,
+        "prob": 0.59
+      },
+      {
+        "word": "bên",
+        "start": 315.84,
+        "end": 316.54,
+        "prob": 0.13
+      },
+      {
+        "word": "ngoài",
+        "start": 316.54,
+        "end": 317.8,
+        "prob": 0.52
+      }
+    ]
+  },
+  {
+    "id": "p31",
+    "target_name": "Em giờ biết lòng buồn vui",
+    "window_start": 318.5,
+    "window_end": 325.0,
+    "transcribed_text": "Em yêu em yên",
+    "words": [
+      {
+        "word": "Em",
+        "start": 318.5,
+        "end": 319.72,
+        "prob": 0.03
+      },
+      {
+        "word": "yêu",
+        "start": 319.72,
+        "end": 319.98,
+        "prob": 0.1
+      },
+      {
+        "word": "em",
+        "start": 319.98,
+        "end": 320.5,
+        "prob": 0.36
+      },
+      {
+        "word": "yên",
+        "start": 320.5,
+        "end": 322.74,
+        "prob": 0.09
+      }
+    ]
+  },
+  {
+    "id": "p32",
+    "target_name": "Em về làm dâu bên ấy",
+    "window_start": 324.0,
+    "window_end": 337.5,
+    "transcribed_text": "Gia mơ mơ mơ mơ mơ Này Nguồn, Nguồn, Nguồn, Nguồn, Nguồn.",
+    "words": [
+      {
+        "word": "Gia",
+        "start": 324.0,
+        "end": 326.38,
+        "prob": 0.44
+      },
+      {
+        "word": "mơ",
+        "start": 326.38,
+        "end": 328.36,
+        "prob": 0.08
+      },
+      {
+        "word": "mơ",
+        "start": 328.36,
+        "end": 328.62,
+        "prob": 0.68
+      },
+      {
+        "word": "mơ",
+        "start": 328.62,
+        "end": 328.98,
+        "prob": 0.91
+      },
+      {
+        "word": "mơ",
+        "start": 328.98,
+        "end": 329.62,
+        "prob": 0.83
+      },
+      {
+        "word": "mơ",
+        "start": 329.62,
+        "end": 330.3,
+        "prob": 0.81
+      },
+      {
+        "word": "Này",
+        "start": 330.3,
+        "end": 332.88,
+        "prob": 0.08
+      },
+      {
+        "word": "Nguồn,",
+        "start": 332.88,
+        "end": 332.88,
+        "prob": 0.4
+      },
+      {
+        "word": "Nguồn,",
+        "start": 332.88,
+        "end": 333.22,
+        "prob": 0.67
+      },
+      {
+        "word": "Nguồn,",
+        "start": 333.22,
+        "end": 333.96,
+        "prob": 0.88
+      },
+      {
+        "word": "Nguồn,",
+        "start": 333.96,
+        "end": 335.14,
+        "prob": 0.93
+      },
+      {
+        "word": "Nguồn.",
+        "start": 335.14,
+        "end": 336.56,
+        "prob": 0.95
+      }
+    ]
+  },
+  {
+    "id": "p33",
+    "target_name": "Bên này vẫn hoài chờ mong",
+    "window_start": 337.5,
+    "window_end": 351.0,
+    "transcribed_text": "Bên này vẫn hoài chờ mong",
+    "words": [
+      {
+        "word": "Bên",
+        "start": 337.5,
+        "end": 338.24,
+        "prob": 0.01
+      },
+      {
+        "word": "này",
+        "start": 338.24,
+        "end": 338.9,
+        "prob": 0.02
+      },
+      {
+        "word": "vẫn",
+        "start": 338.9,
+        "end": 339.0,
+        "prob": 0.0
+      },
+      {
+        "word": "hoài",
+        "start": 339.0,
+        "end": 339.78,
+        "prob": 0.01
+      },
+      {
+        "word": "chờ",
+        "start": 339.78,
+        "end": 349.04,
+        "prob": 0.02
+      },
+      {
+        "word": "mong",
+        "start": 349.04,
+        "end": 350.98,
+        "prob": 0.01
+      }
+    ]
+  }
+]

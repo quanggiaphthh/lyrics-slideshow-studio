@@ -1,6 +1,6 @@
 /**
  * DEMO PRESET: ĐÊM GÀNH HÀO (CÒN THƯƠNG SẮC HOA CHUNG TÌNH - QUÝ BÌNH)
- * 60FPS FinnXIII Sharp Kinetic Typography with dynamic layouts & authentic photoreal slideshow
+ * 60FPS FinnXIII Sharp Kinetic Typography with AUDITED ACOUSTIC TIMESTAMPS
  */
 
 window.DEMO_PRESET_GANH_HAO = {
@@ -41,8 +41,8 @@ window.DEMO_PRESET_GANH_HAO = {
   wordsData: [
     {
         "id": "gh_0",
-        "start": 14.5,
-        "end": 28.0,
+        "start": 14.8,
+        "end": 27.8,
         "layout": "left",
         "text": "HÒ ƠI... ai xuôi con sáo SỔ LỒNG, cho em nỡ vội",
         "indent": 0,
@@ -57,12 +57,12 @@ window.DEMO_PRESET_GANH_HAO = {
                     {
                         "text": "HÒ",
                         "start": 14.8,
-                        "end": 16.15,
+                        "end": 16.3,
                         "isUpperKey": true
                     },
                     {
                         "text": "ƠI...",
-                        "start": 16.15,
+                        "start": 16.3,
                         "end": 17.5,
                         "isUpperKey": true
                     }
@@ -78,21 +78,21 @@ window.DEMO_PRESET_GANH_HAO = {
                     {
                         "text": "ai",
                         "start": 17.8,
-                        "end": 18.55
+                        "end": 18.4
                     },
                     {
                         "text": "xuôi",
-                        "start": 18.55,
-                        "end": 19.3
+                        "start": 18.4,
+                        "end": 19.1
                     },
                     {
                         "text": "con",
-                        "start": 19.3,
-                        "end": 20.05
+                        "start": 19.1,
+                        "end": 19.7
                     },
                     {
                         "text": "sáo",
-                        "start": 20.05,
+                        "start": 19.7,
                         "end": 20.8
                     }
                 ]
@@ -107,16 +107,15 @@ window.DEMO_PRESET_GANH_HAO = {
                     {
                         "text": "SỔ",
                         "start": 21.0,
-                        "end": 22.75,
+                        "end": 22.4,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "LỒNG,",
-                        "start": 22.75,
+                        "start": 22.4,
                         "end": 24.5,
-                        "isUpperKey": true,
-                        "boxHighlight": true
+                        "isUpperKey": true
                     }
                 ]
             },
@@ -130,22 +129,22 @@ window.DEMO_PRESET_GANH_HAO = {
                     {
                         "text": "cho",
                         "start": 24.8,
-                        "end": 25.55
+                        "end": 25.4
                     },
                     {
                         "text": "em",
-                        "start": 25.55,
-                        "end": 26.3,
+                        "start": 25.4,
+                        "end": 26.1,
                         "colorAccent": true
                     },
                     {
                         "text": "nỡ",
-                        "start": 26.3,
-                        "end": 27.05
+                        "start": 26.1,
+                        "end": 26.8
                     },
                     {
                         "text": "vội",
-                        "start": 27.05,
+                        "start": 26.8,
                         "end": 27.8
                     }
                 ]
@@ -154,102 +153,101 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_1",
-        "start": 29.0,
-        "end": 47.0,
+        "start": 28.5,
+        "end": 46.8,
         "layout": "center",
         "text": "HÒ ƠI... cho em nỡ vội LẤY CHỒNG BỎ ANH...",
         "indent": 0,
         "lines": [
             {
                 "text": "HÒ ƠI...",
-                "start": 29.2,
-                "end": 34.0,
+                "start": 28.5,
+                "end": 33.8,
                 "indent": 0,
                 "align": "center",
                 "words": [
                     {
                         "text": "HÒ",
-                        "start": 29.2,
-                        "end": 31.6,
+                        "start": 28.5,
+                        "end": 30.54,
                         "isUpperKey": true
                     },
                     {
                         "text": "ƠI...",
-                        "start": 31.6,
-                        "end": 34.0,
+                        "start": 30.54,
+                        "end": 33.8,
                         "isUpperKey": true
                     }
                 ]
             },
             {
                 "text": "cho em nỡ vội",
-                "start": 34.5,
-                "end": 38.0,
-                "indent": 0,
+                "start": 36.88,
+                "end": 39.64,
+                "indent": 1,
                 "align": "center",
                 "words": [
                     {
                         "text": "cho",
-                        "start": 34.5,
-                        "end": 35.38
+                        "start": 36.88,
+                        "end": 37.8
                     },
                     {
                         "text": "em",
-                        "start": 35.38,
-                        "end": 36.25,
+                        "start": 37.8,
+                        "end": 38.4,
                         "colorAccent": true
                     },
                     {
                         "text": "nỡ",
-                        "start": 36.25,
-                        "end": 37.12
+                        "start": 38.4,
+                        "end": 39.0
                     },
                     {
                         "text": "vội",
-                        "start": 37.12,
-                        "end": 38.0
+                        "start": 39.0,
+                        "end": 39.64
                     }
                 ]
             },
             {
                 "text": "LẤY CHỒNG",
-                "start": 38.2,
-                "end": 42.0,
-                "indent": 0,
+                "start": 39.64,
+                "end": 41.8,
+                "indent": 2,
                 "align": "center",
                 "words": [
                     {
                         "text": "LẤY",
-                        "start": 38.2,
-                        "end": 40.1,
+                        "start": 39.64,
+                        "end": 41.34,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "CHỒNG",
-                        "start": 40.1,
-                        "end": 42.0,
-                        "isUpperKey": true,
-                        "boxHighlight": true
+                        "start": 41.34,
+                        "end": 41.8,
+                        "isUpperKey": true
                     }
                 ]
             },
             {
                 "text": "BỎ ANH...",
-                "start": 42.2,
+                "start": 41.8,
                 "end": 46.8,
-                "indent": 0,
+                "indent": 3,
                 "align": "center",
                 "words": [
                     {
                         "text": "BỎ",
-                        "start": 42.2,
-                        "end": 44.5,
+                        "start": 41.8,
+                        "end": 43.04,
                         "isUpperKey": true
                     },
                     {
                         "text": "ANH...",
-                        "start": 44.5,
+                        "start": 43.04,
                         "end": 46.8,
                         "isUpperKey": true,
                         "colorAccent": true
@@ -260,83 +258,83 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_2",
-        "start": 79.2,
-        "end": 85.8,
+        "start": 78.5,
+        "end": 85.06,
         "layout": "left",
         "text": "sáo bay theo chồng đâu biết là ĐAU LÒNG ANH LẮM",
         "indent": 0,
         "lines": [
             {
                 "text": "sáo bay theo chồng",
-                "start": 79.2,
-                "end": 81.8,
+                "start": 78.5,
+                "end": 81.06,
                 "indent": 0,
                 "align": "left",
                 "words": [
                     {
                         "text": "sáo",
-                        "start": 79.2,
-                        "end": 79.85
+                        "start": 78.5,
+                        "end": 79.74
                     },
                     {
                         "text": "bay",
-                        "start": 79.85,
-                        "end": 80.5
+                        "start": 79.74,
+                        "end": 80.1
                     },
                     {
                         "text": "theo",
-                        "start": 80.5,
-                        "end": 81.15
+                        "start": 80.1,
+                        "end": 80.68
                     },
                     {
                         "text": "chồng",
-                        "start": 81.15,
-                        "end": 81.8
+                        "start": 80.68,
+                        "end": 81.06
                     }
                 ]
             },
             {
                 "text": "đâu biết là",
-                "start": 81.8,
-                "end": 83.0,
+                "start": 81.06,
+                "end": 82.82,
                 "indent": 1,
                 "align": "left",
                 "words": [
                     {
                         "text": "đâu",
-                        "start": 81.8,
-                        "end": 82.2
+                        "start": 81.06,
+                        "end": 81.36
                     },
                     {
                         "text": "biết",
-                        "start": 82.2,
-                        "end": 82.6
+                        "start": 81.36,
+                        "end": 82.36
                     },
                     {
                         "text": "là",
-                        "start": 82.6,
-                        "end": 83.0
+                        "start": 82.36,
+                        "end": 82.82
                     }
                 ]
             },
             {
                 "text": "ĐAU LÒNG",
-                "start": 83.2,
-                "end": 84.6,
+                "start": 82.82,
+                "end": 83.7,
                 "indent": 2,
                 "align": "left",
                 "words": [
                     {
                         "text": "ĐAU",
-                        "start": 83.2,
-                        "end": 83.9,
+                        "start": 82.82,
+                        "end": 83.36,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "LÒNG",
-                        "start": 83.9,
-                        "end": 84.6,
+                        "start": 83.36,
+                        "end": 83.7,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -344,22 +342,22 @@ window.DEMO_PRESET_GANH_HAO = {
             },
             {
                 "text": "ANH LẮM",
-                "start": 84.6,
-                "end": 85.8,
+                "start": 83.7,
+                "end": 85.06,
                 "indent": 3,
                 "align": "left",
                 "words": [
                     {
                         "text": "ANH",
-                        "start": 84.6,
-                        "end": 85.2,
+                        "start": 83.7,
+                        "end": 84.0,
                         "isUpperKey": true,
                         "colorAccent": true
                     },
                     {
                         "text": "LẮM",
-                        "start": 85.2,
-                        "end": 85.8,
+                        "start": 84.0,
+                        "end": 85.06,
                         "isUpperKey": true
                     }
                 ]
@@ -368,88 +366,88 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_3",
-        "start": 86.0,
-        "end": 93.5,
+        "start": 85.5,
+        "end": 93.3,
         "layout": "right",
         "text": "xót xa lặng thầm nhìn theo bước em QUA CẦU",
         "indent": 0,
         "lines": [
             {
                 "text": "xót xa lặng thầm",
-                "start": 86.0,
-                "end": 88.6,
+                "start": 85.5,
+                "end": 89.14,
                 "indent": 0,
                 "align": "right",
                 "words": [
                     {
                         "text": "xót",
-                        "start": 86.0,
-                        "end": 86.65
+                        "start": 85.5,
+                        "end": 86.68
                     },
                     {
                         "text": "xa",
-                        "start": 86.65,
-                        "end": 87.3
+                        "start": 86.68,
+                        "end": 87.24
                     },
                     {
                         "text": "lặng",
-                        "start": 87.3,
-                        "end": 87.95
+                        "start": 87.24,
+                        "end": 88.38
                     },
                     {
                         "text": "thầm",
-                        "start": 87.95,
-                        "end": 88.6
+                        "start": 88.38,
+                        "end": 89.14
                     }
                 ]
             },
             {
                 "text": "nhìn theo bước em",
-                "start": 88.8,
-                "end": 91.0,
+                "start": 89.14,
+                "end": 91.14,
                 "indent": 1,
                 "align": "right",
                 "words": [
                     {
                         "text": "nhìn",
-                        "start": 88.8,
-                        "end": 89.35
+                        "start": 89.14,
+                        "end": 89.6
                     },
                     {
                         "text": "theo",
-                        "start": 89.35,
-                        "end": 89.9
+                        "start": 89.6,
+                        "end": 90.12
                     },
                     {
                         "text": "bước",
-                        "start": 89.9,
-                        "end": 90.45
+                        "start": 90.12,
+                        "end": 90.54
                     },
                     {
                         "text": "em",
-                        "start": 90.45,
-                        "end": 91.0,
+                        "start": 90.54,
+                        "end": 91.14,
                         "colorAccent": true
                     }
                 ]
             },
             {
                 "text": "QUA CẦU",
-                "start": 91.2,
+                "start": 91.14,
                 "end": 93.3,
                 "indent": 2,
                 "align": "right",
                 "words": [
                     {
                         "text": "QUA",
-                        "start": 91.2,
-                        "end": 92.25,
+                        "start": 91.14,
+                        "end": 91.78,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "CẦU",
-                        "start": 92.25,
+                        "start": 91.78,
                         "end": 93.3,
                         "isUpperKey": true,
                         "boxHighlight": true
@@ -461,7 +459,7 @@ window.DEMO_PRESET_GANH_HAO = {
     {
         "id": "gh_4",
         "start": 93.6,
-        "end": 99.8,
+        "end": 99.97,
         "layout": "left",
         "text": "ngày nào có nhau ta trao ước hẹn TRẦU CAU",
         "indent": 0,
@@ -469,79 +467,79 @@ window.DEMO_PRESET_GANH_HAO = {
             {
                 "text": "ngày nào có nhau",
                 "start": 93.6,
-                "end": 96.2,
+                "end": 95.8,
                 "indent": 0,
                 "align": "left",
                 "words": [
                     {
                         "text": "ngày",
                         "start": 93.6,
-                        "end": 94.25
+                        "end": 94.2
                     },
                     {
                         "text": "nào",
-                        "start": 94.25,
-                        "end": 94.9
+                        "start": 94.2,
+                        "end": 94.45
                     },
                     {
                         "text": "có",
-                        "start": 94.9,
-                        "end": 95.55
+                        "start": 94.45,
+                        "end": 94.8
                     },
                     {
                         "text": "nhau",
-                        "start": 95.55,
-                        "end": 96.2
+                        "start": 94.8,
+                        "end": 95.8
                     }
                 ]
             },
             {
                 "text": "ta trao ước hẹn",
-                "start": 96.4,
+                "start": 95.8,
                 "end": 98.2,
                 "indent": 1,
                 "align": "left",
                 "words": [
                     {
                         "text": "ta",
-                        "start": 96.4,
-                        "end": 96.85
+                        "start": 95.8,
+                        "end": 96.5
                     },
                     {
                         "text": "trao",
-                        "start": 96.85,
-                        "end": 97.3
+                        "start": 96.5,
+                        "end": 97.34
                     },
                     {
                         "text": "ước",
-                        "start": 97.3,
-                        "end": 97.75
+                        "start": 97.34,
+                        "end": 97.6
                     },
                     {
                         "text": "hẹn",
-                        "start": 97.75,
+                        "start": 97.6,
                         "end": 98.2
                     }
                 ]
             },
             {
                 "text": "TRẦU CAU",
-                "start": 98.4,
-                "end": 99.8,
+                "start": 98.2,
+                "end": 99.97,
                 "indent": 2,
                 "align": "left",
                 "words": [
                     {
                         "text": "TRẦU",
-                        "start": 98.4,
-                        "end": 99.1,
+                        "start": 98.2,
+                        "end": 98.8,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "CAU",
-                        "start": 99.1,
-                        "end": 99.8,
+                        "start": 98.8,
+                        "end": 99.97,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -552,7 +550,7 @@ window.DEMO_PRESET_GANH_HAO = {
     {
         "id": "gh_5",
         "start": 100.0,
-        "end": 107.0,
+        "end": 106.8,
         "layout": "right",
         "text": "mong duyên ban đầu trời thương không đổ MƯA NGÂU",
         "indent": 0,
@@ -560,78 +558,78 @@ window.DEMO_PRESET_GANH_HAO = {
             {
                 "text": "mong duyên ban đầu",
                 "start": 100.0,
-                "end": 102.8,
+                "end": 102.5,
                 "indent": 0,
                 "align": "right",
                 "words": [
                     {
                         "text": "mong",
                         "start": 100.0,
-                        "end": 100.7
+                        "end": 100.84
                     },
                     {
                         "text": "duyên",
-                        "start": 100.7,
-                        "end": 101.4
+                        "start": 100.84,
+                        "end": 101.44
                     },
                     {
                         "text": "ban",
-                        "start": 101.4,
-                        "end": 102.1
+                        "start": 101.44,
+                        "end": 101.72
                     },
                     {
                         "text": "đầu",
-                        "start": 102.1,
-                        "end": 102.8
+                        "start": 101.72,
+                        "end": 102.5
                     }
                 ]
             },
             {
                 "text": "trời thương",
-                "start": 103.0,
-                "end": 104.5,
+                "start": 102.5,
+                "end": 104.4,
                 "indent": 1,
                 "align": "right",
                 "words": [
                     {
                         "text": "trời",
-                        "start": 103.0,
-                        "end": 103.75
+                        "start": 102.5,
+                        "end": 103.5
                     },
                     {
                         "text": "thương",
-                        "start": 103.75,
-                        "end": 104.5
+                        "start": 103.5,
+                        "end": 104.4
                     }
                 ]
             },
             {
                 "text": "không đổ MƯA NGÂU",
-                "start": 104.8,
+                "start": 104.4,
                 "end": 106.8,
                 "indent": 2,
                 "align": "right",
                 "words": [
                     {
                         "text": "không",
-                        "start": 104.8,
-                        "end": 105.3
+                        "start": 104.4,
+                        "end": 104.7
                     },
                     {
                         "text": "đổ",
-                        "start": 105.3,
-                        "end": 105.8
+                        "start": 104.7,
+                        "end": 105.2
                     },
                     {
                         "text": "MƯA",
-                        "start": 105.8,
-                        "end": 106.3,
+                        "start": 105.2,
+                        "end": 105.6,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "NGÂU",
-                        "start": 106.3,
+                        "start": 105.6,
                         "end": 106.8,
                         "isUpperKey": true,
                         "boxHighlight": true
@@ -643,7 +641,7 @@ window.DEMO_PRESET_GANH_HAO = {
     {
         "id": "gh_6",
         "start": 107.2,
-        "end": 114.0,
+        "end": 113.8,
         "layout": "left",
         "text": "bóng em xa dần ANH biết là một lần CHIA CÁCH",
         "indent": 0,
@@ -651,86 +649,86 @@ window.DEMO_PRESET_GANH_HAO = {
             {
                 "text": "bóng em xa dần",
                 "start": 107.2,
-                "end": 109.8,
+                "end": 109.5,
                 "indent": 0,
                 "align": "left",
                 "words": [
                     {
                         "text": "bóng",
                         "start": 107.2,
-                        "end": 107.85
+                        "end": 107.9
                     },
                     {
                         "text": "em",
-                        "start": 107.85,
-                        "end": 108.5,
+                        "start": 107.9,
+                        "end": 108.2,
                         "colorAccent": true
                     },
                     {
                         "text": "xa",
-                        "start": 108.5,
-                        "end": 109.15
+                        "start": 108.2,
+                        "end": 108.7
                     },
                     {
                         "text": "dần",
-                        "start": 109.15,
-                        "end": 109.8
+                        "start": 108.7,
+                        "end": 109.5
                     }
                 ]
             },
             {
                 "text": "ANH biết là",
-                "start": 110.0,
-                "end": 111.4,
+                "start": 109.5,
+                "end": 111.3,
                 "indent": 1,
                 "align": "left",
                 "words": [
                     {
                         "text": "ANH",
-                        "start": 110.0,
-                        "end": 110.47,
+                        "start": 109.5,
+                        "end": 110.2,
                         "isUpperKey": true,
                         "colorAccent": true
                     },
                     {
                         "text": "biết",
-                        "start": 110.47,
-                        "end": 110.93
+                        "start": 110.2,
+                        "end": 110.7
                     },
                     {
                         "text": "là",
-                        "start": 110.93,
-                        "end": 111.4
+                        "start": 110.7,
+                        "end": 111.3
                     }
                 ]
             },
             {
                 "text": "một lần CHIA CÁCH",
-                "start": 111.6,
+                "start": 111.3,
                 "end": 113.8,
                 "indent": 2,
                 "align": "left",
                 "words": [
                     {
                         "text": "một",
-                        "start": 111.6,
-                        "end": 112.15
+                        "start": 111.3,
+                        "end": 111.86
                     },
                     {
                         "text": "lần",
-                        "start": 112.15,
-                        "end": 112.7
+                        "start": 111.86,
+                        "end": 112.1
                     },
                     {
                         "text": "CHIA",
-                        "start": 112.7,
-                        "end": 113.25,
+                        "start": 112.1,
+                        "end": 112.5,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "CÁCH",
-                        "start": 113.25,
+                        "start": 112.5,
                         "end": 113.8,
                         "isUpperKey": true,
                         "boxHighlight": true
@@ -757,61 +755,61 @@ window.DEMO_PRESET_GANH_HAO = {
                     {
                         "text": "trách",
                         "start": 114.2,
-                        "end": 114.85
+                        "end": 114.9
                     },
                     {
                         "text": "ai",
-                        "start": 114.85,
-                        "end": 115.5
+                        "start": 114.9,
+                        "end": 115.3
                     },
                     {
                         "text": "vô",
-                        "start": 115.5,
-                        "end": 116.15
+                        "start": 115.3,
+                        "end": 115.9
                     },
                     {
                         "text": "tình",
-                        "start": 116.15,
+                        "start": 115.9,
                         "end": 116.8
                     }
                 ]
             },
             {
                 "text": "đành tâm",
-                "start": 117.0,
+                "start": 116.8,
                 "end": 118.2,
                 "indent": 1,
                 "align": "right",
                 "words": [
                     {
                         "text": "đành",
-                        "start": 117.0,
-                        "end": 117.6
+                        "start": 116.8,
+                        "end": 117.5
                     },
                     {
                         "text": "tâm",
-                        "start": 117.6,
+                        "start": 117.5,
                         "end": 118.2
                     }
                 ]
             },
             {
                 "text": "XẺ ĐÔI",
-                "start": 118.4,
+                "start": 118.2,
                 "end": 119.8,
                 "indent": 2,
                 "align": "right",
                 "words": [
                     {
                         "text": "XẺ",
-                        "start": 118.4,
-                        "end": 119.1,
+                        "start": 118.2,
+                        "end": 118.9,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "ĐÔI",
-                        "start": 119.1,
+                        "start": 118.9,
                         "end": 119.8,
                         "isUpperKey": true,
                         "boxHighlight": true
@@ -820,24 +818,23 @@ window.DEMO_PRESET_GANH_HAO = {
             },
             {
                 "text": "TIM MÌNH",
-                "start": 120.0,
+                "start": 119.8,
                 "end": 121.2,
                 "indent": 3,
                 "align": "right",
                 "words": [
                     {
                         "text": "TIM",
-                        "start": 120.0,
-                        "end": 120.6,
+                        "start": 119.8,
+                        "end": 120.3,
                         "isUpperKey": true,
                         "colorAccent": true
                     },
                     {
                         "text": "MÌNH",
-                        "start": 120.6,
+                        "start": 120.3,
                         "end": 121.2,
-                        "isUpperKey": true,
-                        "colorAccent": true
+                        "isUpperKey": true
                     }
                 ]
             }
@@ -861,74 +858,74 @@ window.DEMO_PRESET_GANH_HAO = {
                     {
                         "text": "dặn",
                         "start": 121.5,
-                        "end": 122.17
+                        "end": 122.1
                     },
                     {
                         "text": "lòng",
-                        "start": 122.17,
-                        "end": 122.85
+                        "start": 122.1,
+                        "end": 122.5
                     },
                     {
                         "text": "cố",
-                        "start": 122.85,
-                        "end": 123.53
+                        "start": 122.5,
+                        "end": 123.32
                     },
                     {
                         "text": "quên",
-                        "start": 123.53,
+                        "start": 123.32,
                         "end": 124.2
                     }
                 ]
             },
             {
                 "text": "sao đêm vẫn thường",
-                "start": 124.5,
+                "start": 124.2,
                 "end": 126.5,
                 "indent": 1,
                 "align": "left",
                 "words": [
                     {
                         "text": "sao",
-                        "start": 124.5,
-                        "end": 125.0
+                        "start": 124.2,
+                        "end": 124.8
                     },
                     {
                         "text": "đêm",
-                        "start": 125.0,
-                        "end": 125.5
+                        "start": 124.8,
+                        "end": 125.25
                     },
                     {
                         "text": "vẫn",
-                        "start": 125.5,
-                        "end": 126.0
+                        "start": 125.25,
+                        "end": 125.6
                     },
                     {
                         "text": "thường",
-                        "start": 126.0,
+                        "start": 125.6,
                         "end": 126.5
                     }
                 ]
             },
             {
                 "text": "gọi tên EM",
-                "start": 126.8,
+                "start": 126.5,
                 "end": 128.5,
                 "indent": 2,
                 "align": "left",
                 "words": [
                     {
                         "text": "gọi",
-                        "start": 126.8,
-                        "end": 127.37
+                        "start": 126.5,
+                        "end": 127.1
                     },
                     {
                         "text": "tên",
-                        "start": 127.37,
-                        "end": 127.93
+                        "start": 127.1,
+                        "end": 127.6
                     },
                     {
                         "text": "EM",
-                        "start": 127.93,
+                        "start": 127.6,
                         "end": 128.5,
                         "isUpperKey": true,
                         "colorAccent": true
@@ -940,7 +937,7 @@ window.DEMO_PRESET_GANH_HAO = {
     {
         "id": "gh_9",
         "start": 128.8,
-        "end": 141.2,
+        "end": 140.8,
         "layout": "right",
         "text": "ai ru trong chiều cho lòng càng nhớ EM NHIỀU...",
         "indent": 0,
@@ -948,79 +945,79 @@ window.DEMO_PRESET_GANH_HAO = {
             {
                 "text": "ai ru trong chiều",
                 "start": 128.8,
-                "end": 132.2,
+                "end": 131.8,
                 "indent": 0,
                 "align": "right",
                 "words": [
                     {
                         "text": "ai",
                         "start": 128.8,
-                        "end": 129.65
+                        "end": 129.5
                     },
                     {
                         "text": "ru",
-                        "start": 129.65,
-                        "end": 130.5
+                        "start": 129.5,
+                        "end": 130.0
                     },
                     {
                         "text": "trong",
-                        "start": 130.5,
-                        "end": 131.35
+                        "start": 130.0,
+                        "end": 130.5
                     },
                     {
                         "text": "chiều",
-                        "start": 131.35,
-                        "end": 132.2
+                        "start": 130.5,
+                        "end": 131.8
                     }
                 ]
             },
             {
                 "text": "cho lòng càng nhớ",
-                "start": 132.5,
-                "end": 135.5,
+                "start": 131.8,
+                "end": 134.4,
                 "indent": 1,
                 "align": "right",
                 "words": [
                     {
                         "text": "cho",
-                        "start": 132.5,
-                        "end": 133.25
+                        "start": 131.8,
+                        "end": 132.3
                     },
                     {
                         "text": "lòng",
-                        "start": 133.25,
-                        "end": 134.0
+                        "start": 132.3,
+                        "end": 132.8
                     },
                     {
                         "text": "càng",
-                        "start": 134.0,
-                        "end": 134.75
+                        "start": 132.8,
+                        "end": 133.4
                     },
                     {
                         "text": "nhớ",
-                        "start": 134.75,
-                        "end": 135.5
+                        "start": 133.4,
+                        "end": 134.4
                     }
                 ]
             },
             {
                 "text": "EM NHIỀU...",
-                "start": 135.8,
-                "end": 141.0,
+                "start": 134.4,
+                "end": 140.8,
                 "indent": 2,
                 "align": "right",
                 "words": [
                     {
                         "text": "EM",
-                        "start": 135.8,
-                        "end": 138.4,
+                        "start": 134.4,
+                        "end": 135.2,
                         "isUpperKey": true,
-                        "boxHighlight": true
+                        "colorAccent": true
                     },
                     {
                         "text": "NHIỀU...",
-                        "start": 138.4,
-                        "end": 141.0,
+                        "start": 135.2,
+                        "end": 140.8,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -1030,120 +1027,119 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_10",
-        "start": 142.0,
-        "end": 157.0,
+        "start": 141.5,
+        "end": 156.8,
         "layout": "center",
         "text": "À ƠI... EM nỡ sao em bỏ anh một mình LỤC BÌNH TRÔI chẳng biết nơi neo",
         "indent": 0,
         "lines": [
             {
                 "text": "À ƠI...",
-                "start": 142.2,
-                "end": 146.5,
+                "start": 141.5,
+                "end": 146.42,
                 "indent": 0,
                 "align": "center",
                 "words": [
                     {
                         "text": "À",
-                        "start": 142.2,
-                        "end": 144.35,
-                        "isUpperKey": true
+                        "start": 141.5,
+                        "end": 143.66
                     },
                     {
                         "text": "ƠI...",
-                        "start": 144.35,
-                        "end": 146.5,
+                        "start": 143.66,
+                        "end": 146.42,
                         "isUpperKey": true
                     }
                 ]
             },
             {
                 "text": "EM nỡ sao em",
-                "start": 146.8,
-                "end": 149.8,
-                "indent": 0,
+                "start": 146.42,
+                "end": 148.5,
+                "indent": 1,
                 "align": "center",
                 "words": [
                     {
                         "text": "EM",
-                        "start": 146.8,
-                        "end": 147.55,
+                        "start": 146.42,
+                        "end": 147.1,
                         "isUpperKey": true,
                         "colorAccent": true
                     },
                     {
                         "text": "nỡ",
-                        "start": 147.55,
-                        "end": 148.3
+                        "start": 147.1,
+                        "end": 147.3
                     },
                     {
                         "text": "sao",
-                        "start": 148.3,
-                        "end": 149.05
+                        "start": 147.3,
+                        "end": 147.7
                     },
                     {
                         "text": "em",
-                        "start": 149.05,
-                        "end": 149.8,
+                        "start": 147.7,
+                        "end": 148.5,
                         "colorAccent": true
                     }
                 ]
             },
             {
                 "text": "bỏ anh một mình",
-                "start": 150.0,
-                "end": 152.8,
-                "indent": 0,
+                "start": 148.5,
+                "end": 152.12,
+                "indent": 2,
                 "align": "center",
                 "words": [
                     {
                         "text": "bỏ",
-                        "start": 150.0,
-                        "end": 150.7
+                        "start": 148.5,
+                        "end": 150.3
                     },
                     {
                         "text": "anh",
-                        "start": 150.7,
-                        "end": 151.4,
+                        "start": 150.3,
+                        "end": 150.7,
                         "colorAccent": true
                     },
                     {
                         "text": "một",
-                        "start": 151.4,
-                        "end": 152.1
+                        "start": 150.7,
+                        "end": 151.3
                     },
                     {
                         "text": "mình",
-                        "start": 152.1,
-                        "end": 152.8
+                        "start": 151.3,
+                        "end": 152.12
                     }
                 ]
             },
             {
                 "text": "LỤC BÌNH TRÔI",
-                "start": 153.0,
-                "end": 155.8,
-                "indent": 0,
+                "start": 152.5,
+                "end": 154.5,
+                "indent": 3,
                 "align": "center",
                 "words": [
                     {
                         "text": "LỤC",
-                        "start": 153.0,
-                        "end": 153.93,
+                        "start": 152.5,
+                        "end": 153.1,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "BÌNH",
-                        "start": 153.93,
-                        "end": 154.87,
+                        "start": 153.1,
+                        "end": 153.5,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "TRÔI",
-                        "start": 154.87,
-                        "end": 155.8,
+                        "start": 153.5,
+                        "end": 154.5,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -1151,30 +1147,30 @@ window.DEMO_PRESET_GANH_HAO = {
             },
             {
                 "text": "chẳng biết nơi neo",
-                "start": 156.0,
-                "end": 157.0,
-                "indent": 0,
+                "start": 154.5,
+                "end": 156.8,
+                "indent": 4,
                 "align": "center",
                 "words": [
                     {
                         "text": "chẳng",
-                        "start": 156.0,
-                        "end": 156.25
+                        "start": 154.5,
+                        "end": 155.0
                     },
                     {
                         "text": "biết",
-                        "start": 156.25,
-                        "end": 156.5
+                        "start": 155.0,
+                        "end": 155.3
                     },
                     {
                         "text": "nơi",
-                        "start": 156.5,
-                        "end": 156.75
+                        "start": 155.3,
+                        "end": 155.8
                     },
                     {
                         "text": "neo",
-                        "start": 156.75,
-                        "end": 157.0
+                        "start": 155.8,
+                        "end": 156.8
                     }
                 ]
             }
@@ -1182,81 +1178,81 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_11",
-        "start": 157.5,
-        "end": 165.5,
+        "start": 157.57,
+        "end": 171.14,
         "layout": "left",
         "text": "CÒN THƯƠNG tóc em buông dài TÍM HOA anh cài em cười XIẾT CHẶT VÒNG TAY",
         "indent": 0,
         "lines": [
             {
                 "text": "CÒN THƯƠNG",
-                "start": 157.5,
-                "end": 159.2,
+                "start": 157.57,
+                "end": 159.68,
                 "indent": 0,
                 "align": "left",
                 "words": [
                     {
                         "text": "CÒN",
-                        "start": 157.5,
-                        "end": 158.35,
+                        "start": 157.57,
+                        "end": 158.4,
                         "isUpperKey": true
                     },
                     {
                         "text": "THƯƠNG",
-                        "start": 158.35,
-                        "end": 159.2,
+                        "start": 158.4,
+                        "end": 159.68,
                         "isUpperKey": true
                     }
                 ]
             },
             {
                 "text": "tóc em buông dài",
-                "start": 159.4,
-                "end": 161.2,
+                "start": 159.7,
+                "end": 162.2,
                 "indent": 1,
                 "align": "left",
                 "words": [
                     {
                         "text": "tóc",
-                        "start": 159.4,
-                        "end": 159.85
+                        "start": 159.7,
+                        "end": 160.4
                     },
                     {
                         "text": "em",
-                        "start": 159.85,
-                        "end": 160.3,
+                        "start": 160.4,
+                        "end": 160.8,
                         "colorAccent": true
                     },
                     {
                         "text": "buông",
-                        "start": 160.3,
-                        "end": 160.75
+                        "start": 160.8,
+                        "end": 161.4
                     },
                     {
                         "text": "dài",
-                        "start": 160.75,
-                        "end": 161.2
+                        "start": 161.4,
+                        "end": 162.2
                     }
                 ]
             },
             {
                 "text": "TÍM HOA",
-                "start": 161.5,
-                "end": 162.8,
+                "start": 162.2,
+                "end": 163.8,
                 "indent": 2,
                 "align": "left",
                 "words": [
                     {
                         "text": "TÍM",
-                        "start": 161.5,
-                        "end": 162.15,
+                        "start": 162.2,
+                        "end": 162.9,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "HOA",
-                        "start": 162.15,
-                        "end": 162.8,
+                        "start": 162.9,
+                        "end": 163.8,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -1264,63 +1260,64 @@ window.DEMO_PRESET_GANH_HAO = {
             },
             {
                 "text": "anh cài em cười",
-                "start": 163.0,
-                "end": 164.2,
+                "start": 163.8,
+                "end": 166.43,
                 "indent": 3,
                 "align": "left",
                 "words": [
                     {
                         "text": "anh",
-                        "start": 163.0,
-                        "end": 163.3
+                        "start": 163.8,
+                        "end": 164.4,
+                        "colorAccent": true
                     },
                     {
                         "text": "cài",
-                        "start": 163.3,
-                        "end": 163.6
+                        "start": 164.4,
+                        "end": 165.0
                     },
                     {
                         "text": "em",
-                        "start": 163.6,
-                        "end": 163.9,
+                        "start": 165.0,
+                        "end": 165.5,
                         "colorAccent": true
                     },
                     {
                         "text": "cười",
-                        "start": 163.9,
-                        "end": 164.2
+                        "start": 165.5,
+                        "end": 166.43
                     }
                 ]
             },
             {
                 "text": "XIẾT CHẶT VÒNG TAY",
-                "start": 164.4,
-                "end": 165.5,
+                "start": 166.68,
+                "end": 171.14,
                 "indent": 4,
                 "align": "left",
                 "words": [
                     {
                         "text": "XIẾT",
-                        "start": 164.4,
-                        "end": 164.68,
+                        "start": 166.68,
+                        "end": 167.43,
                         "isUpperKey": true
                     },
                     {
                         "text": "CHẶT",
-                        "start": 164.68,
-                        "end": 164.95,
+                        "start": 167.43,
+                        "end": 168.1,
                         "isUpperKey": true
                     },
                     {
                         "text": "VÒNG",
-                        "start": 164.95,
-                        "end": 165.22,
+                        "start": 168.1,
+                        "end": 168.68,
                         "isUpperKey": true
                     },
                     {
                         "text": "TAY",
-                        "start": 165.22,
-                        "end": 165.5,
+                        "start": 168.68,
+                        "end": 171.14,
                         "isUpperKey": true
                     }
                 ]
@@ -1329,84 +1326,83 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_12",
-        "start": 166.0,
-        "end": 182.5,
+        "start": 171.14,
+        "end": 184.5,
         "layout": "right",
         "text": "À ƠI... nói thương anh nhiều đành lòng EM CẤT BƯỚC SANG SÔNG...",
         "indent": 0,
         "lines": [
             {
                 "text": "À ƠI...",
-                "start": 166.0,
-                "end": 171.5,
+                "start": 171.14,
+                "end": 174.4,
                 "indent": 0,
                 "align": "right",
                 "words": [
                     {
                         "text": "À",
-                        "start": 166.0,
-                        "end": 168.75,
-                        "isUpperKey": true
+                        "start": 171.14,
+                        "end": 172.5
                     },
                     {
                         "text": "ƠI...",
-                        "start": 168.75,
-                        "end": 171.5,
+                        "start": 172.5,
+                        "end": 174.4,
                         "isUpperKey": true
                     }
                 ]
             },
             {
                 "text": "nói thương anh nhiều",
-                "start": 172.0,
-                "end": 175.5,
+                "start": 174.4,
+                "end": 178.4,
                 "indent": 1,
                 "align": "right",
                 "words": [
                     {
                         "text": "nói",
-                        "start": 172.0,
-                        "end": 172.88
+                        "start": 174.4,
+                        "end": 175.4
                     },
                     {
                         "text": "thương",
-                        "start": 172.88,
-                        "end": 173.75
+                        "start": 175.4,
+                        "end": 176.3
                     },
                     {
                         "text": "anh",
-                        "start": 173.75,
-                        "end": 174.62,
+                        "start": 176.3,
+                        "end": 177.28,
                         "colorAccent": true
                     },
                     {
                         "text": "nhiều",
-                        "start": 174.62,
-                        "end": 175.5
+                        "start": 177.28,
+                        "end": 178.4
                     }
                 ]
             },
             {
                 "text": "đành lòng EM",
-                "start": 176.0,
-                "end": 177.8,
+                "start": 178.4,
+                "end": 180.8,
                 "indent": 2,
                 "align": "right",
                 "words": [
                     {
                         "text": "đành",
-                        "start": 176.0,
-                        "end": 176.6
+                        "start": 178.4,
+                        "end": 179.3
                     },
                     {
                         "text": "lòng",
-                        "start": 176.6,
-                        "end": 177.2
+                        "start": 179.3,
+                        "end": 179.8
                     },
                     {
                         "text": "EM",
-                        "start": 177.2,
-                        "end": 177.8,
+                        "start": 179.8,
+                        "end": 180.8,
                         "isUpperKey": true,
                         "colorAccent": true
                     }
@@ -1414,22 +1410,22 @@ window.DEMO_PRESET_GANH_HAO = {
             },
             {
                 "text": "CẤT BƯỚC",
-                "start": 178.0,
-                "end": 180.2,
+                "start": 180.8,
+                "end": 182.4,
                 "indent": 3,
                 "align": "right",
                 "words": [
                     {
                         "text": "CẤT",
-                        "start": 178.0,
-                        "end": 179.1,
+                        "start": 180.8,
+                        "end": 181.6,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "BƯỚC",
-                        "start": 179.1,
-                        "end": 180.2,
+                        "start": 181.6,
+                        "end": 182.4,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -1437,21 +1433,21 @@ window.DEMO_PRESET_GANH_HAO = {
             },
             {
                 "text": "SANG SÔNG...",
-                "start": 180.5,
-                "end": 182.5,
+                "start": 182.4,
+                "end": 184.5,
                 "indent": 4,
                 "align": "right",
                 "words": [
                     {
                         "text": "SANG",
-                        "start": 180.5,
-                        "end": 181.5,
+                        "start": 182.4,
+                        "end": 182.9,
                         "isUpperKey": true
                     },
                     {
                         "text": "SÔNG...",
-                        "start": 181.5,
-                        "end": 182.5,
+                        "start": 182.9,
+                        "end": 184.5,
                         "isUpperKey": true
                     }
                 ]
@@ -1460,83 +1456,83 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_13",
-        "start": 183.0,
-        "end": 198.0,
+        "start": 184.66,
+        "end": 199.5,
         "layout": "center",
         "text": "vì đâu dở dang duyên mình SẮC HOA CHUNG TÌNH chưa phai màu NỠ NÀO NGƯỜI ĐI...",
         "indent": 0,
         "lines": [
             {
                 "text": "vì đâu dở dang duyên mình",
-                "start": 183.0,
-                "end": 187.5,
+                "start": 184.66,
+                "end": 190.34,
                 "indent": 0,
                 "align": "center",
                 "words": [
                     {
                         "text": "vì",
-                        "start": 183.0,
-                        "end": 183.75
-                    },
-                    {
-                        "text": "đâu",
-                        "start": 183.75,
-                        "end": 184.5
-                    },
-                    {
-                        "text": "dở",
-                        "start": 184.5,
-                        "end": 185.25
-                    },
-                    {
-                        "text": "dang",
-                        "start": 185.25,
+                        "start": 184.66,
                         "end": 186.0
                     },
                     {
-                        "text": "duyên",
+                        "text": "đâu",
                         "start": 186.0,
-                        "end": 186.75
+                        "end": 186.86
+                    },
+                    {
+                        "text": "dở",
+                        "start": 186.86,
+                        "end": 187.8
+                    },
+                    {
+                        "text": "dang",
+                        "start": 187.8,
+                        "end": 188.8
+                    },
+                    {
+                        "text": "duyên",
+                        "start": 188.8,
+                        "end": 189.6
                     },
                     {
                         "text": "mình",
-                        "start": 186.75,
-                        "end": 187.5
+                        "start": 189.6,
+                        "end": 190.34
                     }
                 ]
             },
             {
                 "text": "SẮC HOA CHUNG TÌNH",
-                "start": 188.0,
-                "end": 192.5,
-                "indent": 0,
+                "start": 190.34,
+                "end": 194.2,
+                "indent": 1,
                 "align": "center",
                 "words": [
                     {
                         "text": "SẮC",
-                        "start": 188.0,
-                        "end": 189.12,
+                        "start": 190.34,
+                        "end": 191.4,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "HOA",
-                        "start": 189.12,
-                        "end": 190.25,
+                        "start": 191.4,
+                        "end": 192.3,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "CHUNG",
-                        "start": 190.25,
-                        "end": 191.38,
+                        "start": 192.3,
+                        "end": 193.04,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "TÌNH",
-                        "start": 191.38,
-                        "end": 192.5,
+                        "start": 193.04,
+                        "end": 194.2,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -1544,57 +1540,57 @@ window.DEMO_PRESET_GANH_HAO = {
             },
             {
                 "text": "chưa phai màu",
-                "start": 193.0,
-                "end": 195.0,
-                "indent": 0,
+                "start": 194.2,
+                "end": 196.34,
+                "indent": 2,
                 "align": "center",
                 "words": [
                     {
                         "text": "chưa",
-                        "start": 193.0,
-                        "end": 193.67
+                        "start": 194.2,
+                        "end": 194.78
                     },
                     {
                         "text": "phai",
-                        "start": 193.67,
-                        "end": 194.33
+                        "start": 194.78,
+                        "end": 195.52
                     },
                     {
                         "text": "màu",
-                        "start": 194.33,
-                        "end": 195.0
+                        "start": 195.52,
+                        "end": 196.34
                     }
                 ]
             },
             {
                 "text": "NỠ NÀO NGƯỜI ĐI...",
-                "start": 195.2,
-                "end": 198.0,
-                "indent": 0,
+                "start": 196.34,
+                "end": 199.5,
+                "indent": 3,
                 "align": "center",
                 "words": [
                     {
                         "text": "NỠ",
-                        "start": 195.2,
-                        "end": 195.9,
+                        "start": 196.34,
+                        "end": 196.8,
                         "isUpperKey": true
                     },
                     {
                         "text": "NÀO",
-                        "start": 195.9,
-                        "end": 196.6,
+                        "start": 196.8,
+                        "end": 197.4,
                         "isUpperKey": true
                     },
                     {
                         "text": "NGƯỜI",
-                        "start": 196.6,
-                        "end": 197.3,
+                        "start": 197.4,
+                        "end": 197.9,
                         "isUpperKey": true
                     },
                     {
                         "text": "ĐI...",
-                        "start": 197.3,
-                        "end": 198.0,
+                        "start": 197.9,
+                        "end": 199.5,
                         "isUpperKey": true
                     }
                 ]
@@ -1603,7 +1599,7 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_14",
-        "start": 227.5,
+        "start": 226.5,
         "end": 241.5,
         "layout": "center",
         "text": "À ƠI... EM nỡ sao em bỏ anh một mình LỤC BÌNH TRÔI chẳng biết nơi neo",
@@ -1611,112 +1607,111 @@ window.DEMO_PRESET_GANH_HAO = {
         "lines": [
             {
                 "text": "À ƠI...",
-                "start": 227.8,
-                "end": 231.5,
+                "start": 226.5,
+                "end": 230.64,
                 "indent": 0,
                 "align": "center",
                 "words": [
                     {
                         "text": "À",
-                        "start": 227.8,
-                        "end": 229.65,
-                        "isUpperKey": true
+                        "start": 226.5,
+                        "end": 228.54
                     },
                     {
                         "text": "ƠI...",
-                        "start": 229.65,
-                        "end": 231.5,
+                        "start": 228.54,
+                        "end": 230.64,
                         "isUpperKey": true
                     }
                 ]
             },
             {
                 "text": "EM nỡ sao em",
-                "start": 232.0,
-                "end": 234.8,
-                "indent": 0,
+                "start": 230.64,
+                "end": 233.1,
+                "indent": 1,
                 "align": "center",
                 "words": [
                     {
                         "text": "EM",
-                        "start": 232.0,
-                        "end": 232.7,
+                        "start": 230.64,
+                        "end": 231.88,
                         "isUpperKey": true,
                         "colorAccent": true
                     },
                     {
                         "text": "nỡ",
-                        "start": 232.7,
-                        "end": 233.4
+                        "start": 231.88,
+                        "end": 232.14
                     },
                     {
                         "text": "sao",
-                        "start": 233.4,
-                        "end": 234.1
+                        "start": 232.14,
+                        "end": 232.32
                     },
                     {
                         "text": "em",
-                        "start": 234.1,
-                        "end": 234.8,
+                        "start": 232.32,
+                        "end": 233.1,
                         "colorAccent": true
                     }
                 ]
             },
             {
                 "text": "bỏ anh một mình",
-                "start": 235.0,
-                "end": 237.5,
-                "indent": 0,
+                "start": 233.1,
+                "end": 236.8,
+                "indent": 2,
                 "align": "center",
                 "words": [
                     {
                         "text": "bỏ",
-                        "start": 235.0,
-                        "end": 235.62
+                        "start": 233.1,
+                        "end": 235.02
                     },
                     {
                         "text": "anh",
-                        "start": 235.62,
-                        "end": 236.25,
+                        "start": 235.02,
+                        "end": 235.34,
                         "colorAccent": true
                     },
                     {
                         "text": "một",
-                        "start": 236.25,
-                        "end": 236.88
+                        "start": 235.34,
+                        "end": 235.98
                     },
                     {
                         "text": "mình",
-                        "start": 236.88,
-                        "end": 237.5
+                        "start": 235.98,
+                        "end": 236.8
                     }
                 ]
             },
             {
                 "text": "LỤC BÌNH TRÔI",
-                "start": 237.8,
-                "end": 240.2,
-                "indent": 0,
+                "start": 237.0,
+                "end": 238.8,
+                "indent": 3,
                 "align": "center",
                 "words": [
                     {
                         "text": "LỤC",
-                        "start": 237.8,
-                        "end": 238.6,
+                        "start": 237.0,
+                        "end": 237.5,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "BÌNH",
-                        "start": 238.6,
-                        "end": 239.4,
+                        "start": 237.5,
+                        "end": 238.1,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "TRÔI",
-                        "start": 239.4,
-                        "end": 240.2,
+                        "start": 238.1,
+                        "end": 238.8,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -1724,29 +1719,29 @@ window.DEMO_PRESET_GANH_HAO = {
             },
             {
                 "text": "chẳng biết nơi neo",
-                "start": 240.5,
+                "start": 238.8,
                 "end": 241.5,
-                "indent": 0,
+                "indent": 4,
                 "align": "center",
                 "words": [
                     {
                         "text": "chẳng",
-                        "start": 240.5,
-                        "end": 240.75
+                        "start": 238.8,
+                        "end": 239.2
                     },
                     {
                         "text": "biết",
-                        "start": 240.75,
-                        "end": 241.0
+                        "start": 239.2,
+                        "end": 239.6
                     },
                     {
                         "text": "nơi",
-                        "start": 241.0,
-                        "end": 241.25
+                        "start": 239.6,
+                        "end": 240.2
                     },
                     {
                         "text": "neo",
-                        "start": 241.25,
+                        "start": 240.2,
                         "end": 241.5
                     }
                 ]
@@ -1756,7 +1751,7 @@ window.DEMO_PRESET_GANH_HAO = {
     {
         "id": "gh_15",
         "start": 242.0,
-        "end": 253.2,
+        "end": 255.5,
         "layout": "right",
         "text": "CÒN THƯƠNG tóc em buông dài TÍM HOA anh cài em cười XIẾT CHẶT VÒNG TAY",
         "indent": 0,
@@ -1764,20 +1759,20 @@ window.DEMO_PRESET_GANH_HAO = {
             {
                 "text": "CÒN THƯƠNG",
                 "start": 242.0,
-                "end": 244.2,
+                "end": 244.5,
                 "indent": 0,
                 "align": "right",
                 "words": [
                     {
                         "text": "CÒN",
                         "start": 242.0,
-                        "end": 243.1,
+                        "end": 243.2,
                         "isUpperKey": true
                     },
                     {
                         "text": "THƯƠNG",
-                        "start": 243.1,
-                        "end": 244.2,
+                        "start": 243.2,
+                        "end": 244.5,
                         "isUpperKey": true
                     }
                 ]
@@ -1785,43 +1780,43 @@ window.DEMO_PRESET_GANH_HAO = {
             {
                 "text": "tóc em buông dài",
                 "start": 244.5,
-                "end": 247.0,
+                "end": 247.3,
                 "indent": 1,
                 "align": "right",
                 "words": [
                     {
                         "text": "tóc",
                         "start": 244.5,
-                        "end": 245.12
+                        "end": 245.2
                     },
                     {
                         "text": "em",
-                        "start": 245.12,
-                        "end": 245.75,
+                        "start": 245.2,
+                        "end": 245.8,
                         "colorAccent": true
                     },
                     {
                         "text": "buông",
-                        "start": 245.75,
-                        "end": 246.38
+                        "start": 245.8,
+                        "end": 246.5
                     },
                     {
                         "text": "dài",
-                        "start": 246.38,
-                        "end": 247.0
+                        "start": 246.5,
+                        "end": 247.3
                     }
                 ]
             },
             {
                 "text": "TÍM HOA",
-                "start": 247.2,
+                "start": 247.3,
                 "end": 249.0,
                 "indent": 2,
                 "align": "right",
                 "words": [
                     {
                         "text": "TÍM",
-                        "start": 247.2,
+                        "start": 247.3,
                         "end": 248.1,
                         "isUpperKey": true,
                         "boxHighlight": true
@@ -1837,63 +1832,64 @@ window.DEMO_PRESET_GANH_HAO = {
             },
             {
                 "text": "anh cài em cười",
-                "start": 249.2,
-                "end": 251.2,
+                "start": 249.0,
+                "end": 251.8,
                 "indent": 3,
                 "align": "right",
                 "words": [
                     {
                         "text": "anh",
-                        "start": 249.2,
-                        "end": 249.7
+                        "start": 249.0,
+                        "end": 249.7,
+                        "colorAccent": true
                     },
                     {
                         "text": "cài",
                         "start": 249.7,
-                        "end": 250.2
+                        "end": 250.3
                     },
                     {
                         "text": "em",
-                        "start": 250.2,
-                        "end": 250.7,
+                        "start": 250.3,
+                        "end": 250.94,
                         "colorAccent": true
                     },
                     {
                         "text": "cười",
-                        "start": 250.7,
-                        "end": 251.2
+                        "start": 250.94,
+                        "end": 251.8
                     }
                 ]
             },
             {
                 "text": "XIẾT CHẶT VÒNG TAY",
-                "start": 251.5,
-                "end": 253.2,
+                "start": 251.8,
+                "end": 255.5,
                 "indent": 4,
                 "align": "right",
                 "words": [
                     {
                         "text": "XIẾT",
-                        "start": 251.5,
-                        "end": 251.93,
+                        "start": 251.8,
+                        "end": 252.7,
                         "isUpperKey": true
                     },
                     {
                         "text": "CHẶT",
-                        "start": 251.93,
-                        "end": 252.35,
+                        "start": 252.7,
+                        "end": 253.12,
                         "isUpperKey": true
                     },
                     {
                         "text": "VÒNG",
-                        "start": 252.35,
-                        "end": 252.77,
+                        "start": 253.12,
+                        "end": 253.6,
                         "isUpperKey": true
                     },
                     {
                         "text": "TAY",
-                        "start": 252.77,
-                        "end": 253.2,
+                        "start": 253.6,
+                        "end": 255.5,
                         "isUpperKey": true
                     }
                 ]
@@ -1902,84 +1898,83 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_16",
-        "start": 253.5,
-        "end": 267.0,
+        "start": 256.0,
+        "end": 269.5,
         "layout": "left",
         "text": "À ƠI... nói thương anh nhiều đành lòng EM CẤT BƯỚC SANG SÔNG...",
         "indent": 0,
         "lines": [
             {
                 "text": "À ƠI...",
-                "start": 253.5,
-                "end": 257.5,
+                "start": 256.0,
+                "end": 260.15,
                 "indent": 0,
                 "align": "left",
                 "words": [
                     {
                         "text": "À",
-                        "start": 253.5,
-                        "end": 255.5,
-                        "isUpperKey": true
+                        "start": 256.0,
+                        "end": 257.5
                     },
                     {
                         "text": "ƠI...",
-                        "start": 255.5,
-                        "end": 257.5,
+                        "start": 257.5,
+                        "end": 260.15,
                         "isUpperKey": true
                     }
                 ]
             },
             {
                 "text": "nói thương anh nhiều",
-                "start": 258.0,
-                "end": 261.2,
+                "start": 260.15,
+                "end": 263.5,
                 "indent": 1,
                 "align": "left",
                 "words": [
                     {
                         "text": "nói",
-                        "start": 258.0,
-                        "end": 258.8
+                        "start": 260.15,
+                        "end": 261.2
                     },
                     {
                         "text": "thương",
-                        "start": 258.8,
-                        "end": 259.6
+                        "start": 261.2,
+                        "end": 261.8
                     },
                     {
                         "text": "anh",
-                        "start": 259.6,
-                        "end": 260.4,
+                        "start": 261.8,
+                        "end": 262.5,
                         "colorAccent": true
                     },
                     {
                         "text": "nhiều",
-                        "start": 260.4,
-                        "end": 261.2
+                        "start": 262.5,
+                        "end": 263.5
                     }
                 ]
             },
             {
                 "text": "đành lòng EM",
-                "start": 261.5,
-                "end": 263.2,
+                "start": 263.5,
+                "end": 265.8,
                 "indent": 2,
                 "align": "left",
                 "words": [
                     {
                         "text": "đành",
-                        "start": 261.5,
-                        "end": 262.07
+                        "start": 263.5,
+                        "end": 264.2
                     },
                     {
                         "text": "lòng",
-                        "start": 262.07,
-                        "end": 262.63
+                        "start": 264.2,
+                        "end": 264.8
                     },
                     {
                         "text": "EM",
-                        "start": 262.63,
-                        "end": 263.2,
+                        "start": 264.8,
+                        "end": 265.8,
                         "isUpperKey": true,
                         "colorAccent": true
                     }
@@ -1987,22 +1982,22 @@ window.DEMO_PRESET_GANH_HAO = {
             },
             {
                 "text": "CẤT BƯỚC",
-                "start": 263.5,
-                "end": 265.5,
+                "start": 265.8,
+                "end": 267.2,
                 "indent": 3,
                 "align": "left",
                 "words": [
                     {
                         "text": "CẤT",
-                        "start": 263.5,
-                        "end": 264.5,
+                        "start": 265.8,
+                        "end": 266.5,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "BƯỚC",
-                        "start": 264.5,
-                        "end": 265.5,
+                        "start": 266.5,
+                        "end": 267.2,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -2010,21 +2005,21 @@ window.DEMO_PRESET_GANH_HAO = {
             },
             {
                 "text": "SANG SÔNG...",
-                "start": 265.8,
-                "end": 267.0,
+                "start": 267.2,
+                "end": 269.5,
                 "indent": 4,
                 "align": "left",
                 "words": [
                     {
                         "text": "SANG",
-                        "start": 265.8,
-                        "end": 266.4,
+                        "start": 267.2,
+                        "end": 267.8,
                         "isUpperKey": true
                     },
                     {
                         "text": "SÔNG...",
-                        "start": 266.4,
-                        "end": 267.0,
+                        "start": 267.8,
+                        "end": 269.5,
                         "isUpperKey": true
                     }
                 ]
@@ -2033,83 +2028,83 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_17",
-        "start": 267.5,
-        "end": 280.0,
+        "start": 269.5,
+        "end": 283.0,
         "layout": "center",
         "text": "vì đâu dở dang duyên mình SẮC HOA CHUNG TÌNH chưa phai màu NỠ NÀO NGƯỜI ĐI...",
         "indent": 0,
         "lines": [
             {
                 "text": "vì đâu dở dang duyên mình",
-                "start": 267.5,
-                "end": 271.0,
+                "start": 269.5,
+                "end": 274.2,
                 "indent": 0,
                 "align": "center",
                 "words": [
                     {
                         "text": "vì",
-                        "start": 267.5,
-                        "end": 268.08
+                        "start": 269.5,
+                        "end": 270.5
                     },
                     {
                         "text": "đâu",
-                        "start": 268.08,
-                        "end": 268.67
+                        "start": 270.5,
+                        "end": 271.3
                     },
                     {
                         "text": "dở",
-                        "start": 268.67,
-                        "end": 269.25
+                        "start": 271.3,
+                        "end": 272.0
                     },
                     {
                         "text": "dang",
-                        "start": 269.25,
-                        "end": 269.83
+                        "start": 272.0,
+                        "end": 272.85
                     },
                     {
                         "text": "duyên",
-                        "start": 269.83,
-                        "end": 270.42
+                        "start": 272.85,
+                        "end": 273.5
                     },
                     {
                         "text": "mình",
-                        "start": 270.42,
-                        "end": 271.0
+                        "start": 273.5,
+                        "end": 274.2
                     }
                 ]
             },
             {
                 "text": "SẮC HOA CHUNG TÌNH",
-                "start": 271.2,
-                "end": 275.5,
-                "indent": 0,
+                "start": 274.2,
+                "end": 277.5,
+                "indent": 1,
                 "align": "center",
                 "words": [
                     {
                         "text": "SẮC",
-                        "start": 271.2,
-                        "end": 272.27,
+                        "start": 274.2,
+                        "end": 275.2,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "HOA",
-                        "start": 272.27,
-                        "end": 273.35,
+                        "start": 275.2,
+                        "end": 276.0,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "CHUNG",
-                        "start": 273.35,
-                        "end": 274.43,
+                        "start": 276.0,
+                        "end": 276.6,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "TÌNH",
-                        "start": 274.43,
-                        "end": 275.5,
+                        "start": 276.6,
+                        "end": 277.5,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -2117,57 +2112,57 @@ window.DEMO_PRESET_GANH_HAO = {
             },
             {
                 "text": "chưa phai màu",
-                "start": 275.8,
-                "end": 277.5,
-                "indent": 0,
+                "start": 277.5,
+                "end": 280.34,
+                "indent": 2,
                 "align": "center",
                 "words": [
                     {
                         "text": "chưa",
-                        "start": 275.8,
-                        "end": 276.37
+                        "start": 277.5,
+                        "end": 278.2
                     },
                     {
                         "text": "phai",
-                        "start": 276.37,
-                        "end": 276.93
+                        "start": 278.2,
+                        "end": 279.46
                     },
                     {
                         "text": "màu",
-                        "start": 276.93,
-                        "end": 277.5
+                        "start": 279.46,
+                        "end": 280.34
                     }
                 ]
             },
             {
                 "text": "NỠ NÀO NGƯỜI ĐI...",
-                "start": 277.8,
-                "end": 280.0,
-                "indent": 0,
+                "start": 280.34,
+                "end": 283.0,
+                "indent": 3,
                 "align": "center",
                 "words": [
                     {
                         "text": "NỠ",
-                        "start": 277.8,
-                        "end": 278.35,
+                        "start": 280.34,
+                        "end": 280.88,
                         "isUpperKey": true
                     },
                     {
                         "text": "NÀO",
-                        "start": 278.35,
-                        "end": 278.9,
+                        "start": 280.88,
+                        "end": 281.18,
                         "isUpperKey": true
                     },
                     {
                         "text": "NGƯỜI",
-                        "start": 278.9,
-                        "end": 279.45,
+                        "start": 281.18,
+                        "end": 281.7,
                         "isUpperKey": true
                     },
                     {
                         "text": "ĐI...",
-                        "start": 279.45,
-                        "end": 280.0,
+                        "start": 281.7,
+                        "end": 283.0,
                         "isUpperKey": true
                     }
                 ]
@@ -2176,73 +2171,73 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_18",
-        "start": 280.0,
-        "end": 293.5,
+        "start": 283.04,
+        "end": 293.0,
         "layout": "lower",
         "text": "dòng nhớ trong tim LÀM SAO CHIA CẮT",
         "indent": 0,
         "lines": [
             {
                 "text": "dòng nhớ trong tim",
-                "start": 280.0,
-                "end": 285.5,
+                "start": 283.04,
+                "end": 287.72,
                 "indent": 0,
                 "align": "lower",
                 "words": [
                     {
                         "text": "dòng",
-                        "start": 280.0,
-                        "end": 281.38
+                        "start": 283.04,
+                        "end": 284.8
                     },
                     {
                         "text": "nhớ",
-                        "start": 281.38,
-                        "end": 282.75
+                        "start": 284.8,
+                        "end": 285.6
                     },
                     {
                         "text": "trong",
-                        "start": 282.75,
-                        "end": 284.12
+                        "start": 285.6,
+                        "end": 286.2
                     },
                     {
                         "text": "tim",
-                        "start": 284.12,
-                        "end": 285.5
+                        "start": 286.2,
+                        "end": 287.72
                     }
                 ]
             },
             {
                 "text": "LÀM SAO CHIA CẮT",
-                "start": 286.0,
-                "end": 293.5,
-                "indent": 0,
+                "start": 287.72,
+                "end": 293.0,
+                "indent": 1,
                 "align": "lower",
                 "words": [
                     {
                         "text": "LÀM",
-                        "start": 286.0,
-                        "end": 287.88,
+                        "start": 287.72,
+                        "end": 289.0,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "SAO",
-                        "start": 287.88,
-                        "end": 289.75,
+                        "start": 289.0,
+                        "end": 290.0,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "CHIA",
-                        "start": 289.75,
-                        "end": 291.62,
+                        "start": 290.0,
+                        "end": 291.2,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "CẮT",
-                        "start": 291.62,
-                        "end": 293.5,
+                        "start": 291.2,
+                        "end": 293.0,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -2253,7 +2248,7 @@ window.DEMO_PRESET_GANH_HAO = {
     {
         "id": "gh_19",
         "start": 294.0,
-        "end": 308.5,
+        "end": 304.88,
         "layout": "center",
         "text": "người thương... CÓ HAY...",
         "indent": 0,
@@ -2261,40 +2256,40 @@ window.DEMO_PRESET_GANH_HAO = {
             {
                 "text": "người thương...",
                 "start": 294.0,
-                "end": 299.5,
+                "end": 298.24,
                 "indent": 0,
                 "align": "center",
                 "words": [
                     {
                         "text": "người",
                         "start": 294.0,
-                        "end": 296.75
+                        "end": 295.6
                     },
                     {
                         "text": "thương...",
-                        "start": 296.75,
-                        "end": 299.5
+                        "start": 295.6,
+                        "end": 298.24
                     }
                 ]
             },
             {
                 "text": "CÓ HAY...",
-                "start": 300.0,
-                "end": 308.5,
-                "indent": 0,
+                "start": 298.5,
+                "end": 304.88,
+                "indent": 1,
                 "align": "center",
                 "words": [
                     {
                         "text": "CÓ",
-                        "start": 300.0,
-                        "end": 304.25,
+                        "start": 298.5,
+                        "end": 300.2,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "HAY...",
-                        "start": 304.25,
-                        "end": 308.5,
+                        "start": 300.2,
+                        "end": 304.88,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -2304,60 +2299,60 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_20",
-        "start": 309.0,
-        "end": 324.0,
+        "start": 308.0,
+        "end": 323.8,
         "layout": "left",
         "text": "đêm dài mình anh THAO THỨC, em giờ biết lòng buồn vui",
         "indent": 0,
         "lines": [
             {
                 "text": "đêm dài mình anh",
-                "start": 309.0,
-                "end": 313.5,
+                "start": 308.0,
+                "end": 313.42,
                 "indent": 0,
                 "align": "left",
                 "words": [
                     {
                         "text": "đêm",
-                        "start": 309.0,
-                        "end": 310.12
+                        "start": 308.0,
+                        "end": 309.72
                     },
                     {
                         "text": "dài",
-                        "start": 310.12,
-                        "end": 311.25
+                        "start": 309.72,
+                        "end": 310.8
                     },
                     {
                         "text": "mình",
-                        "start": 311.25,
-                        "end": 312.38
+                        "start": 310.8,
+                        "end": 312.46
                     },
                     {
                         "text": "anh",
-                        "start": 312.38,
-                        "end": 313.5,
+                        "start": 312.46,
+                        "end": 313.42,
                         "colorAccent": true
                     }
                 ]
             },
             {
                 "text": "THAO THỨC,",
-                "start": 314.0,
-                "end": 318.5,
+                "start": 313.42,
+                "end": 318.18,
                 "indent": 1,
                 "align": "left",
                 "words": [
                     {
                         "text": "THAO",
-                        "start": 314.0,
-                        "end": 316.25,
+                        "start": 313.42,
+                        "end": 314.75,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "THỨC,",
-                        "start": 316.25,
-                        "end": 318.5,
+                        "start": 314.75,
+                        "end": 318.18,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -2365,41 +2360,41 @@ window.DEMO_PRESET_GANH_HAO = {
             },
             {
                 "text": "em giờ biết lòng buồn vui",
-                "start": 319.0,
-                "end": 324.0,
+                "start": 318.5,
+                "end": 323.8,
                 "indent": 2,
                 "align": "left",
                 "words": [
                     {
                         "text": "em",
-                        "start": 319.0,
-                        "end": 319.83,
+                        "start": 318.5,
+                        "end": 319.72,
                         "colorAccent": true
                     },
                     {
                         "text": "giờ",
-                        "start": 319.83,
-                        "end": 320.67
+                        "start": 319.72,
+                        "end": 320.2
                     },
                     {
                         "text": "biết",
-                        "start": 320.67,
-                        "end": 321.5
+                        "start": 320.2,
+                        "end": 320.8
                     },
                     {
                         "text": "lòng",
-                        "start": 321.5,
-                        "end": 322.33
+                        "start": 320.8,
+                        "end": 321.45
                     },
                     {
                         "text": "buồn",
-                        "start": 322.33,
-                        "end": 323.17
+                        "start": 321.45,
+                        "end": 322.2
                     },
                     {
                         "text": "vui",
-                        "start": 323.17,
-                        "end": 324.0
+                        "start": 322.2,
+                        "end": 323.8
                     }
                 ]
             }
@@ -2407,60 +2402,60 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_21",
-        "start": 324.5,
-        "end": 337.5,
+        "start": 324.0,
+        "end": 336.56,
         "layout": "right",
         "text": "em về làm dâu BÊN ẤY...",
         "indent": 0,
         "lines": [
             {
                 "text": "em về làm dâu",
-                "start": 324.5,
-                "end": 329.5,
+                "start": 324.0,
+                "end": 328.5,
                 "indent": 0,
                 "align": "right",
                 "words": [
                     {
                         "text": "em",
-                        "start": 324.5,
-                        "end": 325.75,
+                        "start": 324.0,
+                        "end": 325.2,
                         "colorAccent": true
                     },
                     {
                         "text": "về",
-                        "start": 325.75,
-                        "end": 327.0
+                        "start": 325.2,
+                        "end": 326.0
                     },
                     {
                         "text": "làm",
-                        "start": 327.0,
-                        "end": 328.25
+                        "start": 326.0,
+                        "end": 327.2
                     },
                     {
                         "text": "dâu",
-                        "start": 328.25,
-                        "end": 329.5
+                        "start": 327.2,
+                        "end": 328.5
                     }
                 ]
             },
             {
                 "text": "BÊN ẤY...",
-                "start": 330.0,
-                "end": 337.5,
+                "start": 328.5,
+                "end": 336.56,
                 "indent": 1,
                 "align": "right",
                 "words": [
                     {
                         "text": "BÊN",
-                        "start": 330.0,
-                        "end": 333.75,
+                        "start": 328.5,
+                        "end": 331.0,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "ẤY...",
-                        "start": 333.75,
-                        "end": 337.5,
+                        "start": 331.0,
+                        "end": 336.56,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
@@ -2470,68 +2465,68 @@ window.DEMO_PRESET_GANH_HAO = {
     },
     {
         "id": "gh_22",
-        "start": 337.8,
-        "end": 350.5,
+        "start": 337.5,
+        "end": 351.5,
         "layout": "center",
         "text": "bên này... vẫn hoài CHỜ MONG...",
         "indent": 0,
         "lines": [
             {
                 "text": "bên này...",
-                "start": 337.8,
-                "end": 341.5,
+                "start": 337.5,
+                "end": 338.9,
                 "indent": 0,
                 "align": "center",
                 "words": [
                     {
                         "text": "bên",
-                        "start": 337.8,
-                        "end": 339.65
+                        "start": 337.5,
+                        "end": 338.24
                     },
                     {
                         "text": "này...",
-                        "start": 339.65,
-                        "end": 341.5
+                        "start": 338.24,
+                        "end": 338.9
                     }
                 ]
             },
             {
                 "text": "vẫn hoài",
-                "start": 341.8,
-                "end": 344.2,
-                "indent": 0,
+                "start": 338.9,
+                "end": 339.78,
+                "indent": 1,
                 "align": "center",
                 "words": [
                     {
                         "text": "vẫn",
-                        "start": 341.8,
-                        "end": 343.0
+                        "start": 338.9,
+                        "end": 339.2
                     },
                     {
                         "text": "hoài",
-                        "start": 343.0,
-                        "end": 344.2
+                        "start": 339.2,
+                        "end": 339.78
                     }
                 ]
             },
             {
                 "text": "CHỜ MONG...",
-                "start": 344.5,
-                "end": 350.5,
-                "indent": 0,
+                "start": 339.78,
+                "end": 351.5,
+                "indent": 2,
                 "align": "center",
                 "words": [
                     {
                         "text": "CHỜ",
-                        "start": 344.5,
-                        "end": 347.5,
+                        "start": 339.78,
+                        "end": 349.04,
                         "isUpperKey": true,
                         "boxHighlight": true
                     },
                     {
                         "text": "MONG...",
-                        "start": 347.5,
-                        "end": 350.5,
+                        "start": 349.04,
+                        "end": 351.5,
                         "isUpperKey": true,
                         "boxHighlight": true
                     }
