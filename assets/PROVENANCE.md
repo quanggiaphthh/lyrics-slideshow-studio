@@ -10,7 +10,7 @@ This document records the provenance, licensing, audio cryptographic hashes, and
 - **Song Title**: Còn Thương Sắc Hoa Chung Tình
 - **Soundtrack**: OST Phim Truyền Hình *"Sông Phố Nhà Ghe"*
 - **Composer (Sáng tác)**: Nhạc sĩ Lê Phương
-- **Performer (Trình bày)**: Ca sĩ / Diễn viên Quý Bình
+- **Performer (Thể hiện)**: Quang Giáp (Cover 7)
 - **Recording Duration**: 353.23 seconds (05:53.23)
 - **Audio Specifications**: MPEG Audio Layer 3 (MP3), 44,100 Hz, 2 Channels (Stereo), 320 kbps CBR
 - **SHA-256 Checksum**:

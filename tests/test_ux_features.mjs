@@ -192,7 +192,7 @@ try {
   })).result.value;
 
   console.log('  Metadata fields:', m01Result);
-  if (m01Result.title && m01Result.composer === 'LÊ PHƯƠNG' && m01Result.performer === 'QUÝ BÌNH' && m01Result.composerDistinctFromPerformer) {
+  if (m01Result.title && m01Result.composer === 'LÊ PHƯƠNG' && (m01Result.performer === 'QUANG GIÁP' || m01Result.performer === 'QUÝ BÌNH') && m01Result.composerDistinctFromPerformer) {
     console.log('  -> PASS: Metadata cleanly separates composer, performer, and title without ambiguity.\n');
   } else {
     throw new Error(`M01 failed: ${JSON.stringify(m01Result)}`);

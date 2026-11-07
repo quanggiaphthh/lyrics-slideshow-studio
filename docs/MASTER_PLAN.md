@@ -21,6 +21,7 @@
 | **G5** | **UX-01**  | P2 | Audit transition types (implement zoom/diagonal or hide) | **DONE** | 4 true transitions: kenburns, slide, zoom, diagonal (U01 PASS) |
 | **G5** | **UX-02**  | P1 | Multi-ratio safe area & auto-reflow (16:9, 9:16, 1:1) | **DONE** | Safe boundaries, auto-scale font for 16:9, 9:16, 1:1 (U02 PASS) |
 | **G5** | **UX-03**  | P1 | Visual word timing adjustment table (loop & nudge) | **DONE** | Interactive phrase loop + ±50ms nudge controls (U03 PASS) |
-| **G5** | **META-01**| P2 | Separate song metadata fields & provenance | **DONE** | Composer (Lê Phương) vs Performer (Quý Bình) (M01 PASS) |
+| **G5** | **META-01**| P2 | Separate song metadata fields & provenance | **DONE** | Composer (Lê Phương) vs Performer (Quang Giáp) (M01 PASS) |
 | **G6** | **QA-01**  | P0 | Portable test runner (relative paths, no user dir hardcodes) | **DONE** | 7/7 suites PASS (`tests/run_all_tests.py`) |
 | **G6** | **DOCS-01**| P1 | README & Provenance documentation | **DONE** | Created `assets/PROVENANCE.md`, updated `QA_EVIDENCE.md` |
+| **V2** | **TIM-V2** | P0 | V2 Pair-Level & Hero Word Timeline (Quang Giáp Cover 7) | **DONE** | 26 stanzas, 133 cues, 49 lines, hero highlights & sustains |

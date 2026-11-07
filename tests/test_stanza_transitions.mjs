@@ -84,12 +84,10 @@ console.log(`Old logic masked/delayed: ${oldFailedCount} / ${totalTransitions} t
 console.log(`New logic correctly resolved: ${newPassedCount} / ${totalTransitions} transitions`);
 console.log(`===========================================`);
 
-if (oldFailedCount === 18 && newPassedCount === 23) {
-  console.log(`CONFIRMED: Exactly reproduced the audit's 18/23 masked transitions bug in old code, and new logic fixes 100% (23/23)!`);
-  process.exit(0);
-} else if (newPassedCount === 23) {
-  console.log(`ALL 23 TRANSITIONS PASS WITH ZERO DELAY! (TIM-01 VERIFIED)`);
+if (newPassedCount === totalTransitions) {
+  console.log(`ALL ${totalTransitions} TRANSITIONS PASS WITH ZERO DELAY! (TIM-01 VERIFIED)`);
   process.exit(0);
 } else {
+  console.error(`FAILED: Only ${newPassedCount} / ${totalTransitions} transitions resolved.`);
   process.exit(1);
 }

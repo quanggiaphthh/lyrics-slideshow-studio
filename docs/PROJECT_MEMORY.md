@@ -16,7 +16,13 @@
 - **G4 (Session Persistence & Project Schema)**: Implemented `MediaStore` IndexedDB for audio/image binary blobs. Added non-destructive startup draft recovery banner without clobbering initial demo preset. Enhanced project export/import schema validation to preserve words, sustain, and status (D01, D02, D03 PASS) (`9ae1586`).
 - **G5 (UX, Motion, Typography & Metadata)**: Implemented all 4 background image transitions (`kenburns`, `slide`, `zoom`, `diagonal`) in `engine.js`. Added responsive safe-area boundary calculation & auto-scaling typography in `templates.js` for 16:9, 9:16 vertical, and 1:1 square layouts. Added interactive phrase looping and ±50ms nudge controls in `app.js`. Separated title, composer, and performer in `preset_ganh_hao.js` (U01, U02, U03, M01 PASS) (`9caf54e`).
 - **G6 (Portable Test Runner, Provenance & Release Gate)**: Built unified test runner `tests/run_all_tests.py` verifying 7/7 test suites without hardcoded user directories. Created `assets/PROVENANCE.md` detailing master audio licensing, hashes, and image provenance. Documented ffprobe output and test artifacts in `docs/QA_EVIDENCE.md`. All release gates passed.
+- **V2 Timeline & Quang Giáp Integration**:
+  - Unpacked and integrated `TIMELINE_CAP_TU_HERO_V2.json` into canonical preset `js/preset_ganh_hao.js`.
+  - Upgraded to 26 stanzas, 133 cue pairs, and 49 lines with dedicated Hero Word glowing box highlights (`boxHighlight: true`) and vocal sustain metrics (`sustain`).
+  - Updated all performer metadata across presets, index tooltip, and `assets/PROVENANCE.md` to: **Thể hiện: Quang Giáp** (Cover 7), Sáng tác: Lê Phương.
+  - Verified 25/25 stanza transitions resolve with 0ms delay.
+  - Re-verified complete 7-suite test harness `python tests/run_all_tests.py`: 7/7 PASSED.
 
 ### 3. Immediate Next Actions
-1. Push branch `fix/audit-2026-11-07-core-stability` to GitHub remote.
+1. Commit changes and push branch `fix/audit-2026-11-07-core-stability` to GitHub remote.
 2. Present complete release report and checklist to user.
