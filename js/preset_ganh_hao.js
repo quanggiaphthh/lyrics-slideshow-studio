@@ -2,8 +2,8 @@
  * DEMO PRESET: CÒN THƯƠNG SẮC HOA CHUNG TÌNH
  * Thể hiện: QUANG GIÁP (Cover 7)
  * Sáng tác: Nhạc sĩ Lê Phương
- * 60FPS FinnXIII Sharp Kinetic Typography with AUDITED V2 HERO WORD TIMESTAMPS
- * Fully synchronized with master audio (353.256s) and standardized V2 Pair-Level & Hero Word dataset.
+ * 60FPS FinnXIII Sharp Kinetic Typography with AUDITED V3 HERO WORD & PAIR-LEVEL TIMESTAMPS
+ * Fully synchronized with master audio (353.256s) and cross-verified V3 dataset.
  */
 
 window.DEMO_PRESET_GANH_HAO = {
@@ -90,10 +90,10 @@ window.DEMO_PRESET_GANH_HAO = {
     "end": 25.0,
     "status": "reviewed",
     "layout": "left",
-    "text": "Ai xuôi con sáo XỔ LỒNG",
+    "text": "Ai xui con sáo SỔ LỒNG",
     "lines": [
       {
-        "text": "Ai xuôi con sáo XỔ LỒNG",
+        "text": "Ai xui con sáo SỔ LỒNG",
         "start": 18.5,
         "end": 25.0,
         "indent": 0,
@@ -105,7 +105,7 @@ window.DEMO_PRESET_GANH_HAO = {
             "end": 19.325
           },
           {
-            "text": "xuôi",
+            "text": "xui",
             "start": 19.325,
             "end": 20.15,
             "sustain": 0.58
@@ -122,7 +122,7 @@ window.DEMO_PRESET_GANH_HAO = {
             "sustain": 0.61
           },
           {
-            "text": "XỔ",
+            "text": "SỔ",
             "start": 21.9,
             "end": 23.45,
             "isUpperKey": true,
@@ -683,10 +683,10 @@ window.DEMO_PRESET_GANH_HAO = {
     "end": 120.91,
     "status": "reviewed",
     "layout": "right",
-    "text": "Trách ai VÔ TÌNH đành tâm xẻ đôi tim mình",
+    "text": "Trách ai VÔ TÌNH đành tâm xé đôi tim mình",
     "lines": [
       {
-        "text": "Trách ai VÔ TÌNH đành tâm xẻ đôi tim mình",
+        "text": "Trách ai VÔ TÌNH đành tâm xé đôi tim mình",
         "start": 114.65,
         "end": 120.91,
         "indent": 0,
@@ -727,7 +727,7 @@ window.DEMO_PRESET_GANH_HAO = {
             "end": 118.03
           },
           {
-            "text": "xẻ",
+            "text": "xé",
             "start": 118.03,
             "end": 118.64
           },

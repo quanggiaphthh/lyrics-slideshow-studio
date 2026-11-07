@@ -25,3 +25,4 @@
 | **G6** | **QA-01**  | P0 | Portable test runner (relative paths, no user dir hardcodes) | **DONE** | 7/7 suites PASS (`tests/run_all_tests.py`) |
 | **G6** | **DOCS-01**| P1 | README & Provenance documentation | **DONE** | Created `assets/PROVENANCE.md`, updated `QA_EVIDENCE.md` |
 | **V2** | **TIM-V2** | P0 | V2 Pair-Level & Hero Word Timeline (Quang Giáp Cover 7) | **DONE** | 26 stanzas, 133 cues, 49 lines, hero highlights & sustains |
+| **V3** | **TIM-V3** | P0 | V3 Corrected Lyrics & Cues Dataset (Nỡ vội, cất bước, đâu biết là) | **DONE** | Cross-matched 133 cues, 0 collisions, 7/7 suites PASS |
