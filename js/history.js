@@ -1,7 +1,106 @@
 /**
  * LYRICSTUDIO PRO - PROJECT HISTORY & AUTO-SAVE MANAGER
  * Persistent snapshots, local storage drafts, undo/restore, and JSON export/import.
+ * Backed by IndexedDB MediaStore for binary audio/image blobs (DATA-01).
  */
+
+class MediaStore {
+  constructor(dbName = 'LyricStudio_MediaStore_V1') {
+    this.dbName = dbName;
+    this.storeName = 'media_blobs';
+    this.db = null;
+    this.initPromise = null;
+  }
+
+  async getDB() {
+    if (this.db) return this.db;
+    if (this.initPromise) return this.initPromise;
+
+    this.initPromise = new Promise((resolve, reject) => {
+      if (typeof indexedDB === 'undefined') {
+        return reject(new Error('IndexedDB not supported in current environment'));
+      }
+      const req = indexedDB.open(this.dbName, 1);
+      req.onupgradeneeded = (e) => {
+        const db = e.target.result;
+        if (!db.objectStoreNames.contains(this.storeName)) {
+          db.createObjectStore(this.storeName);
+        }
+      };
+      req.onsuccess = (e) => {
+        this.db = e.target.result;
+        resolve(this.db);
+      };
+      req.onerror = (e) => {
+        console.warn('IndexedDB open error:', e.target.error);
+        reject(e.target.error);
+      };
+    });
+    return this.initPromise;
+  }
+
+  async put(key, blob) {
+    try {
+      const db = await this.getDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction([this.storeName], 'readwrite');
+        const store = tx.objectStore(this.storeName);
+        const req = store.put(blob, key);
+        req.onsuccess = () => resolve(true);
+        req.onerror = (e) => reject(e.target.error);
+      });
+    } catch (e) {
+      console.warn('MediaStore.put failed:', e);
+      return false;
+    }
+  }
+
+  async get(key) {
+    try {
+      const db = await this.getDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction([this.storeName], 'readonly');
+        const store = tx.objectStore(this.storeName);
+        const req = store.get(key);
+        req.onsuccess = () => resolve(req.result || null);
+        req.onerror = (e) => reject(e.target.error);
+      });
+    } catch (e) {
+      console.warn('MediaStore.get failed:', e);
+      return null;
+    }
+  }
+
+  async delete(key) {
+    try {
+      const db = await this.getDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction([this.storeName], 'readwrite');
+        const store = tx.objectStore(this.storeName);
+        const req = store.delete(key);
+        req.onsuccess = () => resolve(true);
+        req.onerror = (e) => reject(e.target.error);
+      });
+    } catch (e) {
+      return false;
+    }
+  }
+
+  async clear() {
+    try {
+      const db = await this.getDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction([this.storeName], 'readwrite');
+        const store = tx.objectStore(this.storeName);
+        const req = store.clear();
+        req.onsuccess = () => resolve(true);
+        req.onerror = (e) => reject(e.target.error);
+      });
+    } catch (e) {
+      return false;
+    }
+  }
+}
 
 class ProjectHistoryManager {
   constructor() {
@@ -9,6 +108,7 @@ class ProjectHistoryManager {
     this.STORAGE_KEY_HISTORY = 'LYRICSTUDIO_HISTORY_LIST_V1';
     this.autoSaveTimer = null;
     this.onAutoSaveStatusChange = null;
+    this.mediaStore = new MediaStore();
   }
 
   // === AUTO-SAVE DRAFT (DEBOUNCED) ===
@@ -119,11 +219,12 @@ class ProjectHistoryManager {
       app: 'LyricStudio Pro',
       version: '2.0.0',
       exportedAt: new Date().toISOString(),
+      note: 'Dữ liệu dự án bao gồm mốc thời gian lời, độ ngân từng từ, cấu hình template và metadata.',
       project: safeData
     };
 
     const jsonStr = JSON.stringify(exportObject, null, 2);
-    const blob = new Blob([jsonStr], { type: 'application/json' });
+    const blob = new Blob([jsonStr], { type: 'application/json;charset=utf-8' });
     const fname = filename || `lyric_project_${safeData.template || 'video'}_${Date.now()}.lyricproj`;
 
     const a = document.createElement('a');
@@ -182,18 +283,35 @@ class ProjectHistoryManager {
         const end = typeof s.end === 'number' && !isNaN(s.end) && s.end >= start ? s.end : start + 3;
         const text = typeof s.text === 'string' ? s.text : '';
         const id = s.id ? String(s.id).replace(/[^\w-]/g, '') : `stanza_${i}`;
+        const status = (s.status === 'reviewed' || s.timingStatus === 'reviewed') ? 'reviewed' : 'estimated';
 
         // Validate lines if present
         const lines = [];
         if (Array.isArray(s.lines)) {
           for (const l of s.lines) {
             if (!l || typeof l !== 'object') continue;
+            const lineStart = typeof l.start === 'number' ? l.start : start;
+            const lineEnd = typeof l.end === 'number' ? l.end : end;
+            const safeWords = [];
+            if (Array.isArray(l.words)) {
+              for (const w of l.words) {
+                if (!w || typeof w !== 'object') continue;
+                safeWords.push({
+                  word: typeof w.word === 'string' ? w.word : '',
+                  start: typeof w.start === 'number' ? w.start : lineStart,
+                  end: typeof w.end === 'number' ? w.end : lineEnd,
+                  sustain: (typeof w.sustain === 'number' && !isNaN(w.sustain)) ? w.sustain : null,
+                  status: (w.status === 'reviewed' || w.timingStatus === 'reviewed') ? 'reviewed' : 'estimated'
+                });
+              }
+            }
+
             lines.push({
               text: typeof l.text === 'string' ? l.text : '',
-              start: typeof l.start === 'number' ? l.start : start,
-              end: typeof l.end === 'number' ? l.end : end,
+              start: lineStart,
+              end: lineEnd,
               indent: typeof l.indent === 'number' ? l.indent : 0,
-              words: Array.isArray(l.words) ? l.words : []
+              words: safeWords
             });
           }
         }
@@ -203,8 +321,9 @@ class ProjectHistoryManager {
           start,
           end,
           text,
+          status,
           layout: ['left', 'right', 'center', 'lower'].includes(s.layout) ? s.layout : 'left',
-          lines: lines.length > 0 ? lines : [{ text, start, end }]
+          lines: lines.length > 0 ? lines : [{ text, start, end, words: [] }]
         });
       }
     }
@@ -220,11 +339,14 @@ class ProjectHistoryManager {
         audioUrl: typeof proj.audioUrl === 'string' ? proj.audioUrl : '',
         audioDuration: safeDuration,
         duration: safeDuration,
+        hasCustomAudio: !!proj.hasCustomAudio,
+        customImagesCount: typeof proj.customImagesCount === 'number' ? proj.customImagesCount : 0,
         images: safeImages,
         template: ['finnxiii', 'lofi', 'cyberpunk', 'classic', 'pop'].includes(proj.template) ? proj.template : 'finnxiii',
         transition: ['kenburns', 'slide', 'zoom', 'diagonal'].includes(proj.transition) ? proj.transition : 'kenburns',
         aspectRatio: ['16-9', '9-16', '1-1'].includes(proj.aspectRatio) ? proj.aspectRatio : '16-9',
         lyricsRaw: typeof proj.lyricsRaw === 'string' ? proj.lyricsRaw : '',
+        songMeta: proj.songMeta && typeof proj.songMeta === 'object' ? proj.songMeta : null,
         parsedStanzas: safeStanzas
       }
     };
@@ -284,14 +406,18 @@ class ProjectHistoryManager {
       audioName: state.audioName || '',
       audioUrl: state.audioUrl || '',
       audioDuration: state.audioDuration || 60,
+      hasCustomAudio: !!state.hasCustomAudio,
+      customImagesCount: typeof state.customImagesCount === 'number' ? state.customImagesCount : 0,
       images: cleanImages,
       template: state.template || 'finnxiii',
       transition: state.transition || 'kenburns',
       aspectRatio: state.aspectRatio || '16-9',
       lyricsRaw: state.lyricsRaw || '',
+      songMeta: state.songMeta || null,
       parsedStanzas: state.parsedStanzas || []
     };
   }
 }
 
+window.MediaStore = MediaStore;
 window.ProjectHistoryManager = ProjectHistoryManager;

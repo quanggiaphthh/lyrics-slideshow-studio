@@ -1267,3 +1267,48 @@ body {
   color: #facc15;
   border: 1px solid rgba(234, 179, 8, 0.3);
 }
+
+.restore-draft-banner {
+  background: linear-gradient(90deg, #1e1b4b, #312e81);
+  border-bottom: 1px solid rgba(129, 140, 248, 0.4);
+  padding: 8px 16px;
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.draft-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: #e0e7ff;
+}
+.draft-banner-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.btn-banner-action {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-banner-action:hover {
+  background: #4f46e5;
+}
+.btn-banner-close {
+  background: transparent;
+  color: #a5b4fc;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 4px;
+}

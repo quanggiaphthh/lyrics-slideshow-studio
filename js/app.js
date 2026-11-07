@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const historyListContainer = document.getElementById('historyListContainer');
   const btnHistoryNewProject = document.getElementById('btnHistoryNewProject');
   const btnImportProjectJson = document.getElementById('btnImportProjectJson');
+  const btnExportProjectJson = document.getElementById('btnExportProjectJson');
   const importProjectJsonFileInput = document.getElementById('importProjectJsonFileInput');
   const btnClearHistory = document.getElementById('btnClearHistory');
 
@@ -1145,6 +1146,15 @@ document.addEventListener('DOMContentLoaded', () => {
         closeHistoryModal();
       });
 
+      const exportSnapshotBtn = document.createElement('button');
+      exportSnapshotBtn.className = 'btn-history-restore';
+      exportSnapshotBtn.style.background = '#374151';
+      exportSnapshotBtn.title = 'Xuất bản nháp này ra file .lyricproj';
+      exportSnapshotBtn.textContent = 'Xuất';
+      exportSnapshotBtn.addEventListener('click', () => {
+        historyManager.exportProjectFile(item.state, `${item.name.replace(/[^\w-]/g, '_')}.lyricproj`);
+      });
+
       const delBtn = document.createElement('button');
       delBtn.className = 'btn-history-del';
       delBtn.title = 'Xóa bản nháp';
@@ -1156,6 +1166,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       actionsDiv.appendChild(restoreBtn);
+      actionsDiv.appendChild(exportSnapshotBtn);
       actionsDiv.appendChild(delBtn);
 
       card.appendChild(leftDiv);
@@ -1186,6 +1197,10 @@ document.addEventListener('DOMContentLoaded', () => {
       applyProjectState(DEMO_PRESET_1);
       closeHistoryModal();
     }
+  });
+
+  btnExportProjectJson?.addEventListener('click', () => {
+    historyManager.exportProjectFile(currentProjectState);
   });
 
   btnImportProjectJson.addEventListener('click', () => importProjectJsonFileInput.click());
@@ -1524,6 +1539,12 @@ document.addEventListener('DOMContentLoaded', () => {
     audioNameDisplay.textContent = file.name;
     audioDurationDisplay.textContent = 'Đang giải mã âm thanh...';
 
+    // Store raw file blob into IndexedDB for persistence across reloads (DATA-01)
+    historyManager.mediaStore.put('draft_audio_blob', file).then(() => {
+      currentProjectState.hasCustomAudio = true;
+      currentProjectState.audioFileName = file.name;
+    }).catch(e => console.warn('Failed to cache audio blob in MediaStore:', e));
+
     coreAudio.onloadedmetadata = () => {
       const dur = coreAudio.duration;
       audioDurationDisplay.textContent = `${formatTime(dur)} • ${(file.size / (1024*1024)).toFixed(1)} MB`;
@@ -1546,7 +1567,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let loaded = 0;
     const newImgs = [];
 
-    files.forEach(f => {
+    files.forEach((f, idx) => {
+      historyManager.mediaStore.put(`draft_image_blob_${idx}`, f).catch(e => console.warn('Failed to cache image blob:', e));
       const img = new Image();
       img.src = URL.createObjectURL(f);
       img.onload = () => {
@@ -1554,6 +1576,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newImgs.push(img);
         if (loaded === files.length) {
           activeImageObjects = activeImageObjects.concat(newImgs);
+          currentProjectState.customImagesCount = activeImageObjects.length;
           engine.setImages(activeImageObjects);
           renderThumbnails();
           renderCurrentFrame();
@@ -1561,6 +1584,95 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
     });
+  }
+
+  async function restoreDraftState(state) {
+    if (!state) return;
+
+    // Check if custom audio was saved in IndexedDB
+    if (state.hasCustomAudio) {
+      try {
+        const audioBlob = await historyManager.mediaStore.get('draft_audio_blob');
+        if (audioBlob) {
+          state.audioUrl = URL.createObjectURL(audioBlob);
+        }
+      } catch (err) {
+        console.warn('Could not restore audio blob from MediaStore:', err);
+      }
+    }
+
+    // Check if custom images were saved in IndexedDB
+    if (state.customImagesCount && state.customImagesCount > 0) {
+      try {
+        const restoredImgs = [];
+        for (let i = 0; i < state.customImagesCount; i++) {
+          const imgBlob = await historyManager.mediaStore.get(`draft_image_blob_${i}`);
+          if (imgBlob) {
+            restoredImgs.push(URL.createObjectURL(imgBlob));
+          }
+        }
+        if (restoredImgs.length > 0) {
+          state.images = restoredImgs;
+        }
+      } catch (err) {
+        console.warn('Could not restore image blobs from MediaStore:', err);
+      }
+    }
+
+    applyProjectState(state);
+  }
+
+  function checkAndPromptDraftRecovery() {
+    const draft = historyManager.getAutoSave();
+    if (!draft || !draft.state) return;
+
+    const state = draft.state;
+    // Don't prompt if draft is empty
+    const hasContent = state.lyricsRaw || (state.parsedStanzas && state.parsedStanzas.length > 0) || state.hasCustomAudio;
+    if (!hasContent) return;
+
+    const timeStr = draft.updatedAt ? new Date(draft.updatedAt).toLocaleTimeString() : 'trước đó';
+
+    const banner = document.createElement('div');
+    banner.id = 'draftRecoveryBanner';
+    banner.className = 'restore-draft-banner';
+
+    const content = document.createElement('div');
+    content.className = 'draft-banner-content';
+
+    const icon = document.createElement('span');
+    icon.textContent = '💾';
+
+    const text = document.createElement('span');
+    text.textContent = `Phát hiện bản thảo chưa lưu từ phiên làm việc trước (${timeStr}). Bạn có muốn khôi phục không?`;
+
+    const actions = document.createElement('div');
+    actions.className = 'draft-banner-actions';
+
+    const btnRestore = document.createElement('button');
+    btnRestore.className = 'btn-banner-action';
+    btnRestore.textContent = 'Khôi phục bản thảo';
+    btnRestore.onclick = async () => {
+      await restoreDraftState(state);
+      banner.remove();
+    };
+
+    const btnDismiss = document.createElement('button');
+    btnDismiss.className = 'btn-banner-close';
+    btnDismiss.title = 'Bỏ qua';
+    btnDismiss.textContent = '✕';
+    btnDismiss.onclick = () => {
+      banner.remove();
+    };
+
+    actions.appendChild(btnRestore);
+    actions.appendChild(btnDismiss);
+    content.appendChild(icon);
+    content.appendChild(text);
+    content.appendChild(actions);
+    banner.appendChild(content);
+
+    document.body.insertBefore(banner, document.body.firstChild);
   }
 
   // Preset handlers
@@ -1721,6 +1833,9 @@ document.addEventListener('DOMContentLoaded', () => {
     selectPreset1();
   }
   updateHistoryBadge();
+
+  // Check for auto-saved draft and prompt user non-destructively (DATA-01)
+  checkAndPromptDraftRecovery();
 
   // Test time parameter for snapshot inspections & verification
   const urlParams = new URLSearchParams(window.location.search);
