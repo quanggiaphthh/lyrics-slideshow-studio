@@ -119,6 +119,17 @@ Truy cập trình duyệt (ưu tiên Google Chrome, Microsoft Edge hoặc Firefo
 
 ---
 
+## 📖 Tài liệu kỹ thuật & Kiến trúc (Documentation)
+
+- [AGENTS.md](AGENTS.md): Quy chuẩn cho AI agent / kỹ sư tiếp quản dự án.
+- [docs/PROJECT_GOAL.md](docs/PROJECT_GOAL.md): 7 Mục tiêu cốt lõi và tiêu chuẩn hoàn thành (Definition of Done).
+- [docs/MASTER_PLAN.md](docs/MASTER_PLAN.md): Lộ trình nâng cấp từ G0 đến G6, mã định danh task và trạng thái.
+- [docs/PROJECT_MEMORY.md](docs/PROJECT_MEMORY.md): Nhật ký phiên làm việc, mốc commit SHA và lịch sử kiểm thử.
+- [docs/DECISIONS.md](docs/DECISIONS.md): Hồ sơ quyết định kiến trúc (ADRs).
+- [docs/QA_EVIDENCE.md](docs/QA_EVIDENCE.md): Bằng chứng kiểm thử tự động, log probe và chứng thực chất lượng.
+
+---
+
 ## 📜 Giấy phép (License)
 
 Dự án được phát hành theo giấy phép [MIT License](LICENSE).
