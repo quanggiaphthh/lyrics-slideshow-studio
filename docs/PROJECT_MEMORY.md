@@ -14,9 +14,9 @@
 - **G2 (Export Lifecycle & Quality)**: Implemented strict state machine, cancellation semantics, failure reset in `recorder.js`. Probed exported MP4 using ffprobe (H.264 @ 60fps, AAC 48kHz stereo, 14.5 Mbps). Added Vietnamese/Windows filename sanitization (`558144a`).
 - **G3 (Timing Provenance & Sustain)**: Labeled estimated vs reviewed timings in UI and templates (`timingStatus: 'reviewed'|'estimated'`). Preserved explicit vocal sustain duration and audio SHA-256 integrity (`df2c121`).
 - **G4 (Session Persistence & Project Schema)**: Implemented `MediaStore` IndexedDB for audio/image binary blobs. Added non-destructive startup draft recovery banner without clobbering initial demo preset. Enhanced project export/import schema validation to preserve words, sustain, and status (D01, D02, D03 PASS) (`9ae1586`).
-- **G5 (UX, Motion, Typography & Metadata)**: Implemented all 4 background image transitions (`kenburns`, `slide`, `zoom`, `diagonal`) in `engine.js`. Added responsive safe-area boundary calculation & auto-scaling typography in `templates.js` for 16:9, 9:16 vertical, and 1:1 square layouts. Added interactive phrase looping and ±50ms nudge controls in `app.js`. Separated title, composer, and performer in `preset_ganh_hao.js` (U01, U02, U03, M01 PASS).
+- **G5 (UX, Motion, Typography & Metadata)**: Implemented all 4 background image transitions (`kenburns`, `slide`, `zoom`, `diagonal`) in `engine.js`. Added responsive safe-area boundary calculation & auto-scaling typography in `templates.js` for 16:9, 9:16 vertical, and 1:1 square layouts. Added interactive phrase looping and ±50ms nudge controls in `app.js`. Separated title, composer, and performer in `preset_ganh_hao.js` (U01, U02, U03, M01 PASS) (`9caf54e`).
+- **G6 (Portable Test Runner, Provenance & Release Gate)**: Built unified test runner `tests/run_all_tests.py` verifying 7/7 test suites without hardcoded user directories. Created `assets/PROVENANCE.md` detailing master audio licensing, hashes, and image provenance. Documented ffprobe output and test artifacts in `docs/QA_EVIDENCE.md`. All release gates passed.
 
 ### 3. Immediate Next Actions
-1. **G6 / QA-01**: Run portable full test suite verification across security, export, transitions, persistence, and UX.
-2. **G6 / DOCS-01**: Create `assets/PROVENANCE.md` and update `README.md` and `docs/QA_EVIDENCE.md`.
-3. Push branch `fix/audit-2026-11-07-core-stability` to GitHub remote.
+1. Push branch `fix/audit-2026-11-07-core-stability` to GitHub remote.
+2. Present complete release report and checklist to user.

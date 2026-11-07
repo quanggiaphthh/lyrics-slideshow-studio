@@ -22,5 +22,5 @@
 | **G5** | **UX-02**  | P1 | Multi-ratio safe area & auto-reflow (16:9, 9:16, 1:1) | **DONE** | Safe boundaries, auto-scale font for 16:9, 9:16, 1:1 (U02 PASS) |
 | **G5** | **UX-03**  | P1 | Visual word timing adjustment table (loop & nudge) | **DONE** | Interactive phrase loop + ±50ms nudge controls (U03 PASS) |
 | **G5** | **META-01**| P2 | Separate song metadata fields & provenance | **DONE** | Composer (Lê Phương) vs Performer (Quý Bình) (M01 PASS) |
-| **G6** | **QA-01**  | P0 | Portable test runner (relative paths, no user dir hardcodes) | **TODO** | Self-contained Node & Python test scripts |
-| **G6** | **DOCS-01**| P1 | README & Provenance documentation | **TODO** | Update README with verified status and instructions |
+| **G6** | **QA-01**  | P0 | Portable test runner (relative paths, no user dir hardcodes) | **DONE** | 7/7 suites PASS (`tests/run_all_tests.py`) |
+| **G6** | **DOCS-01**| P1 | README & Provenance documentation | **DONE** | Created `assets/PROVENANCE.md`, updated `QA_EVIDENCE.md` |

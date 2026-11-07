@@ -12,6 +12,8 @@ screenshot_*.png
 temp_*
 *.raw
 *.tmp
+tests/*.mp4
+tests/*.webm
 
 # User / Local Data
 .vscode/
